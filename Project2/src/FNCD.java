@@ -15,7 +15,7 @@ public class FNCD {
 	private ArrayList<Salesperson> departedSStaff = new ArrayList<>();
 	private ArrayList<Intern> departedIStaff = new ArrayList<>();
 	// Getters
-	
+
 	public ArrayList<Mechanic> getMechanicStaff() {
 		return this.mechanicStaff;
 	}
@@ -135,6 +135,13 @@ public class FNCD {
 		*/
 	}
 	public static void main(String[] args) {
+		PerformanceCars test = new PerformanceCars(2023);
+
+		System.out.println("Cost: " + test.getCostPrice());
+		System.out.println("Sales: " + test.getSalesPrice());
+		System.out.println(test.getCondition());
+
+		/* 
 		FNCD simulation = new FNCD();
 		simulation.setOperatingBudget(500000); //Starting off budget at 500k
 		//for loop to simulate 30 days
@@ -147,6 +154,7 @@ public class FNCD {
 				simulation.ending();
 			}
 		}
+		*/
 	}
 
 }

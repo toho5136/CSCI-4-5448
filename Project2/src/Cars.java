@@ -2,8 +2,8 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Cars extends Vehicles{
-	public Cars(String name){
-		setUniqueName(name);
+	public Cars(int identity){
+		setID(identity);
 		setCarType("Cars");
 		setSalesBonus(500.0);
 		setRepairBonus(50.0);
@@ -14,8 +14,6 @@ public class Cars extends Vehicles{
 		int conditionRoll = ThreadLocalRandom.current().nextInt(1, 3 + 1);
 		int cleanlinessRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 
-		setCostPrice(rand);
-		setSalesPrice(rand * 2.0);
 		if (conditionRoll == 1){
 			setCondition("Like New");
 			setCostPrice(rand);
