@@ -15,6 +15,7 @@ public class FNCD {
 	private ArrayList<Salesperson> departedSStaff = new ArrayList<>();
 	private ArrayList<Intern> departedIStaff = new ArrayList<>();
 	// Getters
+	
 	public ArrayList<Mechanic> getMechanicStaff() {
 		return this.mechanicStaff;
 	}
