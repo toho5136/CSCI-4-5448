@@ -54,6 +54,18 @@ public class Vehicles {
 	public void setCleanliness(String clean) {
 		cleanliness = clean;
 	}
+	public void setCarType(String type){
+		carType = type;
+	}
+	public void setSalesBonus(double bonus){
+		salesBonus = bonus;
+	}
+	public void setRepairBonus(double bonus){
+		repairBonus = bonus;
+	}
+	public void setWashBonus(double bonus){
+		washBonus = bonus;
+	}
 	public static void main(String[] args) {
 	}
 

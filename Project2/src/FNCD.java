@@ -52,27 +52,21 @@ public class FNCD {
 	}
 	// Adders
 	public void addMechanic(Mechanic newGuy) {
-		newGuy = new Mechanic();
 		mechanicStaff.add(newGuy);
 	}
 	public void addSalesperson(Salesperson newGuy) {
-		newGuy = new Salesperson();
 		salespersonStaff.add(newGuy);
 	}
 	public void addIntern(Intern newGuy) {
-		newGuy = new Intern();
 		internStaff.add(newGuy);
 	}
 	public void addPerformanceCar(PerformanceCars newCar) {
-		newCar = new PerformanceCars();
 		performanceCarInventory.add(newCar);
 	}
 	public void addCar(Cars newCar) {
-		newCar = new Cars();
 		carsInventory.add(newCar);
 	}
 	public void addPickups(Pickups newCar) {
-		newCar = new Pickups();
 		pickupsInventory.add(newCar);
 	}
 	// Creator
@@ -132,10 +126,12 @@ public class FNCD {
 		for (int i = 0; i < departedIStaff.size(); i++) {
 			counter = counter + 1;
 		}
+		/* 
 		final Object[][] table = new String[counter][];
 		for (int i = 0; i < mechanicStaff.size(); i++) { //adds all working mechanics to table
 			table[i] = new String[] {mechanicStaff.get(i).newMechanic.getUniqueName(), Integer.toString(mechanicStaff.get(i).newMechanic.getDaysWorked()), String.valueOf(mechanicStaff.get(i).newMechanic.getNormalPay()), String.valueOf(mechanicStaff.get(i).newMechanic.getBonusPay()), "Working"};
 		}
+		*/
 	}
 	public static void main(String[] args) {
 		FNCD simulation = new FNCD();

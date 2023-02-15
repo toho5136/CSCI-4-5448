@@ -1,4 +1,5 @@
 
+
 public class Staff {
 	// Private Class Variables
 	private String uniqueName;
@@ -18,6 +19,9 @@ public class Staff {
 	}
 	public void setBonusPay(double bonus) {
 		totalBonusPay = bonus;
+	}
+	public void setSalary(double pay) {
+		salary = pay;
 	}
 	// Getters
 	public String getUniqueName() {
