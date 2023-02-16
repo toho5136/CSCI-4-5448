@@ -3,9 +3,9 @@ public class Buyer {
 	// Private Class Variables
 	private String buyerType;
 	private String vehicleTypeWanted;
-	private double buyChance;
+	private int buyChance;
 
-	public Buyer(String type, String wanted, double chance){
+	public Buyer(String type, String wanted, int chance){
 		buyerType = type;
 		vehicleTypeWanted = wanted;
 		buyChance = chance;
@@ -17,7 +17,7 @@ public class Buyer {
 	public String getVehicleTypeWanted() {
 		return this.vehicleTypeWanted;
 	}
-	public double getBuyChance(){
+	public int getBuyChance(){
 		return this.buyChance;
 	}
 	public static void main(String[] args) {

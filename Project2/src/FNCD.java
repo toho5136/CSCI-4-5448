@@ -11,6 +11,7 @@ public class FNCD {
 	private ArrayList<Cars> carsInventory = new ArrayList<>();
 	private ArrayList<Pickups> pickupsInventory = new ArrayList<>();
 	private ArrayList<Buyer> buyers = new ArrayList<>();
+	private ArrayList<Vehicles> soldVehicles = new ArrayList<>();
 	private double operatingBudget;
 	private double addedFunds = 0;
 	private int currentDay = 1;
@@ -94,17 +95,17 @@ public class FNCD {
 				if (buyerRoll == 1){
 					// Wants Performance
 					if (wantedRoll == 1){
-						Buyer buy = new Buyer("Just Looking", "PerformanceCars", 0.1);
+						Buyer buy = new Buyer("Just Looking", "PerformanceCars", 10);
 						this.addBuyer(buy);
 					}
 					// Wants Pickups
 					else if (wantedRoll == 2){
-						Buyer buy = new Buyer("Just Looking", "Pickups", 0.1);
+						Buyer buy = new Buyer("Just Looking", "Pickups", 10);
 						this.addBuyer(buy);
 					}
 					// Wants Cars
 					else {
-						Buyer buy = new Buyer("Just Looking", "Cars", 0.1);
+						Buyer buy = new Buyer("Just Looking", "Cars", 10);
 						this.addBuyer(buy);
 					}
 				}
@@ -112,34 +113,34 @@ public class FNCD {
 				else if (buyerRoll == 2){
 					// Wants Performance
 					if (wantedRoll == 1){
-						Buyer buy = new Buyer("Wants One", "PerformanceCars", 0.4);
+						Buyer buy = new Buyer("Wants One", "PerformanceCars", 40);
 						this.addBuyer(buy);
 					}
 					// Wants Pickups
 					else if (wantedRoll == 2){
-						Buyer buy = new Buyer("Wants One", "Pickups", 0.4);
+						Buyer buy = new Buyer("Wants One", "Pickups", 40);
 						this.addBuyer(buy);
 					}
 					// Wants Cars
 					else {
-						Buyer buy = new Buyer("Wants One", "Cars", 0.4);
+						Buyer buy = new Buyer("Wants One", "Cars", 40);
 						this.addBuyer(buy);
 					}
 				}
 				else {
 					// Wants Performance
 					if (wantedRoll == 1){
-						Buyer buy = new Buyer("Needs One", "PerformanceCars", 0.7);
+						Buyer buy = new Buyer("Needs One", "PerformanceCars", 70);
 						this.addBuyer(buy);
 					}
 					// Wants Pickups
 					else if (wantedRoll == 2){
-						Buyer buy = new Buyer("Needs One", "Pickups", 0.7);
+						Buyer buy = new Buyer("Needs One", "Pickups", 70);
 						this.addBuyer(buy);
 					}
 					// Wants Cars
 					else {
-						Buyer buy = new Buyer("Needs One", "Cars", 0.7);
+						Buyer buy = new Buyer("Needs One", "Cars", 70);
 						this.addBuyer(buy);
 					}
 				}
@@ -155,17 +156,17 @@ public class FNCD {
 					if (buyerRoll == 1){
 						// Wants Performance
 						if (wantedRoll == 1){
-							Buyer buy = new Buyer("Just Looking", "PerformanceCars", 0.1);
+							Buyer buy = new Buyer("Just Looking", "PerformanceCars", 10);
 							this.addBuyer(buy);
 						}
 						// Wants Pickups
 						else if (wantedRoll == 2){
-							Buyer buy = new Buyer("Just Looking", "Pickups", 0.1);
+							Buyer buy = new Buyer("Just Looking", "Pickups", 10);
 							this.addBuyer(buy);
 						}
 						// Wants Cars
 						else {
-							Buyer buy = new Buyer("Just Looking", "Cars", 0.1);
+							Buyer buy = new Buyer("Just Looking", "Cars", 10);
 							this.addBuyer(buy);
 						}
 					}
@@ -173,34 +174,34 @@ public class FNCD {
 					else if (buyerRoll == 2){
 						// Wants Performance
 						if (wantedRoll == 1){
-							Buyer buy = new Buyer("Wants One", "PerformanceCars", 0.4);
+							Buyer buy = new Buyer("Wants One", "PerformanceCars", 40);
 							this.addBuyer(buy);
 						}
 						// Wants Pickups
 						else if (wantedRoll == 2){
-							Buyer buy = new Buyer("Wants One", "Pickups", 0.4);
+							Buyer buy = new Buyer("Wants One", "Pickups", 40);
 							this.addBuyer(buy);
 						}
 						// Wants Cars
 						else {
-							Buyer buy = new Buyer("Wants One", "Cars", 0.4);
+							Buyer buy = new Buyer("Wants One", "Cars", 40);
 							this.addBuyer(buy);
 						}
 					}
 					else {
 						// Wants Performance
 						if (wantedRoll == 1){
-							Buyer buy = new Buyer("Needs One", "PerformanceCars", 0.7);
+							Buyer buy = new Buyer("Needs One", "PerformanceCars", 70);
 							this.addBuyer(buy);
 						}
 						// Wants Pickups
 						else if (wantedRoll == 2){
-							Buyer buy = new Buyer("Needs One", "Pickups", 0.7);
+							Buyer buy = new Buyer("Needs One", "Pickups", 70);
 							this.addBuyer(buy);
 						}
 						// Wants Cars
 						else {
-							Buyer buy = new Buyer("Needs One", "Cars", 0.7);
+							Buyer buy = new Buyer("Needs One", "Cars", 70);
 							this.addBuyer(buy);
 						}
 					}
@@ -208,7 +209,6 @@ public class FNCD {
 			}
 		}
 		else {
-			System.out.println("Curr day: " + currentDay);
 			for (int i = 0; i < 5; i++){
 				int roll = ThreadLocalRandom.current().nextInt(1, 2 + 1);
 				
@@ -220,17 +220,17 @@ public class FNCD {
 					if (buyerRoll == 1){
 						// Wants Performance
 						if (wantedRoll == 1){
-							Buyer buy = new Buyer("Just Looking", "PerformanceCars", 0.1);
+							Buyer buy = new Buyer("Just Looking", "PerformanceCars", 10);
 							this.addBuyer(buy);
 						}
 						// Wants Pickups
 						else if (wantedRoll == 2){
-							Buyer buy = new Buyer("Just Looking", "Pickups", 0.1);
+							Buyer buy = new Buyer("Just Looking", "Pickups", 10);
 							this.addBuyer(buy);
 						}
 						// Wants Cars
 						else {
-							Buyer buy = new Buyer("Just Looking", "Cars", 0.1);
+							Buyer buy = new Buyer("Just Looking", "Cars", 10);
 							this.addBuyer(buy);
 						}
 					}
@@ -238,41 +238,40 @@ public class FNCD {
 					else if (buyerRoll == 2){
 						// Wants Performance
 						if (wantedRoll == 1){
-							Buyer buy = new Buyer("Wants One", "PerformanceCars", 0.4);
+							Buyer buy = new Buyer("Wants One", "PerformanceCars", 40);
 							this.addBuyer(buy);
 						}
 						// Wants Pickups
 						else if (wantedRoll == 2){
-							Buyer buy = new Buyer("Wants One", "Pickups", 0.4);
+							Buyer buy = new Buyer("Wants One", "Pickups", 40);
 							this.addBuyer(buy);
 						}
 						// Wants Cars
 						else {
-							Buyer buy = new Buyer("Wants One", "Cars", 0.4);
+							Buyer buy = new Buyer("Wants One", "Cars", 40);
 							this.addBuyer(buy);
 						}
 					}
 					else {
 						// Wants Performance
 						if (wantedRoll == 1){
-							Buyer buy = new Buyer("Needs One", "PerformanceCars", 0.7);
+							Buyer buy = new Buyer("Needs One", "PerformanceCars", 70);
 							this.addBuyer(buy);
 						}
 						// Wants Pickups
 						else if (wantedRoll == 2){
-							Buyer buy = new Buyer("Needs One", "Pickups", 0.7);
+							Buyer buy = new Buyer("Needs One", "Pickups", 70);
 							this.addBuyer(buy);
 						}
 						// Wants Cars
 						else {
-							Buyer buy = new Buyer("Needs One", "Cars", 0.7);
+							Buyer buy = new Buyer("Needs One", "Cars", 70);
 							this.addBuyer(buy);
 						}
 					}
 				}
 			}
 		}
-		System.out.println(buyers.size());
 	}
 	public int createVehicleID(){
 		return 0;
@@ -281,7 +280,7 @@ public class FNCD {
 	public void opening() {
 		System.out.println("Day: " + currentDay);
 		//First day, need to add workers, cars, and set budget
-		if (currentDay == 0){
+		if (currentDay == 1){
 			for (int i = 0; i < 3; i++){
 				Mechanic mech = new Mechanic("Mechanic" + String.valueOf(mechNames));
 				this.addMechanic(mech);
@@ -710,7 +709,342 @@ public class FNCD {
 		}
 	}
 	public void selling() {
+		createBuyers();
 
+		for (int i = 0; i < buyers.size(); i++){
+			int salesPersonRoll = ThreadLocalRandom.current().nextInt(0, 2 + 1);
+
+			if (buyers.get(i).getVehicleTypeWanted() == "PerformanceCars"){
+				if (performanceCarInventory.size() != 0){
+					double maxPrice = 0.0;
+					int maxPriceIndex = -1;
+					int salesChance = buyers.get(i).getBuyChance();
+
+					for (int j = 0; j < performanceCarInventory.size(); j++){
+						if (maxPrice < performanceCarInventory.get(j).getSalesPrice() && performanceCarInventory.get(j).getCondition() != "Broken"){
+							maxPrice = performanceCarInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+						}
+					}
+
+					if (maxPriceIndex == -1){
+						break;
+					}
+
+					if (performanceCarInventory.get(maxPriceIndex).getCondition() == "Like New"){
+						salesChance += 10;
+					}
+					if (performanceCarInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+						salesChance += 10;
+					}
+					int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+					if (sellRoll <= salesChance){
+						System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+						+ performanceCarInventory.get(maxPriceIndex).getCleanliness() + " " 
+						+ performanceCarInventory.get(maxPriceIndex).getCondition() + " " + performanceCarInventory.get(maxPriceIndex).getID() 
+						+ " to Buyer for $" + performanceCarInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+						+ performanceCarInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+						operatingBudget += performanceCarInventory.get(maxPriceIndex).getSalesPrice();
+						double bonus = performanceCarInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+						salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+						soldVehicles.add(performanceCarInventory.get(maxPriceIndex));
+						performanceCarInventory.remove(maxPriceIndex);
+					}
+				}
+				else {
+					double maxPrice = 0.0;
+					int maxPriceIndex = -1;
+					int salesChance = buyers.get(i).getBuyChance() - 20;
+					String maxPriceType = "";
+
+					for (int j = 0; j < pickupsInventory.size(); j++){
+						if (maxPrice < pickupsInventory.get(j).getSalesPrice() && pickupsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = pickupsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Pickups";
+						}
+					}
+					for (int j = 0; j < carsInventory.size(); j++){
+						if (maxPrice < carsInventory.get(j).getSalesPrice() && carsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = carsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Cars";
+						}
+					}
+
+					if (maxPriceType == "Pickups"){
+						if (pickupsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (pickupsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ pickupsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ pickupsInventory.get(maxPriceIndex).getCondition() + " " + pickupsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + pickupsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ pickupsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							operatingBudget += pickupsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = pickupsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(pickupsInventory.get(maxPriceIndex));
+							pickupsInventory.remove(maxPriceIndex);
+						}
+					}
+					else if (maxPriceType == "Cars"){
+						if (carsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (carsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ carsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ carsInventory.get(maxPriceIndex).getCondition() + " " + carsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + carsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ carsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							operatingBudget += carsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = carsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(carsInventory.get(maxPriceIndex));
+							carsInventory.remove(maxPriceIndex);
+						}
+					}
+				}
+			}
+			// Pickups desired
+			else if (buyers.get(i).getVehicleTypeWanted() == "Pickups"){
+				if (pickupsInventory.size() != 0){
+					double maxPrice = 0.0;
+					int maxPriceIndex = -1;
+					int salesChance = buyers.get(i).getBuyChance();
+
+					for (int j = 0; j < pickupsInventory.size(); j++){
+						if (maxPrice < pickupsInventory.get(j).getSalesPrice() && pickupsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = pickupsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+						}
+					}
+
+					if (maxPriceIndex == -1){
+						break;
+					}
+
+					if (pickupsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+						salesChance += 10;
+					}
+					if (pickupsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+						salesChance += 10;
+					}
+					int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+					if (sellRoll <= salesChance){
+						System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+						+ pickupsInventory.get(maxPriceIndex).getCleanliness() + " " 
+						+ pickupsInventory.get(maxPriceIndex).getCondition() + " " + pickupsInventory.get(maxPriceIndex).getID() 
+						+ " to Buyer for $" + pickupsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+						+ pickupsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+						operatingBudget += pickupsInventory.get(maxPriceIndex).getSalesPrice();
+						double bonus = pickupsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+						salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+						soldVehicles.add(pickupsInventory.get(maxPriceIndex));
+						pickupsInventory.remove(maxPriceIndex);
+					}
+				}
+				else {
+					double maxPrice = 0.0;
+					int maxPriceIndex = -1;
+					int salesChance = buyers.get(i).getBuyChance() - 20;
+					String maxPriceType = "";
+
+					for (int j = 0; j < performanceCarInventory.size(); j++){
+						if (maxPrice < performanceCarInventory.get(j).getSalesPrice() && performanceCarInventory.get(j).getCondition() != "Broken"){
+							maxPrice = performanceCarInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "PerformanceCars";
+						}
+					}
+					for (int j = 0; j < carsInventory.size(); j++){
+						if (maxPrice < carsInventory.get(j).getSalesPrice() && carsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = carsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Cars";
+						}
+					}
+
+					if (maxPriceType == "PerformanceCars"){
+						if (performanceCarInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (performanceCarInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ performanceCarInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ performanceCarInventory.get(maxPriceIndex).getCondition() + " " + performanceCarInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + performanceCarInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ performanceCarInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							operatingBudget += performanceCarInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = performanceCarInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(performanceCarInventory.get(maxPriceIndex));
+							performanceCarInventory.remove(maxPriceIndex);
+						}
+					}
+					else if (maxPriceType == "Cars"){
+						if (carsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (carsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ carsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ carsInventory.get(maxPriceIndex).getCondition() + " " + carsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + carsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ carsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							operatingBudget += carsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = carsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(carsInventory.get(maxPriceIndex));
+							carsInventory.remove(maxPriceIndex);
+						}
+					}
+				}
+			}
+
+			// Cars desired
+			else {
+				if (carsInventory.size() != 0){
+					double maxPrice = 0.0;
+					int maxPriceIndex = -1;
+					int salesChance = buyers.get(i).getBuyChance();
+
+					for (int j = 0; j < carsInventory.size(); j++){
+						if (maxPrice < carsInventory.get(j).getSalesPrice() && carsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = carsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+						}
+					}
+
+					if (maxPriceIndex == -1){
+						break;
+					}
+
+					if (carsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+						salesChance += 10;
+					}
+					if (carsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+						salesChance += 10;
+					}
+					int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+					if (sellRoll <= salesChance){
+						System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+						+ carsInventory.get(maxPriceIndex).getCleanliness() + " " 
+						+ carsInventory.get(maxPriceIndex).getCondition() + " " + carsInventory.get(maxPriceIndex).getID() 
+						+ " to Buyer for $" + carsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+						+ carsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+						operatingBudget += carsInventory.get(maxPriceIndex).getSalesPrice();
+						double bonus = carsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+						salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+						soldVehicles.add(carsInventory.get(maxPriceIndex));
+						carsInventory.remove(maxPriceIndex);
+					}
+				}
+				else {
+					double maxPrice = 0.0;
+					int maxPriceIndex = -1;
+					int salesChance = buyers.get(i).getBuyChance() - 20;
+					String maxPriceType = "";
+
+					for (int j = 0; j < pickupsInventory.size(); j++){
+						if (maxPrice < pickupsInventory.get(j).getSalesPrice() && pickupsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = pickupsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Pickups";
+						}
+					}
+					for (int j = 0; j < performanceCarInventory.size(); j++){
+						if (maxPrice < performanceCarInventory.get(j).getSalesPrice() && performanceCarInventory.get(j).getCondition() != "Broken"){
+							maxPrice = performanceCarInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "PerformanceCars";
+						}
+					}
+
+					if (maxPriceType == "Pickups"){
+						if (pickupsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (pickupsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ pickupsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ pickupsInventory.get(maxPriceIndex).getCondition() + " " + pickupsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + pickupsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ pickupsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							operatingBudget += pickupsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = pickupsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(pickupsInventory.get(maxPriceIndex));
+							pickupsInventory.remove(maxPriceIndex);
+						}
+					}
+					else if (maxPriceType == "PerformanceCars"){
+						if (performanceCarInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (performanceCarInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ performanceCarInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ performanceCarInventory.get(maxPriceIndex).getCondition() + " " + performanceCarInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + performanceCarInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ performanceCarInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							operatingBudget += performanceCarInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = performanceCarInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(performanceCarInventory.get(maxPriceIndex));
+							performanceCarInventory.remove(maxPriceIndex);
+						}
+					}
+				}
+			}
+		}
 	}
 	public void ending() {
 		int counterM = 0; //counter to create print table
@@ -815,13 +1149,13 @@ public class FNCD {
 			tablePC[i] = new String[] {performanceCarInventory.get(i).getID(), "$" + carCostPrice, "$" + carSalesPrice, performanceCarInventory.get(i).getCondition(), performanceCarInventory.get(i).getCleanliness(), "In Stock"};
 		}
 		for (int i = 0; i < carsInventory.size(); i++) {
-			String carCostPrice = String.format("%.2f", performanceCarInventory.get(i).getCostPrice());
-			String carSalesPrice = String.format("%.2f", performanceCarInventory.get(i).getSalesPrice());
+			String carCostPrice = String.format("%.2f", carsInventory.get(i).getCostPrice());
+			String carSalesPrice = String.format("%.2f", carsInventory.get(i).getSalesPrice());
 			tableC[i] = new String[] {carsInventory.get(i).getID(), "$" + carCostPrice, "$" + carSalesPrice, carsInventory.get(i).getCondition(), carsInventory.get(i).getCleanliness(), "In Stock"};
 		}
 		for (int i = 0; i < pickupsInventory.size(); i++) {
-			String carCostPrice = String.format("%.2f", performanceCarInventory.get(i).getCostPrice());
-			String carSalesPrice = String.format("%.2f", performanceCarInventory.get(i).getSalesPrice());
+			String carCostPrice = String.format("%.2f", pickupsInventory.get(i).getCostPrice());
+			String carSalesPrice = String.format("%.2f", pickupsInventory.get(i).getSalesPrice());
 			tableP[i] = new String[] {pickupsInventory.get(i).getID(), "$" + carCostPrice, "$" + carSalesPrice, pickupsInventory.get(i).getCondition(), pickupsInventory.get(i).getCleanliness(), "In Stock"};
 		}
 		String newOperatingBudget = String.format("%.2f", operatingBudget);
@@ -871,8 +1205,15 @@ public class FNCD {
 	}
 	public static void main(String[] args) {
 		FNCD sim = new FNCD();
-
-		sim.opening();
+		for (int i = 0; i < 30; i++){
+			sim.opening();
+			sim.washing();
+			sim.repairing();
+			sim.selling();
+			sim.ending();
+			sim.updateCurrentDay();
+		}
+		
 
 		/* 
 		FNCD simulation = new FNCD();
