@@ -440,8 +440,8 @@ public class FNCD {
 		FNCD sim = new FNCD();
 
 		sim.opening();
-		sim.washing();
-
+		sim.opening();
+		sim.ending();
 		/* 
 		FNCD simulation = new FNCD();
 		simulation.setOperatingBudget(500000); //Starting off budget at 500k
