@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
-
+import java.io.*;
 public class FNCD {
 	// Private Class Variables
 	private ArrayList<Mechanic> mechanicStaff = new ArrayList<>();
@@ -1238,7 +1238,10 @@ public class FNCD {
 			System.out.format("%15s%15s%n", row);
 		}
 	}
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
+		PrintStream o = new PrintStream(new File("SimResults.txt"));
+		//PrintStream console = System.out;
+		System.setOut(o);
 		FNCD sim = new FNCD();
 		for (int i = 0; i < 30; i++){
 			sim.opening();
