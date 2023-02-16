@@ -1092,13 +1092,27 @@ public class FNCD {
 		int internQuitChance = ran.nextInt(10) + 1; // if internQuitChance = 1; a intern quits
 		if (mechanicQuitChance == 1) { //mechanic quits
 			departedMStaff.add(mechanicStaff.get(0));
-			mechanicStaff.remove(0);
-			counterM = counterM - 1;
+			Mechanic promotedIntern = new Mechanic("Mechanic0");
+			promotedIntern.setUniqueName(internStaff.get(0).getUniqueName());
+			promotedIntern.setBonusPay(internStaff.get(0).getBonusPay());
+			promotedIntern.setDaysWorked(internStaff.get(0).getDaysWorked());
+			promotedIntern.setNormalPay(internStaff.get(0).getNormalPay());
+			promotedIntern.setSalary(internStaff.get(0).getSalary());
+			mechanicStaff.set(0, promotedIntern);
+			internStaff.remove(0);
+			counterI = counterI - 1;
 		}
 		if (salespersonQuitChance == 1) { //salesperson quits
 			departedSStaff.add(salespersonStaff.get(0));
-			salespersonStaff.remove(0);
-			counterS = counterS - 1;
+			Salesperson promotedIntern = new Salesperson("Salesperson0");
+			promotedIntern.setUniqueName(internStaff.get(0).getUniqueName());
+			promotedIntern.setBonusPay(internStaff.get(0).getBonusPay());
+			promotedIntern.setDaysWorked(internStaff.get(0).getDaysWorked());
+			promotedIntern.setNormalPay(internStaff.get(0).getNormalPay());
+			promotedIntern.setSalary(internStaff.get(0).getSalary());
+			salespersonStaff.set(0, promotedIntern);
+			internStaff.remove(0);
+			counterI = counterI - 1;
 		}
 		if (internQuitChance == 1) { //intern quits
 			departedIStaff.add(internStaff.get(0));
