@@ -211,7 +211,7 @@ public class FNCD {
 							System.out.println(internStaff.get(i).getUniqueName() + " has made " + performanceCarInventory.get(j).getID() 
 							+ " sparkling!($" + performanceCarInventory.get(j).getWashBonus() + " bonus)");
 
-							internStaff.get(i).setBonusPay(performanceCarInventory.get(j).getWashBonus());
+							internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + performanceCarInventory.get(j).getWashBonus());
 							operatingBudget -= performanceCarInventory.get(j).getWashBonus();
 							performanceCarInventory.get(j).setCleanliness("Sparkling");
 							vehiclesWashed += 1;
@@ -232,7 +232,7 @@ public class FNCD {
 							System.out.println(internStaff.get(i).getUniqueName() + " has made " + pickupsInventory.get(j-4).getID() 
 							+ " sparkling!($" + pickupsInventory.get(j-4).getWashBonus() + " bonus)");
 
-							internStaff.get(i).setBonusPay(pickupsInventory.get(j-4).getWashBonus());
+							internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + pickupsInventory.get(j-4).getWashBonus());
 							operatingBudget -= pickupsInventory.get(j-4).getWashBonus();
 							pickupsInventory.get(j-4).setCleanliness("Sparkling");
 							vehiclesWashed += 1;
@@ -253,8 +253,8 @@ public class FNCD {
 							System.out.println(internStaff.get(i).getUniqueName() + " has made " + carsInventory.get(j-8).getID() 
 							+ " sparkling!($" + carsInventory.get(j-8).getWashBonus() + " bonus)");
 
-							internStaff.get(i).setBonusPay(carsInventory.get(j-8).getWashBonus());
-							operatingBudget -= carsInventory.get(j-4).getWashBonus();
+							internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + carsInventory.get(j-8).getWashBonus());
+							operatingBudget -= carsInventory.get(j-8).getWashBonus();
 							carsInventory.get(j-8).setCleanliness("Sparkling");
 							vehiclesWashed += 1;
 						}
@@ -281,7 +281,7 @@ public class FNCD {
 								System.out.println(internStaff.get(i).getUniqueName() + " has made " + performanceCarInventory.get(j).getID() 
 								+ " sparkling!($" + performanceCarInventory.get(j).getWashBonus() + " bonus)");
 
-								internStaff.get(i).setBonusPay(performanceCarInventory.get(j).getWashBonus());
+								internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + performanceCarInventory.get(j).getWashBonus());
 								performanceCarInventory.get(j).setCleanliness("Sparkling");
 								vehiclesWashed += 1;
 							}
@@ -300,7 +300,7 @@ public class FNCD {
 								System.out.println(internStaff.get(i).getUniqueName() + " has made " + pickupsInventory.get(j-4).getID() 
 								+ " sparkling!($" + pickupsInventory.get(j-4).getWashBonus() + " bonus)");
 
-								internStaff.get(i).setBonusPay(pickupsInventory.get(j-4).getWashBonus());
+								internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + pickupsInventory.get(j-4).getWashBonus());
 								pickupsInventory.get(j-4).setCleanliness("Sparkling");
 								vehiclesWashed += 1;
 							}
@@ -318,7 +318,7 @@ public class FNCD {
 								System.out.println(internStaff.get(i).getUniqueName() + " has made " + carsInventory.get(j-8).getID() 
 								+ " sparkling!($" + carsInventory.get(j-8).getWashBonus() + " bonus)");
 
-								internStaff.get(i).setBonusPay(carsInventory.get(j-8).getWashBonus());
+								internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + carsInventory.get(j-8).getWashBonus());
 								carsInventory.get(j-8).setCleanliness("Sparkling");
 								vehiclesWashed += 1;
 							}
@@ -329,7 +329,195 @@ public class FNCD {
 		}
 	}
 	public void repairing() {
-		
+		for (int i = 0; i < 3; i++){
+			int vehiclesFixed = 0;
+
+			for (int j = 0; j < 12; j++){
+				if (vehiclesFixed == 2){
+					break;
+				}
+
+				//
+				if (j < 4){
+					if (performanceCarInventory.get(j).getCondition() == "Broken"){
+						int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+						if (repairRoll <= 80){
+							System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Broken car " + performanceCarInventory.get(j).getID() 
+							+ " and made it Used!($" + performanceCarInventory.get(j).getRepairBonus() + " bonus)");
+
+							performanceCarInventory.get(j).setCondition("Used");
+							mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + performanceCarInventory.get(j).getRepairBonus());
+							
+							if (performanceCarInventory.get(j).getCleanliness() == "Sparkling"){
+								performanceCarInventory.get(j).setCleanliness("Clean");
+							}
+							else if (performanceCarInventory.get(j).getCleanliness() == "Clean"){
+								performanceCarInventory.get(j).setCleanliness("Dirty");
+							}
+						}
+						else {
+							if (performanceCarInventory.get(j).getCleanliness() == "Sparkling"){
+								performanceCarInventory.get(j).setCleanliness("Clean");
+							}
+							else if (performanceCarInventory.get(j).getCleanliness() == "Clean"){
+								performanceCarInventory.get(j).setCleanliness("Dirty");
+							}
+						}
+						vehiclesFixed += 1;
+					}
+				}
+				else if (j >= 4 && j < 8){
+					if (pickupsInventory.get(j-4).getCondition() == "Broken"){
+						int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+						if (repairRoll <= 80){
+							System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Broken car " + pickupsInventory.get(j-4).getID() 
+							+ " and made it Used!($" + pickupsInventory.get(j-4).getRepairBonus() + " bonus)");
+
+							pickupsInventory.get(j-4).setCondition("Used");
+							mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + pickupsInventory.get(j-4).getRepairBonus());
+							
+							if (pickupsInventory.get(j-4).getCleanliness() == "Sparkling"){
+								pickupsInventory.get(j-4).setCleanliness("Clean");
+							}
+							else if (pickupsInventory.get(j-4).getCleanliness() == "Clean"){
+								pickupsInventory.get(j-4).setCleanliness("Dirty");
+							}
+						}
+						else {
+							if (pickupsInventory.get(j-4).getCleanliness() == "Sparkling"){
+								pickupsInventory.get(j-4).setCleanliness("Clean");
+							}
+							else if (pickupsInventory.get(j-4).getCleanliness() == "Clean"){
+								pickupsInventory.get(j-4).setCleanliness("Dirty");
+							}
+						}
+						vehiclesFixed += 1;
+					}
+				}
+				else {
+					if (carsInventory.get(j-8).getCondition() == "Broken"){
+						int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+						if (repairRoll <= 80){
+							System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Broken car " + carsInventory.get(j-8).getID() 
+							+ " and made it Used!($" + carsInventory.get(j-8).getRepairBonus() + " bonus)");
+
+							carsInventory.get(j-8).setCondition("Used");
+							mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + carsInventory.get(j-8).getRepairBonus());
+							
+							if (carsInventory.get(j-8).getCleanliness() == "Sparkling"){
+								carsInventory.get(j-8).setCleanliness("Clean");
+							}
+							else if (carsInventory.get(j-8).getCleanliness() == "Clean"){
+								carsInventory.get(j-8).setCleanliness("Dirty");
+							}
+						}
+						else {
+							if (carsInventory.get(j-8).getCleanliness() == "Sparkling"){
+								carsInventory.get(j-8).setCleanliness("Clean");
+							}
+							else if (carsInventory.get(j-8).getCleanliness() == "Clean"){
+								carsInventory.get(j-8).setCleanliness("Dirty");
+							}
+						}
+						vehiclesFixed += 1;
+					}
+				}
+			}
+			if (vehiclesFixed < 2){
+				for (int j = 0; j < 12; j++){
+					if (j < 4){
+						if (performanceCarInventory.get(j).getCondition() == "Used"){
+							int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+	
+							if (repairRoll <= 80){
+								System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Used car " + performanceCarInventory.get(j).getID() 
+								+ " and made it Like New!($" + performanceCarInventory.get(j).getRepairBonus() + " bonus)");
+	
+								performanceCarInventory.get(j).setCondition("Like New");
+								mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + performanceCarInventory.get(j).getRepairBonus());
+								
+								if (performanceCarInventory.get(j).getCleanliness() == "Sparkling"){
+									performanceCarInventory.get(j).setCleanliness("Clean");
+								}
+								else if (performanceCarInventory.get(j).getCleanliness() == "Clean"){
+									performanceCarInventory.get(j).setCleanliness("Dirty");
+								}
+							}
+							else {
+								if (performanceCarInventory.get(j).getCleanliness() == "Sparkling"){
+									performanceCarInventory.get(j).setCleanliness("Clean");
+								}
+								else if (performanceCarInventory.get(j).getCleanliness() == "Clean"){
+									performanceCarInventory.get(j).setCleanliness("Dirty");
+								}
+							}
+							vehiclesFixed += 1;
+						}
+					}
+					else if (j >= 4 && j < 8){
+						if (pickupsInventory.get(j-4).getCondition() == "Used"){
+							int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+	
+							if (repairRoll <= 80){
+								System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Used car " + pickupsInventory.get(j-4).getID() 
+								+ " and made it Like New!($" + pickupsInventory.get(j-4).getRepairBonus() + " bonus)");
+	
+								pickupsInventory.get(j-4).setCondition("Like New");
+								mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + pickupsInventory.get(j-4).getRepairBonus());
+								
+								if (pickupsInventory.get(j-4).getCleanliness() == "Sparkling"){
+									pickupsInventory.get(j-4).setCleanliness("Clean");
+								}
+								else if (pickupsInventory.get(j-4).getCleanliness() == "Clean"){
+									pickupsInventory.get(j-4).setCleanliness("Dirty");
+								}
+							}
+							else {
+								if (pickupsInventory.get(j-4).getCleanliness() == "Sparkling"){
+									pickupsInventory.get(j-4).setCleanliness("Clean");
+								}
+								else if (pickupsInventory.get(j-4).getCleanliness() == "Clean"){
+									pickupsInventory.get(j-4).setCleanliness("Dirty");
+								}
+							}
+							vehiclesFixed += 1;
+						}
+					}
+					else {
+						if (carsInventory.get(j-8).getCondition() == "Used"){
+							int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+	
+							if (repairRoll <= 80){
+								System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Used car " + carsInventory.get(j-8).getID() 
+								+ " and made it Like New!($" + carsInventory.get(j-8).getRepairBonus() + " bonus)");
+	
+								carsInventory.get(j-8).setCondition("Like New");
+								mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + carsInventory.get(j-8).getRepairBonus());
+								
+								if (carsInventory.get(j-8).getCleanliness() == "Sparkling"){
+									carsInventory.get(j-8).setCleanliness("Clean");
+								}
+								else if (carsInventory.get(j-8).getCleanliness() == "Clean"){
+									carsInventory.get(j-8).setCleanliness("Dirty");
+								}
+							}
+							else {
+								if (carsInventory.get(j-8).getCleanliness() == "Sparkling"){
+									carsInventory.get(j-8).setCleanliness("Clean");
+								}
+								else if (carsInventory.get(j-8).getCleanliness() == "Clean"){
+									carsInventory.get(j-8).setCleanliness("Dirty");
+								}
+							}
+							vehiclesFixed += 1;
+						}
+					}
+				}
+			}
+		}
 	}
 	public void selling() {
 		
@@ -440,8 +628,7 @@ public class FNCD {
 		FNCD sim = new FNCD();
 
 		sim.opening();
-		sim.opening();
-		sim.ending();
+		sim.repairing();
 		/* 
 		FNCD simulation = new FNCD();
 		simulation.setOperatingBudget(500000); //Starting off budget at 500k
