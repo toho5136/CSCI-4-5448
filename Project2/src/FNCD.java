@@ -17,7 +17,6 @@ public class FNCD {
 	private ArrayList<Mechanic> departedMStaff = new ArrayList<>();
 	private ArrayList<Salesperson> departedSStaff = new ArrayList<>();
 	private ArrayList<Intern> departedIStaff = new ArrayList<>();
-	private ArrayList<PerformanceCars> outPerformanceCarInventory = new ArrayList<>();
 	private int perfID = 0;
 	private int carID = 0;
 	private int pickupID = 0;
@@ -119,7 +118,7 @@ public class FNCD {
 				this.addCar(car);
 				carID += 1;
 			}
-			this.setOperatingBudget(250000);
+			this.setOperatingBudget(500000);
 			System.out.println("opened");
 		}
 		else {
