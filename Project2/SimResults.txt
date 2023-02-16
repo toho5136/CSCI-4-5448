@@ -1,0 +1,1027 @@
+Day: 1
+opened
+Intern0 has made PerformanceCar1 sparkling!($25.0 bonus)
+Intern0 has made PerformanceCar2 clean!
+Intern1 has made Pickup0 clean!
+Intern1 has made Pickup2 clean!
+Intern2 has made Car0 clean!
+Intern2 has made Car1 clean!
+Mechanic0 has repaired Broken car PerformanceCar1 and made it Used!($100.0 bonus)
+Mechanic0 has repaired Broken car PerformanceCar2 and made it Used!($100.0 bonus)
+Mechanic1 has repaired Broken car Pickup0 and made it Used!($75.0 bonus)
+Mechanic1 has repaired Broken car Car2 and made it Used!($50.0 bonus)
+Mechanic2 has repaired Broken car Car3 and made it Used!($50.0 bonus)
+Mechanic2 has repaired Used car PerformanceCar2 and made it Like New!($100.0 bonus)
+Mechanic2 has repaired Used car Pickup2 and made it Like New!($75.0 bonus)
+Mechanic2 has repaired Used car Car0 and made it Like New!($50.0 bonus)
+Mechanic2 has repaired Used car Car2 and made it Like New!($50.0 bonus)
+Mechanic2 has repaired Used car Car3 and made it Like New!($50.0 bonus)
+Salesperson1 sold Clean Like New Pickup3 to Buyer for $73899.31019710482 (earned $700.0 bonus)
+Salesperson1 sold Clean Like New PerformanceCar3 to Buyer for $72512.94313470574 (earned $1000.0 bonus)
+Staff Members: 
+      Mechanic0              1           20.5          200.0        Working
+      Mechanic1              1           20.5          125.0        Working
+      Mechanic2              1           20.5          375.0        Working
+   Salesperson0              1           22.5            0.0        Working
+   Salesperson1              1           22.5         1700.0        Working
+   Salesperson2              1           22.5            0.0        Working
+        Intern0              1           10.5           25.0        Working
+        Intern1              1           10.5            0.0        Working
+        Intern2              1           10.5            0.0        Working
+Vehicle Inventory:
+PerformanceCar0      $27630.51      $55261.03       Like New          Clean       In Stock
+PerformanceCar1      $17012.14      $34024.28           Used          Dirty       In Stock
+PerformanceCar2      $17974.04      $35948.07       Like New          Dirty       In Stock
+           Car0      $12131.92      $24263.85       Like New          Dirty       In Stock
+           Car1      $13458.66      $26917.33       Like New          Clean       In Stock
+           Car2       $8397.58      $16795.16       Like New          Dirty       In Stock
+           Car3       $6469.10      $12938.19       Like New          Dirty       In Stock
+        Pickup0       $9534.02      $19068.03           Used          Dirty       In Stock
+        Pickup1      $24351.46      $48702.92       Like New          Clean       In Stock
+        Pickup2      $12147.69      $24295.37       Like New          Dirty       In Stock
+Total Budget and Sales:
+     $646387.25     $146412.25
+Day: 2
+Buying car: PerformanceCar4
+Buying car:Pickup4
+Intern0 has made PerformanceCar1 clean!
+Intern0 has made PerformanceCar2 clean!
+Intern1 has made PerformanceCar4 clean!
+Intern1 has made Pickup0 clean!
+Intern2 has made Pickup2 clean!
+Intern2 has made Pickup4 clean!
+Mechanic0 has repaired Used car PerformanceCar1 and made it Like New!($100.0 bonus)
+Mechanic0 has repaired Used car PerformanceCar4 and made it Like New!($100.0 bonus)
+Mechanic0 has repaired Used car Pickup0 and made it Like New!($75.0 bonus)
+Mechanic0 has repaired Used car Pickup4 and made it Like New!($75.0 bonus)
+Salesperson0 sold Clean Like New Car1 to Buyer for $26917.329996790977 (earned $500.0 bonus)
+Salesperson0 sold Dirty Like New Car0 to Buyer for $24263.845840269794 (earned $500.0 bonus)
+Salesperson0 sold Clean Like New Pickup1 to Buyer for $48702.92184452837 (earned $700.0 bonus)
+Staff Members: 
+      Mechanic0              2           41.0          550.0        Working
+      Mechanic1              2           41.0          125.0        Working
+      Mechanic2              2           41.0          375.0        Working
+   Salesperson0              2           45.0         1700.0        Working
+   Salesperson1              2           45.0         1700.0        Working
+   Salesperson2              2           45.0            0.0        Working
+        Intern0              2           21.0           25.0        Working
+        Intern1              2           21.0            0.0        Working
+        Intern2              2           21.0            0.0        Working
+Vehicle Inventory:
+PerformanceCar0      $27630.51      $55261.03       Like New          Clean       In Stock
+PerformanceCar1      $17012.14      $34024.28       Like New          Dirty       In Stock
+PerformanceCar2      $17974.04      $35948.07       Like New          Clean       In Stock
+PerformanceCar4      $17471.06      $34942.12       Like New          Dirty       In Stock
+           Car2       $8397.58      $16795.16       Like New          Dirty       In Stock
+           Car3       $6469.10      $12938.19       Like New          Dirty       In Stock
+        Pickup0       $9534.02      $19068.03       Like New          Dirty       In Stock
+        Pickup2      $12147.69      $24295.37       Like New          Clean       In Stock
+        Pickup4      $14854.29      $29708.58       Like New          Dirty       In Stock
+Total Budget and Sales:
+     $713946.00     $246296.35
+Day: 3
+Buying car:Pickup5
+Buying car:Car4
+Buying car:Car5
+Intern0 has made PerformanceCar1 clean!
+Intern0 has made PerformanceCar4 clean!
+Intern1 has made Pickup4 sparkling!($15.0 bonus)
+Intern1 has made Pickup5 clean!
+Intern2 has made Pickup0 clean!
+Intern2 has made Car2 clean!
+Salesperson2 sold Sparkling Like New Pickup4 to Buyer for $29708.58396571468 (earned $700.0 bonus)
+Salesperson0 sold Clean Like New Car5 to Buyer for $21740.330477786916 (earned $500.0 bonus)
+Salesperson1 sold Sparkling Like New Car4 to Buyer for $20805.358491836192 (earned $500.0 bonus)
+Staff Members: 
+      Mechanic0              3           61.5          550.0        Working
+      Mechanic1              3           61.5          125.0        Working
+      Mechanic2              3           61.5          375.0        Working
+   Salesperson0              3           67.5         2200.0        Working
+   Salesperson1              3           67.5         2200.0        Working
+   Salesperson2              3           67.5          700.0        Working
+        Intern0              3           31.5           25.0        Working
+        Intern1              3           31.5           15.0        Working
+        Intern2              3           31.5            0.0        Working
+Vehicle Inventory:
+PerformanceCar0      $27630.51      $55261.03       Like New          Clean       In Stock
+PerformanceCar1      $17012.14      $34024.28       Like New          Clean       In Stock
+PerformanceCar2      $17974.04      $35948.07       Like New          Clean       In Stock
+PerformanceCar4      $17471.06      $34942.12       Like New          Clean       In Stock
+           Car2       $8397.58      $16795.16       Like New          Clean       In Stock
+           Car3       $6469.10      $12938.19       Like New          Dirty       In Stock
+        Pickup0       $9534.02      $19068.03       Like New          Clean       In Stock
+        Pickup2      $12147.69      $24295.37       Like New          Clean       In Stock
+        Pickup5      $12327.94      $24655.87       Like New          Clean       In Stock
+Total Budget and Sales:
+     $752584.49     $318550.62
+Day: 4
+Buying car:Pickup6
+Buying car:Car6
+Buying car:Car7
+Intern0 has made Pickup6 clean!
+Intern0 has made Car6 sparkling!($10.0 bonus)
+Intern1 has made Car3 clean!
+Intern1 has made Pickup2 sparkling!($15.0 bonus)
+Intern2 has made PerformanceCar0 sparkling!($25.0 bonus)
+Intern2 has made Car2 sparkling!($10.0 bonus)
+Mechanic0 has repaired Broken car Car6 and made it Used!($50.0 bonus)
+Mechanic0 has repaired Used car Car6 and made it Like New!($50.0 bonus)
+Mechanic1 has repaired Used car Car7 and made it Like New!($50.0 bonus)
+Salesperson0 sold Sparkling Like New Car2 to Buyer for $16795.16423670506 (earned $500.0 bonus)
+Staff Members: 
+      Mechanic0              4           82.0          650.0        Working
+      Mechanic1              4           82.0          175.0        Working
+      Mechanic2              4           82.0          375.0        Working
+   Salesperson0              4           90.0         2700.0        Working
+   Salesperson1              4           90.0         2200.0        Working
+   Salesperson2              4           90.0          700.0        Working
+        Intern0              4           42.0           35.0        Working
+        Intern1              4           42.0           30.0        Working
+        Intern2              4           42.0           35.0        Working
+Vehicle Inventory:
+PerformanceCar0      $27630.51      $55261.03       Like New      Sparkling       In Stock
+PerformanceCar1      $17012.14      $34024.28       Like New          Clean       In Stock
+PerformanceCar2      $17974.04      $35948.07       Like New          Clean       In Stock
+PerformanceCar4      $17471.06      $34942.12       Like New          Clean       In Stock
+           Car3       $6469.10      $12938.19       Like New          Clean       In Stock
+           Car6       $7911.76      $15823.52       Like New          Dirty       In Stock
+           Car7       $8111.94      $16223.89       Like New          Dirty       In Stock
+        Pickup0       $9534.02      $19068.03       Like New          Clean       In Stock
+        Pickup2      $12147.69      $24295.37       Like New      Sparkling       In Stock
+        Pickup5      $12327.94      $24655.87       Like New          Clean       In Stock
+        Pickup6      $39064.92      $78129.84       Like New          Clean       In Stock
+Total Budget and Sales:
+     $714281.03     $335345.79
+Day: 5
+Buying car:Car8
+Intern0 has made Car6 clean!
+Intern0 has made Car7 clean!
+Intern1 has made PerformanceCar1 sparkling!($25.0 bonus)
+Intern1 has made Pickup0 sparkling!($15.0 bonus)
+Intern2 has made Car7 sparkling!($10.0 bonus)
+Mechanic0 has repaired Used car Car8 and made it Like New!($50.0 bonus)
+Salesperson0 sold Sparkling Like New PerformanceCar0 to Buyer for $55261.02611520868 (earned $1000.0 bonus)
+Staff Members: 
+      Mechanic0              5          102.5          700.0        Working
+      Mechanic1              5          102.5          175.0        Working
+      Mechanic2              5          102.5          375.0        Working
+        Intern0              5           52.5           35.0        Working
+   Salesperson1              5          112.5         2200.0        Working
+   Salesperson2              5          112.5          700.0        Working
+        Intern1              5           52.5           70.0        Working
+        Intern2              5           52.5           45.0        Working
+   Salesperson0              5          112.5         3700.0           Quit
+Vehicle Inventory:
+PerformanceCar1      $17012.14      $34024.28       Like New      Sparkling       In Stock
+PerformanceCar2      $17974.04      $35948.07       Like New          Clean       In Stock
+PerformanceCar4      $17471.06      $34942.12       Like New          Clean       In Stock
+           Car3       $6469.10      $12938.19       Like New          Clean       In Stock
+           Car6       $7911.76      $15823.52       Like New          Clean       In Stock
+           Car7       $8111.94      $16223.89       Like New      Sparkling       In Stock
+           Car8      $10790.62      $21581.24       Like New          Clean       In Stock
+        Pickup0       $9534.02      $19068.03       Like New      Sparkling       In Stock
+        Pickup2      $12147.69      $24295.37       Like New      Sparkling       In Stock
+        Pickup5      $12327.94      $24655.87       Like New          Clean       In Stock
+        Pickup6      $39064.92      $78129.84       Like New          Clean       In Stock
+Total Budget and Sales:
+     $758751.44     $390606.81
+Day: 6
+Hiring intern Intern3
+Buying car: PerformanceCar5
+Intern1 has made PerformanceCar4 sparkling!($25.0 bonus)
+Intern1 has made Car3 sparkling!($10.0 bonus)
+Intern2 has made PerformanceCar5 clean!
+Intern2 has made PerformanceCar5 sparkling!($25.0 bonus)
+Intern3 has made PerformanceCar2 sparkling!($25.0 bonus)
+Intern0 sold Sparkling Like New PerformanceCar5 to Buyer for $71007.71466131347 (earned $1000.0 bonus)
+Salesperson1 sold Sparkling Like New PerformanceCar2 to Buyer for $35948.07256453173 (earned $1000.0 bonus)
+Staff Members: 
+      Mechanic0              6          123.0          700.0        Working
+      Mechanic1              6          123.0          175.0        Working
+      Mechanic2              6          123.0          375.0        Working
+        Intern0              6           75.0         1035.0        Working
+   Salesperson1              6          135.0         3200.0        Working
+   Salesperson2              6          135.0          700.0        Working
+        Intern1              6           63.0          105.0        Working
+        Intern2              6           63.0           70.0        Working
+        Intern3              1           10.5           25.0        Working
+Vehicle Inventory:
+PerformanceCar1      $17012.14      $34024.28       Like New      Sparkling       In Stock
+PerformanceCar4      $17471.06      $34942.12       Like New      Sparkling       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New          Clean       In Stock
+           Car7       $8111.94      $16223.89       Like New      Sparkling       In Stock
+           Car8      $10790.62      $21581.24       Like New          Clean       In Stock
+        Pickup0       $9534.02      $19068.03       Like New      Sparkling       In Stock
+        Pickup2      $12147.69      $24295.37       Like New      Sparkling       In Stock
+        Pickup5      $12327.94      $24655.87       Like New          Clean       In Stock
+        Pickup6      $39064.92      $78129.84       Like New          Clean       In Stock
+Total Budget and Sales:
+     $830203.37     $497562.60
+Day: 7
+Buying car: PerformanceCar6
+Buying car: PerformanceCar7
+Intern1 has made PerformanceCar6 clean!
+Intern1 has made PerformanceCar7 clean!
+Intern2 has made PerformanceCar6 sparkling!($25.0 bonus)
+Intern2 has made Pickup6 sparkling!($15.0 bonus)
+Intern3 has made PerformanceCar7 sparkling!($25.0 bonus)
+Intern3 has made Pickup5 sparkling!($15.0 bonus)
+Salesperson2 sold Clean Like New Car8 to Buyer for $21581.242698641967 (earned $500.0 bonus)
+Salesperson1 sold Sparkling Like New PerformanceCar7 to Buyer for $78225.23248181879 (earned $1000.0 bonus)
+Staff Members: 
+      Mechanic0              7          143.5          700.0        Working
+      Mechanic1              7          143.5          175.0        Working
+      Mechanic2              7          143.5          375.0        Working
+        Intern0              7           97.5         1035.0        Working
+   Salesperson1              7          157.5         4200.0        Working
+   Salesperson2              7          157.5         1200.0        Working
+        Intern1              7           73.5          105.0        Working
+        Intern2              7           73.5          110.0        Working
+        Intern3              2           21.0           65.0        Working
+Vehicle Inventory:
+PerformanceCar1      $17012.14      $34024.28       Like New      Sparkling       In Stock
+PerformanceCar4      $17471.06      $34942.12       Like New      Sparkling       In Stock
+PerformanceCar6      $24130.82      $48261.63       Like New      Sparkling       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New          Clean       In Stock
+           Car7       $8111.94      $16223.89       Like New      Sparkling       In Stock
+        Pickup0       $9534.02      $19068.03       Like New      Sparkling       In Stock
+        Pickup2      $12147.69      $24295.37       Like New      Sparkling       In Stock
+        Pickup5      $12327.94      $24655.87       Like New      Sparkling       In Stock
+        Pickup6      $39064.92      $78129.84       Like New      Sparkling       In Stock
+Total Budget and Sales:
+     $866766.41     $597369.08
+Day: 8
+Buying car: PerformanceCar8
+Buying car:Car9
+Intern1 has made Car6 sparkling!($10.0 bonus)
+Intern1 has made Car9 dirty!
+Intern2 has made Car9 clean!
+Intern2 has made PerformanceCar8 sparkling!($25.0 bonus)
+Intern3 has made Car9 sparkling!($10.0 bonus)
+Mechanic0 has repaired Broken car PerformanceCar8 and made it Used!($100.0 bonus)
+Mechanic0 has repaired Broken car Car9 and made it Used!($50.0 bonus)
+Mechanic1 has repaired Used car PerformanceCar8 and made it Like New!($100.0 bonus)
+Mechanic1 has repaired Used car Car9 and made it Like New!($50.0 bonus)
+Staff Members: 
+      Mechanic0              8          164.0          850.0        Working
+      Mechanic1              8          164.0          325.0        Working
+      Mechanic2              8          164.0          375.0        Working
+        Intern0              8          120.0         1035.0        Working
+   Salesperson1              8          180.0         4200.0        Working
+   Salesperson2              8          180.0         1200.0        Working
+        Intern1              8           84.0          115.0        Working
+        Intern2              8           84.0          135.0        Working
+        Intern3              3           31.5           75.0        Working
+Vehicle Inventory:
+PerformanceCar1      $17012.14      $34024.28       Like New      Sparkling       In Stock
+PerformanceCar4      $17471.06      $34942.12       Like New      Sparkling       In Stock
+PerformanceCar6      $24130.82      $48261.63       Like New      Sparkling       In Stock
+PerformanceCar8      $19892.05      $39784.09       Like New          Dirty       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New      Sparkling       In Stock
+           Car7       $8111.94      $16223.89       Like New      Sparkling       In Stock
+           Car9       $9413.75      $18827.50       Like New          Dirty       In Stock
+        Pickup0       $9534.02      $19068.03       Like New      Sparkling       In Stock
+        Pickup2      $12147.69      $24295.37       Like New      Sparkling       In Stock
+        Pickup5      $12327.94      $24655.87       Like New      Sparkling       In Stock
+        Pickup6      $39064.92      $78129.84       Like New      Sparkling       In Stock
+Total Budget and Sales:
+     $837460.61     $597369.08
+Day: 9
+Intern1 has made Car9 clean!
+Intern2 has made Car9 sparkling!($10.0 bonus)
+Intern3 has made PerformanceCar8 sparkling!($25.0 bonus)
+Salesperson2 sold Sparkling Like New Pickup6 to Buyer for $78129.8426836848 (earned $700.0 bonus)
+Staff Members: 
+        Intern1              9           94.5          115.0        Working
+      Mechanic1              9          184.5          325.0        Working
+      Mechanic2              9          184.5          375.0        Working
+        Intern0              9          142.5         1035.0        Working
+   Salesperson1              9          202.5         4200.0        Working
+   Salesperson2              9          202.5         1900.0        Working
+        Intern2              9           94.5          145.0        Working
+        Intern3              4           42.0          100.0        Working
+      Mechanic0              9          184.5          850.0           Quit
+Vehicle Inventory:
+PerformanceCar1      $17012.14      $34024.28       Like New      Sparkling       In Stock
+PerformanceCar4      $17471.06      $34942.12       Like New      Sparkling       In Stock
+PerformanceCar6      $24130.82      $48261.63       Like New      Sparkling       In Stock
+PerformanceCar8      $19892.05      $39784.09       Like New      Sparkling       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New      Sparkling       In Stock
+           Car7       $8111.94      $16223.89       Like New      Sparkling       In Stock
+           Car9       $9413.75      $18827.50       Like New      Sparkling       In Stock
+        Pickup0       $9534.02      $19068.03       Like New      Sparkling       In Stock
+        Pickup2      $12147.69      $24295.37       Like New      Sparkling       In Stock
+        Pickup5      $12327.94      $24655.87       Like New      Sparkling       In Stock
+Total Budget and Sales:
+     $915565.46     $675498.92
+Day: 10
+Hiring intern Intern4
+Buying car:Pickup7
+Intern1 has repaired Broken car Pickup7 and made it Used!($75.0 bonus)
+Intern1 has repaired Used car Pickup7 and made it Like New!($75.0 bonus)
+Staff Members: 
+        Intern1             10          115.0          265.0        Working
+      Mechanic1             10          205.0          325.0        Working
+      Mechanic2             10          205.0          375.0        Working
+        Intern0             10          165.0         1035.0        Working
+   Salesperson1             10          225.0         4200.0        Working
+   Salesperson2             10          225.0         1900.0        Working
+        Intern2             10          105.0          145.0        Working
+        Intern3              5           52.5          100.0        Working
+        Intern4              1           10.5            0.0        Working
+Vehicle Inventory:
+PerformanceCar1      $17012.14      $34024.28       Like New      Sparkling       In Stock
+PerformanceCar4      $17471.06      $34942.12       Like New      Sparkling       In Stock
+PerformanceCar6      $24130.82      $48261.63       Like New      Sparkling       In Stock
+PerformanceCar8      $19892.05      $39784.09       Like New      Sparkling       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New      Sparkling       In Stock
+           Car7       $8111.94      $16223.89       Like New      Sparkling       In Stock
+           Car9       $9413.75      $18827.50       Like New      Sparkling       In Stock
+        Pickup0       $9534.02      $19068.03       Like New      Sparkling       In Stock
+        Pickup2      $12147.69      $24295.37       Like New      Sparkling       In Stock
+        Pickup5      $12327.94      $24655.87       Like New      Sparkling       In Stock
+        Pickup7       $6691.51      $13383.02       Like New          Dirty       In Stock
+Total Budget and Sales:
+     $908873.95     $675498.92
+Day: 11
+Intern2 has made Pickup7 clean!
+Intern2 has made Pickup7 sparkling!($15.0 bonus)
+Salesperson2 sold Sparkling Like New PerformanceCar6 to Buyer for $48261.63230109727 (earned $1000.0 bonus)
+Salesperson1 sold Sparkling Like New PerformanceCar8 to Buyer for $39784.0915875393 (earned $1000.0 bonus)
+Staff Members: 
+        Intern1             11          135.5          265.0        Working
+      Mechanic1             11          225.5          325.0        Working
+      Mechanic2             11          225.5          375.0        Working
+        Intern0             11          187.5         1035.0        Working
+   Salesperson1             11          247.5         5200.0        Working
+   Salesperson2             11          247.5         2900.0        Working
+        Intern2             11          115.5          160.0        Working
+        Intern3              6           63.0          100.0        Working
+        Intern4              2           21.0            0.0        Working
+Vehicle Inventory:
+PerformanceCar1      $17012.14      $34024.28       Like New      Sparkling       In Stock
+PerformanceCar4      $17471.06      $34942.12       Like New      Sparkling       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New      Sparkling       In Stock
+           Car7       $8111.94      $16223.89       Like New      Sparkling       In Stock
+           Car9       $9413.75      $18827.50       Like New      Sparkling       In Stock
+        Pickup0       $9534.02      $19068.03       Like New      Sparkling       In Stock
+        Pickup2      $12147.69      $24295.37       Like New      Sparkling       In Stock
+        Pickup5      $12327.94      $24655.87       Like New      Sparkling       In Stock
+        Pickup7       $6691.51      $13383.02       Like New      Sparkling       In Stock
+Total Budget and Sales:
+     $996919.67     $763544.64
+Day: 12
+Buying car: PerformanceCar9
+Buying car: PerformanceCar10
+Intern2 has made PerformanceCar9 clean!
+Intern3 has made PerformanceCar9 sparkling!($25.0 bonus)
+Intern1 has repaired Broken car PerformanceCar9 and made it Used!($100.0 bonus)
+Mechanic2 has repaired Broken car PerformanceCar10 and made it Used!($100.0 bonus)
+Mechanic2 has repaired Used car PerformanceCar9 and made it Like New!($100.0 bonus)
+Mechanic2 has repaired Used car PerformanceCar10 and made it Like New!($100.0 bonus)
+Salesperson2 sold Sparkling Like New Car9 to Buyer for $18827.502757571237 (earned $500.0 bonus)
+Salesperson2 sold Sparkling Like New Car7 to Buyer for $16223.885216300283 (earned $500.0 bonus)
+Staff Members: 
+        Intern2             12          126.0          160.0        Working
+      Mechanic1             12          246.0          325.0        Working
+      Mechanic2             12          246.0          675.0        Working
+        Intern0             12          210.0         1035.0        Working
+   Salesperson1             12          270.0         5200.0        Working
+   Salesperson2             12          270.0         3900.0        Working
+        Intern3              7           73.5          125.0        Working
+        Intern4              3           31.5            0.0        Working
+        Intern1             12          156.0          365.0           Quit
+Vehicle Inventory:
+PerformanceCar1      $17012.14      $34024.28       Like New      Sparkling       In Stock
+PerformanceCar4      $17471.06      $34942.12       Like New      Sparkling       In Stock
+PerformanceCar9      $10510.48      $21020.96       Like New          Dirty       In Stock
+PerformanceCar10      $16697.76      $33395.53       Like New          Dirty       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New      Sparkling       In Stock
+        Pickup0       $9534.02      $19068.03       Like New      Sparkling       In Stock
+        Pickup2      $12147.69      $24295.37       Like New      Sparkling       In Stock
+        Pickup5      $12327.94      $24655.87       Like New      Sparkling       In Stock
+        Pickup7       $6691.51      $13383.02       Like New      Sparkling       In Stock
+Total Budget and Sales:
+    $1004762.81     $798596.03
+Day: 13
+Hiring intern Intern5
+Buying car:Car10
+Buying car:Car11
+Intern3 has made PerformanceCar9 clean!
+Intern3 has made PerformanceCar10 clean!
+Intern4 has made Car10 clean!
+Intern4 has made Car11 clean!
+Intern2 has repaired Broken car Car10 and made it Used!($50.0 bonus)
+Intern2 has repaired Used car Car10 and made it Like New!($50.0 bonus)
+Intern0 sold Sparkling Like New PerformanceCar4 to Buyer for $34942.11710751685 (earned $1000.0 bonus)
+Staff Members: 
+        Intern2             13          146.5          260.0        Working
+      Mechanic1             13          266.5          325.0        Working
+      Mechanic2             13          266.5          675.0        Working
+        Intern0             13          232.5         2035.0        Working
+   Salesperson1             13          292.5         5200.0        Working
+   Salesperson2             13          292.5         3900.0        Working
+        Intern3              8           84.0          125.0        Working
+        Intern4              4           42.0            0.0        Working
+        Intern5              1           10.5            0.0        Working
+Vehicle Inventory:
+PerformanceCar1      $17012.14      $34024.28       Like New      Sparkling       In Stock
+PerformanceCar9      $10510.48      $21020.96       Like New          Clean       In Stock
+PerformanceCar10      $16697.76      $33395.53       Like New          Clean       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New      Sparkling       In Stock
+          Car10       $9818.45      $19636.90       Like New          Dirty       In Stock
+          Car11      $10850.40      $21700.79       Like New          Clean       In Stock
+        Pickup0       $9534.02      $19068.03       Like New      Sparkling       In Stock
+        Pickup2      $12147.69      $24295.37       Like New      Sparkling       In Stock
+        Pickup5      $12327.94      $24655.87       Like New      Sparkling       In Stock
+        Pickup7       $6691.51      $13383.02       Like New      Sparkling       In Stock
+Total Budget and Sales:
+    $1019036.08     $833538.15
+Day: 14
+Buying car: PerformanceCar11
+Intern3 has made Car10 sparkling!($10.0 bonus)
+Intern3 has made PerformanceCar9 dirty!
+Intern4 has made PerformanceCar9 sparkling!($25.0 bonus)
+Intern5 has made PerformanceCar11 sparkling!($25.0 bonus)
+Mechanic1 has repaired Used car PerformanceCar11 and made it Like New!($100.0 bonus)
+Intern0 sold Clean Like New Car11 to Buyer for $21700.791649794 (earned $500.0 bonus)
+Salesperson1 sold Dirty Like New PerformanceCar11 to Buyer for $46867.09601120778 (earned $1000.0 bonus)
+Staff Members: 
+        Intern2             14          167.0          260.0        Working
+      Mechanic1             14          287.0          425.0        Working
+      Mechanic2             14          287.0          675.0        Working
+        Intern3              9           94.5          135.0        Working
+   Salesperson1             14          315.0         6200.0        Working
+   Salesperson2             14          315.0         3900.0        Working
+        Intern4              5           52.5           25.0        Working
+        Intern5              2           21.0           25.0        Working
+        Intern0             14          255.0         2535.0           Quit
+Vehicle Inventory:
+PerformanceCar1      $17012.14      $34024.28       Like New      Sparkling       In Stock
+PerformanceCar9      $10510.48      $21020.96       Like New      Sparkling       In Stock
+PerformanceCar10      $16697.76      $33395.53       Like New          Clean       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New      Sparkling       In Stock
+          Car10       $9818.45      $19636.90       Like New      Sparkling       In Stock
+        Pickup0       $9534.02      $19068.03       Like New      Sparkling       In Stock
+        Pickup2      $12147.69      $24295.37       Like New      Sparkling       In Stock
+        Pickup5      $12327.94      $24655.87       Like New      Sparkling       In Stock
+        Pickup7       $6691.51      $13383.02       Like New      Sparkling       In Stock
+Total Budget and Sales:
+    $1064135.42     $902106.04
+Day: 15
+Hiring intern Intern6
+Buying car: PerformanceCar12
+Buying car:Car12
+Intern4 has made Car12 clean!
+Intern5 has made PerformanceCar10 sparkling!($25.0 bonus)
+Intern2 has repaired Broken car PerformanceCar12 and made it Used!($100.0 bonus)
+Intern2 has repaired Used car PerformanceCar12 and made it Like New!($100.0 bonus)
+Salesperson1 sold Sparkling Like New PerformanceCar1 to Buyer for $34024.283744355766 (earned $1000.0 bonus)
+Staff Members: 
+        Intern2             15          187.5          460.0        Working
+      Mechanic1             15          307.5          425.0        Working
+      Mechanic2             15          307.5          675.0        Working
+        Intern3             10          117.0          135.0        Working
+   Salesperson1             15          337.5         7200.0        Working
+   Salesperson2             15          337.5         3900.0        Working
+        Intern4              6           63.0           25.0        Working
+        Intern5              3           31.5           50.0        Working
+        Intern6              1           10.5            0.0        Working
+Vehicle Inventory:
+PerformanceCar9      $10510.48      $21020.96       Like New      Sparkling       In Stock
+PerformanceCar10      $16697.76      $33395.53       Like New      Sparkling       In Stock
+PerformanceCar12      $10876.58      $21753.15       Like New          Dirty       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New      Sparkling       In Stock
+          Car10       $9818.45      $19636.90       Like New      Sparkling       In Stock
+          Car12      $13845.70      $27691.40       Like New          Clean       In Stock
+        Pickup0       $9534.02      $19068.03       Like New      Sparkling       In Stock
+        Pickup2      $12147.69      $24295.37       Like New      Sparkling       In Stock
+        Pickup5      $12327.94      $24655.87       Like New      Sparkling       In Stock
+        Pickup7       $6691.51      $13383.02       Like New      Sparkling       In Stock
+Total Budget and Sales:
+    $1073437.43     $936130.32
+Day: 16
+Buying car: PerformanceCar13
+Intern4 has made PerformanceCar12 clean!
+Intern4 has made PerformanceCar13 clean!
+Intern6 has made PerformanceCar12 sparkling!($25.0 bonus)
+Intern6 has made PerformanceCar13 sparkling!($25.0 bonus)
+Intern2 has repaired Broken car PerformanceCar13 and made it Used!($100.0 bonus)
+Intern2 has repaired Used car PerformanceCar13 and made it Like New!($100.0 bonus)
+Salesperson2 sold Sparkling Like New Pickup5 to Buyer for $24655.874436071364 (earned $700.0 bonus)
+Staff Members: 
+        Intern2             16          208.0          660.0        Working
+      Mechanic1             16          328.0          425.0        Working
+      Mechanic2             16          328.0          675.0        Working
+        Intern3             11          139.5          135.0        Working
+   Salesperson1             16          360.0         7200.0        Working
+   Salesperson2             16          360.0         4600.0        Working
+        Intern4              7           73.5           25.0        Working
+        Intern5              4           42.0           50.0        Working
+        Intern6              2           21.0           50.0        Working
+Vehicle Inventory:
+PerformanceCar9      $10510.48      $21020.96       Like New      Sparkling       In Stock
+PerformanceCar10      $16697.76      $33395.53       Like New      Sparkling       In Stock
+PerformanceCar12      $10876.58      $21753.15       Like New      Sparkling       In Stock
+PerformanceCar13      $14222.58      $28445.17       Like New          Dirty       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New      Sparkling       In Stock
+          Car10       $9818.45      $19636.90       Like New      Sparkling       In Stock
+          Car12      $13845.70      $27691.40       Like New          Clean       In Stock
+        Pickup0       $9534.02      $19068.03       Like New      Sparkling       In Stock
+        Pickup2      $12147.69      $24295.37       Like New      Sparkling       In Stock
+        Pickup7       $6691.51      $13383.02       Like New      Sparkling       In Stock
+Total Budget and Sales:
+    $1083870.72     $960786.19
+Day: 17
+Buying car:Pickup8
+Intern4 has made PerformanceCar13 clean!
+Intern4 has made Pickup8 clean!
+Intern5 has made Pickup8 sparkling!($15.0 bonus)
+Intern6 has made PerformanceCar13 sparkling!($25.0 bonus)
+Staff Members: 
+        Intern4              8           84.0           25.0        Working
+      Mechanic1             17          348.5          425.0        Working
+      Mechanic2             17          348.5          675.0        Working
+        Intern3             12          162.0          135.0        Working
+   Salesperson1             17          382.5         7200.0        Working
+   Salesperson2             17          382.5         4600.0        Working
+        Intern5              5           52.5           65.0        Working
+        Intern6              3           31.5           75.0        Working
+        Intern2             17          228.5          660.0           Quit
+Vehicle Inventory:
+PerformanceCar9      $10510.48      $21020.96       Like New      Sparkling       In Stock
+PerformanceCar10      $16697.76      $33395.53       Like New      Sparkling       In Stock
+PerformanceCar12      $10876.58      $21753.15       Like New      Sparkling       In Stock
+PerformanceCar13      $14222.58      $28445.17       Like New      Sparkling       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New      Sparkling       In Stock
+          Car10       $9818.45      $19636.90       Like New      Sparkling       In Stock
+          Car12      $13845.70      $27691.40       Like New          Clean       In Stock
+        Pickup0       $9534.02      $19068.03       Like New      Sparkling       In Stock
+        Pickup2      $12147.69      $24295.37       Like New      Sparkling       In Stock
+        Pickup7       $6691.51      $13383.02       Like New      Sparkling       In Stock
+        Pickup8      $23438.35      $46876.70       Like New      Sparkling       In Stock
+Total Budget and Sales:
+    $1060432.37     $960786.19
+Day: 18
+Hiring intern Intern7
+Salesperson2 sold Sparkling Like New Pickup8 to Buyer for $46876.69738903841 (earned $700.0 bonus)
+Salesperson2 sold Sparkling Like New PerformanceCar10 to Buyer for $33395.529169040754 (earned $1000.0 bonus)
+Staff Members: 
+        Intern4              9          104.5           25.0        Working
+      Mechanic1             18          369.0          425.0        Working
+      Mechanic2             18          369.0          675.0        Working
+        Intern5              6           63.0           65.0        Working
+   Salesperson1             18          405.0         7200.0        Working
+   Salesperson2             18          405.0         6300.0        Working
+        Intern6              4           42.0           75.0        Working
+        Intern7              1           10.5            0.0        Working
+        Intern3             13          184.5          135.0           Quit
+Vehicle Inventory:
+PerformanceCar9      $10510.48      $21020.96       Like New      Sparkling       In Stock
+PerformanceCar12      $10876.58      $21753.15       Like New      Sparkling       In Stock
+PerformanceCar13      $14222.58      $28445.17       Like New      Sparkling       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New      Sparkling       In Stock
+          Car10       $9818.45      $19636.90       Like New      Sparkling       In Stock
+          Car12      $13845.70      $27691.40       Like New          Clean       In Stock
+        Pickup0       $9534.02      $19068.03       Like New      Sparkling       In Stock
+        Pickup2      $12147.69      $24295.37       Like New      Sparkling       In Stock
+        Pickup7       $6691.51      $13383.02       Like New      Sparkling       In Stock
+Total Budget and Sales:
+    $1140704.60    $1041058.42
+Day: 19
+Hiring intern Intern8
+Buying car: PerformanceCar14
+Buying car:Pickup9
+Intern6 has made Pickup9 clean!
+Intern6 has made Car12 sparkling!($10.0 bonus)
+Intern7 has made Pickup9 dirty!
+Intern8 has made Pickup9 clean!
+Mechanic1 has repaired Broken car PerformanceCar14 and made it Used!($100.0 bonus)
+Mechanic1 has repaired Used car PerformanceCar14 and made it Like New!($100.0 bonus)
+Salesperson1 sold Sparkling Like New Car12 to Buyer for $27691.40047508591 (earned $500.0 bonus)
+Staff Members: 
+        Intern4             10          125.0           25.0        Working
+      Mechanic1             19          389.5          625.0        Working
+      Mechanic2             19          389.5          675.0        Working
+        Intern6              5           52.5           85.0        Working
+   Salesperson1             19          427.5         7700.0        Working
+   Salesperson2             19          427.5         6300.0        Working
+        Intern7              2           21.0            0.0        Working
+        Intern8              1           10.5            0.0        Working
+        Intern5              7           85.5           65.0           Quit
+Vehicle Inventory:
+PerformanceCar9      $10510.48      $21020.96       Like New      Sparkling       In Stock
+PerformanceCar12      $10876.58      $21753.15       Like New      Sparkling       In Stock
+PerformanceCar13      $14222.58      $28445.17       Like New      Sparkling       In Stock
+PerformanceCar14      $12707.14      $25414.27       Like New          Dirty       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New      Sparkling       In Stock
+          Car10       $9818.45      $19636.90       Like New      Sparkling       In Stock
+        Pickup0       $9534.02      $19068.03       Like New      Sparkling       In Stock
+        Pickup2      $12147.69      $24295.37       Like New      Sparkling       In Stock
+        Pickup7       $6691.51      $13383.02       Like New      Sparkling       In Stock
+        Pickup9      $31594.71      $63189.41       Like New          Clean       In Stock
+Total Budget and Sales:
+    $1124094.16    $1068749.82
+Day: 20
+Hiring intern Intern9
+Buying car:Car13
+Intern7 has made PerformanceCar14 clean!
+Intern7 has made Pickup9 dirty!
+Intern8 has made Pickup9 clean!
+Intern8 has made Pickup9 dirty!
+Intern9 has made Pickup9 sparkling!($15.0 bonus)
+Intern9 has made Car13 sparkling!($10.0 bonus)
+Staff Members: 
+        Intern4             11          145.5           25.0        Working
+      Mechanic1             20          410.0          625.0        Working
+      Mechanic2             20          410.0          675.0        Working
+        Intern6              6           75.0           85.0        Working
+   Salesperson1             20          450.0         7700.0        Working
+   Salesperson2             20          450.0         6300.0        Working
+        Intern7              3           31.5            0.0        Working
+        Intern8              2           21.0            0.0        Working
+        Intern9              1           10.5           25.0        Working
+Vehicle Inventory:
+PerformanceCar9      $10510.48      $21020.96       Like New      Sparkling       In Stock
+PerformanceCar12      $10876.58      $21753.15       Like New      Sparkling       In Stock
+PerformanceCar13      $14222.58      $28445.17       Like New      Sparkling       In Stock
+PerformanceCar14      $12707.14      $25414.27       Like New          Clean       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New      Sparkling       In Stock
+          Car10       $9818.45      $19636.90       Like New      Sparkling       In Stock
+          Car13      $18048.54      $36097.09       Like New      Sparkling       In Stock
+        Pickup0       $9534.02      $19068.03       Like New      Sparkling       In Stock
+        Pickup2      $12147.69      $24295.37       Like New      Sparkling       In Stock
+        Pickup7       $6691.51      $13383.02       Like New      Sparkling       In Stock
+        Pickup9      $31594.71      $63189.41       Like New      Sparkling       In Stock
+Total Budget and Sales:
+    $1106030.62    $1068749.82
+Day: 21
+Intern7 has made PerformanceCar14 sparkling!($25.0 bonus)
+Salesperson1 sold Sparkling Like New PerformanceCar13 to Buyer for $28445.168740611356 (earned $1000.0 bonus)
+Salesperson1 sold Sparkling Like New Car13 to Buyer for $36097.087049846145 (earned $500.0 bonus)
+Salesperson2 sold Sparkling Like New PerformanceCar14 to Buyer for $25414.270055635032 (earned $1000.0 bonus)
+Salesperson2 sold Sparkling Like New PerformanceCar12 to Buyer for $21753.15258594472 (earned $1000.0 bonus)
+Salesperson1 sold Sparkling Like New Car10 to Buyer for $19636.89877536707 (earned $500.0 bonus)
+Staff Members: 
+        Intern4             12          166.0           25.0        Working
+      Mechanic1             21          430.5          625.0        Working
+      Mechanic2             21          430.5          675.0        Working
+        Intern7              4           42.0           25.0        Working
+   Salesperson1             21          472.5         9700.0        Working
+   Salesperson2             21          472.5         8300.0        Working
+        Intern8              3           31.5            0.0        Working
+        Intern9              2           21.0           25.0        Working
+        Intern6              7           97.5           85.0           Quit
+Vehicle Inventory:
+PerformanceCar9      $10510.48      $21020.96       Like New      Sparkling       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New      Sparkling       In Stock
+        Pickup0       $9534.02      $19068.03       Like New      Sparkling       In Stock
+        Pickup2      $12147.69      $24295.37       Like New      Sparkling       In Stock
+        Pickup7       $6691.51      $13383.02       Like New      Sparkling       In Stock
+        Pickup9      $31594.71      $63189.41       Like New      Sparkling       In Stock
+Total Budget and Sales:
+    $1237377.19    $1200096.40
+Day: 22
+Hiring intern Intern10
+Buying car: PerformanceCar15
+Buying car: PerformanceCar16
+Buying car: PerformanceCar17
+Buying car:Car14
+Buying car:Car15
+Intern8 has made PerformanceCar15 clean!
+Intern8 has made PerformanceCar16 clean!
+Intern9 has made PerformanceCar17 clean!
+Intern9 has made Car15 clean!
+Intern10 has made PerformanceCar15 sparkling!($25.0 bonus)
+Intern10 has made PerformanceCar16 sparkling!($25.0 bonus)
+Intern4 has repaired Broken car PerformanceCar15 and made it Used!($100.0 bonus)
+Intern4 has repaired Used car PerformanceCar15 and made it Like New!($100.0 bonus)
+Intern4 has repaired Used car PerformanceCar17 and made it Like New!($100.0 bonus)
+Mechanic1 has repaired Used car Car15 and made it Like New!($50.0 bonus)
+Salesperson1 sold Clean Like New Car14 to Buyer for $35333.17704785813 (earned $500.0 bonus)
+Salesperson1 sold Sparkling Like New PerformanceCar16 to Buyer for $48002.1486212177 (earned $1000.0 bonus)
+Salesperson1 sold Sparkling Like New Pickup9 to Buyer for $63189.41043091205 (earned $700.0 bonus)
+Staff Members: 
+        Intern4             13          186.5          325.0        Working
+      Mechanic1             22          451.0          675.0        Working
+      Mechanic2             22          451.0          675.0        Working
+        Intern7              5           64.5           25.0        Working
+   Salesperson1             22          495.0        11900.0        Working
+   Salesperson2             22          495.0         8300.0        Working
+        Intern8              4           42.0            0.0        Working
+        Intern9              3           31.5           25.0        Working
+       Intern10              1           10.5           50.0        Working
+Vehicle Inventory:
+PerformanceCar9      $10510.48      $21020.96       Like New      Sparkling       In Stock
+PerformanceCar15      $12590.64      $25181.28       Like New          Dirty       In Stock
+PerformanceCar17      $22020.90      $44041.80       Like New          Dirty       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New      Sparkling       In Stock
+          Car15      $14171.06      $28342.13       Like New          Dirty       In Stock
+        Pickup0       $9534.02      $19068.03       Like New      Sparkling       In Stock
+        Pickup2      $12147.69      $24295.37       Like New      Sparkling       In Stock
+        Pickup7       $6691.51      $13383.02       Like New      Sparkling       In Stock
+Total Budget and Sales:
+    $1293451.67    $1346621.13
+Day: 23
+Buying car: PerformanceCar18
+Buying car:Pickup10
+Buying car:Car16
+Intern8 has made PerformanceCar15 clean!
+Intern8 has made PerformanceCar17 clean!
+Intern9 has made Pickup10 clean!
+Intern9 has made Car15 clean!
+Intern10 has made Car16 clean!
+Intern10 has made PerformanceCar17 sparkling!($25.0 bonus)
+Intern4 has repaired Used car PerformanceCar18 and made it Like New!($100.0 bonus)
+Salesperson1 sold Clean Like New Pickup10 to Buyer for $50959.8778244707 (earned $700.0 bonus)
+Salesperson2 sold Sparkling Like New PerformanceCar17 to Buyer for $44041.79519852859 (earned $1000.0 bonus)
+Salesperson2 sold Clean Like New Car16 to Buyer for $31635.377521992836 (earned $500.0 bonus)
+Staff Members: 
+        Intern4             14          207.0          425.0        Working
+      Mechanic1             23          471.5          675.0        Working
+      Mechanic2             23          471.5          675.0        Working
+        Intern7              6           87.0           25.0        Working
+   Salesperson1             23          517.5        12600.0        Working
+   Salesperson2             23          517.5         9800.0        Working
+        Intern8              5           52.5            0.0        Working
+        Intern9              4           42.0           25.0        Working
+       Intern10              2           21.0           75.0        Working
+Vehicle Inventory:
+PerformanceCar9      $10510.48      $21020.96       Like New      Sparkling       In Stock
+PerformanceCar15      $12590.64      $25181.28       Like New          Clean       In Stock
+PerformanceCar18      $19086.81      $38173.63       Like New          Dirty       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New      Sparkling       In Stock
+          Car15      $14171.06      $28342.13       Like New          Clean       In Stock
+        Pickup0       $9534.02      $19068.03       Like New      Sparkling       In Stock
+        Pickup2      $12147.69      $24295.37       Like New      Sparkling       In Stock
+        Pickup7       $6691.51      $13383.02       Like New      Sparkling       In Stock
+Total Budget and Sales:
+    $1359704.28    $1473258.19
+Day: 24
+Buying car: PerformanceCar19
+Buying car:Pickup11
+Buying car:Car17
+Intern8 has made PerformanceCar18 clean!
+Intern8 has made PerformanceCar19 sparkling!($25.0 bonus)
+Intern9 has made Pickup11 clean!
+Intern9 has made Car17 clean!
+Intern10 has made Pickup11 sparkling!($15.0 bonus)
+Intern10 has made Car17 sparkling!($10.0 bonus)
+Intern4 has repaired Used car Car17 and made it Like New!($50.0 bonus)
+Salesperson2 sold Sparkling Like New PerformanceCar19 to Buyer for $70490.84000063152 (earned $1000.0 bonus)
+Intern7 sold Sparkling Like New Pickup11 to Buyer for $36017.18535345795 (earned $700.0 bonus)
+Intern7 sold Sparkling Like New Pickup2 to Buyer for $24295.371979732732 (earned $700.0 bonus)
+Salesperson1 sold Clean Like New PerformanceCar18 to Buyer for $38173.62810104601 (earned $1000.0 bonus)
+Intern7 sold Sparkling Like New Pickup0 to Buyer for $19068.032932486494 (earned $700.0 bonus)
+Salesperson2 sold Clean Like New PerformanceCar15 to Buyer for $25181.276032566995 (earned $1000.0 bonus)
+Staff Members: 
+        Intern4             15          227.5          475.0        Working
+      Mechanic1             24          492.0          675.0        Working
+      Mechanic2             24          492.0          675.0        Working
+        Intern7              7          109.5         2125.0        Working
+   Salesperson1             24          540.0        13600.0        Working
+   Salesperson2             24          540.0        11800.0        Working
+        Intern8              6           63.0           25.0        Working
+        Intern9              5           52.5           25.0        Working
+       Intern10              3           31.5          100.0        Working
+Vehicle Inventory:
+PerformanceCar9      $10510.48      $21020.96       Like New      Sparkling       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New      Sparkling       In Stock
+          Car15      $14171.06      $28342.13       Like New          Clean       In Stock
+          Car17       $8776.52      $17553.04       Like New          Clean       In Stock
+        Pickup7       $6691.51      $13383.02       Like New      Sparkling       In Stock
+Total Budget and Sales:
+    $1510875.08    $1686484.52
+Day: 25
+Buying car: PerformanceCar20
+Buying car: PerformanceCar21
+Buying car: PerformanceCar22
+Buying car:Pickup12
+Buying car:Pickup13
+Buying car:Pickup14
+Intern8 has made PerformanceCar21 clean!
+Intern8 has made PerformanceCar22 sparkling!($25.0 bonus)
+Intern9 has made PerformanceCar20 clean!
+Intern9 has made Car17 sparkling!($10.0 bonus)
+Intern10 has made Pickup13 sparkling!($15.0 bonus)
+Intern10 has made Pickup14 clean!
+Intern4 has repaired Broken car Pickup14 and made it Used!($75.0 bonus)
+Mechanic1 has repaired Used car PerformanceCar22 and made it Like New!($100.0 bonus)
+Mechanic1 has repaired Used car Pickup12 and made it Like New!($75.0 bonus)
+Mechanic2 has repaired Broken car PerformanceCar21 and made it Used!($100.0 bonus)
+Mechanic2 has repaired Used car PerformanceCar21 and made it Like New!($100.0 bonus)
+Intern7 sold Clean Like New Car15 to Buyer for $28342.126250936344 (earned $500.0 bonus)
+Salesperson1 sold Clean Like New PerformanceCar20 to Buyer for $53595.934374124656 (earned $1000.0 bonus)
+Intern7 sold Sparkling Like New Car17 to Buyer for $17553.038868882184 (earned $500.0 bonus)
+Staff Members: 
+        Intern4             16          248.0          550.0        Working
+      Mechanic1             25          512.5          850.0        Working
+      Mechanic2             25          512.5          875.0        Working
+        Intern7              8          132.0         3125.0        Working
+   Salesperson1             25          562.5        14600.0        Working
+   Salesperson2             25          562.5        11800.0        Working
+        Intern8              7           73.5           50.0        Working
+        Intern9              6           63.0           35.0        Working
+       Intern10              4           42.0          115.0        Working
+Vehicle Inventory:
+PerformanceCar9      $10510.48      $21020.96       Like New      Sparkling       In Stock
+PerformanceCar21      $16367.68      $32735.35       Like New          Dirty       In Stock
+PerformanceCar22      $20194.87      $40389.74       Like New          Clean       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New      Sparkling       In Stock
+        Pickup7       $6691.51      $13383.02       Like New      Sparkling       In Stock
+       Pickup12       $9563.68      $19127.36       Like New          Dirty       In Stock
+       Pickup13      $21474.03      $42948.06       Like New      Sparkling       In Stock
+       Pickup14       $8122.26      $16244.53           Used          Dirty       In Stock
+Total Budget and Sales:
+    $1507805.69    $1785975.62
+Day: 26
+Buying car: PerformanceCar23
+Buying car:Car18
+Buying car:Car19
+Intern8 has made PerformanceCar21 clean!
+Intern8 has made Pickup12 clean!
+Intern9 has made Pickup14 clean!
+Intern9 has made Car18 clean!
+Intern10 has made Car19 clean!
+Intern10 has made PerformanceCar21 sparkling!($25.0 bonus)
+Intern4 has repaired Used car PerformanceCar23 and made it Like New!($100.0 bonus)
+Intern4 has repaired Used car Pickup14 and made it Like New!($75.0 bonus)
+Intern4 has repaired Used car Car18 and made it Like New!($50.0 bonus)
+Intern7 sold Dirty Like New PerformanceCar23 to Buyer for $51012.559218704184 (earned $1000.0 bonus)
+Intern7 sold Clean Like New Car19 to Buyer for $26251.873758606074 (earned $500.0 bonus)
+Staff Members: 
+        Intern4             17          268.5          775.0        Working
+      Mechanic1             26          533.0          850.0        Working
+      Mechanic2             26          533.0          875.0        Working
+        Intern7              9          154.5         4625.0        Working
+   Salesperson1             26          585.0        14600.0        Working
+   Salesperson2             26          585.0        11800.0        Working
+        Intern8              8           84.0           50.0        Working
+        Intern9              7           73.5           35.0        Working
+       Intern10              5           52.5          140.0        Working
+Vehicle Inventory:
+PerformanceCar9      $10510.48      $21020.96       Like New      Sparkling       In Stock
+PerformanceCar21      $16367.68      $32735.35       Like New      Sparkling       In Stock
+PerformanceCar22      $20194.87      $40389.74       Like New          Clean       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New      Sparkling       In Stock
+          Car18      $10393.79      $20787.58       Like New          Dirty       In Stock
+        Pickup7       $6691.51      $13383.02       Like New      Sparkling       In Stock
+       Pickup12       $9563.68      $19127.36       Like New          Clean       In Stock
+       Pickup13      $21474.03      $42948.06       Like New      Sparkling       In Stock
+       Pickup14       $8122.26      $16244.53       Like New          Dirty       In Stock
+Total Budget and Sales:
+    $1536044.12    $1863240.05
+Day: 27
+Buying car: PerformanceCar24
+Buying car:Car20
+Intern8 has made PerformanceCar24 clean!
+Intern8 has made Pickup14 sparkling!($15.0 bonus)
+Intern9 has made Car18 clean!
+Intern9 has made Car20 clean!
+Mechanic1 has repaired Broken car PerformanceCar24 and made it Used!($100.0 bonus)
+Mechanic1 has repaired Used car PerformanceCar24 and made it Like New!($100.0 bonus)
+Salesperson2 sold Sparkling Like New Pickup13 to Buyer for $42948.05567507641 (earned $700.0 bonus)
+Salesperson2 sold Clean Like New PerformanceCar22 to Buyer for $40389.73682707414 (earned $1000.0 bonus)
+Staff Members: 
+        Intern4             18          289.0          775.0        Working
+      Mechanic1             27          553.5         1050.0        Working
+      Mechanic2             27          553.5          875.0        Working
+        Intern7             10          177.0         4625.0        Working
+   Salesperson1             27          607.5        14600.0        Working
+   Salesperson2             27          607.5        13500.0        Working
+        Intern8              9           94.5           65.0        Working
+        Intern9              8           84.0           35.0        Working
+       Intern10              6           63.0          140.0        Working
+Vehicle Inventory:
+PerformanceCar9      $10510.48      $21020.96       Like New      Sparkling       In Stock
+PerformanceCar21      $16367.68      $32735.35       Like New      Sparkling       In Stock
+PerformanceCar24      $13947.51      $27895.03       Like New          Dirty       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New      Sparkling       In Stock
+          Car18      $10393.79      $20787.58       Like New          Clean       In Stock
+          Car20      $14592.57      $29185.14       Like New          Clean       In Stock
+        Pickup7       $6691.51      $13383.02       Like New      Sparkling       In Stock
+       Pickup12       $9563.68      $19127.36       Like New          Clean       In Stock
+       Pickup14       $8122.26      $16244.53       Like New      Sparkling       In Stock
+Total Budget and Sales:
+    $1590826.83    $1946577.84
+Day: 28
+Buying car: PerformanceCar25
+Buying car:Pickup15
+Intern8 has made PerformanceCar24 clean!
+Intern9 has made PerformanceCar25 sparkling!($25.0 bonus)
+Intern9 has made Car18 sparkling!($10.0 bonus)
+Intern10 has made Car20 sparkling!($10.0 bonus)
+Intern4 has repaired Used car PerformanceCar25 and made it Like New!($100.0 bonus)
+Intern4 has repaired Used car Pickup15 and made it Like New!($75.0 bonus)
+Salesperson2 sold Sparkling Like New Car20 to Buyer for $29185.138971896245 (earned $500.0 bonus)
+Salesperson2 sold Sparkling Like New Car18 to Buyer for $20787.58415734071 (earned $500.0 bonus)
+Staff Members: 
+        Intern4             19          309.5          950.0        Working
+      Mechanic1             28          574.0         1050.0        Working
+      Mechanic2             28          574.0          875.0        Working
+        Intern7             11          199.5         4625.0        Working
+   Salesperson1             28          630.0        14600.0        Working
+   Salesperson2             28          630.0        14500.0        Working
+        Intern8             10          105.0           65.0        Working
+        Intern9              9           94.5           70.0        Working
+       Intern10              7           73.5          150.0        Working
+Vehicle Inventory:
+PerformanceCar9      $10510.48      $21020.96       Like New      Sparkling       In Stock
+PerformanceCar21      $16367.68      $32735.35       Like New      Sparkling       In Stock
+PerformanceCar24      $13947.51      $27895.03       Like New          Clean       In Stock
+PerformanceCar25      $26001.06      $52002.12       Like New          Clean       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New      Sparkling       In Stock
+        Pickup7       $6691.51      $13383.02       Like New      Sparkling       In Stock
+       Pickup12       $9563.68      $19127.36       Like New          Clean       In Stock
+       Pickup14       $8122.26      $16244.53       Like New      Sparkling       In Stock
+       Pickup15      $13682.65      $27365.30       Like New          Dirty       In Stock
+Total Budget and Sales:
+    $1601115.84    $1996550.57
+Day: 29
+Buying car:Car21
+Buying car:Car22
+Intern8 has made Pickup15 clean!
+Intern8 has made Car21 clean!
+Intern9 has made PerformanceCar25 sparkling!($25.0 bonus)
+Intern9 has made Pickup12 sparkling!($15.0 bonus)
+Intern10 has made Car22 sparkling!($10.0 bonus)
+Intern4 has repaired Used car Car22 and made it Like New!($50.0 bonus)
+Salesperson1 sold Clean Like New Car22 to Buyer for $28647.589918427468 (earned $500.0 bonus)
+Intern7 sold Clean Like New Pickup15 to Buyer for $27365.304964034873 (earned $700.0 bonus)
+Staff Members: 
+        Intern4             20          330.0         1000.0        Working
+      Mechanic1             29          594.5         1050.0        Working
+      Mechanic2             29          594.5          875.0        Working
+        Intern7             12          222.0         5325.0        Working
+   Salesperson1             29          652.5        15100.0        Working
+   Salesperson2             29          652.5        14500.0        Working
+        Intern8             11          115.5           65.0        Working
+        Intern9             10          105.0          110.0        Working
+       Intern10              8           84.0          160.0        Working
+Vehicle Inventory:
+PerformanceCar9      $10510.48      $21020.96       Like New      Sparkling       In Stock
+PerformanceCar21      $16367.68      $32735.35       Like New      Sparkling       In Stock
+PerformanceCar24      $13947.51      $27895.03       Like New          Clean       In Stock
+PerformanceCar25      $26001.06      $52002.12       Like New      Sparkling       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New      Sparkling       In Stock
+          Car21      $13104.68      $26209.37       Like New          Clean       In Stock
+        Pickup7       $6691.51      $13383.02       Like New      Sparkling       In Stock
+       Pickup12       $9563.68      $19127.36       Like New      Sparkling       In Stock
+       Pickup14       $8122.26      $16244.53       Like New      Sparkling       In Stock
+Total Budget and Sales:
+    $1629700.25    $2052563.46
+Day: 30
+Buying car:Pickup16
+Buying car:Car23
+Intern8 has made PerformanceCar24 sparkling!($25.0 bonus)
+Intern8 has made Car21 dirty!
+Intern9 has made Car21 clean!
+Salesperson1 sold Clean Like New Pickup16 to Buyer for $49771.10130473818 (earned $700.0 bonus)
+Salesperson1 sold Sparkling Like New Pickup12 to Buyer for $19127.362461642446 (earned $700.0 bonus)
+Salesperson2 sold Sparkling Like New Car23 to Buyer for $27337.507556336703 (earned $500.0 bonus)
+Staff Members: 
+        Intern4             21          350.5         1000.0        Working
+      Mechanic1             30          615.0         1050.0        Working
+      Mechanic2             30          615.0          875.0        Working
+        Intern7             13          244.5         5325.0        Working
+   Salesperson1             30          675.0        16500.0        Working
+   Salesperson2             30          675.0        15000.0        Working
+        Intern8             12          126.0           90.0        Working
+        Intern9             11          115.5          110.0        Working
+       Intern10              9           94.5          160.0        Working
+Vehicle Inventory:
+PerformanceCar9      $10510.48      $21020.96       Like New      Sparkling       In Stock
+PerformanceCar21      $16367.68      $32735.35       Like New      Sparkling       In Stock
+PerformanceCar24      $13947.51      $27895.03       Like New      Sparkling       In Stock
+PerformanceCar25      $26001.06      $52002.12       Like New      Sparkling       In Stock
+           Car3       $6469.10      $12938.19       Like New      Sparkling       In Stock
+           Car6       $7911.76      $15823.52       Like New      Sparkling       In Stock
+          Car21      $13104.68      $26209.37       Like New          Clean       In Stock
+        Pickup7       $6691.51      $13383.02       Like New      Sparkling       In Stock
+       Pickup14       $8122.26      $16244.53       Like New      Sparkling       In Stock
+Total Budget and Sales:
+    $1687381.92    $2148799.43
