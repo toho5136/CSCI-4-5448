@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Random;
+
 public class FNCD {
 	// Private Class Variables
 	private ArrayList<Mechanic> mechanicStaff = new ArrayList<>();
@@ -10,10 +11,17 @@ public class FNCD {
 	private ArrayList<Pickups> pickupsInventory = new ArrayList<>();
 	private ArrayList<Buyer> buyers = new ArrayList<>();
 	private double operatingBudget;
-	private String currentDay;
+	private double addedFunds = 0;
+	private int currentDay = 0;
 	private ArrayList<Mechanic> departedMStaff = new ArrayList<>();
 	private ArrayList<Salesperson> departedSStaff = new ArrayList<>();
 	private ArrayList<Intern> departedIStaff = new ArrayList<>();
+	private int perfID = 0;
+	private int carID = 0;
+	private int pickupID = 0;
+	private int mechNames = 0;
+	private int salesNames = 0;
+	private int internNames = 0;
 	// Getters
 
 	public ArrayList<Mechanic> getMechanicStaff() {
@@ -40,7 +48,7 @@ public class FNCD {
 	public double getOperatingBudget() {
 		return this.operatingBudget;
 	}
-	public String getCurrentDay() {
+	public int getCurrentDay() {
 		return this.currentDay;
 	}
 	// Setters
@@ -48,8 +56,8 @@ public class FNCD {
 		operatingBudget = budget;
 	}
 	// Updater
-	public void updateCurrentDay(String day) {
-		currentDay = day;
+	public void updateCurrentDay() {
+		currentDay += 1;
 	}
 	// Adders
 	public void addMechanic(Mechanic newGuy) {
@@ -74,9 +82,108 @@ public class FNCD {
 	public void createBuyers() {
 		
 	}
+	public int createVehicleID(){
+		return 0;
+	}
 	// Other Functions
 	public void opening() {
-		
+		//First day, need to add workers, cars, and set budget
+		if (currentDay == 0){
+			for (int i = 0; i < 3; i++){
+				Mechanic mech = new Mechanic("Mechanic" + String.valueOf(mechNames));
+				this.addMechanic(mech);
+				mechNames += 1;
+
+				Salesperson sale = new Salesperson("Salesperson" + String.valueOf(salesNames));
+				this.addSalesperson(sale);
+				salesNames += 1;
+
+				Intern intern = new Intern("Intern" + String.valueOf(internNames));
+				this.addIntern(intern);
+				internNames += 1;
+			}
+
+			for (int i = 0; i < 4; i++){
+				PerformanceCars perf = new PerformanceCars("PerformanceCar" + String.valueOf(perfID));
+				this.addPerformanceCar(perf);
+				perfID += 1;
+
+				Pickups pick = new Pickups("Pickup" + String.valueOf(pickupID));
+				this.addPickups(pick);
+				pickupID += 1;
+
+				Cars car = new Cars("Car" + String.valueOf(carID));
+				this.addCar(car);
+				carID += 1;
+			}
+			this.setOperatingBudget(250000);
+			System.out.println("opened");
+			performanceCarInventory.remove(0);
+		}
+		else {
+			if (operatingBudget < 0){
+				System.out.println("Operating budget is below 0. Adding funds.");
+				while (operatingBudget < 0){
+					operatingBudget += 250000.0;
+					addedFunds += 250000.0;
+				}
+				System.out.println("Total funds added so far: " + addedFunds);
+			}
+			//Check to see if intern staff is 3
+			if (internStaff.size() < 3){
+				int limit = 3 - internStaff.size();
+				
+				for (int i = 0; i < limit; i++){
+					Intern intern = new Intern("Intern" + String.valueOf(internNames));
+					System.out.println("Hiring intern " + "Intern" + String.valueOf(internNames));
+					this.addIntern(intern);
+					internNames += 1;
+				}
+			}
+
+			//Check to see if performance cars inventory is 4
+			if (performanceCarInventory.size() < 4){
+				int limit = 4 - performanceCarInventory.size();
+
+				for (int i = 0; i < limit; i++){
+					PerformanceCars perf = new PerformanceCars("PerformanceCar" + String.valueOf(perfID));
+					System.out.println("Buying car: " + perf.getID());
+					this.addPerformanceCar(perf);
+					perfID += 1;
+
+					operatingBudget = operatingBudget - perf.getCostPrice();
+				}
+			}
+
+			//Check to see if pickups inventory is 4
+			if (pickupsInventory.size() < 4){
+				int limit = 4 - pickupsInventory.size();
+
+				for (int i = 0; i < limit; i++){
+					Pickups pickup = new Pickups("Pickup" + String.valueOf(pickupID));
+					System.out.println("Buying car:" + pickup.getID());
+					this.addPickups(pickup);
+					pickupID += 1;
+
+					operatingBudget = operatingBudget - pickup.getCostPrice();
+				}
+			}
+
+			//Check to see if cars inventory is 4
+			if (carsInventory.size() < 4){
+				int limit = 4 - carsInventory.size();
+
+				for (int i = 0; i < limit; i++){
+					Cars car = new Cars("Car" + String.valueOf(carID));
+					System.out.println("Buying car:" + car.getID());
+					this.addCar(car);
+					carID += 1;
+
+					operatingBudget = operatingBudget - car.getCostPrice();
+				}
+			}
+		}
+		currentDay += 1;
 	}
 	public void washing() {
 		
@@ -135,11 +242,10 @@ public class FNCD {
 		*/
 	}
 	public static void main(String[] args) {
-		PerformanceCars test = new PerformanceCars(2023);
+		FNCD sim = new FNCD();
 
-		System.out.println("Cost: " + test.getCostPrice());
-		System.out.println("Sales: " + test.getSalesPrice());
-		System.out.println(test.getCondition());
+		sim.opening();
+		sim.opening();
 
 		/* 
 		FNCD simulation = new FNCD();

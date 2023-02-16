@@ -3,7 +3,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 
 public class PerformanceCars extends Vehicles{
-	public PerformanceCars(int identity){
+	public PerformanceCars(String identity){
 		setID(identity);
 		setCarType("PerformanceCars");
 		setSalesBonus(1000.0);

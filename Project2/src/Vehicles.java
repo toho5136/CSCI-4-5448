@@ -1,7 +1,7 @@
 
 public class Vehicles {
 	// Private Class Variables
-	private int ID;
+	private String ID;
 	private String carType;
 	private double salesBonus;
 	private double repairBonus;
@@ -11,7 +11,7 @@ public class Vehicles {
 	private String condition;
 	private String cleanliness;
 	// Getters
-	public int getID() {
+	public String getID() {
 		return this.ID;
 	}
 	public String getCarType() {
@@ -39,7 +39,7 @@ public class Vehicles {
 		return this.cleanliness;
 	}
 	// Setters
-	public void setID(int identity) {
+	public void setID(String identity) {
 		ID = identity;
 	}
 	public void setCostPrice(double cost) {
