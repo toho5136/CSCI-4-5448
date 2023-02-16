@@ -251,6 +251,7 @@ public class FNCD {
 		final Object[][] tableDM = new String[counterDM][];
 		final Object[][] tableDS = new String[counterDS][];
 		final Object[][] tableDI = new String[counterDI][];
+		final Object[][] tableSales = new String[1][];
 		for (int i = 0; i < mechanicStaff.size(); i++) { //adds all working mechanics to table
 			tableM[i] = new String[] {mechanicStaff.get(i).getUniqueName(), Integer.toString(mechanicStaff.get(i).getDaysWorked()), String.valueOf(mechanicStaff.get(i).getNormalPay()), String.valueOf(mechanicStaff.get(i).getBonusPay()), "Working"};
 		}
@@ -269,6 +270,9 @@ public class FNCD {
 		for (int i = 0; i < departedIStaff.size(); i++) { //adds all working interns to table
 			tableDI[i] = new String[] {departedIStaff.get(i).getUniqueName(), Integer.toString(departedIStaff.get(i).getDaysWorked()), String.valueOf(departedIStaff.get(i).getNormalPay()), String.valueOf(departedIStaff.get(i).getBonusPay()), "Quit"};
 		}
+		String newOperatingBudget = String.format("%.2f", operatingBudget);
+		tableSales[0] = new String[] {"$" + newOperatingBudget, "$ Total Sales"};
+		System.out.println("Staff Members: ");
 		for (final Object[] row : tableM) {
 			System.out.format("%15s%15s%15s%15s%15s%n", row);
 		}
@@ -287,7 +291,10 @@ public class FNCD {
 		for (final Object[] row : tableDI) {
 			System.out.format("%15s%15s%15s%15s%15s%n", row);
 		}
-		
+		System.out.println("Total Budget and Sales:");
+		for (final Object[] row : tableSales) {
+			System.out.format("%15s%15s%n", row);
+		}
 	}
 	public static void main(String[] args) {
 		FNCD sim = new FNCD();
