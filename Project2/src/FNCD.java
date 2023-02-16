@@ -13,6 +13,7 @@ public class FNCD {
 	private ArrayList<Buyer> buyers = new ArrayList<>();
 	private ArrayList<Vehicles> soldVehicles = new ArrayList<>();
 	private double operatingBudget;
+	private double totalSales;
 	private double addedFunds = 0;
 	private int currentDay = 1;
 	private ArrayList<Mechanic> departedMStaff = new ArrayList<>();
@@ -309,6 +310,7 @@ public class FNCD {
 				carID += 1;
 			}
 			this.setOperatingBudget(500000);
+			totalSales = 0;
 			System.out.println("opened");
 		}
 		else {
@@ -747,6 +749,7 @@ public class FNCD {
 						+ performanceCarInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
 						operatingBudget += performanceCarInventory.get(maxPriceIndex).getSalesPrice();
+						totalSales += performanceCarInventory.get(maxPriceIndex).getSalesPrice();
 						double bonus = performanceCarInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
 						salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
 
@@ -791,6 +794,7 @@ public class FNCD {
 							+ pickupsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
 							operatingBudget += pickupsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += pickupsInventory.get(maxPriceIndex).getSalesPrice();
 							double bonus = pickupsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
 							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
 
@@ -814,6 +818,7 @@ public class FNCD {
 							+ carsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
 							operatingBudget += carsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += carsInventory.get(maxPriceIndex).getSalesPrice();
 							double bonus = carsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
 							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
 
@@ -857,6 +862,7 @@ public class FNCD {
 						+ pickupsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
 						operatingBudget += pickupsInventory.get(maxPriceIndex).getSalesPrice();
+						totalSales += pickupsInventory.get(maxPriceIndex).getSalesPrice();
 						double bonus = pickupsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
 						salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
 
@@ -901,6 +907,7 @@ public class FNCD {
 							+ performanceCarInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
 							operatingBudget += performanceCarInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += performanceCarInventory.get(maxPriceIndex).getSalesPrice();
 							double bonus = performanceCarInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
 							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
 
@@ -924,6 +931,7 @@ public class FNCD {
 							+ carsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
 							operatingBudget += carsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += carsInventory.get(maxPriceIndex).getSalesPrice();
 							double bonus = carsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
 							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
 
@@ -968,6 +976,7 @@ public class FNCD {
 						+ carsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
 						operatingBudget += carsInventory.get(maxPriceIndex).getSalesPrice();
+						totalSales += carsInventory.get(maxPriceIndex).getSalesPrice();
 						double bonus = carsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
 						salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
 
@@ -1012,6 +1021,7 @@ public class FNCD {
 							+ pickupsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
 							operatingBudget += pickupsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += pickupsInventory.get(maxPriceIndex).getSalesPrice();
 							double bonus = pickupsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
 							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
 
@@ -1035,6 +1045,7 @@ public class FNCD {
 							+ performanceCarInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
 							operatingBudget += performanceCarInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += performanceCarInventory.get(maxPriceIndex).getSalesPrice();
 							double bonus = performanceCarInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
 							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
 
@@ -1182,7 +1193,8 @@ public class FNCD {
 			tableP[i] = new String[] {pickupsInventory.get(i).getID(), "$" + carCostPrice, "$" + carSalesPrice, pickupsInventory.get(i).getCondition(), pickupsInventory.get(i).getCleanliness(), "In Stock"};
 		}
 		String newOperatingBudget = String.format("%.2f", operatingBudget);
-		tableSales[0] = new String[] {"$" + newOperatingBudget, "$ Total Sales"}; //INCOMPLETE
+		String newTotalSales = String.format("%.2f", totalSales);
+		tableSales[0] = new String[] {"$" + newOperatingBudget, "$" + newTotalSales};
 		System.out.println("Staff Members: ");
 		for (final Object[] row : tableM) {
 			System.out.format("%15s%15s%15s%15s%15s%n", row);
