@@ -1151,11 +1151,20 @@ public class FNCD {
 		for (int i = 0; i < departedMStaff.size(); i++) { //adds all working quit mechanics to table
 			tableDM[i] = new String[] {departedMStaff.get(i).getUniqueName(), Integer.toString(departedMStaff.get(i).getDaysWorked()), String.valueOf(departedMStaff.get(i).getNormalPay()), String.valueOf(departedMStaff.get(i).getBonusPay()), "Quit"};
 		}
+		for (int i = 0; i < departedMStaff.size(); i++) {
+			departedMStaff.remove(i);
+		}
 		for (int i = 0; i < departedSStaff.size(); i++) { //adds all working quit salesperson to table
 			tableDS[i] = new String[] {departedSStaff.get(i).getUniqueName(), Integer.toString(departedSStaff.get(i).getDaysWorked()), String.valueOf(departedSStaff.get(i).getNormalPay()), String.valueOf(departedSStaff.get(i).getBonusPay()), "Quit"};
 		}
+		for (int i = 0; i < departedSStaff.size(); i++) {
+			departedSStaff.remove(i);
+		}
 		for (int i = 0; i < departedIStaff.size(); i++) { //adds all working quit intern to table
 			tableDI[i] = new String[] {departedIStaff.get(i).getUniqueName(), Integer.toString(departedIStaff.get(i).getDaysWorked()), String.valueOf(departedIStaff.get(i).getNormalPay()), String.valueOf(departedIStaff.get(i).getBonusPay()), "Quit"};
+		}
+		for (int i = 0; i < departedIStaff.size(); i++) {
+			departedIStaff.remove(i);
 		}
 		for (int i = 0; i < performanceCarInventory.size(); i++) {
 			String carCostPrice = String.format("%.2f", performanceCarInventory.get(i).getCostPrice());
