@@ -382,17 +382,17 @@ public class FNCD {
 		if (mechanicQuitChance == 1) { //mechanic quits
 			departedMStaff.add(mechanicStaff.get(0));
 			mechanicStaff.remove(0);
+			counterM = counterM - 1;
 		}
 		if (salespersonQuitChance == 1) { //salesperson quits
 			departedSStaff.add(salespersonStaff.get(0));
 			salespersonStaff.remove(0);
+			counterS = counterS - 1;
 		}
 		if (internQuitChance == 1) { //intern quits
 			departedIStaff.add(internStaff.get(0));
 			internStaff.remove(0);
-		}
-		if (performanceCarInventory.size() == 0) {
-			
+			counterI = counterI - 1;
 		}
 		for (int i = 0; i < departedMStaff.size(); i++) {
 			counterDM = counterDM + 1;
@@ -448,7 +448,7 @@ public class FNCD {
 			tableP[i] = new String[] {pickupsInventory.get(i).getID(), "$" + carCostPrice, "$" + carSalesPrice, pickupsInventory.get(i).getCondition(), pickupsInventory.get(i).getCleanliness(), "In Stock"};
 		}
 		String newOperatingBudget = String.format("%.2f", operatingBudget);
-		tableSales[0] = new String[] {"$" + newOperatingBudget, "$ Total Sales"};
+		tableSales[0] = new String[] {"$" + newOperatingBudget, "$ Total Sales"}; //INCOMPLETE
 		System.out.println("Staff Members: ");
 		for (final Object[] row : tableM) {
 			System.out.format("%15s%15s%15s%15s%15s%n", row);
@@ -469,6 +469,15 @@ public class FNCD {
 			System.out.format("%15s%15s%15s%15s%15s%n", row);
 		}
 		System.out.println("Vehicle Inventory:");
+		if (performanceCarInventory.size() == 0) {
+			tablePC[0] = new String[] {"PerformanceCar", "$0", "$0", "null", "null", "Out of Stock"};
+		}
+		if (carsInventory.size() == 0) {
+			tableC[0] = new String[] {"Car", "$0", "$0", "null", "null", "Out of Stock"};
+		}
+		if (pickupsInventory.size() == 0) {
+			tableP[0] = new String[] {"Pickup", "$0", "$0", "null", "null", "Out of Stock"};
+		}
 		for (final Object[] row : tablePC) {
 			System.out.format("%15s%15s%15s%15s%15s%15s%n", row);
 		}
