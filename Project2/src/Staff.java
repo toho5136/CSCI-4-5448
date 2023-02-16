@@ -15,10 +15,10 @@ public class Staff {
 		daysWorked = days;
 	}
 	public void setNormalPay(double norm) {
-		totalNormalPay = norm;
+		totalNormalPay += norm;
 	}
 	public void setBonusPay(double bonus) {
-		totalBonusPay = bonus;
+		totalBonusPay += bonus;
 	}
 	public void setSalary(double pay) {
 		salary = pay;

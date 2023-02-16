@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class FNCD {
 	// Private Class Variables
@@ -88,6 +89,7 @@ public class FNCD {
 	}
 	// Other Functions
 	public void opening() {
+		System.out.println("Day: " + currentDay);
 		//First day, need to add workers, cars, and set budget
 		if (currentDay == 0){
 			for (int i = 0; i < 3; i++){
@@ -119,7 +121,6 @@ public class FNCD {
 			}
 			this.setOperatingBudget(250000);
 			System.out.println("opened");
-			performanceCarInventory.remove(0);
 		}
 		else {
 			if (operatingBudget < 0){
@@ -187,7 +188,146 @@ public class FNCD {
 		currentDay += 1;
 	}
 	public void washing() {
-		
+		//Iterate over all 3 interns
+		for (int i = 0; i < 3; i++){
+			int vehiclesWashed = 0;
+
+			//Iterate over all three vehicles lists (0-3:performance, 4-7:pickups, 8-11:cars)
+			for (int j = 0; j < 12; j++){
+				// check if reached limit
+				if (vehiclesWashed == 2){
+					break;
+				}
+				//Iterate through perforance car inventory
+				if (j < 4){
+					if (performanceCarInventory.get(j).getCleanliness() == "Dirty"){
+						int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						if (washRoll < 81){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + performanceCarInventory.get(j).getID() 
+							+ " clean!");
+							performanceCarInventory.get(j).setCleanliness("Clean");
+							vehiclesWashed += 1;
+						}
+						if (washRoll <= 100 && washRoll > 90){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + performanceCarInventory.get(j).getID() 
+							+ " sparkling!($" + performanceCarInventory.get(j).getWashBonus() + " bonus)");
+
+							internStaff.get(i).setBonusPay(performanceCarInventory.get(j).getWashBonus());
+							operatingBudget -= performanceCarInventory.get(j).getWashBonus();
+							performanceCarInventory.get(j).setCleanliness("Sparkling");
+							vehiclesWashed += 1;
+						}
+					}
+				}
+
+				else if (j >= 4 && j < 8){
+					if (pickupsInventory.get(j-4).getCleanliness() == "Dirty"){
+						int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						if (washRoll < 81){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + pickupsInventory.get(j-4).getID() 
+							+ " clean!");
+							pickupsInventory.get(j-4).setCleanliness("Clean");
+							vehiclesWashed += 1;
+						}
+						if (washRoll <= 100 && washRoll > 90){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + pickupsInventory.get(j-4).getID() 
+							+ " sparkling!($" + pickupsInventory.get(j-4).getWashBonus() + " bonus)");
+
+							internStaff.get(i).setBonusPay(pickupsInventory.get(j-4).getWashBonus());
+							operatingBudget -= pickupsInventory.get(j-4).getWashBonus();
+							pickupsInventory.get(j-4).setCleanliness("Sparkling");
+							vehiclesWashed += 1;
+
+						}
+					}
+				}
+				else {
+					if (carsInventory.get(j-8).getCleanliness() == "Dirty"){
+						int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						if (washRoll < 81){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + carsInventory.get(j-8).getID() 
+							+ " clean!");
+							carsInventory.get(j-8).setCleanliness("Clean");
+							vehiclesWashed += 1;
+						}
+						if (washRoll <= 100 && washRoll > 90){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + carsInventory.get(j-8).getID() 
+							+ " sparkling!($" + carsInventory.get(j-8).getWashBonus() + " bonus)");
+
+							internStaff.get(i).setBonusPay(carsInventory.get(j-8).getWashBonus());
+							operatingBudget -= carsInventory.get(j-4).getWashBonus();
+							carsInventory.get(j-8).setCleanliness("Sparkling");
+							vehiclesWashed += 1;
+						}
+					}
+				}
+			}
+
+			if (vehiclesWashed < 2){
+				for (int j = 0; j < 12; j++){
+					// check if reached limit
+					if (vehiclesWashed == 2){
+						break;
+					}
+					//Iterate through perforance car inventory
+					if (j < 4){
+						if (performanceCarInventory.get(j).getCleanliness() == "Clean"){
+							int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							if (washRoll <= 5){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + performanceCarInventory.get(j).getID() + " dirty!");
+								performanceCarInventory.get(j).setCleanliness("Dirty");
+								vehiclesWashed += 1;
+							}
+							if (washRoll <= 100 && washRoll > 70){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + performanceCarInventory.get(j).getID() 
+								+ " sparkling!($" + performanceCarInventory.get(j).getWashBonus() + " bonus)");
+
+								internStaff.get(i).setBonusPay(performanceCarInventory.get(j).getWashBonus());
+								performanceCarInventory.get(j).setCleanliness("Sparkling");
+								vehiclesWashed += 1;
+							}
+						}
+					}
+	
+					else if (j >= 4 && j < 8){
+						if (pickupsInventory.get(j-4).getCleanliness() == "Clean"){
+							int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							if (washRoll <= 5){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + pickupsInventory.get(j-4).getID() + " dirty!");
+								pickupsInventory.get(j-4).setCleanliness("Dirty");
+								vehiclesWashed += 1;
+							}
+							if (washRoll <= 100 && washRoll > 70){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + pickupsInventory.get(j-4).getID() 
+								+ " sparkling!($" + pickupsInventory.get(j-4).getWashBonus() + " bonus)");
+
+								internStaff.get(i).setBonusPay(pickupsInventory.get(j-4).getWashBonus());
+								pickupsInventory.get(j-4).setCleanliness("Sparkling");
+								vehiclesWashed += 1;
+							}
+						}
+					}
+					else {
+						if (carsInventory.get(j-8).getCleanliness() == "Clean"){
+							int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							if (washRoll <= 5){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + carsInventory.get(j-8).getID() + " dirty!");
+								carsInventory.get(j-8).setCleanliness("Dirty");
+								vehiclesWashed += 1;
+							}
+							if (washRoll <= 100 && washRoll > 70){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + carsInventory.get(j-8).getID() 
+								+ " sparkling!($" + carsInventory.get(j-8).getWashBonus() + " bonus)");
+
+								internStaff.get(i).setBonusPay(carsInventory.get(j-8).getWashBonus());
+								carsInventory.get(j-8).setCleanliness("Sparkling");
+								vehiclesWashed += 1;
+							}
+						}
+					}
+				} 
+			}
+		}
 	}
 	public void repairing() {
 		
