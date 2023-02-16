@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class FNCD {
 	// Private Class Variables
@@ -87,6 +88,7 @@ public class FNCD {
 	}
 	// Other Functions
 	public void opening() {
+		System.out.println("Day: " + currentDay);
 		//First day, need to add workers, cars, and set budget
 		if (currentDay == 0){
 			for (int i = 0; i < 3; i++){
@@ -118,7 +120,6 @@ public class FNCD {
 			}
 			this.setOperatingBudget(250000);
 			System.out.println("opened");
-			performanceCarInventory.remove(0);
 		}
 		else {
 			if (operatingBudget < 0){
@@ -186,7 +187,146 @@ public class FNCD {
 		currentDay += 1;
 	}
 	public void washing() {
-		
+		//Iterate over all 3 interns
+		for (int i = 0; i < 3; i++){
+			int vehiclesWashed = 0;
+
+			//Iterate over all three vehicles lists (0-3:performance, 4-7:pickups, 8-11:cars)
+			for (int j = 0; j < 12; j++){
+				// check if reached limit
+				if (vehiclesWashed == 2){
+					break;
+				}
+				//Iterate through perforance car inventory
+				if (j < 4){
+					if (performanceCarInventory.get(j).getCleanliness() == "Dirty"){
+						int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						if (washRoll < 81){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + performanceCarInventory.get(j).getID() 
+							+ " clean!");
+							performanceCarInventory.get(j).setCleanliness("Clean");
+							vehiclesWashed += 1;
+						}
+						if (washRoll <= 100 && washRoll > 90){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + performanceCarInventory.get(j).getID() 
+							+ " sparkling!($" + performanceCarInventory.get(j).getWashBonus() + " bonus)");
+
+							internStaff.get(i).setBonusPay(performanceCarInventory.get(j).getWashBonus());
+							operatingBudget -= performanceCarInventory.get(j).getWashBonus();
+							performanceCarInventory.get(j).setCleanliness("Sparkling");
+							vehiclesWashed += 1;
+						}
+					}
+				}
+
+				else if (j >= 4 && j < 8){
+					if (pickupsInventory.get(j-4).getCleanliness() == "Dirty"){
+						int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						if (washRoll < 81){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + pickupsInventory.get(j-4).getID() 
+							+ " clean!");
+							pickupsInventory.get(j-4).setCleanliness("Clean");
+							vehiclesWashed += 1;
+						}
+						if (washRoll <= 100 && washRoll > 90){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + pickupsInventory.get(j-4).getID() 
+							+ " sparkling!($" + pickupsInventory.get(j-4).getWashBonus() + " bonus)");
+
+							internStaff.get(i).setBonusPay(pickupsInventory.get(j-4).getWashBonus());
+							operatingBudget -= pickupsInventory.get(j-4).getWashBonus();
+							pickupsInventory.get(j-4).setCleanliness("Sparkling");
+							vehiclesWashed += 1;
+
+						}
+					}
+				}
+				else {
+					if (carsInventory.get(j-8).getCleanliness() == "Dirty"){
+						int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						if (washRoll < 81){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + carsInventory.get(j-8).getID() 
+							+ " clean!");
+							carsInventory.get(j-8).setCleanliness("Clean");
+							vehiclesWashed += 1;
+						}
+						if (washRoll <= 100 && washRoll > 90){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + carsInventory.get(j-8).getID() 
+							+ " sparkling!($" + carsInventory.get(j-8).getWashBonus() + " bonus)");
+
+							internStaff.get(i).setBonusPay(carsInventory.get(j-8).getWashBonus());
+							operatingBudget -= carsInventory.get(j-4).getWashBonus();
+							carsInventory.get(j-8).setCleanliness("Sparkling");
+							vehiclesWashed += 1;
+						}
+					}
+				}
+			}
+
+			if (vehiclesWashed < 2){
+				for (int j = 0; j < 12; j++){
+					// check if reached limit
+					if (vehiclesWashed == 2){
+						break;
+					}
+					//Iterate through perforance car inventory
+					if (j < 4){
+						if (performanceCarInventory.get(j).getCleanliness() == "Clean"){
+							int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							if (washRoll <= 5){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + performanceCarInventory.get(j).getID() + " dirty!");
+								performanceCarInventory.get(j).setCleanliness("Dirty");
+								vehiclesWashed += 1;
+							}
+							if (washRoll <= 100 && washRoll > 70){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + performanceCarInventory.get(j).getID() 
+								+ " sparkling!($" + performanceCarInventory.get(j).getWashBonus() + " bonus)");
+
+								internStaff.get(i).setBonusPay(performanceCarInventory.get(j).getWashBonus());
+								performanceCarInventory.get(j).setCleanliness("Sparkling");
+								vehiclesWashed += 1;
+							}
+						}
+					}
+	
+					else if (j >= 4 && j < 8){
+						if (pickupsInventory.get(j-4).getCleanliness() == "Clean"){
+							int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							if (washRoll <= 5){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + pickupsInventory.get(j-4).getID() + " dirty!");
+								pickupsInventory.get(j-4).setCleanliness("Dirty");
+								vehiclesWashed += 1;
+							}
+							if (washRoll <= 100 && washRoll > 70){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + pickupsInventory.get(j-4).getID() 
+								+ " sparkling!($" + pickupsInventory.get(j-4).getWashBonus() + " bonus)");
+
+								internStaff.get(i).setBonusPay(pickupsInventory.get(j-4).getWashBonus());
+								pickupsInventory.get(j-4).setCleanliness("Sparkling");
+								vehiclesWashed += 1;
+							}
+						}
+					}
+					else {
+						if (carsInventory.get(j-8).getCleanliness() == "Clean"){
+							int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							if (washRoll <= 5){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + carsInventory.get(j-8).getID() + " dirty!");
+								carsInventory.get(j-8).setCleanliness("Dirty");
+								vehiclesWashed += 1;
+							}
+							if (washRoll <= 100 && washRoll > 70){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + carsInventory.get(j-8).getID() 
+								+ " sparkling!($" + carsInventory.get(j-8).getWashBonus() + " bonus)");
+
+								internStaff.get(i).setBonusPay(carsInventory.get(j-8).getWashBonus());
+								carsInventory.get(j-8).setCleanliness("Sparkling");
+								vehiclesWashed += 1;
+							}
+						}
+					}
+				} 
+			}
+		}
 	}
 	public void repairing() {
 		
@@ -195,19 +335,29 @@ public class FNCD {
 		
 	}
 	public void ending() {
-		int counter = 0; //counter to create print table
+		int counterM = 0; //counter to create print table
+		int counterS = 0;
+		int counterI = 0;
+		int counterDM = 0;
+		int counterDS = 0;
+		int counterDI = 0;
 		for (int i = 0; i < mechanicStaff.size(); i++) {
 			// Pay each mechanic
-			//mechanicStaff.set(i, );
-			counter = counter + 1;
+			mechanicStaff.get(i).setNormalPay(mechanicStaff.get(i).getNormalPay() + 20.5);
+			mechanicStaff.get(i).setDaysWorked(mechanicStaff.get(i).getDaysWorked() + 1);
+			counterM = counterM + 1;
 		}
 		for (int i = 0; i < salespersonStaff.size(); i++) {
 			// Pay each salesperson
-			counter = counter + 1;
+			salespersonStaff.get(i).setNormalPay(salespersonStaff.get(i).getNormalPay() + 22.5);
+			salespersonStaff.get(i).setDaysWorked(salespersonStaff.get(i).getDaysWorked() + 1);
+			counterS = counterS + 1;
 		}
 		for (int i = 0; i < internStaff.size(); i++) {
 			// Pay each intern
-			counter = counter + 1;
+			internStaff.get(i).setNormalPay(internStaff.get(i).getNormalPay() + 10.5);
+			internStaff.get(i).setDaysWorked(internStaff.get(i).getDaysWorked() + 1);
+			counterI = counterI + 1;
 		}
 		Random ran = new Random();
 		int mechanicQuitChance = ran.nextInt(10) + 1; // if mechanicQuitChance = 1; a mechanic quits
@@ -226,26 +376,71 @@ public class FNCD {
 			internStaff.remove(0);
 		}
 		for (int i = 0; i < departedMStaff.size(); i++) {
-			counter = counter + 1;
+			counterDM = counterDM + 1;
 		}
 		for (int i = 0; i < departedSStaff.size(); i++) {
-			counter = counter + 1;
+			counterDS = counterDS + 1;
 		}
 		for (int i = 0; i < departedIStaff.size(); i++) {
-			counter = counter + 1;
+			counterDI = counterDI + 1;
 		}
-		/* 
-		final Object[][] table = new String[counter][];
+		
+		final Object[][] tableM = new String[counterM][];
+		final Object[][] tableS = new String[counterS][];
+		final Object[][] tableI = new String[counterI][];
+		final Object[][] tableDM = new String[counterDM][];
+		final Object[][] tableDS = new String[counterDS][];
+		final Object[][] tableDI = new String[counterDI][];
+		final Object[][] tableSales = new String[1][];
 		for (int i = 0; i < mechanicStaff.size(); i++) { //adds all working mechanics to table
-			table[i] = new String[] {mechanicStaff.get(i).newMechanic.getUniqueName(), Integer.toString(mechanicStaff.get(i).newMechanic.getDaysWorked()), String.valueOf(mechanicStaff.get(i).newMechanic.getNormalPay()), String.valueOf(mechanicStaff.get(i).newMechanic.getBonusPay()), "Working"};
+			tableM[i] = new String[] {mechanicStaff.get(i).getUniqueName(), Integer.toString(mechanicStaff.get(i).getDaysWorked()), String.valueOf(mechanicStaff.get(i).getNormalPay()), String.valueOf(mechanicStaff.get(i).getBonusPay()), "Working"};
 		}
-		*/
+		 for (int i = 0; i < salespersonStaff.size(); i++) { //adds all working salesperson to table
+			tableS[i] = new String[] {salespersonStaff.get(i).getUniqueName(), Integer.toString(salespersonStaff.get(i).getDaysWorked()), String.valueOf(salespersonStaff.get(i).getNormalPay()), String.valueOf(salespersonStaff.get(i).getBonusPay()), "Working"};
+		}
+		for (int i = 0; i < internStaff.size(); i++) { //adds all working interns to table
+			tableI[i] = new String[] {internStaff.get(i).getUniqueName(), Integer.toString(internStaff.get(i).getDaysWorked()), String.valueOf(internStaff.get(i).getNormalPay()), String.valueOf(internStaff.get(i).getBonusPay()), "Working"};
+		}
+		for (int i = 0; i < departedMStaff.size(); i++) { //adds all working interns to table
+			tableDM[i] = new String[] {departedMStaff.get(i).getUniqueName(), Integer.toString(departedMStaff.get(i).getDaysWorked()), String.valueOf(departedMStaff.get(i).getNormalPay()), String.valueOf(departedMStaff.get(i).getBonusPay()), "Quit"};
+		}
+		for (int i = 0; i < departedSStaff.size(); i++) { //adds all working interns to table
+			tableDS[i] = new String[] {departedSStaff.get(i).getUniqueName(), Integer.toString(departedSStaff.get(i).getDaysWorked()), String.valueOf(departedSStaff.get(i).getNormalPay()), String.valueOf(departedSStaff.get(i).getBonusPay()), "Quit"};
+		}
+		for (int i = 0; i < departedIStaff.size(); i++) { //adds all working interns to table
+			tableDI[i] = new String[] {departedIStaff.get(i).getUniqueName(), Integer.toString(departedIStaff.get(i).getDaysWorked()), String.valueOf(departedIStaff.get(i).getNormalPay()), String.valueOf(departedIStaff.get(i).getBonusPay()), "Quit"};
+		}
+		String newOperatingBudget = String.format("%.2f", operatingBudget);
+		tableSales[0] = new String[] {"$" + newOperatingBudget, "$ Total Sales"};
+		System.out.println("Staff Members: ");
+		for (final Object[] row : tableM) {
+			System.out.format("%15s%15s%15s%15s%15s%n", row);
+		}
+		for (final Object[] row : tableS) {
+			System.out.format("%15s%15s%15s%15s%15s%n", row);
+		}
+		for (final Object[] row : tableI) {
+			System.out.format("%15s%15s%15s%15s%15s%n", row);
+		}
+		for (final Object[] row : tableDM) {
+			System.out.format("%15s%15s%15s%15s%15s%n", row);
+		}
+		for (final Object[] row : tableDS) {
+			System.out.format("%15s%15s%15s%15s%15s%n", row);
+		}
+		for (final Object[] row : tableDI) {
+			System.out.format("%15s%15s%15s%15s%15s%n", row);
+		}
+		System.out.println("Total Budget and Sales:");
+		for (final Object[] row : tableSales) {
+			System.out.format("%15s%15s%n", row);
+		}
 	}
 	public static void main(String[] args) {
 		FNCD sim = new FNCD();
 
 		sim.opening();
-		sim.opening();
+		sim.washing();
 
 		/* 
 		FNCD simulation = new FNCD();
