@@ -16,6 +16,7 @@ public class FNCD {
 	private ArrayList<Mechanic> departedMStaff = new ArrayList<>();
 	private ArrayList<Salesperson> departedSStaff = new ArrayList<>();
 	private ArrayList<Intern> departedIStaff = new ArrayList<>();
+	private ArrayList<PerformanceCars> outPerformanceCarInventory = new ArrayList<>();
 	private int perfID = 0;
 	private int carID = 0;
 	private int pickupID = 0;
@@ -201,6 +202,9 @@ public class FNCD {
 		int counterDM = 0;
 		int counterDS = 0;
 		int counterDI = 0;
+		int counterPC = 0;
+		int counterC = 0;
+		int counterP = 0;
 		for (int i = 0; i < mechanicStaff.size(); i++) {
 			// Pay each mechanic
 			mechanicStaff.get(i).setNormalPay(mechanicStaff.get(i).getNormalPay() + 20.5);
@@ -219,6 +223,18 @@ public class FNCD {
 			internStaff.get(i).setDaysWorked(internStaff.get(i).getDaysWorked() + 1);
 			counterI = counterI + 1;
 		}
+		for (int i = 0; i < performanceCarInventory.size(); i++) {
+			// count each PC
+			counterPC = counterPC + 1;
+		}
+		for (int i = 0; i < carsInventory.size(); i++) {
+			// count each C
+			counterC = counterC + 1;
+		}
+		for (int i = 0; i < pickupsInventory.size(); i++) {
+			// count each P
+			counterP = counterP + 1;
+		}
 		Random ran = new Random();
 		int mechanicQuitChance = ran.nextInt(10) + 1; // if mechanicQuitChance = 1; a mechanic quits
 		int salespersonQuitChance = ran.nextInt(10) + 1; // if salespersonQuitChance = 1; a salesperson quits
@@ -234,6 +250,9 @@ public class FNCD {
 		if (internQuitChance == 1) { //intern quits
 			departedIStaff.add(internStaff.get(0));
 			internStaff.remove(0);
+		}
+		if (performanceCarInventory.size() == 0) {
+			
 		}
 		for (int i = 0; i < departedMStaff.size(); i++) {
 			counterDM = counterDM + 1;
@@ -251,6 +270,9 @@ public class FNCD {
 		final Object[][] tableDM = new String[counterDM][];
 		final Object[][] tableDS = new String[counterDS][];
 		final Object[][] tableDI = new String[counterDI][];
+		final Object[][] tablePC = new String[counterPC][];
+		final Object[][] tableC = new String[counterC][];
+		final Object[][] tableP = new String[counterP][];
 		final Object[][] tableSales = new String[1][];
 		for (int i = 0; i < mechanicStaff.size(); i++) { //adds all working mechanics to table
 			tableM[i] = new String[] {mechanicStaff.get(i).getUniqueName(), Integer.toString(mechanicStaff.get(i).getDaysWorked()), String.valueOf(mechanicStaff.get(i).getNormalPay()), String.valueOf(mechanicStaff.get(i).getBonusPay()), "Working"};
@@ -261,14 +283,29 @@ public class FNCD {
 		for (int i = 0; i < internStaff.size(); i++) { //adds all working interns to table
 			tableI[i] = new String[] {internStaff.get(i).getUniqueName(), Integer.toString(internStaff.get(i).getDaysWorked()), String.valueOf(internStaff.get(i).getNormalPay()), String.valueOf(internStaff.get(i).getBonusPay()), "Working"};
 		}
-		for (int i = 0; i < departedMStaff.size(); i++) { //adds all working interns to table
+		for (int i = 0; i < departedMStaff.size(); i++) { //adds all working quit mechanics to table
 			tableDM[i] = new String[] {departedMStaff.get(i).getUniqueName(), Integer.toString(departedMStaff.get(i).getDaysWorked()), String.valueOf(departedMStaff.get(i).getNormalPay()), String.valueOf(departedMStaff.get(i).getBonusPay()), "Quit"};
 		}
-		for (int i = 0; i < departedSStaff.size(); i++) { //adds all working interns to table
+		for (int i = 0; i < departedSStaff.size(); i++) { //adds all working quit salesperson to table
 			tableDS[i] = new String[] {departedSStaff.get(i).getUniqueName(), Integer.toString(departedSStaff.get(i).getDaysWorked()), String.valueOf(departedSStaff.get(i).getNormalPay()), String.valueOf(departedSStaff.get(i).getBonusPay()), "Quit"};
 		}
-		for (int i = 0; i < departedIStaff.size(); i++) { //adds all working interns to table
+		for (int i = 0; i < departedIStaff.size(); i++) { //adds all working quit intern to table
 			tableDI[i] = new String[] {departedIStaff.get(i).getUniqueName(), Integer.toString(departedIStaff.get(i).getDaysWorked()), String.valueOf(departedIStaff.get(i).getNormalPay()), String.valueOf(departedIStaff.get(i).getBonusPay()), "Quit"};
+		}
+		for (int i = 0; i < performanceCarInventory.size(); i++) {
+			String carCostPrice = String.format("%.2f", performanceCarInventory.get(i).getCostPrice());
+			String carSalesPrice = String.format("%.2f", performanceCarInventory.get(i).getSalesPrice());
+			tablePC[i] = new String[] {performanceCarInventory.get(i).getID(), "$" + carCostPrice, "$" + carSalesPrice, performanceCarInventory.get(i).getCondition(), performanceCarInventory.get(i).getCleanliness(), "In Stock"};
+		}
+		for (int i = 0; i < carsInventory.size(); i++) {
+			String carCostPrice = String.format("%.2f", performanceCarInventory.get(i).getCostPrice());
+			String carSalesPrice = String.format("%.2f", performanceCarInventory.get(i).getSalesPrice());
+			tableC[i] = new String[] {carsInventory.get(i).getID(), "$" + carCostPrice, "$" + carSalesPrice, carsInventory.get(i).getCondition(), carsInventory.get(i).getCleanliness(), "In Stock"};
+		}
+		for (int i = 0; i < pickupsInventory.size(); i++) {
+			String carCostPrice = String.format("%.2f", performanceCarInventory.get(i).getCostPrice());
+			String carSalesPrice = String.format("%.2f", performanceCarInventory.get(i).getSalesPrice());
+			tableP[i] = new String[] {pickupsInventory.get(i).getID(), "$" + carCostPrice, "$" + carSalesPrice, pickupsInventory.get(i).getCondition(), pickupsInventory.get(i).getCleanliness(), "In Stock"};
 		}
 		String newOperatingBudget = String.format("%.2f", operatingBudget);
 		tableSales[0] = new String[] {"$" + newOperatingBudget, "$ Total Sales"};
@@ -290,6 +327,16 @@ public class FNCD {
 		}
 		for (final Object[] row : tableDI) {
 			System.out.format("%15s%15s%15s%15s%15s%n", row);
+		}
+		System.out.println("Vehicle Inventory:");
+		for (final Object[] row : tablePC) {
+			System.out.format("%15s%15s%15s%15s%15s%15s%n", row);
+		}
+		for (final Object[] row : tableC) {
+			System.out.format("%15s%15s%15s%15s%15s%15s%n", row);
+		}
+		for (final Object[] row : tableP) {
+			System.out.format("%15s%15s%15s%15s%15s%15s%n", row);
 		}
 		System.out.println("Total Budget and Sales:");
 		for (final Object[] row : tableSales) {
