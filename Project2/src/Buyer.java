@@ -3,12 +3,12 @@ public class Buyer {
 	// Private Class Variables
 	private String buyerType;
 	private String vehicleTypeWanted;
-	// Setters
-	public void setBuyerType(String type) {
+	private double buyChance;
+
+	public Buyer(String type, String wanted, double chance){
 		buyerType = type;
-	}
-	public void setVehicleTypeWanted(String want) {
-		vehicleTypeWanted = want;
+		vehicleTypeWanted = wanted;
+		buyChance = chance;
 	}
 	// Getters
 	public String getBuyerType() {
@@ -16,6 +16,9 @@ public class Buyer {
 	}
 	public String getVehicleTypeWanted() {
 		return this.vehicleTypeWanted;
+	}
+	public double getBuyChance(){
+		return this.buyChance;
 	}
 	public static void main(String[] args) {
 	}

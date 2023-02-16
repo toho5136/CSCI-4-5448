@@ -13,7 +13,7 @@ public class FNCD {
 	private ArrayList<Buyer> buyers = new ArrayList<>();
 	private double operatingBudget;
 	private double addedFunds = 0;
-	private int currentDay = 0;
+	private int currentDay = 1;
 	private ArrayList<Mechanic> departedMStaff = new ArrayList<>();
 	private ArrayList<Salesperson> departedSStaff = new ArrayList<>();
 	private ArrayList<Intern> departedIStaff = new ArrayList<>();
@@ -79,9 +79,200 @@ public class FNCD {
 	public void addPickups(Pickups newCar) {
 		pickupsInventory.add(newCar);
 	}
+	public void addBuyer(Buyer newBuyer){
+		buyers.add(newBuyer);
+	}
 	// Creator
 	public void createBuyers() {
-		
+		buyers.clear();
+		if (currentDay % 7 == 0 || currentDay % 6 == 0){
+			for (int i = 0; i < 2; i++){
+				int buyerRoll = ThreadLocalRandom.current().nextInt(1, 3 + 1);
+				int wantedRoll = ThreadLocalRandom.current().nextInt(1, 3 + 1);
+
+				// Just looking
+				if (buyerRoll == 1){
+					// Wants Performance
+					if (wantedRoll == 1){
+						Buyer buy = new Buyer("Just Looking", "PerformanceCars", 0.1);
+						this.addBuyer(buy);
+					}
+					// Wants Pickups
+					else if (wantedRoll == 2){
+						Buyer buy = new Buyer("Just Looking", "Pickups", 0.1);
+						this.addBuyer(buy);
+					}
+					// Wants Cars
+					else {
+						Buyer buy = new Buyer("Just Looking", "Cars", 0.1);
+						this.addBuyer(buy);
+					}
+				}
+				// Wants One
+				else if (buyerRoll == 2){
+					// Wants Performance
+					if (wantedRoll == 1){
+						Buyer buy = new Buyer("Wants One", "PerformanceCars", 0.4);
+						this.addBuyer(buy);
+					}
+					// Wants Pickups
+					else if (wantedRoll == 2){
+						Buyer buy = new Buyer("Wants One", "Pickups", 0.4);
+						this.addBuyer(buy);
+					}
+					// Wants Cars
+					else {
+						Buyer buy = new Buyer("Wants One", "Cars", 0.4);
+						this.addBuyer(buy);
+					}
+				}
+				else {
+					// Wants Performance
+					if (wantedRoll == 1){
+						Buyer buy = new Buyer("Needs One", "PerformanceCars", 0.7);
+						this.addBuyer(buy);
+					}
+					// Wants Pickups
+					else if (wantedRoll == 2){
+						Buyer buy = new Buyer("Needs One", "Pickups", 0.7);
+						this.addBuyer(buy);
+					}
+					// Wants Cars
+					else {
+						Buyer buy = new Buyer("Needs One", "Cars", 0.7);
+						this.addBuyer(buy);
+					}
+				}
+			}
+			for (int i = 0; i < 6; i++){
+				int roll = ThreadLocalRandom.current().nextInt(1, 2 + 1);
+				
+				if (roll == 1){
+					int buyerRoll = ThreadLocalRandom.current().nextInt(1, 3 + 1);
+					int wantedRoll = ThreadLocalRandom.current().nextInt(1, 3 + 1);
+
+					// Just looking
+					if (buyerRoll == 1){
+						// Wants Performance
+						if (wantedRoll == 1){
+							Buyer buy = new Buyer("Just Looking", "PerformanceCars", 0.1);
+							this.addBuyer(buy);
+						}
+						// Wants Pickups
+						else if (wantedRoll == 2){
+							Buyer buy = new Buyer("Just Looking", "Pickups", 0.1);
+							this.addBuyer(buy);
+						}
+						// Wants Cars
+						else {
+							Buyer buy = new Buyer("Just Looking", "Cars", 0.1);
+							this.addBuyer(buy);
+						}
+					}
+					// Wants One
+					else if (buyerRoll == 2){
+						// Wants Performance
+						if (wantedRoll == 1){
+							Buyer buy = new Buyer("Wants One", "PerformanceCars", 0.4);
+							this.addBuyer(buy);
+						}
+						// Wants Pickups
+						else if (wantedRoll == 2){
+							Buyer buy = new Buyer("Wants One", "Pickups", 0.4);
+							this.addBuyer(buy);
+						}
+						// Wants Cars
+						else {
+							Buyer buy = new Buyer("Wants One", "Cars", 0.4);
+							this.addBuyer(buy);
+						}
+					}
+					else {
+						// Wants Performance
+						if (wantedRoll == 1){
+							Buyer buy = new Buyer("Needs One", "PerformanceCars", 0.7);
+							this.addBuyer(buy);
+						}
+						// Wants Pickups
+						else if (wantedRoll == 2){
+							Buyer buy = new Buyer("Needs One", "Pickups", 0.7);
+							this.addBuyer(buy);
+						}
+						// Wants Cars
+						else {
+							Buyer buy = new Buyer("Needs One", "Cars", 0.7);
+							this.addBuyer(buy);
+						}
+					}
+				}
+			}
+		}
+		else {
+			System.out.println("Curr day: " + currentDay);
+			for (int i = 0; i < 5; i++){
+				int roll = ThreadLocalRandom.current().nextInt(1, 2 + 1);
+				
+				if (roll == 1){
+					int buyerRoll = ThreadLocalRandom.current().nextInt(1, 3 + 1);
+					int wantedRoll = ThreadLocalRandom.current().nextInt(1, 3 + 1);
+
+					// Just looking
+					if (buyerRoll == 1){
+						// Wants Performance
+						if (wantedRoll == 1){
+							Buyer buy = new Buyer("Just Looking", "PerformanceCars", 0.1);
+							this.addBuyer(buy);
+						}
+						// Wants Pickups
+						else if (wantedRoll == 2){
+							Buyer buy = new Buyer("Just Looking", "Pickups", 0.1);
+							this.addBuyer(buy);
+						}
+						// Wants Cars
+						else {
+							Buyer buy = new Buyer("Just Looking", "Cars", 0.1);
+							this.addBuyer(buy);
+						}
+					}
+					// Wants One
+					else if (buyerRoll == 2){
+						// Wants Performance
+						if (wantedRoll == 1){
+							Buyer buy = new Buyer("Wants One", "PerformanceCars", 0.4);
+							this.addBuyer(buy);
+						}
+						// Wants Pickups
+						else if (wantedRoll == 2){
+							Buyer buy = new Buyer("Wants One", "Pickups", 0.4);
+							this.addBuyer(buy);
+						}
+						// Wants Cars
+						else {
+							Buyer buy = new Buyer("Wants One", "Cars", 0.4);
+							this.addBuyer(buy);
+						}
+					}
+					else {
+						// Wants Performance
+						if (wantedRoll == 1){
+							Buyer buy = new Buyer("Needs One", "PerformanceCars", 0.7);
+							this.addBuyer(buy);
+						}
+						// Wants Pickups
+						else if (wantedRoll == 2){
+							Buyer buy = new Buyer("Needs One", "Pickups", 0.7);
+							this.addBuyer(buy);
+						}
+						// Wants Cars
+						else {
+							Buyer buy = new Buyer("Needs One", "Cars", 0.7);
+							this.addBuyer(buy);
+						}
+					}
+				}
+			}
+		}
+		System.out.println(buyers.size());
 	}
 	public int createVehicleID(){
 		return 0;
@@ -184,7 +375,6 @@ public class FNCD {
 				}
 			}
 		}
-		currentDay += 1;
 	}
 	public void washing() {
 		//Iterate over all 3 interns
@@ -520,7 +710,7 @@ public class FNCD {
 		}
 	}
 	public void selling() {
-		
+
 	}
 	public void ending() {
 		int counterM = 0; //counter to create print table
@@ -683,7 +873,7 @@ public class FNCD {
 		FNCD sim = new FNCD();
 
 		sim.opening();
-		sim.repairing();
+
 		/* 
 		FNCD simulation = new FNCD();
 		simulation.setOperatingBudget(500000); //Starting off budget at 500k
