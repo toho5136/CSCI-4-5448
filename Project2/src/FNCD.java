@@ -195,19 +195,24 @@ public class FNCD {
 		
 	}
 	public void ending() {
-		int counter = 0; //counter to create print table
+		int counterM = 0; //counter to create print table
+		int counterS = 0;
+		int counterI = 0;
+		int counterDM = 0;
+		int counterDS = 0;
+		int counterDI = 0;
 		for (int i = 0; i < mechanicStaff.size(); i++) {
 			// Pay each mechanic
 			//mechanicStaff.set(i, );
-			counter = counter + 1;
+			counterM = counterM + 1;
 		}
 		for (int i = 0; i < salespersonStaff.size(); i++) {
 			// Pay each salesperson
-			counter = counter + 1;
+			counterS = counterS + 1;
 		}
 		for (int i = 0; i < internStaff.size(); i++) {
 			// Pay each intern
-			counter = counter + 1;
+			counterI = counterI + 1;
 		}
 		Random ran = new Random();
 		int mechanicQuitChance = ran.nextInt(10) + 1; // if mechanicQuitChance = 1; a mechanic quits
@@ -226,27 +231,65 @@ public class FNCD {
 			internStaff.remove(0);
 		}
 		for (int i = 0; i < departedMStaff.size(); i++) {
-			counter = counter + 1;
+			counterDM = counterDM + 1;
 		}
 		for (int i = 0; i < departedSStaff.size(); i++) {
-			counter = counter + 1;
+			counterDS = counterDS + 1;
 		}
 		for (int i = 0; i < departedIStaff.size(); i++) {
-			counter = counter + 1;
+			counterDI = counterDI + 1;
 		}
-		/* 
-		final Object[][] table = new String[counter][];
+		
+		final Object[][] tableM = new String[counterM][];
+		final Object[][] tableS = new String[counterS][];
+		final Object[][] tableI = new String[counterI][];
+		final Object[][] tableDM = new String[counterDM][];
+		final Object[][] tableDS = new String[counterDS][];
+		final Object[][] tableDI = new String[counterDI][];
 		for (int i = 0; i < mechanicStaff.size(); i++) { //adds all working mechanics to table
-			table[i] = new String[] {mechanicStaff.get(i).newMechanic.getUniqueName(), Integer.toString(mechanicStaff.get(i).newMechanic.getDaysWorked()), String.valueOf(mechanicStaff.get(i).newMechanic.getNormalPay()), String.valueOf(mechanicStaff.get(i).newMechanic.getBonusPay()), "Working"};
+			tableM[i] = new String[] {mechanicStaff.get(i).getUniqueName(), Integer.toString(mechanicStaff.get(i).getDaysWorked()), String.valueOf(mechanicStaff.get(i).getNormalPay()), String.valueOf(mechanicStaff.get(i).getBonusPay()), "Working"};
 		}
-		*/
+		 for (int i = 0; i < salespersonStaff.size(); i++) { //adds all working salesperson to table
+			tableS[i] = new String[] {salespersonStaff.get(i).getUniqueName(), Integer.toString(salespersonStaff.get(i).getDaysWorked()), String.valueOf(salespersonStaff.get(i).getNormalPay()), String.valueOf(salespersonStaff.get(i).getBonusPay()), "Working"};
+		}
+		for (int i = 0; i < internStaff.size(); i++) { //adds all working interns to table
+			tableI[i] = new String[] {internStaff.get(i).getUniqueName(), Integer.toString(internStaff.get(i).getDaysWorked()), String.valueOf(internStaff.get(i).getNormalPay()), String.valueOf(internStaff.get(i).getBonusPay()), "Working"};
+		}
+		for (int i = 0; i < departedMStaff.size(); i++) { //adds all working interns to table
+			tableDM[i] = new String[] {departedMStaff.get(i).getUniqueName(), Integer.toString(departedMStaff.get(i).getDaysWorked()), String.valueOf(departedMStaff.get(i).getNormalPay()), String.valueOf(departedMStaff.get(i).getBonusPay()), "Quit"};
+		}
+		for (int i = 0; i < departedSStaff.size(); i++) { //adds all working interns to table
+			tableDS[i] = new String[] {departedSStaff.get(i).getUniqueName(), Integer.toString(departedSStaff.get(i).getDaysWorked()), String.valueOf(departedSStaff.get(i).getNormalPay()), String.valueOf(departedSStaff.get(i).getBonusPay()), "Quit"};
+		}
+		for (int i = 0; i < departedIStaff.size(); i++) { //adds all working interns to table
+			tableDI[i] = new String[] {departedIStaff.get(i).getUniqueName(), Integer.toString(departedIStaff.get(i).getDaysWorked()), String.valueOf(departedIStaff.get(i).getNormalPay()), String.valueOf(departedIStaff.get(i).getBonusPay()), "Quit"};
+		}
+		for (final Object[] row : tableM) {
+			System.out.format("%15s%15s%15s%15s%15s%n", row);
+		}
+		for (final Object[] row : tableS) {
+			System.out.format("%15s%15s%15s%15s%15s%n", row);
+		}
+		for (final Object[] row : tableI) {
+			System.out.format("%15s%15s%15s%15s%15s%n", row);
+		}
+		for (final Object[] row : tableDM) {
+			System.out.format("%15s%15s%15s%15s%15s%n", row);
+		}
+		for (final Object[] row : tableDS) {
+			System.out.format("%15s%15s%15s%15s%15s%n", row);
+		}
+		for (final Object[] row : tableDI) {
+			System.out.format("%15s%15s%15s%15s%15s%n", row);
+		}
+		
 	}
 	public static void main(String[] args) {
 		FNCD sim = new FNCD();
 
 		sim.opening();
 		sim.opening();
-
+		sim.ending();
 		/* 
 		FNCD simulation = new FNCD();
 		simulation.setOperatingBudget(500000); //Starting off budget at 500k
