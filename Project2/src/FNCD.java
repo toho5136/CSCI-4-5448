@@ -203,15 +203,20 @@ public class FNCD {
 		int counterDI = 0;
 		for (int i = 0; i < mechanicStaff.size(); i++) {
 			// Pay each mechanic
-			//mechanicStaff.set(i, );
+			mechanicStaff.get(i).setNormalPay(mechanicStaff.get(i).getNormalPay() + 20.5);
+			mechanicStaff.get(i).setDaysWorked(mechanicStaff.get(i).getDaysWorked() + 1);
 			counterM = counterM + 1;
 		}
 		for (int i = 0; i < salespersonStaff.size(); i++) {
 			// Pay each salesperson
+			salespersonStaff.get(i).setNormalPay(salespersonStaff.get(i).getNormalPay() + 22.5);
+			salespersonStaff.get(i).setDaysWorked(salespersonStaff.get(i).getDaysWorked() + 1);
 			counterS = counterS + 1;
 		}
 		for (int i = 0; i < internStaff.size(); i++) {
 			// Pay each intern
+			internStaff.get(i).setNormalPay(internStaff.get(i).getNormalPay() + 10.5);
+			internStaff.get(i).setDaysWorked(internStaff.get(i).getDaysWorked() + 1);
 			counterI = counterI + 1;
 		}
 		Random ran = new Random();
