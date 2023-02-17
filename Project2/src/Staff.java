@@ -1,5 +1,8 @@
 
-
+/* Example of encapsulation: all methods that are used only by Staff 
+ * can be found exclusively in this class. Only Staff and its 
+ * subclasses use the related functions.
+ */
 public class Staff {
 	// Private Class Variables
 	private String uniqueName;
@@ -17,6 +20,9 @@ public class Staff {
 	public void setNormalPay(double norm) {
 		totalNormalPay = norm;
 	}
+	// Although we don't necessarily have an example of polymorphism in our code,
+	// If this function were to have different implementations in each child class,
+	// then it would be an example of polymorphism
 	public void setBonusPay(double bonus) {
 		totalBonusPay = bonus;
 	}

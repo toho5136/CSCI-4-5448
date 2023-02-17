@@ -85,8 +85,16 @@ public class FNCD {
 		buyers.add(newBuyer);
 	}
 	// Creator
+
+	/* Creates the ArrayList of buyers to be used each day for salepersons.
+	 * Randomizes all buyers traits (vehiclesWanted/buyChance)
+	 * --------------------------------------------------------------------
+	 * @param  -> none
+	 * @return -> void
+	 */
 	public void createBuyers() {
 		buyers.clear();
+		// If the current day is a Satuday or a Sunday
 		if (currentDay % 7 == 0 || currentDay % 6 == 0){
 			for (int i = 0; i < 2; i++){
 				int buyerRoll = ThreadLocalRandom.current().nextInt(1, 3 + 1);
@@ -209,6 +217,7 @@ public class FNCD {
 				}
 			}
 		}
+		// If the current day is a weekday
 		else {
 			for (int i = 0; i < 5; i++){
 				int roll = ThreadLocalRandom.current().nextInt(1, 2 + 1);
@@ -277,34 +286,52 @@ public class FNCD {
 	public int createVehicleID(){
 		return 0;
 	}
-	// Other Functions
+
+	/* Opening function first checks to see what day it is. If it is the first day,
+	 * it will populate all of the staff lists, vehicle lists as well as set the 
+	 * operating budget to $500,000. If it is not the first day, it will make sure 
+	 * the vehicle inventories are full and buy new ones if needed. Then it will ensure
+	 * the intern staff is full and hire new ones if necessary.
+	 * --------------------------------------------------------------------------------
+	 * @param  -> none
+	 * @return -> void
+	 */
 	public void opening() {
 		System.out.println("Day: " + currentDay);
 		//First day, need to add workers, cars, and set budget
 		if (currentDay == 1){
+			/* Example of identity: multiple mechanics objects are created
+			 * in this for loop and added to an ArrayList
+			 */
 			for (int i = 0; i < 3; i++){
+				// Initialize mechanic staff list
 				Mechanic mech = new Mechanic("Mechanic" + String.valueOf(mechNames));
 				this.addMechanic(mech);
 				mechNames += 1;
 
+				// Initialize salesperson staff list
 				Salesperson sale = new Salesperson("Salesperson" + String.valueOf(salesNames));
 				this.addSalesperson(sale);
 				salesNames += 1;
 
+				// Initialize intern staff list
 				Intern intern = new Intern("Intern" + String.valueOf(internNames));
 				this.addIntern(intern);
 				internNames += 1;
 			}
 
 			for (int i = 0; i < 4; i++){
+				// Initialize performance car inventory
 				PerformanceCars perf = new PerformanceCars("PerformanceCar" + String.valueOf(perfID));
 				this.addPerformanceCar(perf);
 				perfID += 1;
 
+				// Initialize pickups inventory
 				Pickups pick = new Pickups("Pickup" + String.valueOf(pickupID));
 				this.addPickups(pick);
 				pickupID += 1;
 
+				// Initialize cars inventory
 				Cars car = new Cars("Car" + String.valueOf(carID));
 				this.addCar(car);
 				carID += 1;
@@ -314,6 +341,7 @@ public class FNCD {
 			System.out.println("opened");
 		}
 		else {
+			// If not first day, check too see staff list and vehicle inventory is full
 			if (operatingBudget < 0){
 				System.out.println("Operating budget is below 0. Adding funds.");
 				while (operatingBudget < 0){
@@ -322,7 +350,7 @@ public class FNCD {
 				}
 				System.out.println("Total funds added so far: " + addedFunds);
 			}
-			//Check to see if intern staff is 3
+			// Check to see if intern staff is 3
 			if (internStaff.size() < 3){
 				int limit = 3 - internStaff.size();
 				
@@ -334,7 +362,7 @@ public class FNCD {
 				}
 			}
 
-			//Check to see if performance cars inventory is 4
+			// Check to see if performance cars inventory is 4
 			if (performanceCarInventory.size() < 4){
 				int limit = 4 - performanceCarInventory.size();
 
@@ -348,7 +376,7 @@ public class FNCD {
 				}
 			}
 
-			//Check to see if pickups inventory is 4
+			// Check to see if pickups inventory is 4
 			if (pickupsInventory.size() < 4){
 				int limit = 4 - pickupsInventory.size();
 
@@ -362,7 +390,7 @@ public class FNCD {
 				}
 			}
 
-			//Check to see if cars inventory is 4
+			// Check to see if cars inventory is 4
 			if (carsInventory.size() < 4){
 				int limit = 4 - carsInventory.size();
 
@@ -382,26 +410,30 @@ public class FNCD {
 		for (int i = 0; i < 3; i++){
 			int vehiclesWashed = 0;
 
-			//Iterate over all three vehicles lists (0-3:performance, 4-7:pickups, 8-11:cars)
+			// Iterate over all three vehicles lists (0-3:performance, 4-7:pickups, 8-11:cars)
 			for (int j = 0; j < 12; j++){
 				// check if reached limit
 				if (vehiclesWashed == 2){
 					break;
 				}
-				//Iterate through perforance car inventory
+				// Iterate through perforance car inventory
 				if (j < 4){
+					// Find dirty vehicle
 					if (performanceCarInventory.get(j).getCleanliness() == "Dirty"){
 						int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful wash to clean
 						if (washRoll < 81){
 							System.out.println(internStaff.get(i).getUniqueName() + " has made " + performanceCarInventory.get(j).getID() 
 							+ " clean!");
 							performanceCarInventory.get(j).setCleanliness("Clean");
 							vehiclesWashed += 1;
 						}
+						// Successful wash to sparkling
 						if (washRoll <= 100 && washRoll > 90){
 							System.out.println(internStaff.get(i).getUniqueName() + " has made " + performanceCarInventory.get(j).getID() 
 							+ " sparkling!($" + performanceCarInventory.get(j).getWashBonus() + " bonus)");
 
+							// Pay bonus to intern
 							internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + performanceCarInventory.get(j).getWashBonus());
 							operatingBudget -= performanceCarInventory.get(j).getWashBonus();
 							performanceCarInventory.get(j).setCleanliness("Sparkling");
@@ -410,19 +442,24 @@ public class FNCD {
 					}
 				}
 
+				// Iterate through pickups inventory
 				else if (j >= 4 && j < 8){
+					// Find dirty vehicle
 					if (pickupsInventory.get(j-4).getCleanliness() == "Dirty"){
 						int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful wash to clean
 						if (washRoll < 81){
 							System.out.println(internStaff.get(i).getUniqueName() + " has made " + pickupsInventory.get(j-4).getID() 
 							+ " clean!");
 							pickupsInventory.get(j-4).setCleanliness("Clean");
 							vehiclesWashed += 1;
 						}
+						// Successful wash to sparkling
 						if (washRoll <= 100 && washRoll > 90){
 							System.out.println(internStaff.get(i).getUniqueName() + " has made " + pickupsInventory.get(j-4).getID() 
 							+ " sparkling!($" + pickupsInventory.get(j-4).getWashBonus() + " bonus)");
 
+							// Pay bonus to intern
 							internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + pickupsInventory.get(j-4).getWashBonus());
 							operatingBudget -= pickupsInventory.get(j-4).getWashBonus();
 							pickupsInventory.get(j-4).setCleanliness("Sparkling");
@@ -431,19 +468,23 @@ public class FNCD {
 						}
 					}
 				}
+				// Iterate through cars inventory
 				else {
 					if (carsInventory.get(j-8).getCleanliness() == "Dirty"){
 						int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful wash to clean
 						if (washRoll < 81){
 							System.out.println(internStaff.get(i).getUniqueName() + " has made " + carsInventory.get(j-8).getID() 
 							+ " clean!");
 							carsInventory.get(j-8).setCleanliness("Clean");
 							vehiclesWashed += 1;
 						}
+						// Successful wash to sparkling
 						if (washRoll <= 100 && washRoll > 90){
 							System.out.println(internStaff.get(i).getUniqueName() + " has made " + carsInventory.get(j-8).getID() 
 							+ " sparkling!($" + carsInventory.get(j-8).getWashBonus() + " bonus)");
 
+							// Pay bonus to intern
 							internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + carsInventory.get(j-8).getWashBonus());
 							operatingBudget -= carsInventory.get(j-8).getWashBonus();
 							carsInventory.get(j-8).setCleanliness("Sparkling");
@@ -453,6 +494,7 @@ public class FNCD {
 				}
 			}
 
+			// If there are no more clean cars
 			if (vehiclesWashed < 2){
 				for (int j = 0; j < 12; j++){
 					// check if reached limit
@@ -463,52 +505,63 @@ public class FNCD {
 					if (j < 4){
 						if (performanceCarInventory.get(j).getCleanliness() == "Clean"){
 							int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							// Unsuccsessful clean to dirty
 							if (washRoll <= 5){
 								System.out.println(internStaff.get(i).getUniqueName() + " has made " + performanceCarInventory.get(j).getID() + " dirty!");
 								performanceCarInventory.get(j).setCleanliness("Dirty");
 								vehiclesWashed += 1;
 							}
+							// Successful clean to sparkling
 							if (washRoll <= 100 && washRoll > 70){
 								System.out.println(internStaff.get(i).getUniqueName() + " has made " + performanceCarInventory.get(j).getID() 
 								+ " sparkling!($" + performanceCarInventory.get(j).getWashBonus() + " bonus)");
 
+								// Pay bonus to intern
 								internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + performanceCarInventory.get(j).getWashBonus());
 								performanceCarInventory.get(j).setCleanliness("Sparkling");
 								vehiclesWashed += 1;
 							}
 						}
 					}
-	
+
+					// Iterate through pickups inventory
 					else if (j >= 4 && j < 8){
 						if (pickupsInventory.get(j-4).getCleanliness() == "Clean"){
 							int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							// Unsuccessful clean to dirty
 							if (washRoll <= 5){
 								System.out.println(internStaff.get(i).getUniqueName() + " has made " + pickupsInventory.get(j-4).getID() + " dirty!");
 								pickupsInventory.get(j-4).setCleanliness("Dirty");
 								vehiclesWashed += 1;
 							}
+							// Successful clean to sparkling
 							if (washRoll <= 100 && washRoll > 70){
 								System.out.println(internStaff.get(i).getUniqueName() + " has made " + pickupsInventory.get(j-4).getID() 
 								+ " sparkling!($" + pickupsInventory.get(j-4).getWashBonus() + " bonus)");
 
+								// Pay bonus to intern
 								internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + pickupsInventory.get(j-4).getWashBonus());
 								pickupsInventory.get(j-4).setCleanliness("Sparkling");
 								vehiclesWashed += 1;
 							}
 						}
 					}
+					// Iterate through cars inventory
 					else {
 						if (carsInventory.get(j-8).getCleanliness() == "Clean"){
 							int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							// Unsuccessful wash to dirty
 							if (washRoll <= 5){
 								System.out.println(internStaff.get(i).getUniqueName() + " has made " + carsInventory.get(j-8).getID() + " dirty!");
 								carsInventory.get(j-8).setCleanliness("Dirty");
 								vehiclesWashed += 1;
 							}
+							// Successful wash to sparkling
 							if (washRoll <= 100 && washRoll > 70){
 								System.out.println(internStaff.get(i).getUniqueName() + " has made " + carsInventory.get(j-8).getID() 
 								+ " sparkling!($" + carsInventory.get(j-8).getWashBonus() + " bonus)");
 
+								// pay intern bonus
 								internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + carsInventory.get(j-8).getWashBonus());
 								carsInventory.get(j-8).setCleanliness("Sparkling");
 								vehiclesWashed += 1;
@@ -519,27 +572,44 @@ public class FNCD {
 			}
 		}
 	}
+
+	/* Iterates through all mechanics and rolls for a chance to repair cars (roll on
+	 * either broken or used cars). Upon repair roll, car is dropped a class in cleanliness
+	 * reguardless of whether or not repair is successful. If repair is successful, mechanic
+	 * is paid a bonus (determined by car type).
+	 * -------------------------------------------------------------------------------------
+	 * @param  -> none
+	 * @return -> void
+	 */
 	public void repairing() {
+		// Iterate over mechanics
 		for (int i = 0; i < 3; i++){
 			int vehiclesFixed = 0;
 
+			// Iterate through all three vehicle inventories
+			// Looking for Broken vehicles
 			for (int j = 0; j < 12; j++){
+				// Check to see if repair limit is reached
 				if (vehiclesFixed == 2){
 					break;
 				}
 
-				//
+				// Iterate through performanceCar inventory
 				if (j < 4){
 					if (performanceCarInventory.get(j).getCondition() == "Broken"){
 						int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 
+						// Successful repair
 						if (repairRoll <= 80){
 							System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Broken car " + performanceCarInventory.get(j).getID() 
 							+ " and made it Used!($" + performanceCarInventory.get(j).getRepairBonus() + " bonus)");
 
+							// Set condition to Used
 							performanceCarInventory.get(j).setCondition("Used");
+							// Pay bonus to mechanic
 							mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + performanceCarInventory.get(j).getRepairBonus());
 							
+							// Adjust cleanliness level
 							if (performanceCarInventory.get(j).getCleanliness() == "Sparkling"){
 								performanceCarInventory.get(j).setCleanliness("Clean");
 							}
@@ -547,7 +617,9 @@ public class FNCD {
 								performanceCarInventory.get(j).setCleanliness("Dirty");
 							}
 						}
+						// Unsuccessful repair
 						else {
+							// Adjust cleanliness level
 							if (performanceCarInventory.get(j).getCleanliness() == "Sparkling"){
 								performanceCarInventory.get(j).setCleanliness("Clean");
 							}
@@ -558,17 +630,22 @@ public class FNCD {
 						vehiclesFixed += 1;
 					}
 				}
+				// Iterate through pickups inventory
 				else if (j >= 4 && j < 8){
 					if (pickupsInventory.get(j-4).getCondition() == "Broken"){
 						int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 
+						// Successful repair
 						if (repairRoll <= 80){
 							System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Broken car " + pickupsInventory.get(j-4).getID() 
 							+ " and made it Used!($" + pickupsInventory.get(j-4).getRepairBonus() + " bonus)");
 
+							// Set condition to Used
 							pickupsInventory.get(j-4).setCondition("Used");
+							// Pay mechanic bonus
 							mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + pickupsInventory.get(j-4).getRepairBonus());
 							
+							// Adjust cleanliness level
 							if (pickupsInventory.get(j-4).getCleanliness() == "Sparkling"){
 								pickupsInventory.get(j-4).setCleanliness("Clean");
 							}
@@ -576,7 +653,9 @@ public class FNCD {
 								pickupsInventory.get(j-4).setCleanliness("Dirty");
 							}
 						}
+						// Unsuccessful repair
 						else {
+							// Adjust cleanliness level
 							if (pickupsInventory.get(j-4).getCleanliness() == "Sparkling"){
 								pickupsInventory.get(j-4).setCleanliness("Clean");
 							}
@@ -587,17 +666,22 @@ public class FNCD {
 						vehiclesFixed += 1;
 					}
 				}
+				// Iterate through cars inventory
 				else {
 					if (carsInventory.get(j-8).getCondition() == "Broken"){
 						int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 
+						// Successful repair
 						if (repairRoll <= 80){
 							System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Broken car " + carsInventory.get(j-8).getID() 
 							+ " and made it Used!($" + carsInventory.get(j-8).getRepairBonus() + " bonus)");
 
+							// Set condition to Used
 							carsInventory.get(j-8).setCondition("Used");
+							// Pay mechanic bonus
 							mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + carsInventory.get(j-8).getRepairBonus());
 							
+							// Adjust cleanliness level
 							if (carsInventory.get(j-8).getCleanliness() == "Sparkling"){
 								carsInventory.get(j-8).setCleanliness("Clean");
 							}
@@ -605,7 +689,9 @@ public class FNCD {
 								carsInventory.get(j-8).setCleanliness("Dirty");
 							}
 						}
+						// Unsuccessful repair
 						else {
+							// Adjust cleanliness level
 							if (carsInventory.get(j-8).getCleanliness() == "Sparkling"){
 								carsInventory.get(j-8).setCleanliness("Clean");
 							}
@@ -617,19 +703,28 @@ public class FNCD {
 					}
 				}
 			}
+
+			// Check if limit has been reached
 			if (vehiclesFixed < 2){
+				// Iterate through all vehicle inventories
+				// Looking for Used vehicles
 				for (int j = 0; j < 12; j++){
+					// Iterate through performanceCar inventory
 					if (j < 4){
 						if (performanceCarInventory.get(j).getCondition() == "Used"){
 							int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 	
+							// Successful repair
 							if (repairRoll <= 80){
 								System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Used car " + performanceCarInventory.get(j).getID() 
 								+ " and made it Like New!($" + performanceCarInventory.get(j).getRepairBonus() + " bonus)");
 	
+								// Set condition to Like New
 								performanceCarInventory.get(j).setCondition("Like New");
+								// Pay mechanic bonus
 								mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + performanceCarInventory.get(j).getRepairBonus());
 								
+								// Adjust cleanliness level
 								if (performanceCarInventory.get(j).getCleanliness() == "Sparkling"){
 									performanceCarInventory.get(j).setCleanliness("Clean");
 								}
@@ -637,7 +732,9 @@ public class FNCD {
 									performanceCarInventory.get(j).setCleanliness("Dirty");
 								}
 							}
+							// Unsuccessful repair
 							else {
+								// Adjust cleanliness level
 								if (performanceCarInventory.get(j).getCleanliness() == "Sparkling"){
 									performanceCarInventory.get(j).setCleanliness("Clean");
 								}
@@ -648,17 +745,22 @@ public class FNCD {
 							vehiclesFixed += 1;
 						}
 					}
+					// Iterate through pickups inventory
 					else if (j >= 4 && j < 8){
 						if (pickupsInventory.get(j-4).getCondition() == "Used"){
 							int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 	
+							// Successful repair
 							if (repairRoll <= 80){
 								System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Used car " + pickupsInventory.get(j-4).getID() 
 								+ " and made it Like New!($" + pickupsInventory.get(j-4).getRepairBonus() + " bonus)");
 	
+								// Set condition to Like New
 								pickupsInventory.get(j-4).setCondition("Like New");
+								// Pay mechanic bonus
 								mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + pickupsInventory.get(j-4).getRepairBonus());
 								
+								// Adjust cleanliness level
 								if (pickupsInventory.get(j-4).getCleanliness() == "Sparkling"){
 									pickupsInventory.get(j-4).setCleanliness("Clean");
 								}
@@ -666,7 +768,9 @@ public class FNCD {
 									pickupsInventory.get(j-4).setCleanliness("Dirty");
 								}
 							}
+							// Unsuccessful repair
 							else {
+								// Adjust cleanliness level
 								if (pickupsInventory.get(j-4).getCleanliness() == "Sparkling"){
 									pickupsInventory.get(j-4).setCleanliness("Clean");
 								}
@@ -677,17 +781,22 @@ public class FNCD {
 							vehiclesFixed += 1;
 						}
 					}
+					// Iterate through cars inventory
 					else {
 						if (carsInventory.get(j-8).getCondition() == "Used"){
 							int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 	
+							// Successful repair
 							if (repairRoll <= 80){
 								System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Used car " + carsInventory.get(j-8).getID() 
 								+ " and made it Like New!($" + carsInventory.get(j-8).getRepairBonus() + " bonus)");
 	
+								// Set condition to Like New
 								carsInventory.get(j-8).setCondition("Like New");
+								// Pay mechanic bonus
 								mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + carsInventory.get(j-8).getRepairBonus());
 								
+								// Adjust cleanliness level
 								if (carsInventory.get(j-8).getCleanliness() == "Sparkling"){
 									carsInventory.get(j-8).setCleanliness("Clean");
 								}
@@ -695,7 +804,9 @@ public class FNCD {
 									carsInventory.get(j-8).setCleanliness("Dirty");
 								}
 							}
+							// Unsuccessful repair
 							else {
+								// Adjust cleanliness level
 								if (carsInventory.get(j-8).getCleanliness() == "Sparkling"){
 									carsInventory.get(j-8).setCleanliness("Clean");
 								}
@@ -710,18 +821,36 @@ public class FNCD {
 			}
 		}
 	}
+	/* First calls the createBuyers function generating a new list of buyers.
+	 * It will then iterate over that ArrayList of buyers and randomly roll a 
+	 * salesperson. It will then look at what vehicle type the buyer wants and 
+	 * find the most expensie one in that class. If there are no vehicles of that
+	 * type, then it will find the next most expensive car in either type. It will
+	 * then adjust the roll chance depending on cleanliness and condition. If the roll
+	 * is successful, then the car will be sold to the buyer, adding the funds to 
+	 * operating budget, updating totalSales, and paying the bonus to the salesperson.
+	 * -------------------------------------------------------------------------------
+	 * @param  -> none
+	 * @return -> void
+	 */
 	public void selling() {
+		// Initialize buyers ArrayList
 		createBuyers();
 
+		// Iterate through buyers
 		for (int i = 0; i < buyers.size(); i++){
+			// Randomly choose a salesperson
 			int salesPersonRoll = ThreadLocalRandom.current().nextInt(0, 2 + 1);
 
+			// Buyer wants performanceCar
 			if (buyers.get(i).getVehicleTypeWanted() == "PerformanceCars"){
+				// If in stock
 				if (performanceCarInventory.size() != 0){
 					double maxPrice = 0.0;
 					int maxPriceIndex = -1;
 					int salesChance = buyers.get(i).getBuyChance();
 
+					// Find most expensive vehicle
 					for (int j = 0; j < performanceCarInventory.size(); j++){
 						if (maxPrice < performanceCarInventory.get(j).getSalesPrice() && performanceCarInventory.get(j).getCondition() != "Broken"){
 							maxPrice = performanceCarInventory.get(j).getSalesPrice();
@@ -733,6 +862,7 @@ public class FNCD {
 						break;
 					}
 
+					// Adjust sales chance
 					if (performanceCarInventory.get(maxPriceIndex).getCondition() == "Like New"){
 						salesChance += 10;
 					}
@@ -741,6 +871,7 @@ public class FNCD {
 					}
 					int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 
+					// Successful sales roll
 					if (sellRoll <= salesChance){
 						System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
 						+ performanceCarInventory.get(maxPriceIndex).getCleanliness() + " " 
@@ -748,6 +879,7 @@ public class FNCD {
 						+ " to Buyer for $" + performanceCarInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
 						+ performanceCarInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
+						// Adjust operating budget/total sales/pay bonus
 						operatingBudget += performanceCarInventory.get(maxPriceIndex).getSalesPrice();
 						totalSales += performanceCarInventory.get(maxPriceIndex).getSalesPrice();
 						double bonus = performanceCarInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
@@ -757,12 +889,14 @@ public class FNCD {
 						performanceCarInventory.remove(maxPriceIndex);
 					}
 				}
+				// Not in stock
 				else {
 					double maxPrice = 0.0;
 					int maxPriceIndex = -1;
 					int salesChance = buyers.get(i).getBuyChance() - 20;
 					String maxPriceType = "";
 
+					// Find most expensive pickups
 					for (int j = 0; j < pickupsInventory.size(); j++){
 						if (maxPrice < pickupsInventory.get(j).getSalesPrice() && pickupsInventory.get(j).getCondition() != "Broken"){
 							maxPrice = pickupsInventory.get(j).getSalesPrice();
@@ -770,6 +904,7 @@ public class FNCD {
 							maxPriceType = "Pickups";
 						}
 					}
+					// Find most expensive cars
 					for (int j = 0; j < carsInventory.size(); j++){
 						if (maxPrice < carsInventory.get(j).getSalesPrice() && carsInventory.get(j).getCondition() != "Broken"){
 							maxPrice = carsInventory.get(j).getSalesPrice();
@@ -778,7 +913,9 @@ public class FNCD {
 						}
 					}
 
+					// Pickups is most expensive
 					if (maxPriceType == "Pickups"){
+						// Adjust sales chance
 						if (pickupsInventory.get(maxPriceIndex).getCondition() == "Like New"){
 							salesChance += 10;
 						}
@@ -786,6 +923,7 @@ public class FNCD {
 							salesChance += 10;
 						}
 						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
 						if (sellRoll <= salesChance){
 							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
 							+ pickupsInventory.get(maxPriceIndex).getCleanliness() + " " 
@@ -793,6 +931,7 @@ public class FNCD {
 							+ " to Buyer for $" + pickupsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
 							+ pickupsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
+							// Adjust operating budget/total sales/pay bonus
 							operatingBudget += pickupsInventory.get(maxPriceIndex).getSalesPrice();
 							totalSales += pickupsInventory.get(maxPriceIndex).getSalesPrice();
 							double bonus = pickupsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
@@ -802,7 +941,9 @@ public class FNCD {
 							pickupsInventory.remove(maxPriceIndex);
 						}
 					}
+					// Cars is most expensive
 					else if (maxPriceType == "Cars"){
+						// Adjust sales chance
 						if (carsInventory.get(maxPriceIndex).getCondition() == "Like New"){
 							salesChance += 10;
 						}
@@ -810,6 +951,7 @@ public class FNCD {
 							salesChance += 10;
 						}
 						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
 						if (sellRoll <= salesChance){
 							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
 							+ carsInventory.get(maxPriceIndex).getCleanliness() + " " 
@@ -817,6 +959,7 @@ public class FNCD {
 							+ " to Buyer for $" + carsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
 							+ carsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
+							// Adjust operating budget/total sales/pay bonus
 							operatingBudget += carsInventory.get(maxPriceIndex).getSalesPrice();
 							totalSales += carsInventory.get(maxPriceIndex).getSalesPrice();
 							double bonus = carsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
@@ -830,11 +973,13 @@ public class FNCD {
 			}
 			// Pickups desired
 			else if (buyers.get(i).getVehicleTypeWanted() == "Pickups"){
+				// If in stock
 				if (pickupsInventory.size() != 0){
 					double maxPrice = 0.0;
 					int maxPriceIndex = -1;
 					int salesChance = buyers.get(i).getBuyChance();
 
+					// Find most expensive vehicle
 					for (int j = 0; j < pickupsInventory.size(); j++){
 						if (maxPrice < pickupsInventory.get(j).getSalesPrice() && pickupsInventory.get(j).getCondition() != "Broken"){
 							maxPrice = pickupsInventory.get(j).getSalesPrice();
@@ -846,6 +991,7 @@ public class FNCD {
 						break;
 					}
 
+					// Adjust sales chance
 					if (pickupsInventory.get(maxPriceIndex).getCondition() == "Like New"){
 						salesChance += 10;
 					}
@@ -854,6 +1000,7 @@ public class FNCD {
 					}
 					int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 
+					// Successful sales roll
 					if (sellRoll <= salesChance){
 						System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
 						+ pickupsInventory.get(maxPriceIndex).getCleanliness() + " " 
@@ -861,6 +1008,7 @@ public class FNCD {
 						+ " to Buyer for $" + pickupsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
 						+ pickupsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
+						// Adjust operating budget/total sales/pay bonus
 						operatingBudget += pickupsInventory.get(maxPriceIndex).getSalesPrice();
 						totalSales += pickupsInventory.get(maxPriceIndex).getSalesPrice();
 						double bonus = pickupsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
@@ -870,12 +1018,14 @@ public class FNCD {
 						pickupsInventory.remove(maxPriceIndex);
 					}
 				}
+				// Not in stock
 				else {
 					double maxPrice = 0.0;
 					int maxPriceIndex = -1;
 					int salesChance = buyers.get(i).getBuyChance() - 20;
 					String maxPriceType = "";
 
+					// Find most expensive performanceCar
 					for (int j = 0; j < performanceCarInventory.size(); j++){
 						if (maxPrice < performanceCarInventory.get(j).getSalesPrice() && performanceCarInventory.get(j).getCondition() != "Broken"){
 							maxPrice = performanceCarInventory.get(j).getSalesPrice();
@@ -883,6 +1033,7 @@ public class FNCD {
 							maxPriceType = "PerformanceCars";
 						}
 					}
+					// Find most expensive Car
 					for (int j = 0; j < carsInventory.size(); j++){
 						if (maxPrice < carsInventory.get(j).getSalesPrice() && carsInventory.get(j).getCondition() != "Broken"){
 							maxPrice = carsInventory.get(j).getSalesPrice();
@@ -891,7 +1042,9 @@ public class FNCD {
 						}
 					}
 
+					// PerformaceCar is most expensive
 					if (maxPriceType == "PerformanceCars"){
+						// Adjust sales chance
 						if (performanceCarInventory.get(maxPriceIndex).getCondition() == "Like New"){
 							salesChance += 10;
 						}
@@ -899,6 +1052,8 @@ public class FNCD {
 							salesChance += 10;
 						}
 						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+						// Successful sales chance
 						if (sellRoll <= salesChance){
 							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
 							+ performanceCarInventory.get(maxPriceIndex).getCleanliness() + " " 
@@ -906,6 +1061,7 @@ public class FNCD {
 							+ " to Buyer for $" + performanceCarInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
 							+ performanceCarInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
+							// Adjust operating budget/total sales/pay bonus
 							operatingBudget += performanceCarInventory.get(maxPriceIndex).getSalesPrice();
 							totalSales += performanceCarInventory.get(maxPriceIndex).getSalesPrice();
 							double bonus = performanceCarInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
@@ -915,7 +1071,9 @@ public class FNCD {
 							performanceCarInventory.remove(maxPriceIndex);
 						}
 					}
+					// Cars is most expensive
 					else if (maxPriceType == "Cars"){
+						// Adjust sales chance
 						if (carsInventory.get(maxPriceIndex).getCondition() == "Like New"){
 							salesChance += 10;
 						}
@@ -923,6 +1081,8 @@ public class FNCD {
 							salesChance += 10;
 						}
 						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+						// Successful sales roll
 						if (sellRoll <= salesChance){
 							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
 							+ carsInventory.get(maxPriceIndex).getCleanliness() + " " 
@@ -930,6 +1090,7 @@ public class FNCD {
 							+ " to Buyer for $" + carsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
 							+ carsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
+							// Adjust operating budget/total sales/pay bonus
 							operatingBudget += carsInventory.get(maxPriceIndex).getSalesPrice();
 							totalSales += carsInventory.get(maxPriceIndex).getSalesPrice();
 							double bonus = carsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
@@ -944,11 +1105,13 @@ public class FNCD {
 
 			// Cars desired
 			else {
+				// In stock
 				if (carsInventory.size() != 0){
 					double maxPrice = 0.0;
 					int maxPriceIndex = -1;
 					int salesChance = buyers.get(i).getBuyChance();
 
+					// Find most expensive Car
 					for (int j = 0; j < carsInventory.size(); j++){
 						if (maxPrice < carsInventory.get(j).getSalesPrice() && carsInventory.get(j).getCondition() != "Broken"){
 							maxPrice = carsInventory.get(j).getSalesPrice();
@@ -960,6 +1123,7 @@ public class FNCD {
 						break;
 					}
 
+					// Adjust sales chance
 					if (carsInventory.get(maxPriceIndex).getCondition() == "Like New"){
 						salesChance += 10;
 					}
@@ -968,6 +1132,7 @@ public class FNCD {
 					}
 					int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 
+					// Successful sales roll
 					if (sellRoll <= salesChance){
 						System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
 						+ carsInventory.get(maxPriceIndex).getCleanliness() + " " 
@@ -975,6 +1140,7 @@ public class FNCD {
 						+ " to Buyer for $" + carsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
 						+ carsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
+						// Adjust operating budget/total sales/pay bonus
 						operatingBudget += carsInventory.get(maxPriceIndex).getSalesPrice();
 						totalSales += carsInventory.get(maxPriceIndex).getSalesPrice();
 						double bonus = carsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
@@ -984,12 +1150,14 @@ public class FNCD {
 						carsInventory.remove(maxPriceIndex);
 					}
 				}
+				// Not in stock
 				else {
 					double maxPrice = 0.0;
 					int maxPriceIndex = -1;
 					int salesChance = buyers.get(i).getBuyChance() - 20;
 					String maxPriceType = "";
 
+					// Find most expensive pickup
 					for (int j = 0; j < pickupsInventory.size(); j++){
 						if (maxPrice < pickupsInventory.get(j).getSalesPrice() && pickupsInventory.get(j).getCondition() != "Broken"){
 							maxPrice = pickupsInventory.get(j).getSalesPrice();
@@ -997,6 +1165,7 @@ public class FNCD {
 							maxPriceType = "Pickups";
 						}
 					}
+					// Find most expensive performanceCar
 					for (int j = 0; j < performanceCarInventory.size(); j++){
 						if (maxPrice < performanceCarInventory.get(j).getSalesPrice() && performanceCarInventory.get(j).getCondition() != "Broken"){
 							maxPrice = performanceCarInventory.get(j).getSalesPrice();
@@ -1005,7 +1174,9 @@ public class FNCD {
 						}
 					}
 
+					// Pickup is most expensive
 					if (maxPriceType == "Pickups"){
+						// Adjust sales chance
 						if (pickupsInventory.get(maxPriceIndex).getCondition() == "Like New"){
 							salesChance += 10;
 						}
@@ -1013,6 +1184,8 @@ public class FNCD {
 							salesChance += 10;
 						}
 						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+						// Successful sales roll
 						if (sellRoll <= salesChance){
 							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
 							+ pickupsInventory.get(maxPriceIndex).getCleanliness() + " " 
@@ -1020,6 +1193,7 @@ public class FNCD {
 							+ " to Buyer for $" + pickupsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
 							+ pickupsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
+							// Adjust operating budget/total sales/pay bonus
 							operatingBudget += pickupsInventory.get(maxPriceIndex).getSalesPrice();
 							totalSales += pickupsInventory.get(maxPriceIndex).getSalesPrice();
 							double bonus = pickupsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
@@ -1029,7 +1203,10 @@ public class FNCD {
 							pickupsInventory.remove(maxPriceIndex);
 						}
 					}
+					// PerformanceCar most expensive
 					else if (maxPriceType == "PerformanceCars"){
+
+						// Adjust sales chance
 						if (performanceCarInventory.get(maxPriceIndex).getCondition() == "Like New"){
 							salesChance += 10;
 						}
@@ -1037,6 +1214,8 @@ public class FNCD {
 							salesChance += 10;
 						}
 						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+						// Successful sales roll
 						if (sellRoll <= salesChance){
 							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
 							+ performanceCarInventory.get(maxPriceIndex).getCleanliness() + " " 
@@ -1044,6 +1223,7 @@ public class FNCD {
 							+ " to Buyer for $" + performanceCarInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
 							+ performanceCarInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
+							// Adjust operating budget/total sales/pay bonus
 							operatingBudget += performanceCarInventory.get(maxPriceIndex).getSalesPrice();
 							totalSales += performanceCarInventory.get(maxPriceIndex).getSalesPrice();
 							double bonus = performanceCarInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
@@ -1251,22 +1431,6 @@ public class FNCD {
 			sim.ending();
 			sim.updateCurrentDay();
 		}
-		
-
-		/* 
-		FNCD simulation = new FNCD();
-		simulation.setOperatingBudget(500000); //Starting off budget at 500k
-		//for loop to simulate 30 days
-		for (int i = 0; i < 30; i++) {
-			if (i != 6 | i != 13 | i != 20 | i != 27) { //FNCD does not open on Sundays, day 0 starts on Monday
-				simulation.opening();
-				simulation.washing();
-				simulation.repairing();
-				simulation.selling();
-				simulation.ending();
-			}
-		}
-		*/
 	}
 
 }

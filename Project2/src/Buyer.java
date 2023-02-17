@@ -1,4 +1,8 @@
 
+/* Example of Cohesion: Buyers class is only focused on buyers and
+ * only contains methods that are used by buyer. This makes the code
+ * more reusable.
+ */
 public class Buyer {
 	// Private Class Variables
 	private String buyerType;

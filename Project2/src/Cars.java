@@ -1,6 +1,8 @@
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
+// Cars class is an example of abstraction. It inherits the vehicle class
+// which has variables in vehicles that are hidden from it.
 public class Cars extends Vehicles{
 	public Cars(String identity){
 		setID(identity);

@@ -1,7 +1,9 @@
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
-
+/* Example of inheritance: PerformanceCars class inherits the 
+ * Vehicles class
+ */
 public class PerformanceCars extends Vehicles{
 	public PerformanceCars(String identity){
 		setID(identity);
