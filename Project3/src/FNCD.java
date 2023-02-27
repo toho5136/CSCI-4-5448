@@ -7,9 +7,13 @@ public class FNCD {
 	private ArrayList<Mechanic> mechanicStaff = new ArrayList<>();
 	private ArrayList<Salesperson> salespersonStaff = new ArrayList<>();
 	private ArrayList<Intern> internStaff = new ArrayList<>();
+	private ArrayList<Driver> driverStaff = new ArrayList<>(); // driver staff array list
 	private ArrayList<PerformanceCars> performanceCarInventory = new ArrayList<>();
 	private ArrayList<Cars> carsInventory = new ArrayList<>();
 	private ArrayList<Pickups> pickupsInventory = new ArrayList<>();
+	private ArrayList<ElectricCars> electricCarsInventory = new ArrayList<>(); // electric car inventory
+	private ArrayList<MonsterTrucks> monsterTrucksInventory = new ArrayList<>(); // monster truck inventory
+	private ArrayList<Motorcycles> motorcyclesInventory = new ArrayList<>(); // motorcycles inventory
 	private ArrayList<Buyer> buyers = new ArrayList<>();
 	private ArrayList<Vehicles> soldVehicles = new ArrayList<>();
 	private double operatingBudget;
@@ -22,9 +26,13 @@ public class FNCD {
 	private int perfID = 0;
 	private int carID = 0;
 	private int pickupID = 0;
+	private int electricID = 0; // electric car ID
+	private int monsterID = 0; // monstertruck ID
+	private int motorcycleID = 0; // motorcycle ID
 	private int mechNames = 0;
 	private int salesNames = 0;
 	private int internNames = 0;
+	private int driverNames = 0; // driver names
 	// Getters
 
 	public ArrayList<Mechanic> getMechanicStaff() {
@@ -36,6 +44,9 @@ public class FNCD {
 	public ArrayList<Intern> getInternStaff() {
 		return this.internStaff;
 	}
+	public ArrayList<Driver> getDriverStaff() { // get driver staff
+		return this.driverStaff;
+	}
 	public ArrayList<PerformanceCars> getPerformanceCarInventory() {
 		return this.performanceCarInventory;
 	}
@@ -44,6 +55,15 @@ public class FNCD {
 	}
 	public ArrayList<Pickups> getPickupsInventory() {
 		return this.pickupsInventory;
+	}
+	public ArrayList<ElectricCars> getElectricCarsInventory() { // get electric car inventory
+		return this.electricCarsInventory;
+	}
+	public ArrayList<MonsterTrucks> getMonsterTrucksInventory() { // get monster truck inventory
+		return this.monsterTrucksInventory;
+	}
+	public ArrayList<Motorcycles> getMotorcyclesInventory() { // get motorcycle inventory
+		return this.motorcyclesInventory;
 	}
 	public ArrayList<Buyer> getBuyer() {
 		return this.buyers;
@@ -72,6 +92,9 @@ public class FNCD {
 	public void addIntern(Intern newGuy) {
 		internStaff.add(newGuy);
 	}
+	public void addDriver(Driver newGuy) { // add new driver
+		driverStaff.add(newGuy);
+	}
 	public void addPerformanceCar(PerformanceCars newCar) {
 		performanceCarInventory.add(newCar);
 	}
@@ -80,6 +103,15 @@ public class FNCD {
 	}
 	public void addPickups(Pickups newCar) {
 		pickupsInventory.add(newCar);
+	}
+	public void addElectricCar(ElectricCars newCar) { // add new electric car
+		electricCarsInventory.add(newCar);
+	}
+	public void addMonsterTruck(MonsterTrucks newCar) { // add new monster truck
+		monsterTrucksInventory.add(newCar);
+	}
+	public void addMotorcycle(Motorcycles newCar) { // add new motorcycle
+		motorcyclesInventory.add(newCar);
 	}
 	public void addBuyer(Buyer newBuyer){
 		buyers.add(newBuyer);
@@ -318,6 +350,10 @@ public class FNCD {
 				Intern intern = new Intern("Intern" + String.valueOf(internNames));
 				this.addIntern(intern);
 				internNames += 1;
+				// Initialize driver staff list
+				Driver driver = new Driver("Driver" + String.valueOf(driverNames));
+				this.addDriver(driver);
+				driverNames += 1;
 			}
 
 			for (int i = 0; i < 4; i++){
@@ -335,6 +371,21 @@ public class FNCD {
 				Cars car = new Cars("Car" + String.valueOf(carID));
 				this.addCar(car);
 				carID += 1;
+				
+				// Initialize electric cars inventory
+				ElectricCars Ecar = new ElectricCars("ElectricCar" + String.valueOf(electricID));
+				this.addElectricCar(Ecar);
+				electricID += 1;
+				
+				// Initialize monster truck inventory
+				MonsterTrucks truck = new MonsterTrucks("MonsterTruck" + String.valueOf(monsterID)); // need to add stage name
+				this.addMonsterTruck(truck);
+				monsterID += 1;
+				
+				// Initialize motorcycles inventory
+				Motorcycles motorcycle = new Motorcycles("Motorcycle" + String.valueOf(motorcycleID));
+				this.addMotorcycle(motorcycle);
+				motorcycleID += 1;
 			}
 			this.setOperatingBudget(500000);
 			totalSales = 0;
@@ -403,6 +454,48 @@ public class FNCD {
 					operatingBudget = operatingBudget - car.getCostPrice();
 				}
 			}
+			
+			// Check to see if electric cars inventory is 4
+			if (electricCarsInventory.size() < 4){
+				int limit = 4 - electricCarsInventory.size();
+
+				for (int i = 0; i < limit; i++){
+					ElectricCars Ecar = new ElectricCars("ElectricCar" + String.valueOf(electricID));
+					System.out.println("Buying car:" + Ecar.getID());
+					this.addElectricCar(Ecar);
+					electricID += 1;
+
+					operatingBudget = operatingBudget - Ecar.getCostPrice();
+				}
+			}
+			
+			// Check to see if monster trucks inventory is 4
+			if (monsterTrucksInventory.size() < 4){
+				int limit = 4 - monsterTrucksInventory.size();
+
+				for (int i = 0; i < limit; i++){
+					MonsterTrucks truck = new MonsterTrucks("MonsterTruck" + String.valueOf(monsterID)); // need to add stage name
+					System.out.println("Buying car:" + truck.getID());
+					this.addMonsterTruck(truck);
+					monsterID += 1;
+
+					operatingBudget = operatingBudget - truck.getCostPrice();
+				}
+			}
+			
+			// Check to see if motorcycles inventory is 4
+			if (motorcyclesInventory.size() < 4){
+				int limit = 4 - motorcyclesInventory.size();
+
+				for (int i = 0; i < limit; i++){
+					Motorcycles motorcycle = new Motorcycles("Motorcycle" + String.valueOf(motorcycleID)); // need to add stage name
+					System.out.println("Buying car:" + motorcycle.getID());
+					this.addMotorcycle(motorcycle);
+					motorcycleID += 1;
+
+					operatingBudget = operatingBudget - motorcycle.getCostPrice();
+				}
+			}
 		}
 	}
 	public void washing() {
@@ -410,8 +503,8 @@ public class FNCD {
 		for (int i = 0; i < 3; i++){
 			int vehiclesWashed = 0;
 
-			// Iterate over all three vehicles lists (0-3:performance, 4-7:pickups, 8-11:cars)
-			for (int j = 0; j < 12; j++){
+			// Iterate over all three vehicles lists (0-3:performance, 4-7:pickups, 8-11:cars, 12-15:electric, 16-19:monster, 20-23:motorcycle)
+			for (int j = 0; j < 24; j++){
 				// check if reached limit
 				if (vehiclesWashed == 2){
 					break;
@@ -469,7 +562,7 @@ public class FNCD {
 					}
 				}
 				// Iterate through cars inventory
-				else {
+				else  if (j >= 8 && j < 12){
 					if (carsInventory.get(j-8).getCleanliness() == "Dirty"){
 						int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 						// Successful wash to clean
@@ -492,11 +585,83 @@ public class FNCD {
 						}
 					}
 				}
+				// Iterate through electric cars inventory
+				else  if (j >= 12 && j < 16){
+					if (electricCarsInventory.get(j-12).getCleanliness() == "Dirty"){
+						int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful wash to clean
+						if (washRoll < 81){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + electricCarsInventory.get(j-12).getID() 
+							+ " clean!");
+							electricCarsInventory.get(j-12).setCleanliness("Clean");
+							vehiclesWashed += 1;
+						}
+						// Successful wash to sparkling
+						if (washRoll <= 100 && washRoll > 90){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + electricCarsInventory.get(j-12).getID() 
+							+ " sparkling!($" + electricCarsInventory.get(j-12).getWashBonus() + " bonus)");
+
+							// Pay bonus to intern
+							internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + electricCarsInventory.get(j-12).getWashBonus());
+							operatingBudget -= electricCarsInventory.get(j-12).getWashBonus();
+							electricCarsInventory.get(j-12).setCleanliness("Sparkling");
+							vehiclesWashed += 1;
+						}
+					}
+				}
+				// Iterate through monster truck inventory
+				else  if (j >= 16 && j < 20){
+					if (monsterTrucksInventory.get(j-16).getCleanliness() == "Dirty"){
+						int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful wash to clean
+						if (washRoll < 81){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + monsterTrucksInventory.get(j-16).getID() 
+							+ " clean!");
+							monsterTrucksInventory.get(j-16).setCleanliness("Clean");
+							vehiclesWashed += 1;
+						}
+						// Successful wash to sparkling
+						if (washRoll <= 100 && washRoll > 90){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + monsterTrucksInventory.get(j-16).getID() 
+							+ " sparkling!($" + monsterTrucksInventory.get(j-16).getWashBonus() + " bonus)");
+
+							// Pay bonus to intern
+							internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + monsterTrucksInventory.get(j-16).getWashBonus());
+							operatingBudget -= monsterTrucksInventory.get(j-16).getWashBonus();
+							monsterTrucksInventory.get(j-16).setCleanliness("Sparkling");
+							vehiclesWashed += 1;
+						}
+					}
+				}
+				// Iterate through motorcycles inventory
+				else {
+					if (motorcyclesInventory.get(j-20).getCleanliness() == "Dirty"){
+						int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful wash to clean
+						if (washRoll < 81){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + motorcyclesInventory.get(j-20).getID() 
+							+ " clean!");
+							motorcyclesInventory.get(j-20).setCleanliness("Clean");
+							vehiclesWashed += 1;
+						}
+						// Successful wash to sparkling
+						if (washRoll <= 100 && washRoll > 90){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + motorcyclesInventory.get(j-20).getID() 
+							+ " sparkling!($" + motorcyclesInventory.get(j-20).getWashBonus() + " bonus)");
+
+							// Pay bonus to intern
+							internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + motorcyclesInventory.get(j-20).getWashBonus());
+							operatingBudget -= motorcyclesInventory.get(j-20).getWashBonus();
+							motorcyclesInventory.get(j-20).setCleanliness("Sparkling");
+							vehiclesWashed += 1;
+						}
+					}
+				}
 			}
 
 			// If there are no more clean cars
 			if (vehiclesWashed < 2){
-				for (int j = 0; j < 12; j++){
+				for (int j = 0; j < 24; j++){
 					// check if reached limit
 					if (vehiclesWashed == 2){
 						break;
@@ -547,7 +712,7 @@ public class FNCD {
 						}
 					}
 					// Iterate through cars inventory
-					else {
+					else  if (j >= 8 && j < 12){
 						if (carsInventory.get(j-8).getCleanliness() == "Clean"){
 							int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 							// Unsuccessful wash to dirty
@@ -564,6 +729,72 @@ public class FNCD {
 								// pay intern bonus
 								internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + carsInventory.get(j-8).getWashBonus());
 								carsInventory.get(j-8).setCleanliness("Sparkling");
+								vehiclesWashed += 1;
+							}
+						}
+					}
+					// Iterate through electric cars inventory
+					else  if (j >= 12 && j < 16){
+						if (electricCarsInventory.get(j-12).getCleanliness() == "Clean"){
+							int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							// Unsuccessful wash to dirty
+							if (washRoll <= 5){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + electricCarsInventory.get(j-12).getID() + " dirty!");
+								electricCarsInventory.get(j-12).setCleanliness("Dirty");
+								vehiclesWashed += 1;
+							}
+							// Successful wash to sparkling
+							if (washRoll <= 100 && washRoll > 70){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + electricCarsInventory.get(j-12).getID() 
+								+ " sparkling!($" + electricCarsInventory.get(j-12).getWashBonus() + " bonus)");
+
+								// pay intern bonus
+								internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + electricCarsInventory.get(j-12).getWashBonus());
+								electricCarsInventory.get(j-12).setCleanliness("Sparkling");
+								vehiclesWashed += 1;
+							}
+						}
+					}
+					// Iterate through monster truck inventory
+					else  if (j >= 16 && j < 20){
+						if (monsterTrucksInventory.get(j-16).getCleanliness() == "Clean"){
+							int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							// Unsuccessful wash to dirty
+							if (washRoll <= 5){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + monsterTrucksInventory.get(j-16).getID() + " dirty!");
+								monsterTrucksInventory.get(j-16).setCleanliness("Dirty");
+								vehiclesWashed += 1;
+							}
+							// Successful wash to sparkling
+							if (washRoll <= 100 && washRoll > 70){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + monsterTrucksInventory.get(j-16).getID() 
+								+ " sparkling!($" + monsterTrucksInventory.get(j-16).getWashBonus() + " bonus)");
+
+								// pay intern bonus
+								internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + monsterTrucksInventory.get(j-16).getWashBonus());
+								monsterTrucksInventory.get(j-16).setCleanliness("Sparkling");
+								vehiclesWashed += 1;
+							}
+						}
+					}
+					// Iterate through motorcycles inventory
+					else {
+						if (motorcyclesInventory.get(j-20).getCleanliness() == "Clean"){
+							int washRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							// Unsuccessful wash to dirty
+							if (washRoll <= 5){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + motorcyclesInventory.get(j-20).getID() + " dirty!");
+								motorcyclesInventory.get(j-20).setCleanliness("Dirty");
+								vehiclesWashed += 1;
+							}
+							// Successful wash to sparkling
+							if (washRoll <= 100 && washRoll > 70){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + motorcyclesInventory.get(j-20).getID() 
+								+ " sparkling!($" + motorcyclesInventory.get(j-20).getWashBonus() + " bonus)");
+
+								// pay intern bonus
+								internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + motorcyclesInventory.get(j-20).getWashBonus());
+								motorcyclesInventory.get(j-20).setCleanliness("Sparkling");
 								vehiclesWashed += 1;
 							}
 						}
