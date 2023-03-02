@@ -8,6 +8,7 @@ public class Pickups extends Vehicles{
 		setSalesBonus(700.0);
 		setRepairBonus(75.0);
 		setWashBonus(15.0);
+		setRacesWon(0);
 
 		Random r = new Random();
         double rand = 10000 + (40000 - 10000) * r.nextDouble();

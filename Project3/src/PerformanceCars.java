@@ -11,6 +11,7 @@ public class PerformanceCars extends Vehicles{
 		setSalesBonus(1000.0);
 		setRepairBonus(100.0);
 		setWashBonus(25.0);
+		setRacesWon(0);
 
 		Random r = new Random();
         double rand = 20000 + (40000 - 20000) * r.nextDouble();

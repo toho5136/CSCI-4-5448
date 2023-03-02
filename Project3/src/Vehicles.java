@@ -10,6 +10,7 @@ public class Vehicles {
 	private double salesPrice;
 	private String condition;
 	private String cleanliness;
+	private int racesWon;
 	// Getters
 	public String getID() {
 		return this.ID;
@@ -38,6 +39,9 @@ public class Vehicles {
 	public String getCleanliness() {
 		return this.cleanliness;
 	}
+	public int getRacesWon() {
+		return this.racesWon;
+	}
 	// Setters
 	public void setID(String identity) {
 		ID = identity;
@@ -65,6 +69,9 @@ public class Vehicles {
 	}
 	public void setWashBonus(double bonus){
 		washBonus = bonus;
+	}
+	public void setRacesWon(int race){
+		washBonus = race;
 	}
 	public static void main(String[] args) {
 	}

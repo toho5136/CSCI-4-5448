@@ -15,6 +15,7 @@ public class MonsterTrucks extends Vehicles{
 		setSalesBonus(500.0); //price copied from Cars
 		setRepairBonus(50.0); //copied from cars
 		setWashBonus(10.0); //copied from cars
+		setRacesWon(0);
 
 		Random r = new Random();
         double rand = 10000 + (20000 - 10000) * r.nextDouble();

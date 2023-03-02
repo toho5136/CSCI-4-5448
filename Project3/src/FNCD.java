@@ -1468,6 +1468,25 @@ public class FNCD {
 			}
 		}
 	}
+	public void raceEvent() {
+		if (currentDay == 3 || currentDay == 10 || currentDay == 17 || currentDay == 24 || currentDay == 7 || currentDay == 14 || currentDay ==  21 || currentDay == 28) {
+			Random ran = new Random();
+			int vehicleType = ran.nextInt(4) + 1; // out of 4 vehicle types
+			String vehicleTypeName;
+			if (vehicleType == 1) {
+				vehicleTypeName = "Motorcycles";
+			}
+			else if (vehicleType == 2) {
+				vehicleTypeName = "MonsterTrucks";
+			}
+			else if (vehicleType == 3){
+				vehicleTypeName = "PerformanceCars";
+			}
+			else {
+				vehicleTypeName = "Pickups";
+			}
+		}
+	}
 	public void ending() {
 		int counterM = 0; //counter to create print table
 		int counterS = 0;

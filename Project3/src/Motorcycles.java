@@ -15,6 +15,7 @@ public class Motorcycles extends Vehicles{
 		setSalesBonus(700.0); //copied from pickups
 		setRepairBonus(75.0); //copied from pickups
 		setWashBonus(15.0); //copied from pickups
+		setRacesWon(0);
 		boolean over50 = true;
 		Random randomEngine = new Random();
 		double setEngine = 0;
