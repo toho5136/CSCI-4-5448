@@ -23,6 +23,7 @@ public class FNCD {
 	private ArrayList<Mechanic> departedMStaff = new ArrayList<>();
 	private ArrayList<Salesperson> departedSStaff = new ArrayList<>();
 	private ArrayList<Intern> departedIStaff = new ArrayList<>();
+	private ArrayList<Driver> departedDStaff = new ArrayList<>(); //driver staff departed
 	private int perfID = 0;
 	private int carID = 0;
 	private int pickupID = 0;
@@ -1470,33 +1471,149 @@ public class FNCD {
 	}
 	public void raceEvent() {
 		if (currentDay == 3 || currentDay == 10 || currentDay == 17 || currentDay == 24 || currentDay == 7 || currentDay == 14 || currentDay ==  21 || currentDay == 28) {
-			Random ran = new Random();
-			int vehicleType = ran.nextInt(4) + 1; // out of 4 vehicle types
-			String vehicleTypeName;
+			int vehicleType = ThreadLocalRandom.current().nextInt(1, 4 + 1); // out of 4 vehicle types
 			if (vehicleType == 1) {
-				vehicleTypeName = "Motorcycles";
+				ArrayList<Motorcycles> racingVehicles = new ArrayList<>();
+				for (int i = 0; i < motorcyclesInventory.size(); i++) {
+					if (motorcyclesInventory.get(i).getCondition() != "Broken") {
+						if (racingVehicles.size() < 3) {
+							racingVehicles.add(motorcyclesInventory.get(i));
+						}
+					}
+				}
+				int prevChance = 0;
+				int vehicleChance = 0;
+				for (int i = 0; i < racingVehicles.size(); i++) {
+					while (prevChance == vehicleChance) {
+						vehicleChance = ThreadLocalRandom.current().nextInt(1, 20 + 1);
+					}
+					if (vehicleChance == 1 || vehicleChance == 2 || vehicleChance == 3) {
+						racingVehicles.get(i).setRacesWon(racingVehicles.get(i).getRacesWon() + 1);
+						racingVehicles.get(i).setSalesPrice(racingVehicles.get(i).getSalesPrice() * 1.10);
+						driverStaff.get(i).setRacesWon(driverStaff.get(i).getRacesWon() + 1);
+						driverStaff.get(i).setBonusPay(driverStaff.get(i).getBonusPay() + 50.0); //$50 for winning
+					}
+					else if (vehicleChance == 16 || vehicleChance == 17 || vehicleChance == 18 || vehicleChance == 19 || vehicleChance == 20) {
+						racingVehicles.get(i).setCondition("Broken");
+						int driverChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						if (driverChance <= 30) {
+							driverStaff.get(i).setCondition("Injured"); //driver is injured, will quit.
+						}
+					}
+					prevChance = vehicleChance;
+				}
 			}
 			else if (vehicleType == 2) {
-				vehicleTypeName = "MonsterTrucks";
+				ArrayList<MonsterTrucks> racingVehicles = new ArrayList<>();
+				for (int i = 0; i < monsterTrucksInventory.size(); i++) {
+					if (monsterTrucksInventory.get(i).getCondition() != "Broken") {
+						if (racingVehicles.size() < 3) {
+							racingVehicles.add(monsterTrucksInventory.get(i));
+						}
+					}
+				}
+				int prevChance = 0;
+				int vehicleChance = 0;
+				for (int i = 0; i < racingVehicles.size(); i++) {
+					while (prevChance == vehicleChance) {
+						vehicleChance = ThreadLocalRandom.current().nextInt(1, 20 + 1);
+					}
+					if (vehicleChance == 1 || vehicleChance == 2 || vehicleChance == 3) {
+						racingVehicles.get(i).setRacesWon(racingVehicles.get(i).getRacesWon() + 1);
+						racingVehicles.get(i).setSalesPrice(racingVehicles.get(i).getSalesPrice() * 1.10);
+						driverStaff.get(i).setRacesWon(driverStaff.get(i).getRacesWon() + 1);
+						driverStaff.get(i).setBonusPay(driverStaff.get(i).getBonusPay() + 50.0); //$50 for winning
+					}
+					else if (vehicleChance == 16 || vehicleChance == 17 || vehicleChance == 18 || vehicleChance == 19 || vehicleChance == 20) {
+						racingVehicles.get(i).setCondition("Broken");
+						int driverChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						if (driverChance <= 30) {
+							driverStaff.get(i).setCondition("Injured"); //driver is injured, will quit.
+						}
+					}
+					prevChance = vehicleChance;
+				}
 			}
 			else if (vehicleType == 3){
-				vehicleTypeName = "PerformanceCars";
+				ArrayList<PerformanceCars> racingVehicles = new ArrayList<>();
+				for (int i = 0; i < performanceCarInventory.size(); i++) {
+					if (performanceCarInventory.get(i).getCondition() != "Broken") {
+						if (racingVehicles.size() < 3) {
+							racingVehicles.add(performanceCarInventory.get(i));
+						}
+					}
+				}
+				int prevChance = 0;
+				int vehicleChance = 0;
+				for (int i = 0; i < racingVehicles.size(); i++) {
+					while (prevChance == vehicleChance) {
+						vehicleChance = ThreadLocalRandom.current().nextInt(1, 20 + 1);
+					}
+					if (vehicleChance == 1 || vehicleChance == 2 || vehicleChance == 3) {
+						racingVehicles.get(i).setRacesWon(racingVehicles.get(i).getRacesWon() + 1);
+						racingVehicles.get(i).setSalesPrice(racingVehicles.get(i).getSalesPrice() * 1.10);
+						driverStaff.get(i).setRacesWon(driverStaff.get(i).getRacesWon() + 1);
+						driverStaff.get(i).setBonusPay(driverStaff.get(i).getBonusPay() + 50.0); //$50 for winning
+					}
+					else if (vehicleChance == 16 || vehicleChance == 17 || vehicleChance == 18 || vehicleChance == 19 || vehicleChance == 20) {
+						racingVehicles.get(i).setCondition("Broken");
+						int driverChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						if (driverChance <= 30) {
+							driverStaff.get(i).setCondition("Injured"); //driver is injured, will quit.
+						}
+					}
+					prevChance = vehicleChance;
+				}
 			}
 			else {
-				vehicleTypeName = "Pickups";
+				ArrayList<Pickups> racingVehicles = new ArrayList<>();
+				for (int i = 0; i < pickupsInventory.size(); i++) {
+					if (pickupsInventory.get(i).getCondition() != "Broken") {
+						if (racingVehicles.size() < 3) {
+							racingVehicles.add(pickupsInventory.get(i));
+						}
+					}
+				}
+				int prevChance = 0;
+				int vehicleChance = 0;
+				for (int i = 0; i < racingVehicles.size(); i++) {
+					while (prevChance == vehicleChance) {
+						vehicleChance = ThreadLocalRandom.current().nextInt(1, 20 + 1);
+					}
+					if (vehicleChance == 1 || vehicleChance == 2 || vehicleChance == 3) {
+						racingVehicles.get(i).setRacesWon(racingVehicles.get(i).getRacesWon() + 1);
+						racingVehicles.get(i).setSalesPrice(racingVehicles.get(i).getSalesPrice() * 1.10);
+						driverStaff.get(i).setRacesWon(driverStaff.get(i).getRacesWon() + 1);
+						driverStaff.get(i).setBonusPay(driverStaff.get(i).getBonusPay() + 50.0); //$50 for winning
+					}
+					else if (vehicleChance == 16 || vehicleChance == 17 || vehicleChance == 18 || vehicleChance == 19 || vehicleChance == 20) {
+						racingVehicles.get(i).setCondition("Broken");
+						int driverChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						if (driverChance <= 30) {
+							driverStaff.get(i).setCondition("Injured"); //driver is injured, will quit.
+						}
+					}
+					prevChance = vehicleChance;
+				}
 			}
+			
 		}
 	}
 	public void ending() {
 		int counterM = 0; //counter to create print table
 		int counterS = 0;
 		int counterI = 0;
+		int counterD = 0; //counter for driver
 		int counterDM = 0;
 		int counterDS = 0;
 		int counterDI = 0;
+		int counterDD = 0; //counter for departed drivers
 		int counterPC = 0;
 		int counterC = 0;
 		int counterP = 0;
+		int counterMO = 0; //counter for monster trucks
+		int counterMot = 0; //counter for motorcycles
+		int counterEC = 0; //counter for electric cars
 		for (int i = 0; i < mechanicStaff.size(); i++) {
 			// Pay each mechanic
 			mechanicStaff.get(i).setNormalPay(mechanicStaff.get(i).getNormalPay() + 20.5);
@@ -1515,6 +1632,19 @@ public class FNCD {
 			internStaff.get(i).setDaysWorked(internStaff.get(i).getDaysWorked() + 1);
 			counterI = counterI + 1;
 		}
+		for (int i = 0; i < driverStaff.size(); i++) {
+			// Pay each intern
+			driverStaff.get(i).setNormalPay(driverStaff.get(i).getNormalPay() + 15.5);
+			driverStaff.get(i).setDaysWorked(driverStaff.get(i).getDaysWorked() + 1);
+			counterD = counterD + 1;
+			if (driverStaff.get(i).getCondition() == "Injured") {
+				departedDStaff.add(driverStaff.get(i));
+				Driver newDriver = new Driver("Driver" + String.valueOf(driverNames));
+				driverStaff.set(i, newDriver);
+				counterDD = counterDD + 1;
+				driverNames += 1;
+			}
+		}
 		for (int i = 0; i < performanceCarInventory.size(); i++) {
 			// count each PC
 			counterPC = counterPC + 1;
@@ -1527,13 +1657,24 @@ public class FNCD {
 			// count each P
 			counterP = counterP + 1;
 		}
-		Random ran = new Random();
-		int mechanicQuitChance = ran.nextInt(10) + 1; // if mechanicQuitChance = 1; a mechanic quits
-		int salespersonQuitChance = ran.nextInt(10) + 1; // if salespersonQuitChance = 1; a salesperson quits
-		int internQuitChance = ran.nextInt(10) + 1; // if internQuitChance = 1; a intern quits
+		for (int i = 0; i < monsterTrucksInventory.size(); i++) {
+			// count each MO
+			counterMO = counterMO + 1;
+		}
+		for (int i = 0; i < motorcyclesInventory.size(); i++) {
+			// count each Mot
+			counterMot = counterMot + 1;
+		}
+		for (int i = 0; i < electricCarsInventory.size(); i++) {
+			// count each EC
+			counterEC = counterEC + 1;
+		}
+		int mechanicQuitChance = ThreadLocalRandom.current().nextInt(1, 10 + 1); // if mechanicQuitChance = 1; a mechanic quits
+		int salespersonQuitChance = ThreadLocalRandom.current().nextInt(1, 10 + 1); // if salespersonQuitChance = 1; a salesperson quits
+		int internQuitChance = ThreadLocalRandom.current().nextInt(1, 10 + 1); // if internQuitChance = 1; a intern quits
 		if (mechanicQuitChance == 1) { //mechanic quits
 			departedMStaff.add(mechanicStaff.get(0));
-			Mechanic promotedIntern = new Mechanic("Mechanic0");
+			Mechanic promotedIntern = new Mechanic("Mechanic" + String.valueOf(mechNames));
 			promotedIntern.setUniqueName(internStaff.get(0).getUniqueName());
 			promotedIntern.setBonusPay(internStaff.get(0).getBonusPay());
 			promotedIntern.setDaysWorked(internStaff.get(0).getDaysWorked());
@@ -1542,10 +1683,11 @@ public class FNCD {
 			mechanicStaff.set(0, promotedIntern);
 			internStaff.remove(0);
 			counterI = counterI - 1;
+			mechNames += 1;
 		}
 		if (salespersonQuitChance == 1) { //salesperson quits
 			departedSStaff.add(salespersonStaff.get(0));
-			Salesperson promotedIntern = new Salesperson("Salesperson0");
+			Salesperson promotedIntern = new Salesperson("Salesperson" + String.valueOf(salesNames));
 			promotedIntern.setUniqueName(internStaff.get(0).getUniqueName());
 			promotedIntern.setBonusPay(internStaff.get(0).getBonusPay());
 			promotedIntern.setDaysWorked(internStaff.get(0).getDaysWorked());
@@ -1554,6 +1696,7 @@ public class FNCD {
 			salespersonStaff.set(0, promotedIntern);
 			internStaff.remove(0);
 			counterI = counterI - 1;
+			salesNames += 1;
 		}
 		if (internQuitChance == 1) { //intern quits
 			departedIStaff.add(internStaff.get(0));
@@ -1573,12 +1716,17 @@ public class FNCD {
 		final Object[][] tableM = new String[counterM][];
 		final Object[][] tableS = new String[counterS][];
 		final Object[][] tableI = new String[counterI][];
+		final Object[][] tableD = new String[counterD][]; // table for driver
 		final Object[][] tableDM = new String[counterDM][];
 		final Object[][] tableDS = new String[counterDS][];
 		final Object[][] tableDI = new String[counterDI][];
+		final Object[][] tableDD = new String[counterDD][]; // table for departed driver
 		final Object[][] tablePC = new String[counterPC][];
 		final Object[][] tableC = new String[counterC][];
 		final Object[][] tableP = new String[counterP][];
+		final Object[][] tableMO = new String[counterMO][]; // table for monster truck
+		final Object[][] tableMot = new String[counterMot][]; //table for motorcycles
+		final Object[][] tableEC = new String[counterEC][]; //table for EC
 		final Object[][] tableSales = new String[1][];
 		for (int i = 0; i < mechanicStaff.size(); i++) { //adds all working mechanics to table
 			tableM[i] = new String[] {mechanicStaff.get(i).getUniqueName(), Integer.toString(mechanicStaff.get(i).getDaysWorked()), String.valueOf(mechanicStaff.get(i).getNormalPay()), String.valueOf(mechanicStaff.get(i).getBonusPay()), "Working"};
@@ -1588,6 +1736,9 @@ public class FNCD {
 		}
 		for (int i = 0; i < internStaff.size(); i++) { //adds all working interns to table
 			tableI[i] = new String[] {internStaff.get(i).getUniqueName(), Integer.toString(internStaff.get(i).getDaysWorked()), String.valueOf(internStaff.get(i).getNormalPay()), String.valueOf(internStaff.get(i).getBonusPay()), "Working"};
+		}
+		for (int i = 0; i < driverStaff.size(); i++) { //adds all working interns to table
+			tableD[i] = new String[] {driverStaff.get(i).getUniqueName(), Integer.toString(driverStaff.get(i).getDaysWorked()), String.valueOf(driverStaff.get(i).getNormalPay()), String.valueOf(driverStaff.get(i).getBonusPay()), "Working"};
 		}
 		for (int i = 0; i < departedMStaff.size(); i++) { //adds all working quit mechanics to table
 			tableDM[i] = new String[] {departedMStaff.get(i).getUniqueName(), Integer.toString(departedMStaff.get(i).getDaysWorked()), String.valueOf(departedMStaff.get(i).getNormalPay()), String.valueOf(departedMStaff.get(i).getBonusPay()), "Quit"};
@@ -1607,6 +1758,12 @@ public class FNCD {
 		for (int i = 0; i < departedIStaff.size(); i++) {
 			departedIStaff.remove(i);
 		}
+		for (int i = 0; i < departedDStaff.size(); i++) { //adds all working quit intern to table
+			tableDD[i] = new String[] {departedDStaff.get(i).getUniqueName(), Integer.toString(departedDStaff.get(i).getDaysWorked()), String.valueOf(departedDStaff.get(i).getNormalPay()), String.valueOf(departedDStaff.get(i).getBonusPay()), "Quit"};
+		}
+		for (int i = 0; i < departedDStaff.size(); i++) {
+			departedDStaff.remove(i);
+		}
 		for (int i = 0; i < performanceCarInventory.size(); i++) {
 			String carCostPrice = String.format("%.2f", performanceCarInventory.get(i).getCostPrice());
 			String carSalesPrice = String.format("%.2f", performanceCarInventory.get(i).getSalesPrice());
@@ -1622,6 +1779,21 @@ public class FNCD {
 			String carSalesPrice = String.format("%.2f", pickupsInventory.get(i).getSalesPrice());
 			tableP[i] = new String[] {pickupsInventory.get(i).getID(), "$" + carCostPrice, "$" + carSalesPrice, pickupsInventory.get(i).getCondition(), pickupsInventory.get(i).getCleanliness(), "In Stock"};
 		}
+		for (int i = 0; i < monsterTrucksInventory.size(); i++) {
+			String carCostPrice = String.format("%.2f", monsterTrucksInventory.get(i).getCostPrice());
+			String carSalesPrice = String.format("%.2f", monsterTrucksInventory.get(i).getSalesPrice());
+			tableMO[i] = new String[] {monsterTrucksInventory.get(i).getID(), "$" + carCostPrice, "$" + carSalesPrice, monsterTrucksInventory.get(i).getCondition(), monsterTrucksInventory.get(i).getCleanliness(), "In Stock"};
+		}
+		for (int i = 0; i < motorcyclesInventory.size(); i++) {
+			String carCostPrice = String.format("%.2f", motorcyclesInventory.get(i).getCostPrice());
+			String carSalesPrice = String.format("%.2f", motorcyclesInventory.get(i).getSalesPrice());
+			tableMot[i] = new String[] {motorcyclesInventory.get(i).getID(), "$" + carCostPrice, "$" + carSalesPrice, motorcyclesInventory.get(i).getCondition(), motorcyclesInventory.get(i).getCleanliness(), "In Stock"};
+		}
+		for (int i = 0; i < electricCarsInventory.size(); i++) {
+			String carCostPrice = String.format("%.2f", electricCarsInventory.get(i).getCostPrice());
+			String carSalesPrice = String.format("%.2f", electricCarsInventory.get(i).getSalesPrice());
+			tableEC[i] = new String[] {electricCarsInventory.get(i).getID(), "$" + carCostPrice, "$" + carSalesPrice, electricCarsInventory.get(i).getCondition(), electricCarsInventory.get(i).getCleanliness(), "In Stock"};
+		}
 		String newOperatingBudget = String.format("%.2f", operatingBudget);
 		String newTotalSales = String.format("%.2f", totalSales);
 		tableSales[0] = new String[] {"$" + newOperatingBudget, "$" + newTotalSales};
@@ -1635,6 +1807,9 @@ public class FNCD {
 		for (final Object[] row : tableI) {
 			System.out.format("%15s%15s%15s%15s%15s%n", row);
 		}
+		for (final Object[] row : tableD) {
+			System.out.format("%15s%15s%15s%15s%15s%n", row);
+		}
 		for (final Object[] row : tableDM) {
 			System.out.format("%15s%15s%15s%15s%15s%n", row);
 		}
@@ -1642,6 +1817,9 @@ public class FNCD {
 			System.out.format("%15s%15s%15s%15s%15s%n", row);
 		}
 		for (final Object[] row : tableDI) {
+			System.out.format("%15s%15s%15s%15s%15s%n", row);
+		}
+		for (final Object[] row : tableDD) {
 			System.out.format("%15s%15s%15s%15s%15s%n", row);
 		}
 		System.out.println("Vehicle Inventory:");
@@ -1654,6 +1832,15 @@ public class FNCD {
 		if (pickupsInventory.size() == 0) {
 			tableP[0] = new String[] {"Pickup", "$0", "$0", "null", "null", "Out of Stock"};
 		}
+		if (monsterTrucksInventory.size() == 0) {
+			tableP[0] = new String[] {"MonsterTruck", "$0", "$0", "null", "null", "Out of Stock"};
+		}
+		if (motorcyclesInventory.size() == 0) {
+			tableP[0] = new String[] {"Motorcycle", "$0", "$0", "null", "null", "Out of Stock"};
+		}
+		if (electricCarsInventory.size() == 0) {
+			tableP[0] = new String[] {"ElectricCar", "$0", "$0", "null", "null", "Out of Stock"};
+		}
 		for (final Object[] row : tablePC) {
 			System.out.format("%15s%15s%15s%15s%15s%15s%n", row);
 		}
@@ -1661,6 +1848,15 @@ public class FNCD {
 			System.out.format("%15s%15s%15s%15s%15s%15s%n", row);
 		}
 		for (final Object[] row : tableP) {
+			System.out.format("%15s%15s%15s%15s%15s%15s%n", row);
+		}
+		for (final Object[] row : tableMO) {
+			System.out.format("%15s%15s%15s%15s%15s%15s%n", row);
+		}
+		for (final Object[] row : tableMot) {
+			System.out.format("%15s%15s%15s%15s%15s%15s%n", row);
+		}
+		for (final Object[] row : tableEC) {
 			System.out.format("%15s%15s%15s%15s%15s%15s%n", row);
 		}
 		System.out.println("Total Budget and Sales:");
@@ -1678,6 +1874,7 @@ public class FNCD {
 			sim.washing();
 			sim.repairing();
 			sim.selling();
+			sim.raceEvent();
 			sim.ending();
 			sim.updateCurrentDay();
 		}
