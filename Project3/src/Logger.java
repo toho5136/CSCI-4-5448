@@ -7,12 +7,12 @@ public class Logger extends Observer{
 
     @Override
     public void update(int days, double payed, double addedFunds){
-        if (days == 1){
-            File myFile = new File("Logger.txt");
-        }
+        String fileName = "src/LoggerFiles/Logger-" + Integer.toString(days) + ".txt";
+
+        File myFile = new File(fileName);
 
         try {
-            FileWriter myWriter = new FileWriter("Logger.txt", true);
+            FileWriter myWriter = new FileWriter(fileName, true);
             myWriter.write("\n" + "Day: " + days + "\n");
             myWriter.write("TotalSales: " + payed + "\n");
             myWriter.write("Funds Added: " + addedFunds + "\n");
