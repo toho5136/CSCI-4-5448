@@ -1,8 +1,14 @@
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
+
+import javax.swing.text.html.ObjectView;
+
 import java.io.*;
+import java.util.List;
+
 public class FNCD {
 	// Private Class Variables
+	private List<Observer> observers = new ArrayList<Observer>();
 	private ArrayList<Mechanic> mechanicStaff = new ArrayList<>();
 	private ArrayList<Salesperson> salespersonStaff = new ArrayList<>();
 	private ArrayList<Intern> internStaff = new ArrayList<>();
@@ -82,6 +88,7 @@ public class FNCD {
 	// Updater
 	public void updateCurrentDay() {
 		currentDay += 1;
+		notifyAllObservers();
 	}
 	// Adders
 	public void addMechanic(Mechanic newGuy) {
@@ -116,6 +123,14 @@ public class FNCD {
 	}
 	public void addBuyer(Buyer newBuyer){
 		buyers.add(newBuyer);
+	}
+	public void attach(Observer observer){
+		observers.add(observer);
+	}
+	public void notifyAllObservers(){
+		for (Observer observer: observers) {
+			observer.update(currentDay, totalSales, addedFunds);
+		}
 	}
 	// Creator
 
@@ -4287,6 +4302,7 @@ public class FNCD {
 		System.setOut(o);
 		FNCD sim = new FNCD();
 		for (int i = 0; i < 30; i++){
+			Logger log = new Logger(sim);
 			sim.createStageNames();
 			sim.opening();
 			sim.washing();
@@ -4295,6 +4311,7 @@ public class FNCD {
 			sim.raceEvent();
 			sim.ending();
 			sim.updateCurrentDay();
+			
 		}
 	}
 
