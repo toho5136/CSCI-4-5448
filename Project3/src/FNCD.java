@@ -1459,9 +1459,33 @@ public class FNCD {
 						System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
 						+ performanceCarInventory.get(maxPriceIndex).getCleanliness() + " " 
 						+ performanceCarInventory.get(maxPriceIndex).getCondition() + " " + performanceCarInventory.get(maxPriceIndex).getID() 
-						+ " to Buyer for $" + performanceCarInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+						+ " to Buyer for $" + performanceCarInventory.get(maxPriceIndex).getSalesPrice());
+						int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						Vehicles upgrades = performanceCarInventory.get(maxPriceIndex);
+						if (warrantyChance <= 25) {
+							System.out.println(" with extended warranty for 20% extra, ");
+							upgrades = new ExtendedWarranty(upgrades);
+						}
+						if (undercoatingChance <= 10) {
+							System.out.println(" with undercoating for 5% extra, ");
+							upgrades = new Undercoating(upgrades);
+						}
+						if (roadRescueChance <= 5) {
+							System.out.println(" with road rescue coverage for 2% extra, ");
+							upgrades = new RoadRescueCoverage(upgrades);
+						}
+						if (satelliteRadioChance <= 40) {
+							System.out.println(" with satellite radio for 5% extra, ");
+							upgrades = new SatelliteRadio(upgrades);
+						}
+						PerformanceCars withUpgrades = performanceCarInventory.get(maxPriceIndex);
+						withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+						performanceCarInventory.set(maxPriceIndex, withUpgrades);
+						System.out.println(" for a total of: " + performanceCarInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
 						+ performanceCarInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
-
 						// Adjust operating budget/total sales/pay bonus
 						operatingBudget += performanceCarInventory.get(maxPriceIndex).getSalesPrice();
 						totalSales += performanceCarInventory.get(maxPriceIndex).getSalesPrice();
@@ -1511,9 +1535,33 @@ public class FNCD {
 							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
 							+ pickupsInventory.get(maxPriceIndex).getCleanliness() + " " 
 							+ pickupsInventory.get(maxPriceIndex).getCondition() + " " + pickupsInventory.get(maxPriceIndex).getID() 
-							+ " to Buyer for $" + pickupsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ " to Buyer for $" + pickupsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = pickupsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Pickups withUpgrades = pickupsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							pickupsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + pickupsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
 							+ pickupsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
-
 							// Adjust operating budget/total sales/pay bonus
 							operatingBudget += pickupsInventory.get(maxPriceIndex).getSalesPrice();
 							totalSales += pickupsInventory.get(maxPriceIndex).getSalesPrice();
@@ -1539,7 +1587,32 @@ public class FNCD {
 							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
 							+ carsInventory.get(maxPriceIndex).getCleanliness() + " " 
 							+ carsInventory.get(maxPriceIndex).getCondition() + " " + carsInventory.get(maxPriceIndex).getID() 
-							+ " to Buyer for $" + carsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ " to Buyer for $" + carsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = carsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Cars withUpgrades = carsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							carsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + carsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
 							+ carsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
 							// Adjust operating budget/total sales/pay bonus
@@ -1588,7 +1661,32 @@ public class FNCD {
 						System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
 						+ pickupsInventory.get(maxPriceIndex).getCleanliness() + " " 
 						+ pickupsInventory.get(maxPriceIndex).getCondition() + " " + pickupsInventory.get(maxPriceIndex).getID() 
-						+ " to Buyer for $" + pickupsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+						+ " to Buyer for $" + pickupsInventory.get(maxPriceIndex).getSalesPrice());
+						int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						Vehicles upgrades = pickupsInventory.get(maxPriceIndex);
+						if (warrantyChance <= 25) {
+							System.out.println(" with extended warranty for 20% extra, ");
+							upgrades = new ExtendedWarranty(upgrades);
+						}
+						if (undercoatingChance <= 10) {
+							System.out.println(" with undercoating for 5% extra, ");
+							upgrades = new Undercoating(upgrades);
+						}
+						if (roadRescueChance <= 5) {
+							System.out.println(" with road rescue coverage for 2% extra, ");
+							upgrades = new RoadRescueCoverage(upgrades);
+						}
+						if (satelliteRadioChance <= 40) {
+							System.out.println(" with satellite radio for 5% extra, ");
+							upgrades = new SatelliteRadio(upgrades);
+						}
+						Pickups withUpgrades = pickupsInventory.get(maxPriceIndex);
+						withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+						pickupsInventory.set(maxPriceIndex, withUpgrades);
+						System.out.println(" for a total of: " + pickupsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
 						+ pickupsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
 						// Adjust operating budget/total sales/pay bonus
@@ -1641,7 +1739,32 @@ public class FNCD {
 							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
 							+ performanceCarInventory.get(maxPriceIndex).getCleanliness() + " " 
 							+ performanceCarInventory.get(maxPriceIndex).getCondition() + " " + performanceCarInventory.get(maxPriceIndex).getID() 
-							+ " to Buyer for $" + performanceCarInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ " to Buyer for $" + performanceCarInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = performanceCarInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							PerformanceCars withUpgrades = performanceCarInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							performanceCarInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + performanceCarInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
 							+ performanceCarInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
 							// Adjust operating budget/total sales/pay bonus
@@ -1670,7 +1793,32 @@ public class FNCD {
 							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
 							+ carsInventory.get(maxPriceIndex).getCleanliness() + " " 
 							+ carsInventory.get(maxPriceIndex).getCondition() + " " + carsInventory.get(maxPriceIndex).getID() 
-							+ " to Buyer for $" + carsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ " to Buyer for $" + carsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = carsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Cars withUpgrades = carsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							carsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + carsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
 							+ carsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
 							// Adjust operating budget/total sales/pay bonus
@@ -1720,7 +1868,32 @@ public class FNCD {
 						System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
 						+ carsInventory.get(maxPriceIndex).getCleanliness() + " " 
 						+ carsInventory.get(maxPriceIndex).getCondition() + " " + carsInventory.get(maxPriceIndex).getID() 
-						+ " to Buyer for $" + carsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+						+ " to Buyer for $" + carsInventory.get(maxPriceIndex).getSalesPrice());
+						int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						Vehicles upgrades = carsInventory.get(maxPriceIndex);
+						if (warrantyChance <= 25) {
+							System.out.println(" with extended warranty for 20% extra, ");
+							upgrades = new ExtendedWarranty(upgrades);
+						}
+						if (undercoatingChance <= 10) {
+							System.out.println(" with undercoating for 5% extra, ");
+							upgrades = new Undercoating(upgrades);
+						}
+						if (roadRescueChance <= 5) {
+							System.out.println(" with road rescue coverage for 2% extra, ");
+							upgrades = new RoadRescueCoverage(upgrades);
+						}
+						if (satelliteRadioChance <= 40) {
+							System.out.println(" with satellite radio for 5% extra, ");
+							upgrades = new SatelliteRadio(upgrades);
+						}
+						Cars withUpgrades = carsInventory.get(maxPriceIndex);
+						withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+						carsInventory.set(maxPriceIndex, withUpgrades);
+						System.out.println(" for a total of: " + carsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
 						+ carsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
 						// Adjust operating budget/total sales/pay bonus
@@ -1773,7 +1946,32 @@ public class FNCD {
 							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
 							+ pickupsInventory.get(maxPriceIndex).getCleanliness() + " " 
 							+ pickupsInventory.get(maxPriceIndex).getCondition() + " " + pickupsInventory.get(maxPriceIndex).getID() 
-							+ " to Buyer for $" + pickupsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ " to Buyer for $" + pickupsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = pickupsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Pickups withUpgrades = pickupsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							pickupsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + pickupsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
 							+ pickupsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
 							// Adjust operating budget/total sales/pay bonus
@@ -1803,7 +2001,32 @@ public class FNCD {
 							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
 							+ performanceCarInventory.get(maxPriceIndex).getCleanliness() + " " 
 							+ performanceCarInventory.get(maxPriceIndex).getCondition() + " " + performanceCarInventory.get(maxPriceIndex).getID() 
-							+ " to Buyer for $" + performanceCarInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ " to Buyer for $" + performanceCarInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = performanceCarInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							PerformanceCars withUpgrades = performanceCarInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							performanceCarInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + performanceCarInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
 							+ performanceCarInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
 
 							// Adjust operating budget/total sales/pay bonus

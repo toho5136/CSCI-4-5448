@@ -1,3 +1,1663 @@
+<<<<<<< HEAD
+Day: 1
+opened
+Intern0 has made Pickup0 clean!
+Intern0 has made Pickup1 sparkling!($0.0 bonus)
+Intern1 has made Pickup2 clean!
+Intern1 has made Pickup3 Broken
+Intern1 has made ElectricCar3 clean!
+Intern2 has made Pickup3 clean!
+Intern2 has made ElectricCar1 clean!
+Mechanic0 has repaired Broken car PerformanceCar2 and made it Used!($100.0 bonus)
+Mechanic0 has repaired Broken car PerformanceCar3 and made it Used!($100.0 bonus)
+Mechanic1 has repaired Broken car Pickup0 and made it Used!($75.0 bonus)
+Mechanic1 has repaired Broken car Pickup1 and made it Used!($75.0 bonus)
+Mechanic2 has repaired Broken car Car1 and made it Used!($50.0 bonus)
+Salesperson1 sold Clean Like New Car0 to Buyer for $24848.984122603128
+ for a total of: 24848.984122603128 (earned $500.0 bonus)
+Salesperson2 sold Clean Used Car3 to Buyer for $20615.54863338048
+ for a total of: 20615.54863338048 (earned $500.0 bonus)
+Staff Members: 
+      Mechanic0              1           20.5          200.0        Working
+      Mechanic1              1           20.5          150.0        Working
+      Mechanic2              1           20.5           50.0        Working
+   Salesperson0              1           22.5            0.0        Working
+   Salesperson1              1           22.5          500.0        Working
+   Salesperson2              1           22.5          500.0        Working
+        Intern0              1           10.5            0.0        Working
+        Intern1              1           10.5            0.0        Working
+        Intern2              1           10.5            0.0        Working
+        Driver0              1           15.5            0.0        Working
+        Driver1              1           15.5            0.0        Working
+        Driver2              1           15.5            0.0        Working
+Vehicle Inventory:
+PerformanceCar0      $22896.65      $45793.29           Used          Clean       In Stock
+PerformanceCar1      $30722.60      $61445.19       Like New          Clean       In Stock
+PerformanceCar2      $13816.08      $27632.17           Used          Dirty       In Stock
+PerformanceCar3      $17298.12      $34596.23           Used          Clean       In Stock
+           Car1       $8979.42      $17958.84           Used          Dirty       In Stock
+           Car2       $7893.44      $15786.88         Broken          Clean       In Stock
+        Pickup0      $17490.17      $34980.33           Used          Dirty       In Stock
+        Pickup1      $16031.60      $32063.19           Used          Clean       In Stock
+        Pickup2      $18533.20      $37066.41       Like New          Clean       In Stock
+        Pickup3      $13457.30      $26914.60         Broken          Dirty       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken          Clean       In Stock
+ Bear Foot USA       $14378.17      $28756.34           Used          Clean       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New          Clean       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken          Dirty       In Stock
+    Motorcycle0      $14486.30      $28972.60           Used          Clean       In Stock
+    Motorcycle1      $17258.48      $34516.96           Used          Clean       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used          Dirty       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New          Clean       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used          Clean       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken          Clean       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New          Clean       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken          Clean       In Stock
+Total Budget and Sales:
+     $545464.53      $45464.53
+Day: 2
+Buying car:Car4
+Buying car:Car5
+Intern0 has made PerformanceCar2 Broken
+Intern0 has made Pickup0 clean!
+Intern0 has made Pickup3 clean!
+Intern1 has made PerformanceCar2 clean!
+Intern1 has made Car1 clean!
+Intern2 has made Car4 clean!
+Intern2 has made MonsterTruck3 clean!
+Mechanic0 has repaired Broken car PerformanceCar2 and made it Used!($100.0 bonus)
+Mechanic1 has repaired Broken car Car2 and made it Used!($50.0 bonus)
+Mechanic2 has repaired Used car PerformanceCar2 and made it Like New!($100.0 bonus)
+Mechanic2 has repaired Used car PerformanceCar3 and made it Like New!($100.0 bonus)
+Mechanic2 has repaired Used car Pickup0 and made it Like New!($75.0 bonus)
+Mechanic2 has repaired Used car Car1 and made it Like New!($50.0 bonus)
+Mechanic2 has repaired Used car Car2 and made it Like New!($50.0 bonus)
+Salesperson0 sold Clean Like New Pickup2 to Buyer for $37066.405950448316
+ with satellite radio for 5% extra, 
+ for a total of: 38919.726247970735 (earned $700.0 bonus)
+Staff Members: 
+      Mechanic0              2           41.0          300.0        Working
+      Mechanic1              2           41.0          200.0        Working
+      Mechanic2              2           41.0          425.0        Working
+   Salesperson0              2           45.0          700.0        Working
+   Salesperson1              2           45.0          500.0        Working
+   Salesperson2              2           45.0          500.0        Working
+        Intern0              2           21.0            0.0        Working
+        Intern1              2           21.0            0.0        Working
+        Intern2              2           21.0            0.0        Working
+        Driver0              2           31.0            0.0        Working
+        Driver1              2           31.0            0.0        Working
+        Driver2              2           31.0            0.0        Working
+Vehicle Inventory:
+PerformanceCar0      $22896.65      $45793.29           Used          Dirty       In Stock
+PerformanceCar1      $30722.60      $61445.19       Like New          Clean       In Stock
+PerformanceCar2      $13816.08      $27632.17       Like New          Dirty       In Stock
+PerformanceCar3      $17298.12      $34596.23       Like New          Dirty       In Stock
+           Car1       $8979.42      $17958.84       Like New          Dirty       In Stock
+           Car2       $7893.44      $15786.88       Like New          Dirty       In Stock
+           Car4      $12869.93      $25739.87       Like New          Clean       In Stock
+           Car5      $17414.59      $34829.17       Like New          Clean       In Stock
+        Pickup0      $17490.17      $34980.33       Like New          Dirty       In Stock
+        Pickup1      $16031.60      $32063.19           Used          Dirty       In Stock
+        Pickup3      $13457.30      $26914.60         Broken          Dirty       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken          Clean       In Stock
+ Bear Foot USA       $14378.17      $28756.34           Used          Clean       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New          Clean       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken          Clean       In Stock
+    Motorcycle0      $14486.30      $28972.60           Used          Clean       In Stock
+    Motorcycle1      $17258.48      $34516.96           Used          Clean       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used          Dirty       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New          Clean       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used          Clean       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken          Clean       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New          Clean       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken          Clean       In Stock
+Total Budget and Sales:
+     $554099.74      $84384.26
+Day: 3
+Buying car:Pickup4
+Intern0 has made PerformanceCar0 clean!
+Intern0 has made PerformanceCar2 clean!
+Intern1 has made PerformanceCar3 clean!
+Intern1 has made Pickup0 clean!
+Intern2 has made Pickup1 sparkling!($0.0 bonus)
+Intern2 has made Pickup3 clean!
+Mechanic0 has repaired Used car Pickup4 and made it Like New!($75.0 bonus)
+Mechanic1 has repaired Broken car Pickup3 and made it Used!($75.0 bonus)
+Mechanic1 has repaired Used car PerformanceCar0 and made it Like New!($100.0 bonus)
+Mechanic1 has repaired Used car Pickup1 and made it Like New!($75.0 bonus)
+Mechanic2 has repaired Used car Pickup3 and made it Like New!($75.0 bonus)
+Salesperson1 sold Clean Like New Car5 to Buyer for $34829.17164495992
+ with road rescue coverage for 2% extra, 
+ with satellite radio for 5% extra, 
+ for a total of: 37302.04283175208 (earned $500.0 bonus)
+Staff Members: 
+      Mechanic0              3           61.5          375.0        Working
+      Mechanic1              3           61.5          450.0        Working
+      Mechanic2              3           61.5          500.0        Working
+   Salesperson0              3           67.5          700.0        Working
+   Salesperson1              3           67.5         1000.0        Working
+   Salesperson2              3           67.5          500.0        Working
+        Intern0              3           31.5            0.0        Working
+        Intern1              3           31.5            0.0        Working
+        Intern2              3           31.5            0.0        Working
+        Driver0              3           46.5            0.0        Working
+        Driver1              3           46.5           50.0        Working
+        Driver2              3           46.5            0.0        Working
+Vehicle Inventory:
+PerformanceCar0      $22896.65      $45793.29       Like New          Dirty       In Stock
+PerformanceCar1      $30722.60      $67589.71       Like New          Clean       In Stock
+PerformanceCar2      $13816.08      $27632.17       Like New          Clean       In Stock
+PerformanceCar3      $17298.12      $34596.23       Like New          Clean       In Stock
+           Car1       $8979.42      $17958.84       Like New          Dirty       In Stock
+           Car2       $7893.44      $15786.88       Like New          Dirty       In Stock
+           Car4      $12869.93      $25739.87       Like New          Clean       In Stock
+        Pickup0      $17490.17      $34980.33       Like New          Clean       In Stock
+        Pickup1      $16031.60      $32063.19       Like New          Dirty       In Stock
+        Pickup3      $13457.30      $26914.60       Like New          Dirty       In Stock
+        Pickup4      $23388.11      $46776.23       Like New          Dirty       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken          Clean       In Stock
+ Bear Foot USA       $14378.17      $28756.34           Used          Clean       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New          Clean       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken          Clean       In Stock
+    Motorcycle0      $14486.30      $28972.60           Used          Clean       In Stock
+    Motorcycle1      $17258.48      $34516.96           Used          Clean       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used          Dirty       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New          Clean       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used          Clean       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken          Clean       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New          Clean       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken          Clean       In Stock
+Total Budget and Sales:
+     $568013.67     $121686.30
+Day: 4
+Buying car:Car6
+Intern0 has made PerformanceCar0 clean!
+Intern0 has made Pickup1 clean!
+Intern1 has made Pickup3 clean!
+Intern1 has made Pickup4 clean!
+Intern2 has made Car1 clean!
+Intern2 has made Car2 clean!
+Salesperson2 sold Clean Like New Pickup4 to Buyer for $46776.22906903402
+ with satellite radio for 5% extra, 
+ for a total of: 49115.040522485724 (earned $700.0 bonus)
+Staff Members: 
+      Mechanic0              4           82.0          375.0        Working
+      Mechanic1              4           82.0          450.0        Working
+      Mechanic2              4           82.0          500.0        Working
+   Salesperson0              4           90.0          700.0        Working
+   Salesperson1              4           90.0         1000.0        Working
+   Salesperson2              4           90.0         1200.0        Working
+        Intern0              4           42.0            0.0        Working
+        Intern1              4           42.0            0.0        Working
+        Intern2              4           42.0            0.0        Working
+        Driver0              4           62.0            0.0        Working
+        Driver1              4           62.0           50.0        Working
+        Driver2              4           62.0            0.0        Working
+Vehicle Inventory:
+PerformanceCar0      $22896.65      $45793.29       Like New          Clean       In Stock
+PerformanceCar1      $30722.60      $67589.71       Like New          Clean       In Stock
+PerformanceCar2      $13816.08      $27632.17       Like New          Clean       In Stock
+PerformanceCar3      $17298.12      $34596.23       Like New          Clean       In Stock
+           Car1       $8979.42      $17958.84       Like New          Clean       In Stock
+           Car2       $7893.44      $15786.88       Like New          Clean       In Stock
+           Car4      $12869.93      $25739.87       Like New          Clean       In Stock
+           Car6      $13260.90      $26521.79       Like New          Dirty       In Stock
+        Pickup0      $17490.17      $34980.33       Like New          Clean       In Stock
+        Pickup1      $16031.60      $32063.19       Like New          Clean       In Stock
+        Pickup3      $13457.30      $26914.60       Like New          Clean       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken          Clean       In Stock
+ Bear Foot USA       $14378.17      $28756.34           Used          Clean       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New          Clean       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken          Clean       In Stock
+    Motorcycle0      $14486.30      $28972.60           Used          Clean       In Stock
+    Motorcycle1      $17258.48      $34516.96           Used          Clean       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used          Dirty       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New          Clean       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used          Clean       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken          Clean       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New          Clean       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken          Clean       In Stock
+Total Budget and Sales:
+     $603867.81     $170801.34
+Day: 5
+Buying car:Pickup5
+Intern0 has made Pickup5 clean!
+Intern0 has made Car6 clean!
+Intern1 has made Motorcycle2 clean!
+Intern1 has made PerformanceCar0 Broken
+Intern1 has made PerformanceCar1 dirty!
+Intern2 has made PerformanceCar1 Broken
+Intern2 has made PerformanceCar2 Broken
+Intern2 has made PerformanceCar3 sparkling!($0.0 bonus)
+Intern2 has made ElectricCar0 sparkling!($10.0 bonus)
+Mechanic0 has repaired Broken car PerformanceCar0 and made it Used!($100.0 bonus)
+Mechanic0 has repaired Broken car PerformanceCar1 and made it Used!($100.0 bonus)
+Mechanic1 has repaired Broken car PerformanceCar2 and made it Used!($100.0 bonus)
+Mechanic1 has repaired Used car PerformanceCar0 and made it Like New!($100.0 bonus)
+Mechanic1 has repaired Used car PerformanceCar1 and made it Like New!($100.0 bonus)
+Mechanic1 has repaired Used car PerformanceCar2 and made it Like New!($100.0 bonus)
+Mechanic1 has repaired Used car Pickup5 and made it Like New!($75.0 bonus)
+Salesperson0 sold Clean Like New Car6 to Buyer for $26521.7928895369
+ for a total of: 26521.7928895369 (earned $500.0 bonus)
+Staff Members: 
+      Mechanic0              5          102.5          575.0        Working
+      Mechanic1              5          102.5          925.0        Working
+      Mechanic2              5          102.5          500.0        Working
+        Intern0              5           52.5            0.0        Working
+   Salesperson1              5          112.5         1000.0        Working
+   Salesperson2              5          112.5         1200.0        Working
+        Intern1              5           52.5            0.0        Working
+        Intern2              5           52.5           10.0        Working
+        Driver0              5           77.5            0.0        Working
+        Driver1              5           77.5           50.0        Working
+        Driver2              5           77.5            0.0        Working
+   Salesperson0              5          112.5         1200.0           Quit
+Vehicle Inventory:
+PerformanceCar0      $22896.65      $45793.29       Like New          Dirty       In Stock
+PerformanceCar1      $30722.60      $67589.71       Like New          Dirty       In Stock
+PerformanceCar2      $13816.08      $27632.17       Like New          Dirty       In Stock
+PerformanceCar3      $17298.12      $34596.23       Like New      Sparkling       In Stock
+           Car1       $8979.42      $17958.84       Like New          Clean       In Stock
+           Car2       $7893.44      $15786.88       Like New          Clean       In Stock
+           Car4      $12869.93      $25739.87       Like New          Clean       In Stock
+        Pickup0      $17490.17      $34980.33       Like New          Clean       In Stock
+        Pickup1      $16031.60      $32063.19       Like New          Clean       In Stock
+        Pickup3      $13457.30      $26914.60       Like New          Clean       In Stock
+        Pickup5      $15003.27      $30006.55       Like New          Dirty       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken          Clean       In Stock
+ Bear Foot USA       $14378.17      $28756.34           Used          Clean       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New          Clean       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken          Clean       In Stock
+    Motorcycle0      $14486.30      $28972.60           Used          Clean       In Stock
+    Motorcycle1      $17258.48      $34516.96           Used          Clean       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used          Clean       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New          Clean       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken          Clean       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New          Clean       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken          Clean       In Stock
+Total Budget and Sales:
+     $615386.33     $197323.14
+Day: 6
+Hiring intern Intern3
+Buying car:Car7
+Intern1 has made PerformanceCar0 clean!
+Intern1 has made PerformanceCar1 Broken
+Intern1 has made PerformanceCar2 clean!
+Intern2 has made Pickup5 sparkling!($0.0 bonus)
+Intern2 has made Car7 clean!
+Intern3 has made PerformanceCar1 sparkling!($1.0 bonus)
+Intern3 has made PerformanceCar2 Broken
+Intern3 has made Pickup1 sparkling!($0.0 bonus)
+Mechanic0 has repaired Broken car PerformanceCar1 and made it Used!($100.0 bonus)
+Mechanic0 has repaired Broken car PerformanceCar2 and made it Used!($100.0 bonus)
+Mechanic1 has repaired Used car PerformanceCar2 and made it Like New!($100.0 bonus)
+Mechanic2 has repaired Used car PerformanceCar1 and made it Like New!($100.0 bonus)
+Mechanic2 has repaired Used car Car7 and made it Like New!($50.0 bonus)
+Salesperson1 sold Clean Like New Pickup0 to Buyer for $34980.331147088655
+ with extended warranty for 20% extra, 
+ for a total of: 41976.397376506386 (earned $700.0 bonus)
+Intern0 sold Dirty Like New PerformanceCar1 to Buyer for $67589.71178020921
+ for a total of: 67589.71178020921 (earned $1000.0 bonus)
+Salesperson2 sold Sparkling Like New Pickup1 to Buyer for $32063.193153548295
+ for a total of: 32063.193153548295 (earned $700.0 bonus)
+Intern0 sold Dirty Like New Car7 to Buyer for $30616.187832424024
+ with road rescue coverage for 2% extra, 
+ for a total of: 31228.511589072506 (earned $500.0 bonus)
+Staff Members: 
+      Mechanic0              6          123.0          775.0        Working
+      Mechanic1              6          123.0         1025.0        Working
+      Mechanic2              6          123.0          650.0        Working
+        Intern0              6           75.0         1500.0        Working
+   Salesperson1              6          135.0         1700.0        Working
+   Salesperson2              6          135.0         1900.0        Working
+        Intern1              6           63.0            0.0        Working
+        Intern2              6           63.0           10.0        Working
+        Intern3              1           10.5            1.0        Working
+        Driver0              6           93.0            0.0        Working
+        Driver1              6           93.0           50.0        Working
+        Driver2              6           93.0            0.0        Working
+Vehicle Inventory:
+PerformanceCar0      $22896.65      $45793.29       Like New          Clean       In Stock
+PerformanceCar2      $13816.08      $27632.17       Like New          Dirty       In Stock
+PerformanceCar3      $17298.12      $34596.23       Like New      Sparkling       In Stock
+           Car1       $8979.42      $17958.84       Like New          Clean       In Stock
+           Car2       $7893.44      $15786.88       Like New          Clean       In Stock
+           Car4      $12869.93      $25739.87       Like New          Clean       In Stock
+        Pickup3      $13457.30      $26914.60       Like New          Clean       In Stock
+        Pickup5      $15003.27      $30006.55       Like New      Sparkling       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken          Clean       In Stock
+ Bear Foot USA       $14378.17      $28756.34           Used          Clean       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New          Clean       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken          Clean       In Stock
+    Motorcycle0      $14486.30      $28972.60           Used          Clean       In Stock
+    Motorcycle1      $17258.48      $34516.96           Used          Clean       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used          Clean       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New          Clean       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken          Clean       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New          Clean       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken          Clean       In Stock
+Total Budget and Sales:
+     $772935.05     $370180.95
+Day: 7
+Buying car: PerformanceCar4
+Buying car:Pickup6
+Buying car:Pickup7
+Buying car:Car8
+Intern1 has made PerformanceCar2 sparkling!($0.0 bonus)
+Intern1 has made PerformanceCar4 sparkling!($0.0 bonus)
+Intern2 has made Pickup6 clean!
+Intern2 has made Car8 Broken
+Intern2 has made PerformanceCar0 sparkling!($0.0 bonus)
+Intern3 has made Car8 clean!
+Intern3 has made Pickup3 Broken
+Intern3 has made Car2 Broken
+Intern3 has made Car4 sparkling!($10.0 bonus)
+Mechanic0 has repaired Broken car PerformanceCar4 and made it Used!($100.0 bonus)
+Mechanic0 has repaired Broken car Pickup3 and made it Used!($75.0 bonus)
+Mechanic1 has repaired Broken car Pickup6 and made it Used!($75.0 bonus)
+Mechanic1 has repaired Broken car Car2 and made it Used!($50.0 bonus)
+Mechanic2 has repaired Broken car Car8 and made it Used!($50.0 bonus)
+Mechanic2 has repaired Used car PerformanceCar4 and made it Like New!($100.0 bonus)
+Mechanic2 has repaired Used car Pickup3 and made it Like New!($75.0 bonus)
+Mechanic2 has repaired Used car Pickup6 and made it Like New!($75.0 bonus)
+Mechanic2 has repaired Used car Car2 and made it Like New!($50.0 bonus)
+Mechanic2 has repaired Used car Car8 and made it Like New!($50.0 bonus)
+Staff Members: 
+      Mechanic0              7          143.5          950.0        Working
+      Mechanic1              7          143.5         1150.0        Working
+      Mechanic2              7          143.5         1050.0        Working
+        Intern0              7           97.5         1500.0        Working
+   Salesperson1              7          157.5         1700.0        Working
+   Salesperson2              7          157.5         1900.0        Working
+        Intern1              7           73.5            0.0        Working
+        Intern2              7           73.5           10.0        Working
+        Intern3              2           21.0           11.0        Working
+        Driver0              7          108.5            0.0        Working
+        Driver1              7          108.5           50.0        Working
+        Driver2              7          108.5            0.0        Working
+Vehicle Inventory:
+PerformanceCar0      $22896.65      $45793.29       Like New      Sparkling       In Stock
+PerformanceCar2      $13816.08      $27632.17       Like New      Sparkling       In Stock
+PerformanceCar3      $17298.12      $34596.23       Like New      Sparkling       In Stock
+PerformanceCar4      $19144.95      $38289.91       Like New          Dirty       In Stock
+           Car1       $8979.42      $17958.84       Like New          Clean       In Stock
+           Car2       $7893.44      $15786.88       Like New          Dirty       In Stock
+           Car4      $12869.93      $25739.87       Like New      Sparkling       In Stock
+           Car8       $5531.76      $11063.52       Like New          Dirty       In Stock
+        Pickup3      $13457.30      $26914.60       Like New          Dirty       In Stock
+        Pickup5      $15003.27      $30006.55       Like New      Sparkling       In Stock
+        Pickup6      $18433.49      $36866.98       Like New          Dirty       In Stock
+        Pickup7      $22905.20      $45810.39       Like New          Clean       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken          Clean       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken          Clean       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New          Clean       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken          Clean       In Stock
+    Motorcycle0      $14486.30      $28972.60           Used          Clean       In Stock
+    Motorcycle1      $17258.48      $34516.96           Used          Clean       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used          Clean       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New          Clean       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken          Clean       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New          Clean       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken          Clean       In Stock
+Total Budget and Sales:
+     $706919.65     $370180.95
+Day: 8
+Intern1 has made PerformanceCar4 clean!
+Intern1 has made Pickup3 clean!
+Intern2 has made Pickup6 clean!
+Intern2 has made Car2 clean!
+Intern3 has made Car8 Broken
+Intern3 has made PerformanceCar4 Broken
+Intern3 has made Pickup3 Broken
+Intern3 has made MonsterTruck2 sparkling!($0.0 bonus)
+Intern3 has made Motorcycle0 sparkling!($0.0 bonus)
+Mechanic2 has repaired Broken car PerformanceCar4 and made it Used!($100.0 bonus)
+Salesperson1 sold Clean Like New Pickup7 to Buyer for $45810.39477846229
+ for a total of: 45810.39477846229 (earned $700.0 bonus)
+Salesperson2 sold Sparkling Like New Car4 to Buyer for $25739.865693254113
+ for a total of: 25739.865693254113 (earned $500.0 bonus)
+Staff Members: 
+        Intern1              8           84.0            0.0        Working
+      Mechanic1              8          164.0         1150.0        Working
+      Mechanic2              8          164.0         1150.0        Working
+        Intern2              8           84.0           10.0        Working
+   Salesperson1              8          180.0         2400.0        Working
+   Salesperson2              8          180.0         2400.0        Working
+        Intern3              3           31.5           11.0        Working
+        Driver0              8          124.0            0.0        Working
+        Driver1              8          124.0           50.0        Working
+        Driver2              8          124.0            0.0        Working
+      Mechanic0              8          164.0          950.0           Quit
+        Intern0              8          120.0         1500.0           Quit
+Vehicle Inventory:
+PerformanceCar0      $22896.65      $45793.29       Like New      Sparkling       In Stock
+PerformanceCar2      $13816.08      $27632.17       Like New      Sparkling       In Stock
+PerformanceCar3      $17298.12      $34596.23       Like New      Sparkling       In Stock
+PerformanceCar4      $19144.95      $38289.91           Used          Dirty       In Stock
+           Car1       $8979.42      $17958.84       Like New          Clean       In Stock
+           Car2       $7893.44      $15786.88       Like New          Clean       In Stock
+           Car8       $5531.76      $11063.52         Broken          Dirty       In Stock
+        Pickup3      $13457.30      $26914.60         Broken          Dirty       In Stock
+        Pickup5      $15003.27      $30006.55       Like New      Sparkling       In Stock
+        Pickup6      $18433.49      $36866.98       Like New          Clean       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken          Clean       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken          Clean       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New      Sparkling       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken          Clean       In Stock
+    Motorcycle0      $14486.30      $28972.60           Used      Sparkling       In Stock
+    Motorcycle1      $17258.48      $34516.96           Used          Clean       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used          Clean       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New          Clean       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken          Clean       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New          Clean       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken          Clean       In Stock
+Total Budget and Sales:
+     $778469.91     $441731.21
+Day: 9
+Hiring intern Intern4
+Hiring intern Intern5
+Buying car:Pickup8
+Buying car:Car9
+Intern3 has made PerformanceCar4 clean!
+Intern3 has made Pickup3 Broken
+Intern3 has made Car8 clean!
+Intern4 has made Pickup3 clean!
+Intern4 has made Pickup8 Broken
+Intern4 has made Car9 clean!
+Intern5 has made Pickup8 clean!
+Intern5 has made ElectricCar1 sparkling!($10.0 bonus)
+Intern1 has repaired Broken car Pickup8 and made it Used!($75.0 bonus)
+Mechanic1 has repaired Broken car Pickup3 and made it Used!($75.0 bonus)
+Mechanic1 has repaired Broken car Car8 and made it Used!($50.0 bonus)
+Mechanic2 has repaired Used car PerformanceCar4 and made it Like New!($100.0 bonus)
+Mechanic2 has repaired Used car Pickup3 and made it Like New!($75.0 bonus)
+Mechanic2 has repaired Used car Pickup8 and made it Like New!($75.0 bonus)
+Mechanic2 has repaired Used car Car8 and made it Like New!($50.0 bonus)
+Mechanic2 has repaired Used car Car9 and made it Like New!($50.0 bonus)
+Salesperson1 sold Clean Like New Pickup6 to Buyer for $36866.98131105168
+ with satellite radio for 5% extra, 
+ for a total of: 38710.33037660426 (earned $700.0 bonus)
+Staff Members: 
+        Intern1              9          104.5           75.0        Working
+      Mechanic1              9          184.5         1275.0        Working
+      Mechanic2              9          184.5         1500.0        Working
+        Intern2              9          106.5           10.0        Working
+   Salesperson1              9          202.5         3100.0        Working
+   Salesperson2              9          202.5         2400.0        Working
+        Intern3              4           42.0           11.0        Working
+        Intern4              1           10.5            0.0        Working
+        Intern5              1           10.5           10.0        Working
+        Driver0              9          139.5            0.0        Working
+        Driver1              9          139.5           50.0        Working
+        Driver2              9          139.5            0.0        Working
+Vehicle Inventory:
+PerformanceCar0      $22896.65      $45793.29       Like New      Sparkling       In Stock
+PerformanceCar2      $13816.08      $27632.17       Like New      Sparkling       In Stock
+PerformanceCar3      $17298.12      $34596.23       Like New      Sparkling       In Stock
+PerformanceCar4      $19144.95      $38289.91       Like New          Dirty       In Stock
+           Car1       $8979.42      $17958.84       Like New          Clean       In Stock
+           Car2       $7893.44      $15786.88       Like New          Clean       In Stock
+           Car8       $5531.76      $11063.52       Like New          Dirty       In Stock
+           Car9       $8407.65      $16815.29       Like New          Dirty       In Stock
+        Pickup3      $13457.30      $26914.60       Like New          Dirty       In Stock
+        Pickup5      $15003.27      $30006.55       Like New      Sparkling       In Stock
+        Pickup8      $15965.98      $31931.97       Like New          Dirty       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken          Clean       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken          Clean       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New      Sparkling       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken          Clean       In Stock
+    Motorcycle0      $14486.30      $28972.60           Used      Sparkling       In Stock
+    Motorcycle1      $17258.48      $34516.96           Used          Clean       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used          Clean       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New          Clean       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken      Sparkling       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New          Clean       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken          Clean       In Stock
+Total Budget and Sales:
+     $792806.61     $480441.54
+Day: 10
+Buying car:Pickup9
+Intern3 has made PerformanceCar4 clean!
+Intern3 has made Pickup3 clean!
+Intern4 has made Pickup8 Broken
+Intern4 has made Pickup9 Broken
+Intern4 has made Car8 clean!
+Intern4 has made Car9 clean!
+Intern5 has made PerformanceCar4 dirty!
+Intern5 has made Car9 dirty!
+Intern1 has repaired Broken car Pickup9 and made it Used!($75.0 bonus)
+Mechanic1 has repaired Broken car Pickup8 and made it Used!($75.0 bonus)
+Mechanic1 has repaired Used car Pickup8 and made it Like New!($75.0 bonus)
+Mechanic1 has repaired Used car Pickup9 and made it Like New!($75.0 bonus)
+Salesperson2 sold Sparkling Like New PerformanceCar0 to Buyer for $45793.29305995661
+ with road rescue coverage for 2% extra, 
+ for a total of: 46709.158921155744 (earned $1000.0 bonus)
+Staff Members: 
+        Intern1             10          125.0          150.0        Working
+      Mechanic1             10          205.0         1500.0        Working
+      Mechanic2             10          205.0         1500.0        Working
+        Intern2             10          129.0           10.0        Working
+   Salesperson1             10          225.0         3100.0        Working
+   Salesperson2             10          225.0         3400.0        Working
+        Intern3              5           52.5           11.0        Working
+        Intern4              2           21.0            0.0        Working
+        Intern5              2           21.0           10.0        Working
+        Driver0             10          155.0            0.0        Working
+        Driver3              0            0.0            0.0        Working
+        Driver2             10          155.0            0.0        Working
+        Driver1             10          155.0           50.0           Quit
+Vehicle Inventory:
+PerformanceCar2      $13816.08      $27632.17       Like New      Sparkling       In Stock
+PerformanceCar3      $17298.12      $34596.23       Like New      Sparkling       In Stock
+PerformanceCar4      $19144.95      $38289.91       Like New          Dirty       In Stock
+           Car1       $8979.42      $17958.84       Like New          Clean       In Stock
+           Car2       $7893.44      $15786.88       Like New          Clean       In Stock
+           Car8       $5531.76      $11063.52       Like New          Clean       In Stock
+           Car9       $8407.65      $16815.29       Like New          Dirty       In Stock
+        Pickup3      $13457.30      $26914.60       Like New          Clean       In Stock
+        Pickup5      $15003.27      $30006.55       Like New      Sparkling       In Stock
+        Pickup8      $15965.98      $31931.97       Like New          Dirty       In Stock
+        Pickup9      $27007.36      $54014.72       Like New          Dirty       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken          Clean       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken          Clean       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New      Sparkling       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken          Clean       In Stock
+    Motorcycle0      $14486.30      $28972.60         Broken      Sparkling       In Stock
+    Motorcycle1      $17258.48      $34516.96         Broken          Clean       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used          Clean       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New          Clean       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken      Sparkling       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New          Clean       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken          Clean       In Stock
+Total Budget and Sales:
+     $812508.41     $527150.70
+Day: 11
+Buying car: PerformanceCar5
+Intern3 has made PerformanceCar4 Broken
+Intern3 has made Pickup8 clean!
+Intern3 has made Pickup9 clean!
+Intern4 has made PerformanceCar4 clean!
+Intern4 has made PerformanceCar5 clean!
+Intern5 has made Car9 clean!
+Intern5 has made Pickup3 dirty!
+Intern1 has repaired Broken car PerformanceCar4 and made it Used!($100.0 bonus)
+Intern1 has repaired Broken car PerformanceCar5 and made it Used!($100.0 bonus)
+Mechanic1 has repaired Used car PerformanceCar4 and made it Like New!($100.0 bonus)
+Mechanic1 has repaired Used car PerformanceCar5 and made it Like New!($100.0 bonus)
+Salesperson1 sold Clean Like New Pickup9 to Buyer for $54014.72185481037
+ for a total of: 54014.72185481037 (earned $700.0 bonus)
+Staff Members: 
+        Intern1             11          145.5          350.0        Working
+      Mechanic1             11          225.5         1700.0        Working
+      Mechanic2             11          225.5         1500.0        Working
+        Intern3              6           63.0           11.0        Working
+   Salesperson1             11          247.5         3800.0        Working
+   Salesperson2             11          247.5         3400.0        Working
+        Intern4              3           31.5            0.0        Working
+        Intern5              3           31.5           10.0        Working
+        Driver0             11          170.5            0.0        Working
+        Driver3              1           15.5            0.0        Working
+        Driver2             11          170.5            0.0        Working
+        Intern2             11          151.5           10.0           Quit
+Vehicle Inventory:
+PerformanceCar2      $13816.08      $27632.17       Like New      Sparkling       In Stock
+PerformanceCar3      $17298.12      $34596.23       Like New      Sparkling       In Stock
+PerformanceCar4      $19144.95      $38289.91       Like New          Dirty       In Stock
+PerformanceCar5      $18803.85      $37607.69       Like New          Dirty       In Stock
+           Car1       $8979.42      $17958.84       Like New          Clean       In Stock
+           Car2       $7893.44      $15786.88       Like New          Clean       In Stock
+           Car8       $5531.76      $11063.52       Like New          Clean       In Stock
+           Car9       $8407.65      $16815.29       Like New          Clean       In Stock
+        Pickup3      $13457.30      $26914.60       Like New          Dirty       In Stock
+        Pickup5      $15003.27      $30006.55       Like New      Sparkling       In Stock
+        Pickup8      $15965.98      $31931.97       Like New          Clean       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken          Clean       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken          Clean       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New      Sparkling       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken          Clean       In Stock
+    Motorcycle0      $14486.30      $28972.60         Broken      Sparkling       In Stock
+    Motorcycle1      $17258.48      $34516.96         Broken          Clean       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used          Clean       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New          Clean       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken      Sparkling       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New          Clean       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken          Clean       In Stock
+Total Budget and Sales:
+     $847719.29     $581165.42
+Day: 12
+Hiring intern Intern6
+Buying car:Pickup10
+Intern4 has made PerformanceCar4 clean!
+Intern4 has made PerformanceCar5 sparkling!($0.0 bonus)
+Intern5 has made Pickup3 sparkling!($0.0 bonus)
+Intern5 has made Pickup10 clean!
+Intern6 has made Pickup8 sparkling!($0.0 bonus)
+Intern6 has made Pickup10 dirty!
+Salesperson1 sold Clean Like New Car1 to Buyer for $17958.83576862594
+ for a total of: 17958.83576862594 (earned $500.0 bonus)
+Salesperson2 sold Clean Like New Car9 to Buyer for $16815.29383859037
+ for a total of: 16815.29383859037 (earned $500.0 bonus)
+Salesperson2 sold Dirty Like New Pickup10 to Buyer for $51581.391842643076
+ with extended warranty for 20% extra, 
+ for a total of: 61897.67021117169 (earned $700.0 bonus)
+Salesperson2 sold Clean Like New PerformanceCar4 to Buyer for $38289.90833457056
+ for a total of: 38289.90833457056 (earned $1000.0 bonus)
+Staff Members: 
+        Intern1             12          166.0          350.0        Working
+      Mechanic1             12          246.0         1700.0        Working
+      Mechanic2             12          246.0         1500.0        Working
+        Intern3              7           85.5           11.0        Working
+   Salesperson1             12          270.0         4300.0        Working
+   Salesperson2             12          270.0         5600.0        Working
+        Intern4              4           42.0            0.0        Working
+        Intern5              4           42.0           10.0        Working
+        Intern6              1           10.5            0.0        Working
+        Driver0             12          186.0            0.0        Working
+        Driver3              2           31.0            0.0        Working
+        Driver2             12          186.0            0.0        Working
+Vehicle Inventory:
+PerformanceCar2      $13816.08      $27632.17       Like New      Sparkling       In Stock
+PerformanceCar3      $17298.12      $34596.23       Like New      Sparkling       In Stock
+PerformanceCar5      $18803.85      $37607.69       Like New      Sparkling       In Stock
+           Car2       $7893.44      $15786.88       Like New          Clean       In Stock
+           Car8       $5531.76      $11063.52       Like New          Clean       In Stock
+        Pickup3      $13457.30      $26914.60       Like New      Sparkling       In Stock
+        Pickup5      $15003.27      $30006.55       Like New      Sparkling       In Stock
+        Pickup8      $15965.98      $31931.97       Like New      Sparkling       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken          Clean       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken          Clean       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New      Sparkling       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken          Clean       In Stock
+    Motorcycle0      $14486.30      $28972.60         Broken      Sparkling       In Stock
+    Motorcycle1      $17258.48      $34516.96         Broken          Clean       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used          Clean       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New          Clean       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken      Sparkling       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New          Clean       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken          Clean       In Stock
+Total Budget and Sales:
+     $956890.30     $716127.13
+Day: 13
+Buying car: PerformanceCar6
+Buying car:Pickup11
+Buying car:Car10
+Buying car:Car11
+Intern4 has made PerformanceCar6 clean!
+Intern4 has made Pickup11 clean!
+Intern5 has made Car2 sparkling!($10.0 bonus)
+Intern5 has made ElectricCar2 dirty!
+Intern6 has made PerformanceCar6 dirty!
+Intern6 has made Car8 sparkling!($10.0 bonus)
+Intern1 has repaired Broken car Pickup11 and made it Used!($75.0 bonus)
+Mechanic1 has repaired Broken car Car10 and made it Used!($50.0 bonus)
+Mechanic1 has repaired Used car Pickup11 and made it Like New!($75.0 bonus)
+Mechanic1 has repaired Used car Car11 and made it Like New!($50.0 bonus)
+Mechanic2 has repaired Used car Car10 and made it Like New!($50.0 bonus)
+Salesperson2 sold Dirty Like New PerformanceCar6 to Buyer for $64409.25282940287
+ for a total of: 64409.25282940287 (earned $1000.0 bonus)
+Salesperson1 sold Sparkling Like New PerformanceCar5 to Buyer for $37607.692477641045
+ with satellite radio for 5% extra, 
+ for a total of: 39488.0771015231 (earned $1000.0 bonus)
+Salesperson1 sold Sparkling Like New PerformanceCar3 to Buyer for $34596.23450322747
+ for a total of: 34596.23450322747 (earned $1000.0 bonus)
+Staff Members: 
+        Intern1             13          186.5          425.0        Working
+      Mechanic1             13          266.5         1875.0        Working
+      Mechanic2             13          266.5         1550.0        Working
+        Intern3              8          108.0           11.0        Working
+   Salesperson1             13          292.5         6300.0        Working
+   Salesperson2             13          292.5         6600.0        Working
+        Intern4              5           52.5            0.0        Working
+        Intern5              5           52.5           20.0        Working
+        Intern6              2           21.0           10.0        Working
+        Driver0             13          201.5            0.0        Working
+        Driver3              3           46.5            0.0        Working
+        Driver2             13          201.5            0.0        Working
+Vehicle Inventory:
+PerformanceCar2      $13816.08      $27632.17       Like New      Sparkling       In Stock
+           Car2       $7893.44      $15786.88       Like New      Sparkling       In Stock
+           Car8       $5531.76      $11063.52       Like New      Sparkling       In Stock
+          Car10       $5558.46      $11116.92       Like New          Dirty       In Stock
+          Car11      $15031.83      $30063.66       Like New          Dirty       In Stock
+        Pickup3      $13457.30      $26914.60       Like New      Sparkling       In Stock
+        Pickup5      $15003.27      $30006.55       Like New      Sparkling       In Stock
+        Pickup8      $15965.98      $31931.97       Like New      Sparkling       In Stock
+       Pickup11       $9717.57      $19435.15       Like New          Dirty       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken          Clean       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken          Clean       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New      Sparkling       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken          Clean       In Stock
+    Motorcycle0      $14486.30      $28972.60         Broken      Sparkling       In Stock
+    Motorcycle1      $17258.48      $34516.96         Broken          Clean       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used          Clean       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New          Clean       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken      Sparkling       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New          Dirty       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken          Clean       In Stock
+Total Budget and Sales:
+    $1032871.37     $854620.69
+Day: 14
+Buying car: PerformanceCar7
+Buying car: PerformanceCar8
+Buying car: PerformanceCar9
+Intern4 has made PerformanceCar9 clean!
+Intern4 has made Pickup11 clean!
+Intern5 has made Car10 clean!
+Intern5 has made ElectricCar3 dirty!
+Intern6 has made Car11 clean!
+Intern6 has made ElectricCar2 sparkling!($10.0 bonus)
+Salesperson1 sold Clean Like New Car11 to Buyer for $30063.65780922184
+ for a total of: 30063.65780922184 (earned $500.0 bonus)
+Salesperson1 sold Clean Like New PerformanceCar8 to Buyer for $75134.9435830898
+ with undercoating for 5% extra, 
+ for a total of: 78891.6907622443 (earned $1000.0 bonus)
+Staff Members: 
+        Intern1             14          207.0          425.0        Working
+      Mechanic1             14          287.0         1875.0        Working
+      Mechanic2             14          287.0         1550.0        Working
+        Intern3              9          130.5           11.0        Working
+   Salesperson1             14          315.0         7800.0        Working
+   Salesperson2             14          315.0         6600.0        Working
+        Intern5              6           63.0           20.0        Working
+        Intern6              3           31.5           20.0        Working
+        Driver0             14          217.0            0.0        Working
+        Driver4              0            0.0            0.0        Working
+        Driver2             14          217.0           50.0        Working
+        Intern4              6           63.0            0.0           Quit
+        Driver3              4           62.0            0.0           Quit
+Vehicle Inventory:
+PerformanceCar2      $13816.08      $27632.17       Like New      Sparkling       In Stock
+PerformanceCar7      $23916.49      $47832.99       Like New          Clean       In Stock
+PerformanceCar9      $31869.86      $63739.72       Like New          Clean       In Stock
+           Car2       $7893.44      $15786.88       Like New      Sparkling       In Stock
+           Car8       $5531.76      $11063.52       Like New      Sparkling       In Stock
+          Car10       $5558.46      $11116.92       Like New          Clean       In Stock
+        Pickup3      $13457.30      $26914.60       Like New      Sparkling       In Stock
+        Pickup5      $15003.27      $30006.55         Broken      Sparkling       In Stock
+        Pickup8      $15965.98      $35125.16       Like New      Sparkling       In Stock
+       Pickup11       $9717.57      $19435.15       Like New          Clean       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken          Clean       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken          Clean       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New      Sparkling       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken          Clean       In Stock
+    Motorcycle0      $14486.30      $28972.60         Broken      Sparkling       In Stock
+    Motorcycle1      $17258.48      $34516.96         Broken          Clean       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used          Clean       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New          Clean       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken      Sparkling       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New      Sparkling       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken          Dirty       In Stock
+Total Budget and Sales:
+    $1048462.90     $963576.04
+Day: 15
+Hiring intern Intern7
+Buying car: PerformanceCar10
+Buying car:Car12
+Intern5 has made Car12 clean!
+Intern5 has made ElectricCar3 clean!
+Intern6 has made PerformanceCar10 clean!
+Intern6 has made Pickup11 sparkling!($0.0 bonus)
+Intern7 has made Car10 sparkling!($10.0 bonus)
+Intern7 has made ElectricCar3 dirty!
+Intern1 has repaired Broken car Pickup5 and made it Used!($75.0 bonus)
+Intern1 has repaired Broken car Car12 and made it Used!($50.0 bonus)
+Mechanic1 has repaired Used car Pickup5 and made it Like New!($75.0 bonus)
+Mechanic2 has repaired Used car Car12 and made it Like New!($50.0 bonus)
+Salesperson1 sold Sparkling Like New Pickup8 to Buyer for $35125.16191982725
+ with extended warranty for 20% extra, 
+ for a total of: 42150.194303792705 (earned $700.0 bonus)
+Intern3 sold Clean Like New PerformanceCar10 to Buyer for $72180.76887679005
+ with extended warranty for 20% extra, 
+ for a total of: 86616.92265214806 (earned $1000.0 bonus)
+Staff Members: 
+        Intern1             15          227.5          550.0        Working
+      Mechanic1             15          307.5         1950.0        Working
+      Mechanic2             15          307.5         1600.0        Working
+        Intern3             10          153.0         1011.0        Working
+   Salesperson1             15          337.5         8500.0        Working
+   Salesperson2             15          337.5         6600.0        Working
+        Intern5              7           73.5           20.0        Working
+        Intern6              4           42.0           20.0        Working
+        Intern7              1           10.5           10.0        Working
+        Driver0             15          232.5            0.0        Working
+        Driver4              1           15.5            0.0        Working
+        Driver2             15          232.5           50.0        Working
+Vehicle Inventory:
+PerformanceCar2      $13816.08      $27632.17       Like New      Sparkling       In Stock
+PerformanceCar7      $23916.49      $47832.99       Like New          Clean       In Stock
+PerformanceCar9      $31869.86      $63739.72       Like New          Clean       In Stock
+           Car2       $7893.44      $15786.88       Like New      Sparkling       In Stock
+           Car8       $5531.76      $11063.52       Like New      Sparkling       In Stock
+          Car10       $5558.46      $11116.92       Like New      Sparkling       In Stock
+          Car12       $9065.40      $18130.80       Like New          Dirty       In Stock
+        Pickup3      $13457.30      $26914.60       Like New      Sparkling       In Stock
+        Pickup5      $15003.27      $30006.55       Like New          Dirty       In Stock
+       Pickup11       $9717.57      $19435.15       Like New      Sparkling       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken          Clean       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken          Clean       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New      Sparkling       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken          Clean       In Stock
+    Motorcycle0      $14486.30      $28972.60         Broken      Sparkling       In Stock
+    Motorcycle1      $17258.48      $34516.96         Broken          Clean       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used          Clean       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New          Clean       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken      Sparkling       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New      Sparkling       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken          Dirty       In Stock
+Total Budget and Sales:
+    $1132074.23    $1092343.16
+Day: 16
+Buying car: PerformanceCar11
+Buying car:Pickup12
+Intern5 has made Pickup5 clean!
+Intern5 has made Pickup12 clean!
+Intern6 has made PerformanceCar11 clean!
+Intern6 has made Car12 sparkling!($10.0 bonus)
+Intern7 has made PerformanceCar7 dirty!
+Intern7 has made Pickup5 sparkling!($0.0 bonus)
+Mechanic1 has repaired Used car Pickup12 and made it Like New!($75.0 bonus)
+Salesperson2 sold Dirty Like New Pickup12 to Buyer for $56040.466815465275
+ with satellite radio for 5% extra, 
+ for a total of: 58842.49015623854 (earned $700.0 bonus)
+Intern3 sold Sparkling Like New Car12 to Buyer for $18130.798188154506
+ with road rescue coverage for 2% extra, 
+ for a total of: 18493.414151917597 (earned $500.0 bonus)
+Intern3 sold Sparkling Like New Car2 to Buyer for $15786.883081125497
+ with road rescue coverage for 2% extra, 
+ for a total of: 16102.620742748008 (earned $500.0 bonus)
+Staff Members: 
+        Intern1             16          248.0          550.0        Working
+      Mechanic1             16          328.0         2025.0        Working
+      Mechanic2             16          328.0         1600.0        Working
+        Intern3             11          175.5         2011.0        Working
+   Salesperson1             16          360.0         8500.0        Working
+   Salesperson2             16          360.0         7300.0        Working
+        Intern5              8           84.0           20.0        Working
+        Intern6              5           52.5           30.0        Working
+        Intern7              2           21.0           10.0        Working
+        Driver0             16          248.0            0.0        Working
+        Driver4              2           31.0            0.0        Working
+        Driver2             16          248.0           50.0        Working
+Vehicle Inventory:
+PerformanceCar2      $13816.08      $27632.17       Like New      Sparkling       In Stock
+PerformanceCar7      $23916.49      $47832.99       Like New          Dirty       In Stock
+PerformanceCar9      $31869.86      $63739.72       Like New          Clean       In Stock
+PerformanceCar11      $33558.87      $67117.73       Like New          Clean       In Stock
+           Car8       $5531.76      $11063.52       Like New      Sparkling       In Stock
+          Car10       $5558.46      $11116.92       Like New      Sparkling       In Stock
+        Pickup3      $13457.30      $26914.60       Like New      Sparkling       In Stock
+        Pickup5      $15003.27      $30006.55       Like New      Sparkling       In Stock
+       Pickup11       $9717.57      $19435.15       Like New      Sparkling       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken          Clean       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken          Clean       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New      Sparkling       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken          Clean       In Stock
+    Motorcycle0      $14486.30      $28972.60         Broken      Sparkling       In Stock
+    Motorcycle1      $17258.48      $34516.96         Broken          Clean       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used          Clean       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New          Clean       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken      Sparkling       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New      Sparkling       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken          Dirty       In Stock
+Total Budget and Sales:
+    $1163923.66    $1185781.68
+Day: 17
+Buying car:Pickup13
+Buying car:Car13
+Buying car:Car14
+Intern5 has made PerformanceCar7 clean!
+Intern5 has made ElectricCar3 clean!
+Intern6 has made Pickup13 sparkling!($0.0 bonus)
+Intern6 has made ElectricCar3 sparkling!($10.0 bonus)
+Intern7 has made PerformanceCar7 sparkling!($0.0 bonus)
+Intern7 has made PerformanceCar11 sparkling!($0.0 bonus)
+Intern1 has repaired Broken car Car13 and made it Used!($50.0 bonus)
+Intern1 has repaired Used car Car13 and made it Like New!($50.0 bonus)
+Salesperson2 sold Clean Like New Car14 to Buyer for $27294.479838937797
+ for a total of: 27294.479838937797 (earned $500.0 bonus)
+Staff Members: 
+        Intern1             17          268.5          650.0        Working
+      Mechanic1             17          348.5         2025.0        Working
+      Mechanic2             17          348.5         1600.0        Working
+        Intern3             12          198.0         2011.0        Working
+   Salesperson1             17          382.5         8500.0        Working
+   Salesperson2             17          382.5         7800.0        Working
+        Intern5              9           94.5           20.0        Working
+        Intern6              6           63.0           40.0        Working
+        Intern7              3           31.5           10.0        Working
+        Driver0             17          263.5            0.0        Working
+        Driver4              3           46.5           50.0        Working
+        Driver2             17          263.5           50.0        Working
+Vehicle Inventory:
+PerformanceCar2      $13816.08      $27632.17       Like New      Sparkling       In Stock
+PerformanceCar7      $23916.49      $52616.28       Like New      Sparkling       In Stock
+PerformanceCar9      $31869.86      $63739.72         Broken          Clean       In Stock
+PerformanceCar11      $33558.87      $67117.73       Like New      Sparkling       In Stock
+           Car8       $5531.76      $11063.52       Like New      Sparkling       In Stock
+          Car10       $5558.46      $11116.92       Like New      Sparkling       In Stock
+          Car13       $7272.17      $14544.34       Like New          Dirty       In Stock
+        Pickup3      $13457.30      $26914.60       Like New      Sparkling       In Stock
+        Pickup5      $15003.27      $30006.55       Like New      Sparkling       In Stock
+       Pickup11       $9717.57      $19435.15       Like New      Sparkling       In Stock
+       Pickup13      $38595.64      $77191.28       Like New      Sparkling       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken          Clean       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken          Clean       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New      Sparkling       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken          Clean       In Stock
+    Motorcycle0      $14486.30      $28972.60         Broken      Sparkling       In Stock
+    Motorcycle1      $17258.48      $34516.96         Broken          Clean       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used          Clean       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New          Clean       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken      Sparkling       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New      Sparkling       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken      Sparkling       In Stock
+Total Budget and Sales:
+    $1131703.09    $1213076.16
+Day: 18
+Buying car:Car15
+Intern5 has made Car13 clean!
+Intern5 has made Car15 clean!
+Intern6 has made Car13 dirty!
+Intern6 has made Car15 sparkling!($10.0 bonus)
+Intern7 has made PerformanceCar9 dirty!
+Intern7 has made MonsterTruck1 sparkling!($0.0 bonus)
+Intern1 has repaired Broken car PerformanceCar9 and made it Used!($100.0 bonus)
+Mechanic1 has repaired Used car PerformanceCar9 and made it Like New!($100.0 bonus)
+Salesperson2 sold Sparkling Like New Car15 to Buyer for $36459.776621093886
+ with satellite radio for 5% extra, 
+ for a total of: 38282.76545214858 (earned $500.0 bonus)
+Intern3 sold Sparkling Like New Pickup13 to Buyer for $77191.28316577445
+ with satellite radio for 5% extra, 
+ for a total of: 81050.84732406319 (earned $700.0 bonus)
+Salesperson1 sold Dirty Like New Car13 to Buyer for $14544.337536802595
+ with undercoating for 5% extra, 
+ for a total of: 15271.554413642725 (earned $500.0 bonus)
+Salesperson1 sold Sparkling Like New PerformanceCar11 to Buyer for $67117.73060342256
+ for a total of: 67117.73060342256 (earned $1000.0 bonus)
+Intern3 sold Sparkling Like New Car10 to Buyer for $11116.92257117614
+ with extended warranty for 20% extra, 
+ with satellite radio for 5% extra, 
+ for a total of: 14007.322439681935 (earned $500.0 bonus)
+Salesperson2 sold Dirty Like New PerformanceCar9 to Buyer for $63739.71891163653
+ for a total of: 63739.71891163653 (earned $1000.0 bonus)
+Salesperson2 sold Sparkling Like New PerformanceCar7 to Buyer for $52616.28419553971
+ for a total of: 52616.28419553971 (earned $1000.0 bonus)
+Staff Members: 
+        Intern1             18          289.0          750.0        Working
+      Mechanic1             18          369.0         2125.0        Working
+      Mechanic2             18          369.0         1600.0        Working
+        Intern3             13          220.5         3211.0        Working
+   Salesperson1             18          405.0        10000.0        Working
+   Salesperson2             18          405.0        10300.0        Working
+        Intern6              7           73.5           50.0        Working
+        Intern7              4           42.0           10.0        Working
+        Driver0             18          279.0            0.0        Working
+        Driver4              4           62.0           50.0        Working
+        Driver2             18          279.0           50.0        Working
+        Intern5             10          105.0           20.0           Quit
+Vehicle Inventory:
+PerformanceCar2      $13816.08      $27632.17       Like New      Sparkling       In Stock
+           Car8       $5531.76      $11063.52       Like New      Sparkling       In Stock
+        Pickup3      $13457.30      $26914.60       Like New      Sparkling       In Stock
+        Pickup5      $15003.27      $30006.55       Like New      Sparkling       In Stock
+       Pickup11       $9717.57      $19435.15       Like New      Sparkling       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken          Clean       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken      Sparkling       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New      Sparkling       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken          Clean       In Stock
+    Motorcycle0      $14486.30      $28972.60         Broken      Sparkling       In Stock
+    Motorcycle1      $17258.48      $34516.96         Broken          Clean       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used          Clean       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New          Clean       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken      Sparkling       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New      Sparkling       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken      Sparkling       In Stock
+Total Budget and Sales:
+    $1445559.42    $1545162.39
+Day: 19
+Hiring intern Intern8
+Buying car: PerformanceCar12
+Buying car: PerformanceCar13
+Buying car: PerformanceCar14
+Buying car:Pickup14
+Buying car:Car16
+Buying car:Car17
+Buying car:Car18
+Intern6 has made PerformanceCar12 clean!
+Intern6 has made PerformanceCar13 clean!
+Intern7 has made PerformanceCar13 sparkling!($0.0 bonus)
+Intern7 has made Pickup14 sparkling!($0.0 bonus)
+Intern8 has made Car16 sparkling!($10.0 bonus)
+Intern8 has made PerformanceCar14 sparkling!($0.0 bonus)
+Intern1 has repaired Broken car PerformanceCar12 and made it Used!($100.0 bonus)
+Mechanic1 has repaired Broken car PerformanceCar14 and made it Used!($100.0 bonus)
+Mechanic1 has repaired Broken car Car18 and made it Used!($50.0 bonus)
+Mechanic2 has repaired Used car PerformanceCar14 and made it Like New!($100.0 bonus)
+Mechanic2 has repaired Used car Car18 and made it Like New!($50.0 bonus)
+Staff Members: 
+        Intern6              8           84.0           50.0        Working
+      Mechanic1             19          389.5         2275.0        Working
+      Mechanic2             19          389.5         1750.0        Working
+        Intern3             14          243.0         3211.0        Working
+   Salesperson1             19          427.5        10000.0        Working
+   Salesperson2             19          427.5        10300.0        Working
+        Intern7              5           52.5           10.0        Working
+        Intern8              1           10.5           10.0        Working
+        Driver0             19          294.5            0.0        Working
+        Driver4              5           77.5           50.0        Working
+        Driver2             19          294.5           50.0        Working
+        Intern1             19          309.5          850.0           Quit
+Vehicle Inventory:
+PerformanceCar2      $13816.08      $27632.17       Like New      Sparkling       In Stock
+PerformanceCar12      $15709.32      $31418.65           Used          Dirty       In Stock
+PerformanceCar13      $37374.90      $74749.80       Like New      Sparkling       In Stock
+PerformanceCar14      $13207.45      $26414.89       Like New          Dirty       In Stock
+           Car8       $5531.76      $11063.52       Like New      Sparkling       In Stock
+          Car16      $18735.89      $37471.78       Like New      Sparkling       In Stock
+          Car17      $15164.18      $30328.36       Like New          Dirty       In Stock
+          Car18       $8766.80      $17533.60       Like New          Dirty       In Stock
+        Pickup3      $13457.30      $26914.60       Like New      Sparkling       In Stock
+        Pickup5      $15003.27      $30006.55       Like New      Sparkling       In Stock
+       Pickup11       $9717.57      $19435.15       Like New      Sparkling       In Stock
+       Pickup14      $39218.59      $78437.17       Like New      Sparkling       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken          Clean       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken      Sparkling       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New      Sparkling       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken          Clean       In Stock
+    Motorcycle0      $14486.30      $28972.60         Broken      Sparkling       In Stock
+    Motorcycle1      $17258.48      $34516.96         Broken          Clean       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used          Clean       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New          Clean       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken      Sparkling       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New      Sparkling       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken      Sparkling       In Stock
+Total Budget and Sales:
+    $1297372.30    $1545162.39
+Day: 20
+Hiring intern Intern9
+Intern7 has made PerformanceCar12 clean!
+Intern7 has made Car17 sparkling!($10.0 bonus)
+Intern8 has made Car18 clean!
+Intern8 has made PerformanceCar12 sparkling!($0.0 bonus)
+Intern9 has made Car18 sparkling!($10.0 bonus)
+Intern9 has made MonsterTruck3 sparkling!($0.0 bonus)
+Intern6 has repaired Used car PerformanceCar12 and made it Like New!($100.0 bonus)
+Staff Members: 
+        Intern6              9          104.5          150.0        Working
+      Mechanic1             20          410.0         2275.0        Working
+      Mechanic2             20          410.0         1750.0        Working
+        Intern3             15          265.5         3211.0        Working
+   Salesperson1             20          450.0        10000.0        Working
+   Salesperson2             20          450.0        10300.0        Working
+        Intern7              6           63.0           20.0        Working
+        Intern8              2           21.0           10.0        Working
+        Intern9              1           10.5           10.0        Working
+        Driver0             20          310.0            0.0        Working
+        Driver4              6           93.0           50.0        Working
+        Driver2             20          310.0           50.0        Working
+Vehicle Inventory:
+PerformanceCar2      $13816.08      $27632.17       Like New      Sparkling       In Stock
+PerformanceCar12      $15709.32      $31418.65       Like New          Clean       In Stock
+PerformanceCar13      $37374.90      $74749.80       Like New      Sparkling       In Stock
+PerformanceCar14      $13207.45      $26414.89       Like New          Dirty       In Stock
+           Car8       $5531.76      $11063.52       Like New      Sparkling       In Stock
+          Car16      $18735.89      $37471.78       Like New      Sparkling       In Stock
+          Car17      $15164.18      $30328.36       Like New      Sparkling       In Stock
+          Car18       $8766.80      $17533.60       Like New      Sparkling       In Stock
+        Pickup3      $13457.30      $26914.60       Like New      Sparkling       In Stock
+        Pickup5      $15003.27      $30006.55       Like New      Sparkling       In Stock
+       Pickup11       $9717.57      $19435.15       Like New      Sparkling       In Stock
+       Pickup14      $39218.59      $78437.17       Like New      Sparkling       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken          Clean       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken      Sparkling       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New      Sparkling       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken      Sparkling       In Stock
+    Motorcycle0      $14486.30      $28972.60         Broken      Sparkling       In Stock
+    Motorcycle1      $17258.48      $34516.96         Broken          Clean       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used          Clean       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New          Clean       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken      Sparkling       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New      Sparkling       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken      Sparkling       In Stock
+Total Budget and Sales:
+    $1297362.30    $1545162.39
+Day: 21
+Intern7 has made Motorcycle1 sparkling!($0.0 bonus)
+Intern8 has made PerformanceCar14 clean!
+Intern8 has made PerformanceCar12 sparkling!($0.0 bonus)
+Intern9 has made PerformanceCar14 sparkling!($0.0 bonus)
+Intern9 has made MonsterTruck0 sparkling!($0.0 bonus)
+Salesperson2 sold Sparkling Like New Pickup14 to Buyer for $78437.17359803114
+ with satellite radio for 5% extra, 
+ for a total of: 82359.0322779327 (earned $700.0 bonus)
+Intern3 sold Sparkling Like New Pickup5 to Buyer for $30006.54901133174
+ for a total of: 30006.54901133174 (earned $700.0 bonus)
+Salesperson2 sold Sparkling Like New Car16 to Buyer for $37471.78264797125
+ with extended warranty for 20% extra, 
+ with satellite radio for 5% extra, 
+ for a total of: 47214.446136443774 (earned $500.0 bonus)
+Salesperson1 sold Sparkling Like New Car17 to Buyer for $30328.360633364224
+ with satellite radio for 5% extra, 
+ for a total of: 31844.778665032438 (earned $500.0 bonus)
+Intern3 sold Sparkling Like New Pickup3 to Buyer for $26914.602168470075
+ with satellite radio for 5% extra, 
+ for a total of: 28260.33227689358 (earned $700.0 bonus)
+Staff Members: 
+        Intern6             10          125.0          150.0        Working
+      Mechanic1             21          430.5         2275.0        Working
+      Mechanic2             21          430.5         1750.0        Working
+        Intern3             16          288.0         4611.0        Working
+   Salesperson1             21          472.5        10500.0        Working
+   Salesperson2             21          472.5        11500.0        Working
+        Intern7              7           73.5           20.0        Working
+        Intern8              3           31.5           10.0        Working
+        Intern9              2           21.0           10.0        Working
+        Driver0             21          325.5            0.0        Working
+        Driver4              7          108.5           50.0        Working
+        Driver2             21          325.5           50.0        Working
+Vehicle Inventory:
+PerformanceCar2      $13816.08      $27632.17       Like New      Sparkling       In Stock
+PerformanceCar12      $15709.32      $31418.65       Like New      Sparkling       In Stock
+PerformanceCar13      $37374.90      $74749.80       Like New      Sparkling       In Stock
+PerformanceCar14      $13207.45      $26414.89       Like New      Sparkling       In Stock
+           Car8       $5531.76      $11063.52       Like New      Sparkling       In Stock
+          Car18       $8766.80      $17533.60       Like New      Sparkling       In Stock
+       Pickup11       $9717.57      $19435.15       Like New      Sparkling       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken      Sparkling       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken      Sparkling       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New      Sparkling       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken      Sparkling       In Stock
+    Motorcycle0      $14486.30      $28972.60         Broken      Sparkling       In Stock
+    Motorcycle1      $17258.48      $34516.96         Broken      Sparkling       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used          Clean       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New          Clean       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken      Sparkling       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New      Sparkling       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken      Sparkling       In Stock
+Total Budget and Sales:
+    $1517047.44    $1764847.53
+Day: 22
+Buying car:Pickup15
+Buying car:Pickup16
+Buying car:Pickup17
+Buying car:Car19
+Buying car:Car20
+Intern7 has made Car20 clean!
+Intern7 has made Motorcycle3 sparkling!($0.0 bonus)
+Intern8 has made Pickup15 clean!
+Intern8 has made Pickup15 sparkling!($0.0 bonus)
+Intern9 has made Car20 dirty!
+Intern9 has made Motorcycle2 sparkling!($0.0 bonus)
+Intern6 has repaired Broken car Pickup15 and made it Used!($75.0 bonus)
+Intern6 has repaired Used car Pickup15 and made it Like New!($75.0 bonus)
+Intern6 has repaired Used car Pickup16 and made it Like New!($75.0 bonus)
+Intern6 has repaired Used car Car19 and made it Like New!($50.0 bonus)
+Salesperson1 sold Sparkling Like New PerformanceCar13 to Buyer for $74749.79655719543
+ for a total of: 74749.79655719543 (earned $1000.0 bonus)
+Staff Members: 
+        Intern6             11          145.5          425.0        Working
+      Mechanic1             22          451.0         2275.0        Working
+      Mechanic2             22          451.0         1750.0        Working
+        Intern7              8           84.0           20.0        Working
+   Salesperson1             22          495.0        11500.0        Working
+   Salesperson2             22          495.0        11500.0        Working
+        Intern8              4           42.0           10.0        Working
+        Intern9              3           31.5           10.0        Working
+        Driver0             22          341.0            0.0        Working
+        Driver4              8          124.0           50.0        Working
+        Driver2             22          341.0           50.0        Working
+        Intern3             17          310.5         4611.0           Quit
+Vehicle Inventory:
+PerformanceCar2      $13816.08      $27632.17       Like New      Sparkling       In Stock
+PerformanceCar12      $15709.32      $31418.65       Like New      Sparkling       In Stock
+PerformanceCar14      $13207.45      $26414.89       Like New      Sparkling       In Stock
+           Car8       $5531.76      $11063.52       Like New      Sparkling       In Stock
+          Car18       $8766.80      $17533.60       Like New      Sparkling       In Stock
+          Car19      $11609.82      $23219.64       Like New          Dirty       In Stock
+          Car20      $15887.65      $31775.29       Like New          Dirty       In Stock
+       Pickup11       $9717.57      $19435.15       Like New      Sparkling       In Stock
+       Pickup15      $16643.83      $33287.65       Like New          Dirty       In Stock
+       Pickup16      $27302.57      $54605.13       Like New          Dirty       In Stock
+       Pickup17      $19577.23      $39154.46       Like New          Clean       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken      Sparkling       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken      Sparkling       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New      Sparkling       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken      Sparkling       In Stock
+    Motorcycle0      $14486.30      $28972.60         Broken      Sparkling       In Stock
+    Motorcycle1      $17258.48      $34516.96         Broken      Sparkling       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used      Sparkling       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New      Sparkling       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken      Sparkling       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New      Sparkling       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken      Sparkling       In Stock
+Total Budget and Sales:
+    $1500776.15    $1839597.32
+Day: 23
+Hiring intern Intern10
+Buying car: PerformanceCar15
+Intern8 has made Pickup15 clean!
+Intern8 has made Car19 clean!
+Intern9 has made Car20 clean!
+Intern9 has made PerformanceCar15 sparkling!($0.0 bonus)
+Intern10 has made Car20 sparkling!($10.0 bonus)
+Intern7 sold Sparkling Like New Car20 to Buyer for $31775.2902146294
+ with extended warranty for 20% extra, 
+ for a total of: 38130.34825755528 (earned $500.0 bonus)
+Intern7 sold Clean Like New Car19 to Buyer for $23219.63521073353
+ with satellite radio for 5% extra, 
+ for a total of: 24380.616971270207 (earned $500.0 bonus)
+Staff Members: 
+        Intern6             12          166.0          425.0        Working
+      Mechanic1             23          471.5         2275.0        Working
+      Mechanic2             23          471.5         1750.0        Working
+        Intern7              9          106.5         1020.0        Working
+   Salesperson1             23          517.5        11500.0        Working
+   Salesperson2             23          517.5        11500.0        Working
+        Intern8              5           52.5           10.0        Working
+        Intern9              4           42.0           10.0        Working
+       Intern10              1           10.5           10.0        Working
+        Driver0             23          356.5            0.0        Working
+        Driver4              9          139.5           50.0        Working
+        Driver2             23          356.5           50.0        Working
+Vehicle Inventory:
+PerformanceCar2      $13816.08      $27632.17       Like New      Sparkling       In Stock
+PerformanceCar12      $15709.32      $31418.65       Like New      Sparkling       In Stock
+PerformanceCar14      $13207.45      $26414.89       Like New      Sparkling       In Stock
+PerformanceCar15      $20987.64      $41975.28       Like New      Sparkling       In Stock
+           Car8       $5531.76      $11063.52       Like New      Sparkling       In Stock
+          Car18       $8766.80      $17533.60       Like New      Sparkling       In Stock
+       Pickup11       $9717.57      $19435.15       Like New      Sparkling       In Stock
+       Pickup15      $16643.83      $33287.65       Like New          Clean       In Stock
+       Pickup16      $27302.57      $54605.13       Like New          Dirty       In Stock
+       Pickup17      $19577.23      $39154.46       Like New          Clean       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken      Sparkling       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken      Sparkling       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New      Sparkling       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken      Sparkling       In Stock
+    Motorcycle0      $14486.30      $28972.60         Broken      Sparkling       In Stock
+    Motorcycle1      $17258.48      $34516.96         Broken      Sparkling       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used      Sparkling       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New      Sparkling       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken      Sparkling       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New      Sparkling       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken      Sparkling       In Stock
+Total Budget and Sales:
+    $1542299.47    $1902108.29
+Day: 24
+Buying car:Car21
+Buying car:Car22
+Intern8 has made Pickup16 clean!
+Intern8 has made Pickup17 sparkling!($0.0 bonus)
+Intern9 has made Car21 dirty!
+Intern10 has made Car21 clean!
+Intern10 has made Pickup16 sparkling!($0.0 bonus)
+Intern6 has repaired Broken car Car22 and made it Used!($50.0 bonus)
+Mechanic1 has repaired Used car Car22 and made it Like New!($50.0 bonus)
+Intern7 sold Clean Like New Car21 to Buyer for $38605.885329416524
+ for a total of: 38605.885329416524 (earned $500.0 bonus)
+Staff Members: 
+        Intern6             13          186.5          475.0        Working
+      Mechanic1             24          492.0         2325.0        Working
+      Mechanic2             24          492.0         1750.0        Working
+        Intern7             10          129.0         1520.0        Working
+   Salesperson1             24          540.0        11500.0        Working
+   Salesperson2             24          540.0        11500.0        Working
+        Intern8              6           63.0           10.0        Working
+        Intern9              5           52.5           10.0        Working
+       Intern10              2           21.0           10.0        Working
+        Driver0             24          372.0            0.0        Working
+        Driver4             10          155.0          100.0        Working
+        Driver2             24          372.0           50.0        Working
+Vehicle Inventory:
+PerformanceCar2      $13816.08      $27632.17       Like New      Sparkling       In Stock
+PerformanceCar12      $15709.32      $34560.51       Like New      Sparkling       In Stock
+PerformanceCar14      $13207.45      $26414.89       Like New      Sparkling       In Stock
+PerformanceCar15      $20987.64      $41975.28       Like New      Sparkling       In Stock
+           Car8       $5531.76      $11063.52       Like New      Sparkling       In Stock
+          Car18       $8766.80      $17533.60       Like New      Sparkling       In Stock
+          Car22       $6764.13      $13528.27       Like New          Dirty       In Stock
+       Pickup11       $9717.57      $19435.15       Like New      Sparkling       In Stock
+       Pickup15      $16643.83      $33287.65       Like New          Clean       In Stock
+       Pickup16      $27302.57      $54605.13       Like New      Sparkling       In Stock
+       Pickup17      $19577.23      $39154.46       Like New      Sparkling       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken      Sparkling       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken      Sparkling       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New      Sparkling       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken      Sparkling       In Stock
+    Motorcycle0      $14486.30      $28972.60         Broken      Sparkling       In Stock
+    Motorcycle1      $17258.48      $34516.96         Broken      Sparkling       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used      Sparkling       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New      Sparkling       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken      Sparkling       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New      Sparkling       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken      Sparkling       In Stock
+Total Budget and Sales:
+    $1554838.28    $1940714.17
+Day: 25
+Buying car:Car23
+Intern8 has made Car22 clean!
+Intern8 has made Car23 clean!
+Intern9 has made Car23 sparkling!($10.0 bonus)
+Intern10 has made Pickup15 dirty!
+Salesperson2 sold Sparkling Like New Pickup16 to Buyer for $54605.13363383254
+ with satellite radio for 5% extra, 
+ for a total of: 57335.39031552417 (earned $700.0 bonus)
+Staff Members: 
+        Intern6             14          207.0          475.0        Working
+      Mechanic1             25          512.5         2325.0        Working
+      Mechanic2             25          512.5         1750.0        Working
+        Intern7             11          151.5         1520.0        Working
+   Salesperson1             25          562.5        11500.0        Working
+   Salesperson2             25          562.5        12200.0        Working
+        Intern8              7           73.5           10.0        Working
+        Intern9              6           63.0           20.0        Working
+       Intern10              3           31.5           10.0        Working
+        Driver0             25          387.5            0.0        Working
+        Driver4             11          170.5          100.0        Working
+        Driver2             25          387.5           50.0        Working
+Vehicle Inventory:
+PerformanceCar2      $13816.08      $27632.17       Like New      Sparkling       In Stock
+PerformanceCar12      $15709.32      $34560.51       Like New      Sparkling       In Stock
+PerformanceCar14      $13207.45      $26414.89       Like New      Sparkling       In Stock
+PerformanceCar15      $20987.64      $41975.28       Like New      Sparkling       In Stock
+           Car8       $5531.76      $11063.52       Like New      Sparkling       In Stock
+          Car18       $8766.80      $17533.60       Like New      Sparkling       In Stock
+          Car22       $6764.13      $13528.27       Like New          Clean       In Stock
+          Car23      $19805.72      $39611.43       Like New      Sparkling       In Stock
+       Pickup11       $9717.57      $19435.15       Like New      Sparkling       In Stock
+       Pickup15      $16643.83      $33287.65       Like New          Dirty       In Stock
+       Pickup17      $19577.23      $39154.46       Like New      Sparkling       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken      Sparkling       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken      Sparkling       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New      Sparkling       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken      Sparkling       In Stock
+    Motorcycle0      $14486.30      $28972.60         Broken      Sparkling       In Stock
+    Motorcycle1      $17258.48      $34516.96         Broken      Sparkling       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used      Sparkling       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New      Sparkling       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken      Sparkling       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New      Sparkling       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken      Sparkling       In Stock
+Total Budget and Sales:
+    $1592367.95    $1998049.56
+Day: 26
+Buying car:Pickup18
+Intern8 has made Pickup15 clean!
+Intern8 has made Pickup18 clean!
+Intern9 has made Pickup18 sparkling!($0.0 bonus)
+Salesperson1 sold Sparkling Like New Pickup17 to Buyer for $39154.46249436187
+ with satellite radio for 5% extra, 
+ for a total of: 41112.185619079966 (earned $700.0 bonus)
+Intern7 sold Sparkling Like New Car23 to Buyer for $39611.43417917179
+ for a total of: 39611.43417917179 (earned $500.0 bonus)
+Staff Members: 
+        Intern6             15          227.5          475.0        Working
+      Mechanic1             26          533.0         2325.0        Working
+      Mechanic2             26          533.0         1750.0        Working
+        Intern8              8           84.0           10.0        Working
+   Salesperson1             26          585.0        12200.0        Working
+   Salesperson2             26          585.0        12200.0        Working
+        Intern9              7           73.5           20.0        Working
+       Intern10              4           42.0           10.0        Working
+        Driver0             26          403.0            0.0        Working
+        Driver4             12          186.0          100.0        Working
+        Driver2             26          403.0           50.0        Working
+        Intern7             12          174.0         2020.0           Quit
+Vehicle Inventory:
+PerformanceCar2      $13816.08      $27632.17       Like New      Sparkling       In Stock
+PerformanceCar12      $15709.32      $34560.51       Like New      Sparkling       In Stock
+PerformanceCar14      $13207.45      $26414.89       Like New      Sparkling       In Stock
+PerformanceCar15      $20987.64      $41975.28       Like New      Sparkling       In Stock
+           Car8       $5531.76      $11063.52       Like New      Sparkling       In Stock
+          Car18       $8766.80      $17533.60       Like New      Sparkling       In Stock
+          Car22       $6764.13      $13528.27       Like New          Clean       In Stock
+       Pickup11       $9717.57      $19435.15       Like New      Sparkling       In Stock
+       Pickup15      $16643.83      $33287.65       Like New          Clean       In Stock
+       Pickup18      $14070.45      $28140.90       Like New      Sparkling       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken      Sparkling       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken      Sparkling       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New      Sparkling       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken      Sparkling       In Stock
+    Motorcycle0      $14486.30      $28972.60         Broken      Sparkling       In Stock
+    Motorcycle1      $17258.48      $34516.96         Broken      Sparkling       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used      Sparkling       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New      Sparkling       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken      Sparkling       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New      Sparkling       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken      Sparkling       In Stock
+Total Budget and Sales:
+    $1659021.12    $2078773.18
+Day: 27
+Hiring intern Intern11
+Buying car:Pickup19
+Buying car:Car24
+Intern9 has made Pickup15 sparkling!($0.0 bonus)
+Intern10 has made Pickup19 clean!
+Intern10 has made Pickup19 sparkling!($0.0 bonus)
+Intern11 has made Car22 sparkling!($10.0 bonus)
+Intern11 has made Car24 dirty!
+Intern6 has repaired Broken car Pickup19 and made it Used!($75.0 bonus)
+Intern6 has repaired Used car Pickup19 and made it Like New!($75.0 bonus)
+Intern8 sold Sparkling Like New PerformanceCar15 to Buyer for $41975.281021015726
+ with extended warranty for 20% extra, 
+ with satellite radio for 5% extra, 
+ for a total of: 52888.85408647982 (earned $1000.0 bonus)
+Salesperson1 sold Sparkling Like New Pickup15 to Buyer for $33287.65275927834
+ with satellite radio for 5% extra, 
+ for a total of: 34952.03539724226 (earned $700.0 bonus)
+Staff Members: 
+        Intern6             16          248.0          625.0        Working
+      Mechanic1             27          553.5         2325.0        Working
+      Mechanic2             27          553.5         1750.0        Working
+        Intern8              9          106.5         1010.0        Working
+   Salesperson1             27          607.5        12900.0        Working
+   Salesperson2             27          607.5        12200.0        Working
+        Intern9              8           84.0           20.0        Working
+       Intern10              5           52.5           10.0        Working
+       Intern11              1           10.5           10.0        Working
+        Driver0             27          418.5            0.0        Working
+        Driver4             13          201.5          100.0        Working
+        Driver2             27          418.5           50.0        Working
+Vehicle Inventory:
+PerformanceCar2      $13816.08      $27632.17       Like New      Sparkling       In Stock
+PerformanceCar12      $15709.32      $34560.51       Like New      Sparkling       In Stock
+PerformanceCar14      $13207.45      $26414.89       Like New      Sparkling       In Stock
+           Car8       $5531.76      $11063.52       Like New      Sparkling       In Stock
+          Car18       $8766.80      $17533.60       Like New      Sparkling       In Stock
+          Car22       $6764.13      $13528.27       Like New      Sparkling       In Stock
+          Car24      $18472.60      $36945.19       Like New          Dirty       In Stock
+       Pickup11       $9717.57      $19435.15       Like New      Sparkling       In Stock
+       Pickup18      $14070.45      $28140.90       Like New      Sparkling       In Stock
+       Pickup19      $14944.01      $29888.02       Like New          Dirty       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken      Sparkling       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken      Sparkling       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New      Sparkling       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken      Sparkling       In Stock
+    Motorcycle0      $14486.30      $28972.60         Broken      Sparkling       In Stock
+    Motorcycle1      $17258.48      $34516.96         Broken      Sparkling       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used      Sparkling       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New      Sparkling       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken      Sparkling       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New      Sparkling       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken      Sparkling       In Stock
+Total Budget and Sales:
+    $1713445.40    $2166614.07
+Day: 28
+Buying car: PerformanceCar16
+Buying car:Pickup20
+Intern9 has made Pickup19 clean!
+Intern9 has made Car24 clean!
+Intern10 has made Pickup20 clean!
+Intern10 has made PerformanceCar16 sparkling!($0.0 bonus)
+Intern6 has repaired Used car PerformanceCar16 and made it Like New!($100.0 bonus)
+Salesperson1 sold Clean Like New Pickup20 to Buyer for $56773.99194849352
+ with satellite radio for 5% extra, 
+ for a total of: 59612.691545918206 (earned $700.0 bonus)
+Staff Members: 
+        Intern6             17          268.5          725.0        Working
+      Mechanic1             28          574.0         2325.0        Working
+      Mechanic2             28          574.0         1750.0        Working
+        Intern8             10          129.0         1010.0        Working
+   Salesperson1             28          630.0        13600.0        Working
+   Salesperson2             28          630.0        12200.0        Working
+        Intern9              9           94.5           20.0        Working
+       Intern10              6           63.0           10.0        Working
+       Intern11              2           21.0           10.0        Working
+        Driver0             28          434.0            0.0        Working
+        Driver4             14          217.0          100.0        Working
+        Driver2             28          434.0           50.0        Working
+Vehicle Inventory:
+PerformanceCar2      $13816.08      $27632.17       Like New      Sparkling       In Stock
+PerformanceCar12      $15709.32      $34560.51       Like New      Sparkling       In Stock
+PerformanceCar14      $13207.45      $26414.89       Like New      Sparkling       In Stock
+PerformanceCar16      $22662.08      $45324.15       Like New          Clean       In Stock
+           Car8       $5531.76      $11063.52       Like New      Sparkling       In Stock
+          Car18       $8766.80      $17533.60       Like New      Sparkling       In Stock
+          Car22       $6764.13      $13528.27       Like New      Sparkling       In Stock
+          Car24      $18472.60      $36945.19       Like New          Clean       In Stock
+       Pickup11       $9717.57      $19435.15       Like New      Sparkling       In Stock
+       Pickup18      $14070.45      $28140.90       Like New      Sparkling       In Stock
+       Pickup19      $14944.01      $29888.02       Like New          Clean       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken      Sparkling       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken      Sparkling       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New      Sparkling       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken      Sparkling       In Stock
+    Motorcycle0      $14486.30      $28972.60         Broken      Sparkling       In Stock
+    Motorcycle1      $17258.48      $34516.96         Broken      Sparkling       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used      Sparkling       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New      Sparkling       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken      Sparkling       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New      Sparkling       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken      Sparkling       In Stock
+Total Budget and Sales:
+    $1722009.02    $2226226.76
+Day: 29
+Buying car:Pickup21
+Intern10 has made PerformanceCar16 sparkling!($0.0 bonus)
+Intern6 has repaired Broken car Pickup21 and made it Used!($75.0 bonus)
+Mechanic1 has repaired Used car Pickup21 and made it Like New!($75.0 bonus)
+Staff Members: 
+        Intern6             18          289.0          800.0        Working
+      Mechanic1             29          594.5         2400.0        Working
+      Mechanic2             29          594.5         1750.0        Working
+        Intern8             11          151.5         1010.0        Working
+   Salesperson1             29          652.5        13600.0        Working
+   Salesperson2             29          652.5        12200.0        Working
+        Intern9             10          105.0           20.0        Working
+       Intern10              7           73.5           10.0        Working
+       Intern11              3           31.5           10.0        Working
+        Driver0             29          449.5            0.0        Working
+        Driver4             15          232.5          100.0        Working
+        Driver2             29          449.5           50.0        Working
+Vehicle Inventory:
+PerformanceCar2      $13816.08      $27632.17       Like New      Sparkling       In Stock
+PerformanceCar12      $15709.32      $34560.51       Like New      Sparkling       In Stock
+PerformanceCar14      $13207.45      $26414.89       Like New      Sparkling       In Stock
+PerformanceCar16      $22662.08      $45324.15       Like New      Sparkling       In Stock
+           Car8       $5531.76      $11063.52       Like New      Sparkling       In Stock
+          Car18       $8766.80      $17533.60       Like New      Sparkling       In Stock
+          Car22       $6764.13      $13528.27       Like New      Sparkling       In Stock
+          Car24      $18472.60      $36945.19       Like New          Clean       In Stock
+       Pickup11       $9717.57      $19435.15       Like New      Sparkling       In Stock
+       Pickup18      $14070.45      $28140.90       Like New      Sparkling       In Stock
+       Pickup19      $14944.01      $29888.02       Like New          Clean       In Stock
+       Pickup21      $13297.79      $26595.58       Like New          Dirty       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken      Sparkling       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken      Sparkling       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New      Sparkling       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken      Sparkling       In Stock
+    Motorcycle0      $14486.30      $28972.60         Broken      Sparkling       In Stock
+    Motorcycle1      $17258.48      $34516.96         Broken      Sparkling       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used      Sparkling       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New      Sparkling       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken      Sparkling       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New      Sparkling       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken      Sparkling       In Stock
+Total Budget and Sales:
+    $1708711.23    $2226226.76
+Day: 30
+Intern9 has made Pickup21 sparkling!($0.0 bonus)
+Intern9 has made Pickup19 sparkling!($0.0 bonus)
+Intern10 has made Car24 sparkling!($10.0 bonus)
+Salesperson1 sold Sparkling Like New Car24 to Buyer for $36945.19473249481
+ with road rescue coverage for 2% extra, 
+ with satellite radio for 5% extra, 
+ for a total of: 39568.303558501946 (earned $500.0 bonus)
+Salesperson1 sold Sparkling Like New PerformanceCar16 to Buyer for $45324.151353659014
+ with satellite radio for 5% extra, 
+ for a total of: 47590.35892134197 (earned $1000.0 bonus)
+Salesperson1 sold Sparkling Like New Pickup19 to Buyer for $29888.019293302055
+ with extended warranty for 20% extra, 
+ with satellite radio for 5% extra, 
+ for a total of: 37658.90430956059 (earned $700.0 bonus)
+Salesperson1 sold Sparkling Like New PerformanceCar12 to Buyer for $34560.51011010065
+ with road rescue coverage for 2% extra, 
+ for a total of: 35251.72031230266 (earned $1000.0 bonus)
+Salesperson2 sold Sparkling Like New PerformanceCar2 to Buyer for $27632.165846977205
+ with satellite radio for 5% extra, 
+ for a total of: 29013.774139326066 (earned $1000.0 bonus)
+Staff Members: 
+        Intern6             19          309.5          800.0        Working
+      Mechanic1             30          615.0         2400.0        Working
+      Mechanic2             30          615.0         1750.0        Working
+        Intern9             11          115.5           20.0        Working
+   Salesperson1             30          675.0        16800.0        Working
+   Salesperson2             30          675.0        13200.0        Working
+       Intern10              8           84.0           20.0        Working
+       Intern11              4           42.0           10.0        Working
+        Driver0             30          465.0            0.0        Working
+        Driver4             16          248.0          100.0        Working
+        Driver2             30          465.0           50.0        Working
+        Intern8             12          174.0         1010.0           Quit
+Vehicle Inventory:
+PerformanceCar14      $13207.45      $26414.89       Like New      Sparkling       In Stock
+           Car8       $5531.76      $11063.52       Like New      Sparkling       In Stock
+          Car18       $8766.80      $17533.60       Like New      Sparkling       In Stock
+          Car22       $6764.13      $13528.27       Like New      Sparkling       In Stock
+       Pickup11       $9717.57      $19435.15       Like New      Sparkling       In Stock
+       Pickup18      $14070.45      $28140.90       Like New      Sparkling       In Stock
+       Pickup21      $13297.79      $26595.58       Like New      Sparkling       In Stock
+ Stone Crusher        $9414.87      $18829.74         Broken      Sparkling       In Stock
+ Bear Foot USA       $14378.17      $28756.34         Broken      Sparkling       In Stock
+       Bigfoot       $12962.70      $25925.39       Like New      Sparkling       In Stock
+ Backwards Bob        $5891.67      $11783.34         Broken      Sparkling       In Stock
+    Motorcycle0      $14486.30      $28972.60         Broken      Sparkling       In Stock
+    Motorcycle1      $17258.48      $34516.96         Broken      Sparkling       In Stock
+    Motorcycle2      $22312.82      $44625.64           Used      Sparkling       In Stock
+    Motorcycle3      $13441.55      $26883.09       Like New      Sparkling       In Stock
+   ElectricCar0      $14158.42      $28316.84           Used      Sparkling       In Stock
+   ElectricCar1       $5452.99      $10905.98         Broken      Sparkling       In Stock
+   ElectricCar2      $15609.88      $31219.76       Like New      Sparkling       In Stock
+   ElectricCar3       $7912.57      $15825.15         Broken      Sparkling       In Stock
+Total Budget and Sales:
+    $1897794.29    $2415309.82
+=======
 Day: 1
 opened
 Intern0 has made PerformanceCar0 clean!
@@ -1511,6 +3171,7 @@ Air Force Afterburner        $9164.51      $20161.92           Used      Sparkli
    ElectricCar2       $6553.74      $13107.49           Used      Sparkling       In Stock
    ElectricCar3       $5587.41      $11174.82           Used      Sparkling       In Stock
 Total Budget and Sales:
+<<<<<<< HEAD
     $1599325.05    $1987465.52
 Day: 30
 Buying car:Car19
@@ -1560,3 +3221,7 @@ Air Force Afterburner        $9164.51      $20161.92           Used      Sparkli
    ElectricCar3       $5587.41      $11174.82           Used      Sparkling       In Stock
 Total Budget and Sales:
     $1640031.86    $2067816.94
+=======
+    $1569583.49    $1966631.23
+>>>>>>> branch 'Project3' of https://github.com/toho5136/CSCI-4-5448.git
+>>>>>>> 26be3e0f7df48e0382f694bcfd74414e7c2feb7b
