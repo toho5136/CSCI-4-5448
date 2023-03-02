@@ -940,7 +940,7 @@ public class FNCD {
 
 			// Iterate through all three vehicle inventories
 			// Looking for Broken vehicles
-			for (int j = 0; j < 12; j++){
+			for (int j = 0; j < 24; j++){
 				// Check to see if repair limit is reached
 				if (vehiclesFixed == 2){
 					break;
@@ -1019,7 +1019,7 @@ public class FNCD {
 					}
 				}
 				// Iterate through cars inventory
-				else {
+				else if (j >= 8 && j < 12){
 					if (carsInventory.get(j-8).getCondition() == "Broken"){
 						int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 
@@ -1049,6 +1049,114 @@ public class FNCD {
 							}
 							else if (carsInventory.get(j-8).getCleanliness() == "Clean"){
 								carsInventory.get(j-8).setCleanliness("Dirty");
+							}
+						}
+						vehiclesFixed += 1;
+					}
+				}
+				// Iterate through electricCars
+				else if (j >= 12 && j < 16){
+					if (electricCarsInventory.get(j-12).getCondition() == "Broken"){
+						int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+						// Successful repair
+						if (repairRoll <= 80){
+							System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Broken car " + electricCarsInventory.get(j-12).getID() 
+							+ " and made it Used!($" + electricCarsInventory.get(j-12).getRepairBonus() + " bonus)");
+
+							// Set condition to Used
+							electricCarsInventory.get(j-12).setCondition("Used");
+							// Pay mechanic bonus
+							mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + electricCarsInventory.get(j-12).getRepairBonus());
+							
+							// Adjust cleanliness level
+							if (electricCarsInventory.get(j-12).getCleanliness() == "Sparkling"){
+								electricCarsInventory.get(j-12).setCleanliness("Clean");
+							}
+							else if (electricCarsInventory.get(j-12).getCleanliness() == "Clean"){
+								electricCarsInventory.get(j-12).setCleanliness("Dirty");
+							}
+						}
+						// Unsuccessful repair
+						else {
+							// Adjust cleanliness level
+							if (electricCarsInventory.get(j-12).getCleanliness() == "Sparkling"){
+								electricCarsInventory.get(j-12).setCleanliness("Clean");
+							}
+							else if (electricCarsInventory.get(j-12).getCleanliness() == "Clean"){
+								electricCarsInventory.get(j-12).setCleanliness("Dirty");
+							}
+						}
+						vehiclesFixed += 1;
+					}
+				}
+				// Iterate through monsterTrucks
+				else if (j >= 16 && j < 20){
+					if (monsterTrucksInventory.get(j-16).getCondition() == "Broken"){
+						int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+						// Successful repair
+						if (repairRoll <= 80){
+							System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Broken car " + monsterTrucksInventory.get(j-16).getID() 
+							+ " and made it Used!($" + monsterTrucksInventory.get(j-16).getRepairBonus() + " bonus)");
+
+							// Set condition to Used
+							monsterTrucksInventory.get(j-16).setCondition("Used");
+							// Pay mechanic bonus
+							mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + monsterTrucksInventory.get(j-16).getRepairBonus());
+							
+							// Adjust cleanliness level
+							if (monsterTrucksInventory.get(j-16).getCleanliness() == "Sparkling"){
+								monsterTrucksInventory.get(j-16).setCleanliness("Clean");
+							}
+							else if (monsterTrucksInventory.get(j-16).getCleanliness() == "Clean"){
+								monsterTrucksInventory.get(j-16).setCleanliness("Dirty");
+							}
+						}
+						// Unsuccessful repair
+						else {
+							// Adjust cleanliness level
+							if (monsterTrucksInventory.get(j-16).getCleanliness() == "Sparkling"){
+								monsterTrucksInventory.get(j-16).setCleanliness("Clean");
+							}
+							else if (monsterTrucksInventory.get(j-16).getCleanliness() == "Clean"){
+								monsterTrucksInventory.get(j-16).setCleanliness("Dirty");
+							}
+						}
+						vehiclesFixed += 1;
+					}
+				}
+				// Iterate through motorcyles
+				else if (j >= 20 && j < 24){
+					if (motorcyclesInventory.get(j-20).getCondition() == "Broken"){
+						int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+						// Successful repair
+						if (repairRoll <= 80){
+							System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Broken car " + motorcyclesInventory.get(j-20).getID() 
+							+ " and made it Used!($" + motorcyclesInventory.get(j-20).getRepairBonus() + " bonus)");
+
+							// Set condition to Used
+							motorcyclesInventory.get(j-20).setCondition("Used");
+							// Pay mechanic bonus
+							mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + motorcyclesInventory.get(j-20).getRepairBonus());
+							
+							// Adjust cleanliness level
+							if (motorcyclesInventory.get(j-20).getCleanliness() == "Sparkling"){
+								motorcyclesInventory.get(j-20).setCleanliness("Clean");
+							}
+							else if (motorcyclesInventory.get(j-20).getCleanliness() == "Clean"){
+								motorcyclesInventory.get(j-20).setCleanliness("Dirty");
+							}
+						}
+						// Unsuccessful repair
+						else {
+							// Adjust cleanliness level
+							if (motorcyclesInventory.get(j-20).getCleanliness() == "Sparkling"){
+								motorcyclesInventory.get(j-20).setCleanliness("Clean");
+							}
+							else if (motorcyclesInventory.get(j-20).getCleanliness() == "Clean"){
+								motorcyclesInventory.get(j-20).setCleanliness("Dirty");
 							}
 						}
 						vehiclesFixed += 1;
@@ -1134,7 +1242,7 @@ public class FNCD {
 						}
 					}
 					// Iterate through cars inventory
-					else {
+					else if (j >= 8 && j < 12){
 						if (carsInventory.get(j-8).getCondition() == "Used"){
 							int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 	
@@ -1164,6 +1272,114 @@ public class FNCD {
 								}
 								else if (carsInventory.get(j-8).getCleanliness() == "Clean"){
 									carsInventory.get(j-8).setCleanliness("Dirty");
+								}
+							}
+							vehiclesFixed += 1;
+						}
+					}
+					// Iterate through electricCars
+					else if (j >= 12 && j < 16){
+						if (electricCarsInventory.get(j-12).getCondition() == "Used"){
+							int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+	
+							// Successful repair
+							if (repairRoll <= 80){
+								System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Used car " + electricCarsInventory.get(j-12).getID() 
+								+ " and made it Like New!($" + electricCarsInventory.get(j-12).getRepairBonus() + " bonus)");
+	
+								// Set condition to Like New
+								electricCarsInventory.get(j-12).setCondition("Like New");
+								// Pay mechanic bonus
+								mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + electricCarsInventory.get(j-12).getRepairBonus());
+								
+								// Adjust cleanliness level
+								if (electricCarsInventory.get(j-12).getCleanliness() == "Sparkling"){
+									electricCarsInventory.get(j-12).setCleanliness("Clean");
+								}
+								else if (electricCarsInventory.get(j-12).getCleanliness() == "Clean"){
+									electricCarsInventory.get(j-12).setCleanliness("Dirty");
+								}
+							}
+							// Unsuccessful repair
+							else {
+								// Adjust cleanliness level
+								if (electricCarsInventory.get(j-12).getCleanliness() == "Sparkling"){
+									electricCarsInventory.get(j-12).setCleanliness("Clean");
+								}
+								else if (electricCarsInventory.get(j-12).getCleanliness() == "Clean"){
+									electricCarsInventory.get(j-12).setCleanliness("Dirty");
+								}
+							}
+							vehiclesFixed += 1;
+						}
+					}
+					// Iterate through monsterTrucks
+					else if (j >= 16 && j < 20){
+						if (monsterTrucksInventory.get(j-16).getCondition() == "Used"){
+							int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+	
+							// Successful repair
+							if (repairRoll <= 80){
+								System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Used car " + monsterTrucksInventory.get(j-16).getID() 
+								+ " and made it Like New!($" + monsterTrucksInventory.get(j-16).getRepairBonus() + " bonus)");
+	
+								// Set condition to Like New
+								monsterTrucksInventory.get(j-16).setCondition("Like New");
+								// Pay mechanic bonus
+								mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + monsterTrucksInventory.get(j-16).getRepairBonus());
+								
+								// Adjust cleanliness level
+								if (monsterTrucksInventory.get(j-16).getCleanliness() == "Sparkling"){
+									monsterTrucksInventory.get(j-16).setCleanliness("Clean");
+								}
+								else if (monsterTrucksInventory.get(j-16).getCleanliness() == "Clean"){
+									monsterTrucksInventory.get(j-16).setCleanliness("Dirty");
+								}
+							}
+							// Unsuccessful repair
+							else {
+								// Adjust cleanliness level
+								if (monsterTrucksInventory.get(j-16).getCleanliness() == "Sparkling"){
+									monsterTrucksInventory.get(j-16).setCleanliness("Clean");
+								}
+								else if (monsterTrucksInventory.get(j-16).getCleanliness() == "Clean"){
+									monsterTrucksInventory.get(j-16).setCleanliness("Dirty");
+								}
+							}
+							vehiclesFixed += 1;
+						}
+					}
+					// Iterate through motorCycles
+					else if (j >= 20 && j < 24){
+						if (motorcyclesInventory.get(j-20).getCondition() == "Used"){
+							int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+	
+							// Successful repair
+							if (repairRoll <= 80){
+								System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Used car " + motorcyclesInventory.get(j-20).getID() 
+								+ " and made it Like New!($" + motorcyclesInventory.get(j-20).getRepairBonus() + " bonus)");
+	
+								// Set condition to Like New
+								motorcyclesInventory.get(j-20).setCondition("Like New");
+								// Pay mechanic bonus
+								mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + motorcyclesInventory.get(j-20).getRepairBonus());
+								
+								// Adjust cleanliness level
+								if (motorcyclesInventory.get(j-20).getCleanliness() == "Sparkling"){
+									motorcyclesInventory.get(j-20).setCleanliness("Clean");
+								}
+								else if (motorcyclesInventory.get(j-20).getCleanliness() == "Clean"){
+									motorcyclesInventory.get(j-20).setCleanliness("Dirty");
+								}
+							}
+							// Unsuccessful repair
+							else {
+								// Adjust cleanliness level
+								if (motorcyclesInventory.get(j-20).getCleanliness() == "Sparkling"){
+									motorcyclesInventory.get(j-20).setCleanliness("Clean");
+								}
+								else if (motorcyclesInventory.get(j-20).getCleanliness() == "Clean"){
+									motorcyclesInventory.get(j-20).setCleanliness("Dirty");
 								}
 							}
 							vehiclesFixed += 1;
