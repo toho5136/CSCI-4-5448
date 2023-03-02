@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 import java.io.*;
 public class FNCD {
@@ -34,6 +33,7 @@ public class FNCD {
 	private int salesNames = 0;
 	private int internNames = 0;
 	private int driverNames = 0; // driver names
+	private ArrayList<String> stageNames = new ArrayList<>(); //stage names for monster trucks
 	// Getters
 
 	public ArrayList<Mechanic> getMechanicStaff() {
@@ -319,7 +319,52 @@ public class FNCD {
 	public int createVehicleID(){
 		return 0;
 	}
-
+	public void createStageNames() {
+		stageNames.add("Air Force Afterburner ");
+		stageNames.add("Avenger ");
+		stageNames.add("Bad News Travels Fast ");
+		stageNames.add("Batman ");
+		stageNames.add("Backwards Bob ");
+		stageNames.add("Bear Foot (1979) ");
+		stageNames.add("Bear Foot (F-150) ");
+		stageNames.add("Bear Foot (2xtreme) ");
+		stageNames.add("Bear Foot (Silverado) ");
+		stageNames.add("Bear Foot USA ");
+		stageNames.add("Bigfoot ");
+		stageNames.add("Black Stallion ");
+		stageNames.add("Blacksmith ");
+		stageNames.add("Blue Thunder ");
+		stageNames.add("Bounty Hunter ");
+		stageNames.add("Brutus ");
+		stageNames.add("Bulldozer ");
+		stageNames.add("Captain's Curse ");
+		stageNames.add("Cyborg ");
+		stageNames.add("El Toro Loco ");
+		stageNames.add("Grave Digger ");
+		stageNames.add("Grinder ");
+		stageNames.add("Gunslinger ");
+		stageNames.add("Jurassic Attack ");
+		stageNames.add("King Krunch ");
+		stageNames.add("Lucas Oil Crusader ");
+		stageNames.add("Madusa ");
+		stageNames.add("Max-D ");
+		stageNames.add("Mohawk Warrior ");
+		stageNames.add("Monster Mutt ");
+		stageNames.add("Monster Mutt Dalmatian");
+		stageNames.add("Predator ");
+		stageNames.add("Shell Camino ");
+		stageNames.add("Raminator ");
+		stageNames.add("Snake Bite ");
+		stageNames.add("Stone Crusher ");
+		stageNames.add("Sudden Impact ");
+		stageNames.add("Swamp Thing ");
+		stageNames.add("The Destroyer ");
+		stageNames.add("The Felon ");
+		stageNames.add("USA-1 ");
+		stageNames.add("War Wizard ");
+		stageNames.add("WCW Nitro Machine ");
+		stageNames.add("Zombie ");
+	}
 	/* Opening function first checks to see what day it is. If it is the first day,
 	 * it will populate all of the staff lists, vehicle lists as well as set the 
 	 * operating budget to $500,000. If it is not the first day, it will make sure 
@@ -379,7 +424,11 @@ public class FNCD {
 				electricID += 1;
 				
 				// Initialize monster truck inventory
+				int counter = stageNames.size();
+				int randomNameGenerator = ThreadLocalRandom.current().nextInt(0, counter + 1);
+				String randomName = stageNames.get(randomNameGenerator);
 				MonsterTrucks truck = new MonsterTrucks("MonsterTruck" + String.valueOf(monsterID)); // need to add stage name
+				truck.setStageName(randomName);
 				this.addMonsterTruck(truck);
 				monsterID += 1;
 				
@@ -475,7 +524,11 @@ public class FNCD {
 				int limit = 4 - monsterTrucksInventory.size();
 
 				for (int i = 0; i < limit; i++){
+					int counter = stageNames.size();
+					int randomNameGenerator = ThreadLocalRandom.current().nextInt(0, counter + 1);
+					String randomName = stageNames.get(randomNameGenerator);
 					MonsterTrucks truck = new MonsterTrucks("MonsterTruck" + String.valueOf(monsterID)); // need to add stage name
+					truck.setStageName(randomName);
 					System.out.println("Buying car:" + truck.getID());
 					this.addMonsterTruck(truck);
 					monsterID += 1;
@@ -1849,7 +1902,7 @@ public class FNCD {
 		for (int i = 0; i < monsterTrucksInventory.size(); i++) {
 			String carCostPrice = String.format("%.2f", monsterTrucksInventory.get(i).getCostPrice());
 			String carSalesPrice = String.format("%.2f", monsterTrucksInventory.get(i).getSalesPrice());
-			tableMO[i] = new String[] {monsterTrucksInventory.get(i).getID(), "$" + carCostPrice, "$" + carSalesPrice, monsterTrucksInventory.get(i).getCondition(), monsterTrucksInventory.get(i).getCleanliness(), "In Stock"};
+			tableMO[i] = new String[] {monsterTrucksInventory.get(i).getStageName(), "$" + carCostPrice, "$" + carSalesPrice, monsterTrucksInventory.get(i).getCondition(), monsterTrucksInventory.get(i).getCleanliness(), "In Stock"};
 		}
 		for (int i = 0; i < motorcyclesInventory.size(); i++) {
 			String carCostPrice = String.format("%.2f", motorcyclesInventory.get(i).getCostPrice());
@@ -1937,6 +1990,7 @@ public class FNCD {
 		System.setOut(o);
 		FNCD sim = new FNCD();
 		for (int i = 0; i < 30; i++){
+			sim.createStageNames();
 			sim.opening();
 			sim.washing();
 			sim.repairing();
