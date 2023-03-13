@@ -1,0 +1,24 @@
+
+Day: 4
+TotalSales: 184460.94521241207
+Funds Added: 0.0
+
+Day: 4
+TotalSales: 184460.94521241207
+Funds Added: 0.0
+
+Day: 4
+TotalSales: 184460.94521241207
+Funds Added: 0.0
+
+Day: 4
+TotalSales: 231416.20352210116
+Funds Added: 0.0
+
+Day: 4
+TotalSales: 231416.20352210116
+Funds Added: 0.0
+
+Day: 4
+TotalSales: 231416.20352210116
+Funds Added: 0.0
