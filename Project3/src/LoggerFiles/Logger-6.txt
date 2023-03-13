@@ -1,0 +1,40 @@
+
+Day: 6
+TotalSales: 390667.8741097184
+Funds Added: 0.0
+
+Day: 6
+TotalSales: 390667.8741097184
+Funds Added: 0.0
+
+Day: 6
+TotalSales: 390667.8741097184
+Funds Added: 0.0
+
+Day: 6
+TotalSales: 390667.8741097184
+Funds Added: 0.0
+
+Day: 6
+TotalSales: 390667.8741097184
+Funds Added: 0.0
+
+Day: 6
+TotalSales: 272676.3961215367
+Funds Added: 0.0
+
+Day: 6
+TotalSales: 272676.3961215367
+Funds Added: 0.0
+
+Day: 6
+TotalSales: 272676.3961215367
+Funds Added: 0.0
+
+Day: 6
+TotalSales: 272676.3961215367
+Funds Added: 0.0
+
+Day: 6
+TotalSales: 272676.3961215367
+Funds Added: 0.0
