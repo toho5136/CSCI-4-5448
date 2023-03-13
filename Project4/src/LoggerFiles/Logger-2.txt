@@ -1,8 +1,0 @@
-
-Day: 2
-TotalSales: 35623.40133774783
-Funds Added: 0.0
-
-Day: 2
-TotalSales: 160624.0670575589
-Funds Added: 0.0
