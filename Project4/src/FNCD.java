@@ -4296,23 +4296,31 @@ public class FNCD {
 			System.out.format("%15s%15s%n", row);
 		}
 	}
-	public static void main(String[] args) throws FileNotFoundException {
-		PrintStream o = new PrintStream(new File("SimResults.txt"));
+	public FNCD(String fileName) throws FileNotFoundException {
+		PrintStream o = new PrintStream(new File(fileName));
 		//PrintStream console = System.out;
 		System.setOut(o);
-		FNCD sim = new FNCD();
+		this.runSimulation();
+		o.close();
+	}
+	
+	public void runSimulation() {
 		for (int i = 0; i < 30; i++){
-			Logger log = new Logger(sim);
-			sim.createStageNames();
-			sim.opening();
-			sim.washing();
-			sim.repairing();
-			sim.selling();
-			sim.raceEvent();
-			sim.ending();
-			sim.updateCurrentDay();
-			
+			//FNCD 1
+			Logger log = new Logger(this);
+			this.createStageNames();
+			this.opening();
+			this.washing();
+			this.repairing();
+			this.selling();
+			this.raceEvent();
+			this.ending();
+			this.updateCurrentDay();
 		}
+	}
+	public static void main(String[] args) throws FileNotFoundException {
+		FNCD sim = new FNCD("SimResults.txt"); //FNCD 1
+		FNCD sim2 = new FNCD("Sim2Results.txt"); //FNCD 2
 	}
 
 }
