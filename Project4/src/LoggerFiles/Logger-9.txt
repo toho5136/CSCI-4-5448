@@ -62,3 +62,35 @@ Funds Added: 0.0
 Day: 9
 TotalSales: 506209.10381207726
 Funds Added: 0.0
+
+Day: 9
+TotalSales: 269099.027434221
+Funds Added: 0.0
+
+Day: 9
+TotalSales: 269099.027434221
+Funds Added: 0.0
+
+Day: 9
+TotalSales: 269099.027434221
+Funds Added: 0.0
+
+Day: 9
+TotalSales: 269099.027434221
+Funds Added: 0.0
+
+Day: 9
+TotalSales: 269099.027434221
+Funds Added: 0.0
+
+Day: 9
+TotalSales: 269099.027434221
+Funds Added: 0.0
+
+Day: 9
+TotalSales: 269099.027434221
+Funds Added: 0.0
+
+Day: 9
+TotalSales: 269099.027434221
+Funds Added: 0.0

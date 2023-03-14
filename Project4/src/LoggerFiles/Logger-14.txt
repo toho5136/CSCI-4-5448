@@ -102,3 +102,55 @@ Funds Added: 0.0
 Day: 14
 TotalSales: 656701.7520340949
 Funds Added: 0.0
+
+Day: 14
+TotalSales: 463717.1099529901
+Funds Added: 0.0
+
+Day: 14
+TotalSales: 463717.1099529901
+Funds Added: 0.0
+
+Day: 14
+TotalSales: 463717.1099529901
+Funds Added: 0.0
+
+Day: 14
+TotalSales: 463717.1099529901
+Funds Added: 0.0
+
+Day: 14
+TotalSales: 463717.1099529901
+Funds Added: 0.0
+
+Day: 14
+TotalSales: 463717.1099529901
+Funds Added: 0.0
+
+Day: 14
+TotalSales: 463717.1099529901
+Funds Added: 0.0
+
+Day: 14
+TotalSales: 463717.1099529901
+Funds Added: 0.0
+
+Day: 14
+TotalSales: 463717.1099529901
+Funds Added: 0.0
+
+Day: 14
+TotalSales: 463717.1099529901
+Funds Added: 0.0
+
+Day: 14
+TotalSales: 463717.1099529901
+Funds Added: 0.0
+
+Day: 14
+TotalSales: 463717.1099529901
+Funds Added: 0.0
+
+Day: 14
+TotalSales: 463717.1099529901
+Funds Added: 0.0

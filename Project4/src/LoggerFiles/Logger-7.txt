@@ -46,3 +46,27 @@ Funds Added: 0.0
 Day: 7
 TotalSales: 434898.9214521716
 Funds Added: 0.0
+
+Day: 7
+TotalSales: 198512.5292029561
+Funds Added: 0.0
+
+Day: 7
+TotalSales: 198512.5292029561
+Funds Added: 0.0
+
+Day: 7
+TotalSales: 198512.5292029561
+Funds Added: 0.0
+
+Day: 7
+TotalSales: 198512.5292029561
+Funds Added: 0.0
+
+Day: 7
+TotalSales: 198512.5292029561
+Funds Added: 0.0
+
+Day: 7
+TotalSales: 198512.5292029561
+Funds Added: 0.0
