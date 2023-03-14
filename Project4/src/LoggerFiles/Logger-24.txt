@@ -274,3 +274,95 @@ Funds Added: 0.0
 Day: 24
 TotalSales: 880101.4876925722
 Funds Added: 0.0
+
+Day: 24
+TotalSales: 2012183.123392096
+Funds Added: 0.0
+
+Day: 24
+TotalSales: 2012183.123392096
+Funds Added: 0.0
+
+Day: 24
+TotalSales: 2012183.123392096
+Funds Added: 0.0
+
+Day: 24
+TotalSales: 2012183.123392096
+Funds Added: 0.0
+
+Day: 24
+TotalSales: 2012183.123392096
+Funds Added: 0.0
+
+Day: 24
+TotalSales: 2012183.123392096
+Funds Added: 0.0
+
+Day: 24
+TotalSales: 2012183.123392096
+Funds Added: 0.0
+
+Day: 24
+TotalSales: 2012183.123392096
+Funds Added: 0.0
+
+Day: 24
+TotalSales: 2012183.123392096
+Funds Added: 0.0
+
+Day: 24
+TotalSales: 2012183.123392096
+Funds Added: 0.0
+
+Day: 24
+TotalSales: 2012183.123392096
+Funds Added: 0.0
+
+Day: 24
+TotalSales: 2012183.123392096
+Funds Added: 0.0
+
+Day: 24
+TotalSales: 2012183.123392096
+Funds Added: 0.0
+
+Day: 24
+TotalSales: 2012183.123392096
+Funds Added: 0.0
+
+Day: 24
+TotalSales: 2012183.123392096
+Funds Added: 0.0
+
+Day: 24
+TotalSales: 2012183.123392096
+Funds Added: 0.0
+
+Day: 24
+TotalSales: 2012183.123392096
+Funds Added: 0.0
+
+Day: 24
+TotalSales: 2012183.123392096
+Funds Added: 0.0
+
+Day: 24
+TotalSales: 2012183.123392096
+Funds Added: 0.0
+
+Day: 24
+TotalSales: 2012183.123392096
+Funds Added: 0.0
+
+Day: 24
+TotalSales: 2012183.123392096
+Funds Added: 0.0
+
+Day: 24
+TotalSales: 2012183.123392096
+Funds Added: 0.0
+
+Day: 24
+TotalSales: 2012183.123392096
+Funds Added: 0.0

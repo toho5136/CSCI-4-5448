@@ -22,3 +22,11 @@ Funds Added: 0.0
 Day: 3
 TotalSales: 0.0
 Funds Added: 0.0
+
+Day: 3
+TotalSales: 64015.94896311343
+Funds Added: 0.0
+
+Day: 3
+TotalSales: 64015.94896311343
+Funds Added: 0.0
