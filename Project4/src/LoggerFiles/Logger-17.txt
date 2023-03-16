@@ -2430,3 +2430,131 @@ Funds Added: 0.0
 Day: 17
 TotalSales: 930693.997984515
 Funds Added: 0.0
+
+Day: 17
+TotalSales: 1428622.9588279005
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1428622.9588279005
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1428622.9588279005
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1428622.9588279005
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1428622.9588279005
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1428622.9588279005
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1428622.9588279005
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1428622.9588279005
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1428622.9588279005
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1428622.9588279005
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1428622.9588279005
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1428622.9588279005
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1428622.9588279005
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1428622.9588279005
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1428622.9588279005
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1428622.9588279005
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1144792.6485729092
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1144792.6485729092
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1144792.6485729092
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1144792.6485729092
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1144792.6485729092
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1144792.6485729092
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1144792.6485729092
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1144792.6485729092
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1144792.6485729092
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1144792.6485729092
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1144792.6485729092
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1144792.6485729092
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1144792.6485729092
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1144792.6485729092
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1144792.6485729092
+Funds Added: 0.0
+
+Day: 17
+TotalSales: 1144792.6485729092
+Funds Added: 0.0
