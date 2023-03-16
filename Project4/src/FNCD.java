@@ -19,6 +19,9 @@ public class FNCD {
 	private ArrayList<ElectricCars> electricCarsInventory = new ArrayList<>(); // electric car inventory
 	private ArrayList<MonsterTrucks> monsterTrucksInventory = new ArrayList<>(); // monster truck inventory
 	private ArrayList<Motorcycles> motorcyclesInventory = new ArrayList<>(); // motorcycles inventory
+	private ArrayList<FlyingCars> flyingCarsInventory = new ArrayList<>(); // flying car inventory
+	private ArrayList<Boats> boatsInventory = new ArrayList<>(); // boats inventory
+	private ArrayList<Spaceships> spaceshipsInventory = new ArrayList<>(); // spaceships inventory
 	private ArrayList<Buyer> buyers = new ArrayList<>();
 	private ArrayList<Vehicles> soldVehicles = new ArrayList<>();
 	private double operatingBudget;
@@ -33,8 +36,11 @@ public class FNCD {
 	private int carID = 0;
 	private int pickupID = 0;
 	private int electricID = 0; // electric car ID
-	private int monsterID = 0; // monstertruck ID
+	private int monsterID = 0; // monster truck ID
 	private int motorcycleID = 0; // motorcycle ID
+	private int flyingCarID = 0; // flying car ID
+	private int boatID = 0; // boat ID
+	private int spaceshipID = 0; // spaceship ID
 	private int mechNames = 0;
 	private int salesNames = 0;
 	private int internNames = 0;
@@ -121,6 +127,15 @@ public class FNCD {
 	public void addMotorcycle(Motorcycles newCar) { // add new motorcycle
 		motorcyclesInventory.add(newCar);
 	}
+	public void addFlyingCar(FlyingCars newCar) { // add new flying car
+		flyingCarsInventory.add(newCar);
+	}
+	public void addBoat(Boats newCar) { // add new boat
+		boatsInventory.add(newCar);
+	}
+	public void addSpaceship(Spaceships newCar) { // add new spaceship
+		spaceshipsInventory.add(newCar);
+	}
 	public void addBuyer(Buyer newBuyer){
 		buyers.add(newBuyer);
 	}
@@ -146,7 +161,7 @@ public class FNCD {
 		if (currentDay % 7 == 0 || currentDay % 6 == 0){
 			for (int i = 0; i < 2; i++){
 				int buyerRoll = ThreadLocalRandom.current().nextInt(1, 3 + 1);
-				int wantedRoll = ThreadLocalRandom.current().nextInt(1, 6 + 1);
+				int wantedRoll = ThreadLocalRandom.current().nextInt(1, 9 + 1);
 
 				// Just looking
 				if (buyerRoll == 1){
@@ -175,6 +190,21 @@ public class FNCD {
 						Buyer buy = new Buyer("Just Looking", "Motorcycles", 10);
 						this.addBuyer(buy);
 					}
+					// Wants flying cars
+					else if (wantedRoll == 6){
+						Buyer buy = new Buyer("Just Looking", "FlyingCars", 10);
+						this.addBuyer(buy);
+					}
+					// Wants boats
+					else if (wantedRoll == 7){
+						Buyer buy = new Buyer("Just Looking", "Boats", 10);
+						this.addBuyer(buy);
+					}
+					// Wants spaceships
+					else if (wantedRoll == 8){
+						Buyer buy = new Buyer("Just Looking", "Spaceships", 10);
+						this.addBuyer(buy);
+					}
 					// Wants Cars
 					else {
 						Buyer buy = new Buyer("Just Looking", "Cars", 10);
@@ -195,17 +225,32 @@ public class FNCD {
 					}
 					// Wants monster trucks
 					else if (wantedRoll == 3){
-						Buyer buy = new Buyer("Wants One", "MonsterTrucks", 10);
+						Buyer buy = new Buyer("Wants One", "MonsterTrucks", 40);
 						this.addBuyer(buy);
 					}
 					// Wants EC
 					else if (wantedRoll == 4){
-						Buyer buy = new Buyer("Wants One", "ElectricCars", 10);
+						Buyer buy = new Buyer("Wants One", "ElectricCars", 40);
 						this.addBuyer(buy);
 					}
 					// Wants motorcycles
 					else if (wantedRoll == 5){
-						Buyer buy = new Buyer("Wants One", "Motorcycles", 10);
+						Buyer buy = new Buyer("Wants One", "Motorcycles", 40);
+						this.addBuyer(buy);
+					}
+					// Wants flying cars
+					else if (wantedRoll == 6){
+						Buyer buy = new Buyer("Wants One", "FlyingCars", 40);
+						this.addBuyer(buy);
+					}
+					// Wants boats
+					else if (wantedRoll == 7){
+						Buyer buy = new Buyer("Wants One", "Boats", 40);
+						this.addBuyer(buy);
+					}
+					// Wants spaceships
+					else if (wantedRoll == 8){
+						Buyer buy = new Buyer("Wants One", "Spaceships", 40);
 						this.addBuyer(buy);
 					}
 					// Wants Cars
@@ -227,17 +272,32 @@ public class FNCD {
 					}
 					// Wants monster trucks
 					else if (wantedRoll == 3){
-						Buyer buy = new Buyer("Needs One", "MonsterTrucks", 10);
+						Buyer buy = new Buyer("Needs One", "MonsterTrucks", 70);
 						this.addBuyer(buy);
 					}
 					// Wants EC
 					else if (wantedRoll == 4){
-						Buyer buy = new Buyer("Needs One", "ElectricCars", 10);
+						Buyer buy = new Buyer("Needs One", "ElectricCars", 70);
 						this.addBuyer(buy);
 					}
 					// Wants motorcycles
 					else if (wantedRoll == 5){
-						Buyer buy = new Buyer("Needs One", "Motorcycles", 10);
+						Buyer buy = new Buyer("Needs One", "Motorcycles", 70);
+						this.addBuyer(buy);
+					}
+					// Wants flying cars
+					else if (wantedRoll == 6){
+						Buyer buy = new Buyer("Needs One", "FlyingCars", 70);
+						this.addBuyer(buy);
+					}
+					// Wants boats
+					else if (wantedRoll == 7){
+						Buyer buy = new Buyer("Needs One", "Boats", 70);
+						this.addBuyer(buy);
+					}
+					// Wants spaceships
+					else if (wantedRoll == 8){
+						Buyer buy = new Buyer("Needs One", "Spaceships", 70);
 						this.addBuyer(buy);
 					}
 					// Wants Cars
@@ -252,7 +312,7 @@ public class FNCD {
 				
 				if (roll == 1){
 					int buyerRoll = ThreadLocalRandom.current().nextInt(1, 3 + 1);
-					int wantedRoll = ThreadLocalRandom.current().nextInt(1, 6 + 1);
+					int wantedRoll = ThreadLocalRandom.current().nextInt(1, 9 + 1);
 
 					// Just looking
 					if (buyerRoll == 1){
@@ -281,6 +341,21 @@ public class FNCD {
 							Buyer buy = new Buyer("Just Looking", "Motorcycles", 10);
 							this.addBuyer(buy);
 						}
+						// Wants flying cars
+						else if (wantedRoll == 6){
+							Buyer buy = new Buyer("Just Looking", "FlyingCars", 10);
+							this.addBuyer(buy);
+						}
+						// Wants boats
+						else if (wantedRoll == 7){
+							Buyer buy = new Buyer("Just Looking", "Boats", 10);
+							this.addBuyer(buy);
+						}
+						// Wants spaceships
+						else if (wantedRoll == 8){
+							Buyer buy = new Buyer("Just Looking", "Spaceships", 10);
+							this.addBuyer(buy);
+						}
 						// Wants Cars
 						else {
 							Buyer buy = new Buyer("Just Looking", "Cars", 10);
@@ -301,17 +376,32 @@ public class FNCD {
 						}
 						// Wants Monster Trucks
 						else if (wantedRoll == 3){
-							Buyer buy = new Buyer("Wants One", "MonsterTrucks", 10);
+							Buyer buy = new Buyer("Wants One", "MonsterTrucks", 40);
 							this.addBuyer(buy);
 						}
 						// Wants electric cars
 						else if (wantedRoll == 4){
-							Buyer buy = new Buyer("Wants One", "ElectricCars", 10);
+							Buyer buy = new Buyer("Wants One", "ElectricCars", 40);
 							this.addBuyer(buy);
 						}
 						// Wants motorcycles
 						else if (wantedRoll == 5){
-							Buyer buy = new Buyer("Wants One", "Motorcycles", 10);
+							Buyer buy = new Buyer("Wants One", "Motorcycles", 40);
+							this.addBuyer(buy);
+						}
+						// Wants flying cars
+						else if (wantedRoll == 6){
+							Buyer buy = new Buyer("Wants One", "FlyingCars", 40);
+							this.addBuyer(buy);
+						}
+						// Wants boats
+						else if (wantedRoll == 7){
+							Buyer buy = new Buyer("Wants One", "Boats", 40);
+							this.addBuyer(buy);
+						}
+						// Wants spaceships
+						else if (wantedRoll == 8){
+							Buyer buy = new Buyer("Wants One", "Spaceships", 40);
 							this.addBuyer(buy);
 						}
 						// Wants Cars
@@ -333,17 +423,32 @@ public class FNCD {
 						}
 						// Wants Monster Trucks
 						else if (wantedRoll == 3){
-							Buyer buy = new Buyer("Needs One", "MonsterTrucks", 10);
+							Buyer buy = new Buyer("Needs One", "MonsterTrucks", 70);
 							this.addBuyer(buy);
 						}
 						// Wants electric cars
 						else if (wantedRoll == 4){
-							Buyer buy = new Buyer("Needs One", "ElectricCars", 10);
+							Buyer buy = new Buyer("Needs One", "ElectricCars", 70);
 							this.addBuyer(buy);
 						}
 						// Wants motorcycles
 						else if (wantedRoll == 5){
-							Buyer buy = new Buyer("Needs One", "Motorcycles", 10);
+							Buyer buy = new Buyer("Needs One", "Motorcycles", 70);
+							this.addBuyer(buy);
+						}
+						// Wants flying cars
+						else if (wantedRoll == 6){
+							Buyer buy = new Buyer("Needs One", "FlyingCars", 70);
+							this.addBuyer(buy);
+						}
+						// Wants boats
+						else if (wantedRoll == 7){
+							Buyer buy = new Buyer("Needs One", "Boats", 70);
+							this.addBuyer(buy);
+						}
+						// Wants spaceships
+						else if (wantedRoll == 8){
+							Buyer buy = new Buyer("Needs One", "Spaceships", 70);
 							this.addBuyer(buy);
 						}
 						// Wants Cars
@@ -362,7 +467,7 @@ public class FNCD {
 				
 				if (roll == 1){
 					int buyerRoll = ThreadLocalRandom.current().nextInt(1, 3 + 1);
-					int wantedRoll = ThreadLocalRandom.current().nextInt(1, 6 + 1);
+					int wantedRoll = ThreadLocalRandom.current().nextInt(1, 9 + 1);
 
 					// Just looking
 					if (buyerRoll == 1){
@@ -391,6 +496,21 @@ public class FNCD {
 							Buyer buy = new Buyer("Just Looking", "Motorcycles", 10);
 							this.addBuyer(buy);
 						}
+						// Wants flying cars
+						else if (wantedRoll == 6){
+							Buyer buy = new Buyer("Just Looking", "FlyingCars", 10);
+							this.addBuyer(buy);
+						}
+						// Wants boats
+						else if (wantedRoll == 7){
+							Buyer buy = new Buyer("Just Looking", "Boats", 10);
+							this.addBuyer(buy);
+						}
+						// Wants spaceships
+						else if (wantedRoll == 8){
+							Buyer buy = new Buyer("Just Looking", "Spaceships", 10);
+							this.addBuyer(buy);
+						}
 						// Wants Cars
 						else {
 							Buyer buy = new Buyer("Just Looking", "Cars", 10);
@@ -411,17 +531,32 @@ public class FNCD {
 						}
 						// Wants Monster Trucks
 						else if (wantedRoll == 3){
-							Buyer buy = new Buyer("Wants One", "MonsterTrucks", 10);
+							Buyer buy = new Buyer("Wants One", "MonsterTrucks", 40);
 							this.addBuyer(buy);
 						}
 						// Wants electric cars
 						else if (wantedRoll == 4){
-							Buyer buy = new Buyer("Wants One", "ElectricCars", 10);
+							Buyer buy = new Buyer("Wants One", "ElectricCars", 40);
 							this.addBuyer(buy);
 						}
 						// Wants motorcycles
 						else if (wantedRoll == 5){
-							Buyer buy = new Buyer("Wants One", "Motorcycles", 10);
+							Buyer buy = new Buyer("Wants One", "Motorcycles", 40);
+							this.addBuyer(buy);
+						}
+						// Wants flying cars
+						else if (wantedRoll == 6){
+							Buyer buy = new Buyer("Wants One", "FlyingCars", 40);
+							this.addBuyer(buy);
+						}
+						// Wants boats
+						else if (wantedRoll == 7){
+							Buyer buy = new Buyer("Wants One", "Boats", 40);
+							this.addBuyer(buy);
+						}
+						// Wants spaceships
+						else if (wantedRoll == 8){
+							Buyer buy = new Buyer("Wants One", "Spaceships", 40);
 							this.addBuyer(buy);
 						}
 						// Wants Cars
@@ -443,17 +578,32 @@ public class FNCD {
 						}
 						// Wants Monster Trucks
 						else if (wantedRoll == 3){
-							Buyer buy = new Buyer("Needs One", "MonsterTrucks", 10);
+							Buyer buy = new Buyer("Needs One", "MonsterTrucks", 70);
 							this.addBuyer(buy);
 						}
 						// Wants electric cars
 						else if (wantedRoll == 4){
-							Buyer buy = new Buyer("Needs One", "ElectricCars", 10);
+							Buyer buy = new Buyer("Needs One", "ElectricCars", 70);
 							this.addBuyer(buy);
 						}
 						// Wants motorcycles
 						else if (wantedRoll == 5){
-							Buyer buy = new Buyer("Needs One", "Motorcycles", 10);
+							Buyer buy = new Buyer("Needs One", "Motorcycles", 70);
+							this.addBuyer(buy);
+						}
+						// Wants flying cars
+						else if (wantedRoll == 6){
+							Buyer buy = new Buyer("Needs One", "FlyingCars", 70);
+							this.addBuyer(buy);
+						}
+						// Wants boats
+						else if (wantedRoll == 7){
+							Buyer buy = new Buyer("Needs One", "Boats", 70);
+							this.addBuyer(buy);
+						}
+						// Wants spaceships
+						else if (wantedRoll == 8){
+							Buyer buy = new Buyer("Needs One", "Spaceships", 70);
 							this.addBuyer(buy);
 						}
 						// Wants Cars
@@ -586,6 +736,21 @@ public class FNCD {
 				Motorcycles motorcycle = new Motorcycles("Motorcycle" + String.valueOf(motorcycleID));
 				this.addMotorcycle(motorcycle);
 				motorcycleID += 1;
+				
+				// Initialize flying cars inventory
+				FlyingCars flyCar = new FlyingCars("FlyingCar" + String.valueOf(flyingCarID));
+				this.addFlyingCar(flyCar);
+				flyingCarID += 1;
+				
+				// Initialize boats inventory
+				Boats boa = new Boats("Boat" + String.valueOf(boatID));
+				this.addBoat(boa);
+				boatID += 1;
+				
+				// Initialize spaceship inventory
+				Spaceships space = new Spaceships("Spaceship" + String.valueOf(spaceshipID));
+				this.addSpaceship(space);
+				spaceshipID += 1;
 			}
 			this.setOperatingBudget(500000);
 			totalSales = 0;
@@ -700,6 +865,48 @@ public class FNCD {
 					operatingBudget = operatingBudget - motorcycle.getCostPrice();
 				}
 			}
+			
+			// Check to see if flying car inventory is 6
+			if (flyingCarsInventory.size() < 6){
+				int limit = 6 - flyingCarsInventory.size();
+
+				for (int i = 0; i < limit; i++){
+					FlyingCars flyCar = new FlyingCars("FlyingCar" + String.valueOf(flyingCarID)); // need to add stage name
+					System.out.println("Buying car:" + flyCar.getID());
+					this.addFlyingCar(flyCar);
+					flyingCarID += 1;
+
+					operatingBudget = operatingBudget - flyCar.getCostPrice();
+				}
+			}
+			
+			// Check to see if boat inventory is 6
+			if (boatsInventory.size() < 6){
+				int limit = 6 - boatsInventory.size();
+
+				for (int i = 0; i < limit; i++){
+					Boats boat = new Boats("Boat" + String.valueOf(boatID)); // need to add stage name
+					System.out.println("Buying car:" + boat.getID());
+					this.addBoat(boat);
+					boatID += 1;
+
+					operatingBudget = operatingBudget - boat.getCostPrice();
+				}
+			}
+			
+			// Check to see if spaceship inventory is 6
+			if (spaceshipsInventory.size() < 6){
+				int limit = 6 - spaceshipsInventory.size();
+
+				for (int i = 0; i < limit; i++){
+					Spaceships spaceship = new Spaceships("Spaceship" + String.valueOf(spaceshipID)); // need to add stage name
+					System.out.println("Buying car:" + spaceship.getID());
+					this.addSpaceship(spaceship);
+					spaceshipID += 1;
+
+					operatingBudget = operatingBudget - spaceship.getCostPrice();
+				}
+			}
 		}
 	}
 	public void washing() {
@@ -707,8 +914,9 @@ public class FNCD {
 		for (int i = 0; i < 3; i++){
 			int vehiclesWashed = 0;
 
-			// Iterate over all three vehicles lists (0-5:performance, 6-11:pickups, 12-17:cars, 18-23:electric, 24-29:monster, 30-35:motorcycle)
-			for (int j = 0; j < 36; j++){
+			// Iterate over all three vehicles lists (0-5:performance, 6-11:pickups, 12-17:cars, 18-23:electric, 24-29:monster, 30-35:motorcycle,)
+			// 36-41 flying car, 42-47 boat, 48-53 spaceship
+			for (int j = 0; j < 54; j++){
 				// check if reached limit
 				if (vehiclesWashed == 2){
 					break;
@@ -865,32 +1073,119 @@ public class FNCD {
 						}
 					}
 				}
-				// Iterate through motorcycles inventory
-				else {
-					if (motorcyclesInventory.get(j-30).getCleanliness() == "Dirty"){
+				// Iterate through flying cars inventory
+				else if (j >= 30 && j < 36){
+					if (flyingCarsInventory.get(j-30).getCleanliness() == "Dirty"){
 						String result = internStaff.get(i).getWashMethod().washCar("Dirty");
 						// Successful wash to clean
 						if (result == "Clean"){
-							System.out.println(internStaff.get(i).getUniqueName() + " has made " + motorcyclesInventory.get(j-30).getID() 
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + flyingCarsInventory.get(j-30).getID() 
 							+ " clean!");
-							motorcyclesInventory.get(j-30).setCleanliness("Clean");
+							flyingCarsInventory.get(j-30).setCleanliness("Clean");
 							vehiclesWashed += 1;
 						}
 						// Successful wash to sparkling
 						if (result == "Sparkling"){
-							System.out.println(internStaff.get(i).getUniqueName() + " has made " + motorcyclesInventory.get(j-30).getID() 
-							+ " sparkling!($" + motorcyclesInventory.get(j-30).getWashBonus() + " bonus)");
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + flyingCarsInventory.get(j-30).getID() 
+							+ " sparkling!($" + flyingCarsInventory.get(j-30).getWashBonus() + " bonus)");
 
 							// Pay bonus to intern
-							internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + motorcyclesInventory.get(j-30).getWashBonus());
-							operatingBudget -= motorcyclesInventory.get(j-30).getWashBonus();
-							motorcyclesInventory.get(j-30).setCleanliness("Sparkling");
+							internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + flyingCarsInventory.get(j-30).getWashBonus());
+							operatingBudget -= flyingCarsInventory.get(j-30).getWashBonus();
+							flyingCarsInventory.get(j-30).setCleanliness("Sparkling");
 							vehiclesWashed += 1;
 						}
 						if (result == "Broken"){
-							System.out.println(internStaff.get(i).getUniqueName() + " has made " + motorcyclesInventory.get(j-30).getID() 
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + flyingCarsInventory.get(j-30).getID() 
 							+ " Broken");
-							motorcyclesInventory.get(j-30).setCondition("Broken");
+							flyingCarsInventory.get(j-30).setCondition("Broken");
+						}
+					}
+				}
+				// Iterate through boats inventory
+				else if (j >= 36 && j < 42){
+					if (boatsInventory.get(j-36).getCleanliness() == "Dirty"){
+						String result = internStaff.get(i).getWashMethod().washCar("Dirty");
+						// Successful wash to clean
+						if (result == "Clean"){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + boatsInventory.get(j-36).getID() 
+							+ " clean!");
+							boatsInventory.get(j-36).setCleanliness("Clean");
+							vehiclesWashed += 1;
+						}
+						// Successful wash to sparkling
+						if (result == "Sparkling"){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + boatsInventory.get(j-36).getID() 
+							+ " sparkling!($" + boatsInventory.get(j-36).getWashBonus() + " bonus)");
+
+							// Pay bonus to intern
+							internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + boatsInventory.get(j-36).getWashBonus());
+							operatingBudget -= boatsInventory.get(j-36).getWashBonus();
+							boatsInventory.get(j-36).setCleanliness("Sparkling");
+							vehiclesWashed += 1;
+						}
+						if (result == "Broken"){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + boatsInventory.get(j-36).getID() 
+							+ " Broken");
+							boatsInventory.get(j-36).setCondition("Broken");
+						}
+					}
+				}
+				// Iterate through spaceship inventory
+				else if (j >= 42 && j < 48){
+					if (spaceshipsInventory.get(j-42).getCleanliness() == "Dirty"){
+						String result = internStaff.get(i).getWashMethod().washCar("Dirty");
+						// Successful wash to clean
+						if (result == "Clean"){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + spaceshipsInventory.get(j-42).getID() 
+							+ " clean!");
+							spaceshipsInventory.get(j-42).setCleanliness("Clean");
+							vehiclesWashed += 1;
+						}
+						// Successful wash to sparkling
+						if (result == "Sparkling"){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + spaceshipsInventory.get(j-42).getID() 
+							+ " sparkling!($" + spaceshipsInventory.get(j-42).getWashBonus() + " bonus)");
+
+							// Pay bonus to intern
+							internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + spaceshipsInventory.get(j-42).getWashBonus());
+							operatingBudget -= spaceshipsInventory.get(j-42).getWashBonus();
+							spaceshipsInventory.get(j-42).setCleanliness("Sparkling");
+							vehiclesWashed += 1;
+						}
+						if (result == "Broken"){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + spaceshipsInventory.get(j-42).getID() 
+							+ " Broken");
+							spaceshipsInventory.get(j-42).setCondition("Broken");
+						}
+					}
+				}
+				// Iterate through motorcycles inventory
+				else if (j >= 48 && j < 54){
+					if (motorcyclesInventory.get(j-48).getCleanliness() == "Dirty"){
+						String result = internStaff.get(i).getWashMethod().washCar("Dirty");
+						// Successful wash to clean
+						if (result == "Clean"){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + motorcyclesInventory.get(j-48).getID() 
+							+ " clean!");
+							motorcyclesInventory.get(j-48).setCleanliness("Clean");
+							vehiclesWashed += 1;
+						}
+						// Successful wash to sparkling
+						if (result == "Sparkling"){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + motorcyclesInventory.get(j-48).getID() 
+							+ " sparkling!($" + motorcyclesInventory.get(j-48).getWashBonus() + " bonus)");
+
+							// Pay bonus to intern
+							internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + motorcyclesInventory.get(j-48).getWashBonus());
+							operatingBudget -= motorcyclesInventory.get(j-48).getWashBonus();
+							motorcyclesInventory.get(j-48).setCleanliness("Sparkling");
+							vehiclesWashed += 1;
+						}
+						if (result == "Broken"){
+							System.out.println(internStaff.get(i).getUniqueName() + " has made " + motorcyclesInventory.get(j-48).getID() 
+							+ " Broken");
+							motorcyclesInventory.get(j-48).setCondition("Broken");
 						}
 					}
 				}
@@ -898,7 +1193,7 @@ public class FNCD {
 
 			// If there are no more clean cars
 			if (vehiclesWashed < 2){
-				for (int j = 0; j < 36; j++){
+				for (int j = 0; j < 54; j++){
 					// check if reached limit
 					if (vehiclesWashed == 2){
 						break;
@@ -1044,7 +1339,7 @@ public class FNCD {
 						}
 					}
 					// Iterate through motorcycles inventory
-					else {
+					else if (j >= 30 && j < 36){
 						if (motorcyclesInventory.get(j-30).getCleanliness() == "Clean"){
 							String result = internStaff.get(i).getWashMethod().washCar("Clean");
 							// Unsuccessful wash to dirty
@@ -1070,6 +1365,87 @@ public class FNCD {
 							}
 						}
 					}
+					// Iterate through flying car inventory
+					else if (j >= 36 && j < 42){
+						if (flyingCarsInventory.get(j-36).getCleanliness() == "Clean"){
+							String result = internStaff.get(i).getWashMethod().washCar("Clean");
+							// Unsuccessful wash to dirty
+							if (result == "Dirty"){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + flyingCarsInventory.get(j-36).getID() + " dirty!");
+								flyingCarsInventory.get(j-36).setCleanliness("Dirty");
+								vehiclesWashed += 1;
+							}
+							// Successful wash to sparkling
+							if (result == "Sparkling"){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + flyingCarsInventory.get(j-36).getID() 
+								+ " sparkling!($" + flyingCarsInventory.get(j-36).getWashBonus() + " bonus)");
+
+								// pay intern bonus
+								internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + flyingCarsInventory.get(j-36).getWashBonus());
+								flyingCarsInventory.get(j-36).setCleanliness("Sparkling");
+								vehiclesWashed += 1;
+							}
+							if (result == "Broken"){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + flyingCarsInventory.get(j-36).getID() 
+								+ " Broken");
+								flyingCarsInventory.get(j-36).setCondition("Broken");
+							}
+						}
+					}
+					// Iterate through boat inventory
+					else if (j >= 42 && j < 48){
+						if (boatsInventory.get(j-42).getCleanliness() == "Clean"){
+							String result = internStaff.get(i).getWashMethod().washCar("Clean");
+							// Unsuccessful wash to dirty
+							if (result == "Dirty"){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + boatsInventory.get(j-42).getID() + " dirty!");
+								boatsInventory.get(j-42).setCleanliness("Dirty");
+								vehiclesWashed += 1;
+							}
+							// Successful wash to sparkling
+							if (result == "Sparkling"){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + boatsInventory.get(j-42).getID() 
+								+ " sparkling!($" + boatsInventory.get(j-42).getWashBonus() + " bonus)");
+
+								// pay intern bonus
+								internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + boatsInventory.get(j-42).getWashBonus());
+								boatsInventory.get(j-42).setCleanliness("Sparkling");
+								vehiclesWashed += 1;
+							}
+							if (result == "Broken"){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + boatsInventory.get(j-42).getID() 
+								+ " Broken");
+								boatsInventory.get(j-42).setCondition("Broken");
+							}
+						}
+					}
+					// Iterate through spaceship inventory
+					else if (j >= 48 && j < 54){
+						if (spaceshipsInventory.get(j-48).getCleanliness() == "Clean"){
+							String result = internStaff.get(i).getWashMethod().washCar("Clean");
+							// Unsuccessful wash to dirty
+							if (result == "Dirty"){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + spaceshipsInventory.get(j-48).getID() + " dirty!");
+								spaceshipsInventory.get(j-48).setCleanliness("Dirty");
+								vehiclesWashed += 1;
+							}
+							// Successful wash to sparkling
+							if (result == "Sparkling"){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + spaceshipsInventory.get(j-48).getID() 
+								+ " sparkling!($" + spaceshipsInventory.get(j-48).getWashBonus() + " bonus)");
+
+								// pay intern bonus
+								internStaff.get(i).setBonusPay(internStaff.get(i).getBonusPay() + spaceshipsInventory.get(j-48).getWashBonus());
+								spaceshipsInventory.get(j-48).setCleanliness("Sparkling");
+								vehiclesWashed += 1;
+							}
+							if (result == "Broken"){
+								System.out.println(internStaff.get(i).getUniqueName() + " has made " + spaceshipsInventory.get(j-48).getID() 
+								+ " Broken");
+								spaceshipsInventory.get(j-48).setCondition("Broken");
+							}
+						}
+					}
 				} 
 			}
 		}
@@ -1090,7 +1466,7 @@ public class FNCD {
 
 			// Iterate through all three vehicle inventories
 			// Looking for Broken vehicles
-			for (int j = 0; j < 36; j++){
+			for (int j = 0; j < 54; j++){
 				// Check to see if repair limit is reached
 				if (vehiclesFixed == 2){
 					break;
@@ -1312,13 +1688,121 @@ public class FNCD {
 						vehiclesFixed += 1;
 					}
 				}
+				// Iterate through flying car
+				else if (j >= 36 && j < 42){
+					if (flyingCarsInventory.get(j-36).getCondition() == "Broken"){
+						int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+						// Successful repair
+						if (repairRoll <= 80){
+							System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Broken car " + flyingCarsInventory.get(j-36).getID() 
+							+ " and made it Used!($" + flyingCarsInventory.get(j-36).getRepairBonus() + " bonus)");
+
+							// Set condition to Used
+							flyingCarsInventory.get(j-36).setCondition("Used");
+							// Pay mechanic bonus
+							mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + flyingCarsInventory.get(j-36).getRepairBonus());
+							
+							// Adjust cleanliness level
+							if (flyingCarsInventory.get(j-36).getCleanliness() == "Sparkling"){
+								flyingCarsInventory.get(j-36).setCleanliness("Clean");
+							}
+							else if (flyingCarsInventory.get(j-36).getCleanliness() == "Clean"){
+								flyingCarsInventory.get(j-36).setCleanliness("Dirty");
+							}
+						}
+						// Unsuccessful repair
+						else {
+							// Adjust cleanliness level
+							if (flyingCarsInventory.get(j-36).getCleanliness() == "Sparkling"){
+								flyingCarsInventory.get(j-36).setCleanliness("Clean");
+							}
+							else if (flyingCarsInventory.get(j-36).getCleanliness() == "Clean"){
+								flyingCarsInventory.get(j-36).setCleanliness("Dirty");
+							}
+						}
+						vehiclesFixed += 1;
+					}
+				}
+				// Iterate through boats
+				else if (j >= 42 && j < 48){
+					if (boatsInventory.get(j-42).getCondition() == "Broken"){
+						int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+						// Successful repair
+						if (repairRoll <= 80){
+							System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Broken car " + boatsInventory.get(j-42).getID() 
+							+ " and made it Used!($" + boatsInventory.get(j-42).getRepairBonus() + " bonus)");
+
+							// Set condition to Used
+							boatsInventory.get(j-42).setCondition("Used");
+							// Pay mechanic bonus
+							mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + boatsInventory.get(j-42).getRepairBonus());
+							
+							// Adjust cleanliness level
+							if (boatsInventory.get(j-42).getCleanliness() == "Sparkling"){
+								boatsInventory.get(j-42).setCleanliness("Clean");
+							}
+							else if (boatsInventory.get(j-42).getCleanliness() == "Clean"){
+								boatsInventory.get(j-42).setCleanliness("Dirty");
+							}
+						}
+						// Unsuccessful repair
+						else {
+							// Adjust cleanliness level
+							if (boatsInventory.get(j-42).getCleanliness() == "Sparkling"){
+								boatsInventory.get(j-42).setCleanliness("Clean");
+							}
+							else if (boatsInventory.get(j-42).getCleanliness() == "Clean"){
+								boatsInventory.get(j-42).setCleanliness("Dirty");
+							}
+						}
+						vehiclesFixed += 1;
+					}
+				}
+				// Iterate through spaceships
+				else if (j >= 48 && j < 54){
+					if (spaceshipsInventory.get(j-48).getCondition() == "Broken"){
+						int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+						// Successful repair
+						if (repairRoll <= 80){
+							System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Broken car " + spaceshipsInventory.get(j-48).getID() 
+							+ " and made it Used!($" + spaceshipsInventory.get(j-48).getRepairBonus() + " bonus)");
+
+							// Set condition to Used
+							spaceshipsInventory.get(j-48).setCondition("Used");
+							// Pay mechanic bonus
+							mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + spaceshipsInventory.get(j-48).getRepairBonus());
+							
+							// Adjust cleanliness level
+							if (spaceshipsInventory.get(j-48).getCleanliness() == "Sparkling"){
+								spaceshipsInventory.get(j-48).setCleanliness("Clean");
+							}
+							else if (spaceshipsInventory.get(j-48).getCleanliness() == "Clean"){
+								spaceshipsInventory.get(j-48).setCleanliness("Dirty");
+							}
+						}
+						// Unsuccessful repair
+						else {
+							// Adjust cleanliness level
+							if (spaceshipsInventory.get(j-48).getCleanliness() == "Sparkling"){
+								spaceshipsInventory.get(j-48).setCleanliness("Clean");
+							}
+							else if (spaceshipsInventory.get(j-48).getCleanliness() == "Clean"){
+								spaceshipsInventory.get(j-48).setCleanliness("Dirty");
+							}
+						}
+						vehiclesFixed += 1;
+					}
+				}
 			}
 
 			// Check if limit has been reached
 			if (vehiclesFixed < 2){
 				// Iterate through all vehicle inventories
 				// Looking for Used vehicles
-				for (int j = 0; j < 36; j++){
+				for (int j = 0; j < 54; j++){
 					// Iterate through performanceCar inventory
 					if (j < 6){
 						if (performanceCarInventory.get(j).getCondition() == "Used"){
@@ -1535,6 +2019,114 @@ public class FNCD {
 							vehiclesFixed += 1;
 						}
 					}
+					// Iterate through flying cars
+					else if (j >= 36 && j < 42){
+						if (flyingCarsInventory.get(j-36).getCondition() == "Used"){
+							int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+	
+							// Successful repair
+							if (repairRoll <= 80){
+								System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Used car " + flyingCarsInventory.get(j-36).getID() 
+								+ " and made it Like New!($" + flyingCarsInventory.get(j-36).getRepairBonus() + " bonus)");
+	
+								// Set condition to Like New
+								flyingCarsInventory.get(j-36).setCondition("Like New");
+								// Pay mechanic bonus
+								mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + flyingCarsInventory.get(j-36).getRepairBonus());
+								
+								// Adjust cleanliness level
+								if (flyingCarsInventory.get(j-36).getCleanliness() == "Sparkling"){
+									flyingCarsInventory.get(j-36).setCleanliness("Clean");
+								}
+								else if (flyingCarsInventory.get(j-36).getCleanliness() == "Clean"){
+									flyingCarsInventory.get(j-36).setCleanliness("Dirty");
+								}
+							}
+							// Unsuccessful repair
+							else {
+								// Adjust cleanliness level
+								if (flyingCarsInventory.get(j-36).getCleanliness() == "Sparkling"){
+									flyingCarsInventory.get(j-36).setCleanliness("Clean");
+								}
+								else if (flyingCarsInventory.get(j-36).getCleanliness() == "Clean"){
+									flyingCarsInventory.get(j-36).setCleanliness("Dirty");
+								}
+							}
+							vehiclesFixed += 1;
+						}
+					}
+					// Iterate through boats
+					else if (j >= 42 && j < 48){
+						if (boatsInventory.get(j-42).getCondition() == "Used"){
+							int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+	
+							// Successful repair
+							if (repairRoll <= 80){
+								System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Used car " + boatsInventory.get(j-42).getID() 
+								+ " and made it Like New!($" + boatsInventory.get(j-42).getRepairBonus() + " bonus)");
+	
+								// Set condition to Like New
+								boatsInventory.get(j-42).setCondition("Like New");
+								// Pay mechanic bonus
+								mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + boatsInventory.get(j-42).getRepairBonus());
+								
+								// Adjust cleanliness level
+								if (boatsInventory.get(j-42).getCleanliness() == "Sparkling"){
+									boatsInventory.get(j-42).setCleanliness("Clean");
+								}
+								else if (boatsInventory.get(j-42).getCleanliness() == "Clean"){
+									boatsInventory.get(j-42).setCleanliness("Dirty");
+								}
+							}
+							// Unsuccessful repair
+							else {
+								// Adjust cleanliness level
+								if (boatsInventory.get(j-42).getCleanliness() == "Sparkling"){
+									boatsInventory.get(j-42).setCleanliness("Clean");
+								}
+								else if (boatsInventory.get(j-42).getCleanliness() == "Clean"){
+									boatsInventory.get(j-42).setCleanliness("Dirty");
+								}
+							}
+							vehiclesFixed += 1;
+						}
+					}
+					// Iterate through spaceships
+					else if (j >= 48 && j < 54){
+						if (spaceshipsInventory.get(j-48).getCondition() == "Used"){
+							int repairRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+	
+							// Successful repair
+							if (repairRoll <= 80){
+								System.out.println(mechanicStaff.get(i).getUniqueName() + " has repaired Used car " + spaceshipsInventory.get(j-48).getID() 
+								+ " and made it Like New!($" + spaceshipsInventory.get(j-48).getRepairBonus() + " bonus)");
+	
+								// Set condition to Like New
+								spaceshipsInventory.get(j-48).setCondition("Like New");
+								// Pay mechanic bonus
+								mechanicStaff.get(i).setBonusPay(mechanicStaff.get(i).getBonusPay() + spaceshipsInventory.get(j-48).getRepairBonus());
+								
+								// Adjust cleanliness level
+								if (spaceshipsInventory.get(j-48).getCleanliness() == "Sparkling"){
+									spaceshipsInventory.get(j-48).setCleanliness("Clean");
+								}
+								else if (spaceshipsInventory.get(j-48).getCleanliness() == "Clean"){
+									spaceshipsInventory.get(j-48).setCleanliness("Dirty");
+								}
+							}
+							// Unsuccessful repair
+							else {
+								// Adjust cleanliness level
+								if (spaceshipsInventory.get(j-48).getCleanliness() == "Sparkling"){
+									spaceshipsInventory.get(j-48).setCleanliness("Clean");
+								}
+								else if (spaceshipsInventory.get(j-48).getCleanliness() == "Clean"){
+									spaceshipsInventory.get(j-48).setCleanliness("Dirty");
+								}
+							}
+							vehiclesFixed += 1;
+						}
+					}
 				}
 			}
 		}
@@ -1676,6 +2268,33 @@ public class FNCD {
 							maxPrice = motorcyclesInventory.get(j).getSalesPrice();
 							maxPriceIndex = j;
 							maxPriceType = "Motorcycles";
+						}
+					}
+					
+					// Find most expensive flying car
+					for (int j = 0; j < flyingCarsInventory.size(); j++){
+						if (maxPrice < flyingCarsInventory.get(j).getSalesPrice() && flyingCarsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = flyingCarsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "FlyingCars";
+						}
+					}
+					
+					// Find most expensive boat
+					for (int j = 0; j < boatsInventory.size(); j++){
+						if (maxPrice < boatsInventory.get(j).getSalesPrice() && boatsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = boatsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Boats";
+						}
+					}
+					
+					// Find most expensive spaceship
+					for (int j = 0; j < spaceshipsInventory.size(); j++){
+						if (maxPrice < spaceshipsInventory.get(j).getSalesPrice() && spaceshipsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = spaceshipsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Spaceships";
 						}
 					}
 
@@ -1943,6 +2562,165 @@ public class FNCD {
 							motorcyclesInventory.remove(maxPriceIndex);
 						}
 					}
+					// flying cars is most expensive
+					else if (maxPriceType == "FlyingCars"){
+						// Adjust sales chance
+						if (flyingCarsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (flyingCarsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ flyingCarsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ flyingCarsInventory.get(maxPriceIndex).getCondition() + " " + flyingCarsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + flyingCarsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = flyingCarsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							FlyingCars withUpgrades = flyingCarsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							flyingCarsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + flyingCarsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ flyingCarsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += flyingCarsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += flyingCarsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = flyingCarsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(flyingCarsInventory.get(maxPriceIndex));
+							flyingCarsInventory.remove(maxPriceIndex);
+						}
+					}
+					// boats is most expensive
+					else if (maxPriceType == "Boats"){
+						// Adjust sales chance
+						if (boatsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (boatsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ boatsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ boatsInventory.get(maxPriceIndex).getCondition() + " " + boatsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + boatsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = boatsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Boats withUpgrades = boatsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							boatsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + boatsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ boatsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += boatsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += boatsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = boatsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(boatsInventory.get(maxPriceIndex));
+							boatsInventory.remove(maxPriceIndex);
+						}
+					}
+					// spaceships is most expensive
+					else if (maxPriceType == "Spaceships"){
+						// Adjust sales chance
+						if (spaceshipsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (spaceshipsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ spaceshipsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ spaceshipsInventory.get(maxPriceIndex).getCondition() + " " + spaceshipsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + spaceshipsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = spaceshipsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Spaceships withUpgrades = spaceshipsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							spaceshipsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + spaceshipsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ spaceshipsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += spaceshipsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += spaceshipsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = spaceshipsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(spaceshipsInventory.get(maxPriceIndex));
+							spaceshipsInventory.remove(maxPriceIndex);
+						}
+					}
 				}
 			}
 			// Pickups desired
@@ -2062,6 +2840,33 @@ public class FNCD {
 							maxPrice = motorcyclesInventory.get(j).getSalesPrice();
 							maxPriceIndex = j;
 							maxPriceType = "Motorcycles";
+						}
+					}
+					
+					// Find most expensive flying car
+					for (int j = 0; j < flyingCarsInventory.size(); j++){
+						if (maxPrice < flyingCarsInventory.get(j).getSalesPrice() && flyingCarsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = flyingCarsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "FlyingCars";
+						}
+					}
+					
+					// Find most expensive boat
+					for (int j = 0; j < boatsInventory.size(); j++){
+						if (maxPrice < boatsInventory.get(j).getSalesPrice() && boatsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = boatsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Boats";
+						}
+					}
+					
+					// Find most expensive spaceship
+					for (int j = 0; j < spaceshipsInventory.size(); j++){
+						if (maxPrice < spaceshipsInventory.get(j).getSalesPrice() && spaceshipsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = spaceshipsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Spaceships";
 						}
 					}
 
@@ -2332,6 +3137,165 @@ public class FNCD {
 							motorcyclesInventory.remove(maxPriceIndex);
 						}
 					}
+					// flying cars is most expensive
+					else if (maxPriceType == "FlyingCars"){
+						// Adjust sales chance
+						if (flyingCarsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (flyingCarsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ flyingCarsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ flyingCarsInventory.get(maxPriceIndex).getCondition() + " " + flyingCarsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + flyingCarsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = flyingCarsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							FlyingCars withUpgrades = flyingCarsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							flyingCarsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + flyingCarsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ flyingCarsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += flyingCarsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += flyingCarsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = flyingCarsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(flyingCarsInventory.get(maxPriceIndex));
+							flyingCarsInventory.remove(maxPriceIndex);
+						}
+					}
+					// boats is most expensive
+					else if (maxPriceType == "Boats"){
+						// Adjust sales chance
+						if (boatsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (boatsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ boatsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ boatsInventory.get(maxPriceIndex).getCondition() + " " + boatsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + boatsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = boatsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Boats withUpgrades = boatsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							boatsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + boatsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ boatsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += boatsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += boatsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = boatsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(boatsInventory.get(maxPriceIndex));
+							boatsInventory.remove(maxPriceIndex);
+						}
+					}
+					// spaceships is most expensive
+					else if (maxPriceType == "Spaceships"){
+						// Adjust sales chance
+						if (spaceshipsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (spaceshipsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ spaceshipsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ spaceshipsInventory.get(maxPriceIndex).getCondition() + " " + spaceshipsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + spaceshipsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = spaceshipsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Spaceships withUpgrades = spaceshipsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							spaceshipsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + spaceshipsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ spaceshipsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += spaceshipsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += spaceshipsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = spaceshipsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(spaceshipsInventory.get(maxPriceIndex));
+							spaceshipsInventory.remove(maxPriceIndex);
+						}
+					}
 				}
 			}
 
@@ -2454,6 +3418,33 @@ public class FNCD {
 							maxPriceType = "Motorcycles";
 						}
 					}
+					
+					// Find most expensive flying car
+					for (int j = 0; j < flyingCarsInventory.size(); j++){
+						if (maxPrice < flyingCarsInventory.get(j).getSalesPrice() && flyingCarsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = flyingCarsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "FlyingCars";
+						}
+					}
+					
+					// Find most expensive boat
+					for (int j = 0; j < boatsInventory.size(); j++){
+						if (maxPrice < boatsInventory.get(j).getSalesPrice() && boatsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = boatsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Boats";
+						}
+					}
+					
+					// Find most expensive spaceship
+					for (int j = 0; j < spaceshipsInventory.size(); j++){
+						if (maxPrice < spaceshipsInventory.get(j).getSalesPrice() && spaceshipsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = spaceshipsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Spaceships";
+						}
+					}
 
 					// Pickup is most expensive
 					if (maxPriceType == "Pickups"){
@@ -2721,6 +3712,165 @@ public class FNCD {
 
 							soldVehicles.add(motorcyclesInventory.get(maxPriceIndex));
 							motorcyclesInventory.remove(maxPriceIndex);
+						}
+					}
+					// flying cars is most expensive
+					else if (maxPriceType == "FlyingCars"){
+						// Adjust sales chance
+						if (flyingCarsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (flyingCarsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ flyingCarsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ flyingCarsInventory.get(maxPriceIndex).getCondition() + " " + flyingCarsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + flyingCarsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = flyingCarsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							FlyingCars withUpgrades = flyingCarsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							flyingCarsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + flyingCarsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ flyingCarsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += flyingCarsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += flyingCarsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = flyingCarsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(flyingCarsInventory.get(maxPriceIndex));
+							flyingCarsInventory.remove(maxPriceIndex);
+						}
+					}
+					// boats is most expensive
+					else if (maxPriceType == "Boats"){
+						// Adjust sales chance
+						if (boatsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (boatsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ boatsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ boatsInventory.get(maxPriceIndex).getCondition() + " " + boatsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + boatsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = boatsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Boats withUpgrades = boatsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							boatsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + boatsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ boatsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += boatsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += boatsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = boatsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(boatsInventory.get(maxPriceIndex));
+							boatsInventory.remove(maxPriceIndex);
+						}
+					}
+					// spaceships is most expensive
+					else if (maxPriceType == "Spaceships"){
+						// Adjust sales chance
+						if (spaceshipsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (spaceshipsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ spaceshipsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ spaceshipsInventory.get(maxPriceIndex).getCondition() + " " + spaceshipsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + spaceshipsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = spaceshipsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Spaceships withUpgrades = spaceshipsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							spaceshipsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + spaceshipsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ spaceshipsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += spaceshipsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += spaceshipsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = spaceshipsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(spaceshipsInventory.get(maxPriceIndex));
+							spaceshipsInventory.remove(maxPriceIndex);
 						}
 					}
 				}
@@ -2843,6 +3993,34 @@ public class FNCD {
 							maxPriceType = "Motorcycles";
 						}
 					}
+					
+					// Find most expensive flying car
+					for (int j = 0; j < flyingCarsInventory.size(); j++){
+						if (maxPrice < flyingCarsInventory.get(j).getSalesPrice() && flyingCarsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = flyingCarsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "FlyingCars";
+						}
+					}
+					
+					// Find most expensive boat
+					for (int j = 0; j < boatsInventory.size(); j++){
+						if (maxPrice < boatsInventory.get(j).getSalesPrice() && boatsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = boatsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Boats";
+						}
+					}
+					
+					// Find most expensive spaceship
+					for (int j = 0; j < spaceshipsInventory.size(); j++){
+						if (maxPrice < spaceshipsInventory.get(j).getSalesPrice() && spaceshipsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = spaceshipsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Spaceships";
+						}
+					}
+					
 					// Pickup is most expensive
 					if (maxPriceType == "Pickups"){
 						// Adjust sales chance
@@ -3112,6 +4290,165 @@ public class FNCD {
 							motorcyclesInventory.remove(maxPriceIndex);
 						}
 					}
+					// flying cars is most expensive
+					else if (maxPriceType == "FlyingCars"){
+						// Adjust sales chance
+						if (flyingCarsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (flyingCarsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ flyingCarsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ flyingCarsInventory.get(maxPriceIndex).getCondition() + " " + flyingCarsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + flyingCarsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = flyingCarsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							FlyingCars withUpgrades = flyingCarsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							flyingCarsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + flyingCarsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ flyingCarsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += flyingCarsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += flyingCarsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = flyingCarsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(flyingCarsInventory.get(maxPriceIndex));
+							flyingCarsInventory.remove(maxPriceIndex);
+						}
+					}
+					// boats is most expensive
+					else if (maxPriceType == "Boats"){
+						// Adjust sales chance
+						if (boatsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (boatsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ boatsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ boatsInventory.get(maxPriceIndex).getCondition() + " " + boatsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + boatsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = boatsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Boats withUpgrades = boatsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							boatsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + boatsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ boatsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += boatsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += boatsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = boatsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(boatsInventory.get(maxPriceIndex));
+							boatsInventory.remove(maxPriceIndex);
+						}
+					}
+					// spaceships is most expensive
+					else if (maxPriceType == "Spaceships"){
+						// Adjust sales chance
+						if (spaceshipsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (spaceshipsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ spaceshipsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ spaceshipsInventory.get(maxPriceIndex).getCondition() + " " + spaceshipsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + spaceshipsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = spaceshipsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Spaceships withUpgrades = spaceshipsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							spaceshipsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + spaceshipsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ spaceshipsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += spaceshipsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += spaceshipsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = spaceshipsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(spaceshipsInventory.get(maxPriceIndex));
+							spaceshipsInventory.remove(maxPriceIndex);
+						}
+					}
 				}
 			}
 			// buyer wants electric car
@@ -3232,6 +4569,34 @@ public class FNCD {
 							maxPriceType = "Motorcycles";
 						}
 					}
+					
+					// Find most expensive flying car
+					for (int j = 0; j < flyingCarsInventory.size(); j++){
+						if (maxPrice < flyingCarsInventory.get(j).getSalesPrice() && flyingCarsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = flyingCarsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "FlyingCars";
+						}
+					}
+					
+					// Find most expensive boat
+					for (int j = 0; j < boatsInventory.size(); j++){
+						if (maxPrice < boatsInventory.get(j).getSalesPrice() && boatsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = boatsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Boats";
+						}
+					}
+					
+					// Find most expensive spaceship
+					for (int j = 0; j < spaceshipsInventory.size(); j++){
+						if (maxPrice < spaceshipsInventory.get(j).getSalesPrice() && spaceshipsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = spaceshipsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Spaceships";
+						}
+					}
+					
 					// Pickup is most expensive
 					if (maxPriceType == "Pickups"){
 						// Adjust sales chance
@@ -3499,6 +4864,1892 @@ public class FNCD {
 
 							soldVehicles.add(motorcyclesInventory.get(maxPriceIndex));
 							motorcyclesInventory.remove(maxPriceIndex);
+						}
+					}
+					// flying cars is most expensive
+					else if (maxPriceType == "FlyingCars"){
+						// Adjust sales chance
+						if (flyingCarsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (flyingCarsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ flyingCarsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ flyingCarsInventory.get(maxPriceIndex).getCondition() + " " + flyingCarsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + flyingCarsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = flyingCarsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							FlyingCars withUpgrades = flyingCarsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							flyingCarsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + flyingCarsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ flyingCarsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += flyingCarsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += flyingCarsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = flyingCarsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(flyingCarsInventory.get(maxPriceIndex));
+							flyingCarsInventory.remove(maxPriceIndex);
+						}
+					}
+					// boats is most expensive
+					else if (maxPriceType == "Boats"){
+						// Adjust sales chance
+						if (boatsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (boatsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ boatsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ boatsInventory.get(maxPriceIndex).getCondition() + " " + boatsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + boatsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = boatsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Boats withUpgrades = boatsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							boatsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + boatsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ boatsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += boatsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += boatsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = boatsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(boatsInventory.get(maxPriceIndex));
+							boatsInventory.remove(maxPriceIndex);
+						}
+					}
+					// spaceships is most expensive
+					else if (maxPriceType == "Spaceships"){
+						// Adjust sales chance
+						if (spaceshipsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (spaceshipsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ spaceshipsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ spaceshipsInventory.get(maxPriceIndex).getCondition() + " " + spaceshipsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + spaceshipsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = spaceshipsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Spaceships withUpgrades = spaceshipsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							spaceshipsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + spaceshipsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ spaceshipsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += spaceshipsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += spaceshipsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = spaceshipsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(spaceshipsInventory.get(maxPriceIndex));
+							spaceshipsInventory.remove(maxPriceIndex);
+						}
+					}
+				}
+			}
+			// Buyer wants flying car
+			else if (buyers.get(i).getVehicleTypeWanted() == "FlyingCars") {
+				// In stock
+				if (flyingCarsInventory.size() != 0){
+					double maxPrice = 0.0;
+					int maxPriceIndex = -1;
+					int salesChance = buyers.get(i).getBuyChance();
+
+					// Find most expensive Car
+					for (int j = 0; j < flyingCarsInventory.size(); j++){
+						if (maxPrice < flyingCarsInventory.get(j).getSalesPrice() && flyingCarsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = flyingCarsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+						}
+					}
+
+					if (maxPriceIndex == -1){
+						break;
+					}
+
+					// Adjust sales chance
+					if (flyingCarsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+						salesChance += 10;
+					}
+					if (flyingCarsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+						salesChance += 10;
+					}
+					int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+					// Successful sales roll
+					if (sellRoll <= salesChance){
+						System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+						+ flyingCarsInventory.get(maxPriceIndex).getCleanliness() + " " 
+						+ flyingCarsInventory.get(maxPriceIndex).getCondition() + " " + flyingCarsInventory.get(maxPriceIndex).getID() 
+						+ " to Buyer for $" + flyingCarsInventory.get(maxPriceIndex).getSalesPrice());
+						int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						Vehicles upgrades = flyingCarsInventory.get(maxPriceIndex);
+						if (warrantyChance <= 25) {
+							System.out.println(" with extended warranty for 20% extra, ");
+							upgrades = new ExtendedWarranty(upgrades);
+						}
+						if (undercoatingChance <= 10) {
+							System.out.println(" with undercoating for 5% extra, ");
+							upgrades = new Undercoating(upgrades);
+						}
+						if (roadRescueChance <= 5) {
+							System.out.println(" with road rescue coverage for 2% extra, ");
+							upgrades = new RoadRescueCoverage(upgrades);
+						}
+						if (satelliteRadioChance <= 40) {
+							System.out.println(" with satellite radio for 5% extra, ");
+							upgrades = new SatelliteRadio(upgrades);
+						}
+						FlyingCars withUpgrades = flyingCarsInventory.get(maxPriceIndex);
+						withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+						flyingCarsInventory.set(maxPriceIndex, withUpgrades);
+						System.out.println(" for a total of: " + flyingCarsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+						+ flyingCarsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+						// Adjust operating budget/total sales/pay bonus
+						operatingBudget += flyingCarsInventory.get(maxPriceIndex).getSalesPrice();
+						totalSales += flyingCarsInventory.get(maxPriceIndex).getSalesPrice();
+						double bonus = flyingCarsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+						salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+						soldVehicles.add(flyingCarsInventory.get(maxPriceIndex));
+						flyingCarsInventory.remove(maxPriceIndex);
+					}
+				}
+				// Not in stock
+				else {
+					double maxPrice = 0.0;
+					int maxPriceIndex = -1;
+					int salesChance = buyers.get(i).getBuyChance() - 20;
+					String maxPriceType = "";
+
+					// Find most expensive pickup
+					for (int j = 0; j < pickupsInventory.size(); j++){
+						if (maxPrice < pickupsInventory.get(j).getSalesPrice() && pickupsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = pickupsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Pickups";
+						}
+					}
+					// Find most expensive performanceCar
+					for (int j = 0; j < performanceCarInventory.size(); j++){
+						if (maxPrice < performanceCarInventory.get(j).getSalesPrice() && performanceCarInventory.get(j).getCondition() != "Broken"){
+							maxPrice = performanceCarInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "PerformanceCars";
+						}
+					}
+					// Find most expensive monster truck
+					for (int j = 0; j < monsterTrucksInventory.size(); j++){
+						if (maxPrice < monsterTrucksInventory.get(j).getSalesPrice() && monsterTrucksInventory.get(j).getCondition() != "Broken"){
+							maxPrice = monsterTrucksInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "MonsterTrucks";
+						}
+					}
+					// Find most expensive car
+					for (int j = 0; j < carsInventory.size(); j++){
+						if (maxPrice < carsInventory.get(j).getSalesPrice() && carsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = carsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Cars";
+						}
+					}
+					// Find most expensive motorcycle
+					for (int j = 0; j < motorcyclesInventory.size(); j++){
+						if (maxPrice < motorcyclesInventory.get(j).getSalesPrice() && motorcyclesInventory.get(j).getCondition() != "Broken"){
+							maxPrice = motorcyclesInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Motorcycles";
+						}
+					}
+					
+					// Find most expensive electric car
+					for (int j = 0; j < electricCarsInventory.size(); j++){
+						if (maxPrice < electricCarsInventory.get(j).getSalesPrice() && electricCarsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = electricCarsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "ElectricCars";
+						}
+					}
+					
+					// Find most expensive boat
+					for (int j = 0; j < boatsInventory.size(); j++){
+						if (maxPrice < boatsInventory.get(j).getSalesPrice() && boatsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = boatsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Boats";
+						}
+					}
+					
+					// Find most expensive spaceship
+					for (int j = 0; j < spaceshipsInventory.size(); j++){
+						if (maxPrice < spaceshipsInventory.get(j).getSalesPrice() && spaceshipsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = spaceshipsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Spaceships";
+						}
+					}
+					
+					// Pickup is most expensive
+					if (maxPriceType == "Pickups"){
+						// Adjust sales chance
+						if (pickupsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (pickupsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ pickupsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ pickupsInventory.get(maxPriceIndex).getCondition() + " " + pickupsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + pickupsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = pickupsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Pickups withUpgrades = pickupsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							pickupsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + pickupsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ pickupsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += pickupsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += pickupsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = pickupsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(pickupsInventory.get(maxPriceIndex));
+							pickupsInventory.remove(maxPriceIndex);
+						}
+					}
+					// PerformanceCar most expensive
+					else if (maxPriceType == "PerformanceCars"){
+
+						// Adjust sales chance
+						if (performanceCarInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (performanceCarInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ performanceCarInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ performanceCarInventory.get(maxPriceIndex).getCondition() + " " + performanceCarInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + performanceCarInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = performanceCarInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							PerformanceCars withUpgrades = performanceCarInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							performanceCarInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + performanceCarInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ performanceCarInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += performanceCarInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += performanceCarInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = performanceCarInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(performanceCarInventory.get(maxPriceIndex));
+							performanceCarInventory.remove(maxPriceIndex);
+						}
+					}
+					// Cars is most expensive
+					else if (maxPriceType == "Cars"){
+						// Adjust sales chance
+						if (carsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (carsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ carsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ carsInventory.get(maxPriceIndex).getCondition() + " " + carsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + carsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = carsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Cars withUpgrades = carsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							carsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + carsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ carsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += carsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += carsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = carsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(carsInventory.get(maxPriceIndex));
+							carsInventory.remove(maxPriceIndex);
+						}
+					}
+					// Monster truck is most expensive
+					else if (maxPriceType == "MonsterTrucks"){
+						// Adjust sales chance
+						if (monsterTrucksInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (monsterTrucksInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ monsterTrucksInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ monsterTrucksInventory.get(maxPriceIndex).getCondition() + " " + monsterTrucksInventory.get(maxPriceIndex).getStageName() 
+							+ " to Buyer for $" + monsterTrucksInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = monsterTrucksInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							MonsterTrucks withUpgrades = monsterTrucksInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							monsterTrucksInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + monsterTrucksInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ monsterTrucksInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += monsterTrucksInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += monsterTrucksInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = monsterTrucksInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(monsterTrucksInventory.get(maxPriceIndex));
+							monsterTrucksInventory.remove(maxPriceIndex);
+						}
+					}
+					// motorcycles is most expensive
+					else if (maxPriceType == "Motorcycles"){
+						// Adjust sales chance
+						if (motorcyclesInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (motorcyclesInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ motorcyclesInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ motorcyclesInventory.get(maxPriceIndex).getCondition() + " " + motorcyclesInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + motorcyclesInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = motorcyclesInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Motorcycles withUpgrades = motorcyclesInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							motorcyclesInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + motorcyclesInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ motorcyclesInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += motorcyclesInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += motorcyclesInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = motorcyclesInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(motorcyclesInventory.get(maxPriceIndex));
+							motorcyclesInventory.remove(maxPriceIndex);
+						}
+					}
+					// boats is most expensive
+					else if (maxPriceType == "Boats"){
+						// Adjust sales chance
+						if (boatsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (boatsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ boatsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ boatsInventory.get(maxPriceIndex).getCondition() + " " + boatsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + boatsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = boatsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Boats withUpgrades = boatsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							boatsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + boatsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ boatsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += boatsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += boatsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = boatsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(boatsInventory.get(maxPriceIndex));
+							boatsInventory.remove(maxPriceIndex);
+						}
+					}
+					// electric cars is most expensive
+					else if (maxPriceType == "ElectricCars"){
+						// Adjust sales chance
+						if (electricCarsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (electricCarsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ electricCarsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ electricCarsInventory.get(maxPriceIndex).getCondition() + " " + electricCarsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + electricCarsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = electricCarsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							ElectricCars withUpgrades = electricCarsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							electricCarsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + electricCarsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ electricCarsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += electricCarsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += electricCarsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = electricCarsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(electricCarsInventory.get(maxPriceIndex));
+							electricCarsInventory.remove(maxPriceIndex);
+						}
+					}
+					// spaceships is most expensive
+					else if (maxPriceType == "Spaceships"){
+						// Adjust sales chance
+						if (spaceshipsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (spaceshipsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ spaceshipsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ spaceshipsInventory.get(maxPriceIndex).getCondition() + " " + spaceshipsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + spaceshipsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = spaceshipsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Spaceships withUpgrades = spaceshipsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							spaceshipsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + spaceshipsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ spaceshipsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += spaceshipsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += spaceshipsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = spaceshipsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(spaceshipsInventory.get(maxPriceIndex));
+							spaceshipsInventory.remove(maxPriceIndex);
+						}
+					}
+				}
+			}
+			// Buyer wants spaceship
+			else if (buyers.get(i).getVehicleTypeWanted() == "Spaceships") {
+				// In stock
+				if (spaceshipsInventory.size() != 0){
+					double maxPrice = 0.0;
+					int maxPriceIndex = -1;
+					int salesChance = buyers.get(i).getBuyChance();
+
+					// Find most expensive Car
+					for (int j = 0; j < spaceshipsInventory.size(); j++){
+						if (maxPrice < spaceshipsInventory.get(j).getSalesPrice() && spaceshipsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = spaceshipsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+						}
+					}
+
+					if (maxPriceIndex == -1){
+						break;
+					}
+
+					// Adjust sales chance
+					if (spaceshipsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+						salesChance += 10;
+					}
+					if (spaceshipsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+						salesChance += 10;
+					}
+					int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+					// Successful sales roll
+					if (sellRoll <= salesChance){
+						System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+						+ spaceshipsInventory.get(maxPriceIndex).getCleanliness() + " " 
+						+ spaceshipsInventory.get(maxPriceIndex).getCondition() + " " + spaceshipsInventory.get(maxPriceIndex).getID() 
+						+ " to Buyer for $" + spaceshipsInventory.get(maxPriceIndex).getSalesPrice());
+						int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						Vehicles upgrades = spaceshipsInventory.get(maxPriceIndex);
+						if (warrantyChance <= 25) {
+							System.out.println(" with extended warranty for 20% extra, ");
+							upgrades = new ExtendedWarranty(upgrades);
+						}
+						if (undercoatingChance <= 10) {
+							System.out.println(" with undercoating for 5% extra, ");
+							upgrades = new Undercoating(upgrades);
+						}
+						if (roadRescueChance <= 5) {
+							System.out.println(" with road rescue coverage for 2% extra, ");
+							upgrades = new RoadRescueCoverage(upgrades);
+						}
+						if (satelliteRadioChance <= 40) {
+							System.out.println(" with satellite radio for 5% extra, ");
+							upgrades = new SatelliteRadio(upgrades);
+						}
+						Spaceships withUpgrades = spaceshipsInventory.get(maxPriceIndex);
+						withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+						spaceshipsInventory.set(maxPriceIndex, withUpgrades);
+						System.out.println(" for a total of: " + spaceshipsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+						+ spaceshipsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+						// Adjust operating budget/total sales/pay bonus
+						operatingBudget += spaceshipsInventory.get(maxPriceIndex).getSalesPrice();
+						totalSales += spaceshipsInventory.get(maxPriceIndex).getSalesPrice();
+						double bonus = spaceshipsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+						salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+						soldVehicles.add(spaceshipsInventory.get(maxPriceIndex));
+						spaceshipsInventory.remove(maxPriceIndex);
+					}
+				}
+				// Not in stock
+				else {
+					double maxPrice = 0.0;
+					int maxPriceIndex = -1;
+					int salesChance = buyers.get(i).getBuyChance() - 20;
+					String maxPriceType = "";
+
+					// Find most expensive pickup
+					for (int j = 0; j < pickupsInventory.size(); j++){
+						if (maxPrice < pickupsInventory.get(j).getSalesPrice() && pickupsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = pickupsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Pickups";
+						}
+					}
+					// Find most expensive performanceCar
+					for (int j = 0; j < performanceCarInventory.size(); j++){
+						if (maxPrice < performanceCarInventory.get(j).getSalesPrice() && performanceCarInventory.get(j).getCondition() != "Broken"){
+							maxPrice = performanceCarInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "PerformanceCars";
+						}
+					}
+					// Find most expensive monster truck
+					for (int j = 0; j < monsterTrucksInventory.size(); j++){
+						if (maxPrice < monsterTrucksInventory.get(j).getSalesPrice() && monsterTrucksInventory.get(j).getCondition() != "Broken"){
+							maxPrice = monsterTrucksInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "MonsterTrucks";
+						}
+					}
+					// Find most expensive car
+					for (int j = 0; j < carsInventory.size(); j++){
+						if (maxPrice < carsInventory.get(j).getSalesPrice() && carsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = carsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Cars";
+						}
+					}
+					// Find most expensive motorcycle
+					for (int j = 0; j < motorcyclesInventory.size(); j++){
+						if (maxPrice < motorcyclesInventory.get(j).getSalesPrice() && motorcyclesInventory.get(j).getCondition() != "Broken"){
+							maxPrice = motorcyclesInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Motorcycles";
+						}
+					}
+					
+					// Find most expensive electric car
+					for (int j = 0; j < electricCarsInventory.size(); j++){
+						if (maxPrice < electricCarsInventory.get(j).getSalesPrice() && electricCarsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = electricCarsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "ElectricCars";
+						}
+					}
+					
+					// Find most expensive boat
+					for (int j = 0; j < boatsInventory.size(); j++){
+						if (maxPrice < boatsInventory.get(j).getSalesPrice() && boatsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = boatsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Boats";
+						}
+					}
+					
+					// Find most expensive flying car
+					for (int j = 0; j < flyingCarsInventory.size(); j++){
+						if (maxPrice < flyingCarsInventory.get(j).getSalesPrice() && flyingCarsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = flyingCarsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "FlyingCars";
+						}
+					}
+					
+					// Pickup is most expensive
+					if (maxPriceType == "Pickups"){
+						// Adjust sales chance
+						if (pickupsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (pickupsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ pickupsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ pickupsInventory.get(maxPriceIndex).getCondition() + " " + pickupsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + pickupsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = pickupsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Pickups withUpgrades = pickupsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							pickupsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + pickupsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ pickupsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += pickupsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += pickupsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = pickupsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(pickupsInventory.get(maxPriceIndex));
+							pickupsInventory.remove(maxPriceIndex);
+						}
+					}
+					// PerformanceCar most expensive
+					else if (maxPriceType == "PerformanceCars"){
+
+						// Adjust sales chance
+						if (performanceCarInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (performanceCarInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ performanceCarInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ performanceCarInventory.get(maxPriceIndex).getCondition() + " " + performanceCarInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + performanceCarInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = performanceCarInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							PerformanceCars withUpgrades = performanceCarInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							performanceCarInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + performanceCarInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ performanceCarInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += performanceCarInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += performanceCarInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = performanceCarInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(performanceCarInventory.get(maxPriceIndex));
+							performanceCarInventory.remove(maxPriceIndex);
+						}
+					}
+					// Cars is most expensive
+					else if (maxPriceType == "Cars"){
+						// Adjust sales chance
+						if (carsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (carsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ carsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ carsInventory.get(maxPriceIndex).getCondition() + " " + carsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + carsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = carsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Cars withUpgrades = carsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							carsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + carsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ carsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += carsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += carsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = carsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(carsInventory.get(maxPriceIndex));
+							carsInventory.remove(maxPriceIndex);
+						}
+					}
+					// Monster truck is most expensive
+					else if (maxPriceType == "MonsterTrucks"){
+						// Adjust sales chance
+						if (monsterTrucksInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (monsterTrucksInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ monsterTrucksInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ monsterTrucksInventory.get(maxPriceIndex).getCondition() + " " + monsterTrucksInventory.get(maxPriceIndex).getStageName() 
+							+ " to Buyer for $" + monsterTrucksInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = monsterTrucksInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							MonsterTrucks withUpgrades = monsterTrucksInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							monsterTrucksInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + monsterTrucksInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ monsterTrucksInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += monsterTrucksInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += monsterTrucksInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = monsterTrucksInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(monsterTrucksInventory.get(maxPriceIndex));
+							monsterTrucksInventory.remove(maxPriceIndex);
+						}
+					}
+					// motorcycles is most expensive
+					else if (maxPriceType == "Motorcycles"){
+						// Adjust sales chance
+						if (motorcyclesInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (motorcyclesInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ motorcyclesInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ motorcyclesInventory.get(maxPriceIndex).getCondition() + " " + motorcyclesInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + motorcyclesInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = motorcyclesInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Motorcycles withUpgrades = motorcyclesInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							motorcyclesInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + motorcyclesInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ motorcyclesInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += motorcyclesInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += motorcyclesInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = motorcyclesInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(motorcyclesInventory.get(maxPriceIndex));
+							motorcyclesInventory.remove(maxPriceIndex);
+						}
+					}
+					// boats is most expensive
+					else if (maxPriceType == "Boats"){
+						// Adjust sales chance
+						if (boatsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (boatsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ boatsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ boatsInventory.get(maxPriceIndex).getCondition() + " " + boatsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + boatsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = boatsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Boats withUpgrades = boatsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							boatsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + boatsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ boatsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += boatsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += boatsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = boatsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(boatsInventory.get(maxPriceIndex));
+							boatsInventory.remove(maxPriceIndex);
+						}
+					}
+					// flying cars is most expensive
+					else if (maxPriceType == "FlyingCars"){
+						// Adjust sales chance
+						if (flyingCarsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (flyingCarsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ flyingCarsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ flyingCarsInventory.get(maxPriceIndex).getCondition() + " " + flyingCarsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + flyingCarsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = flyingCarsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							FlyingCars withUpgrades = flyingCarsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							flyingCarsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + flyingCarsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ flyingCarsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += flyingCarsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += flyingCarsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = flyingCarsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(flyingCarsInventory.get(maxPriceIndex));
+							flyingCarsInventory.remove(maxPriceIndex);
+						}
+					}
+					// electric cars is most expensive
+					else if (maxPriceType == "ElectricCars"){
+						// Adjust sales chance
+						if (electricCarsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (electricCarsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ electricCarsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ electricCarsInventory.get(maxPriceIndex).getCondition() + " " + electricCarsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + electricCarsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = electricCarsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							ElectricCars withUpgrades = electricCarsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							electricCarsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + electricCarsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ electricCarsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += electricCarsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += electricCarsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = electricCarsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(electricCarsInventory.get(maxPriceIndex));
+							electricCarsInventory.remove(maxPriceIndex);
+						}
+					}
+				}
+			}
+			//Buyer wants boat
+			else if (buyers.get(i).getVehicleTypeWanted() == "Boats") {
+				// In stock
+				if (boatsInventory.size() != 0){
+					double maxPrice = 0.0;
+					int maxPriceIndex = -1;
+					int salesChance = buyers.get(i).getBuyChance();
+
+					// Find most expensive Car
+					for (int j = 0; j < boatsInventory.size(); j++){
+						if (maxPrice < boatsInventory.get(j).getSalesPrice() && boatsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = boatsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+						}
+					}
+
+					if (maxPriceIndex == -1){
+						break;
+					}
+
+					// Adjust sales chance
+					if (boatsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+						salesChance += 10;
+					}
+					if (boatsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+						salesChance += 10;
+					}
+					int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+					// Successful sales roll
+					if (sellRoll <= salesChance){
+						System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+						+ boatsInventory.get(maxPriceIndex).getCleanliness() + " " 
+						+ boatsInventory.get(maxPriceIndex).getCondition() + " " + boatsInventory.get(maxPriceIndex).getID() 
+						+ " to Buyer for $" + boatsInventory.get(maxPriceIndex).getSalesPrice());
+						int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						Vehicles upgrades = boatsInventory.get(maxPriceIndex);
+						if (warrantyChance <= 25) {
+							System.out.println(" with extended warranty for 20% extra, ");
+							upgrades = new ExtendedWarranty(upgrades);
+						}
+						if (undercoatingChance <= 10) {
+							System.out.println(" with undercoating for 5% extra, ");
+							upgrades = new Undercoating(upgrades);
+						}
+						if (roadRescueChance <= 5) {
+							System.out.println(" with road rescue coverage for 2% extra, ");
+							upgrades = new RoadRescueCoverage(upgrades);
+						}
+						if (satelliteRadioChance <= 40) {
+							System.out.println(" with satellite radio for 5% extra, ");
+							upgrades = new SatelliteRadio(upgrades);
+						}
+						Boats withUpgrades = boatsInventory.get(maxPriceIndex);
+						withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+						boatsInventory.set(maxPriceIndex, withUpgrades);
+						System.out.println(" for a total of: " + boatsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+						+ boatsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+						// Adjust operating budget/total sales/pay bonus
+						operatingBudget += boatsInventory.get(maxPriceIndex).getSalesPrice();
+						totalSales += boatsInventory.get(maxPriceIndex).getSalesPrice();
+						double bonus = boatsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+						salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+						soldVehicles.add(boatsInventory.get(maxPriceIndex));
+						boatsInventory.remove(maxPriceIndex);
+					}
+				}
+				// Not in stock
+				else {
+					double maxPrice = 0.0;
+					int maxPriceIndex = -1;
+					int salesChance = buyers.get(i).getBuyChance() - 20;
+					String maxPriceType = "";
+
+					// Find most expensive pickup
+					for (int j = 0; j < pickupsInventory.size(); j++){
+						if (maxPrice < pickupsInventory.get(j).getSalesPrice() && pickupsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = pickupsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Pickups";
+						}
+					}
+					// Find most expensive performanceCar
+					for (int j = 0; j < performanceCarInventory.size(); j++){
+						if (maxPrice < performanceCarInventory.get(j).getSalesPrice() && performanceCarInventory.get(j).getCondition() != "Broken"){
+							maxPrice = performanceCarInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "PerformanceCars";
+						}
+					}
+					// Find most expensive monster truck
+					for (int j = 0; j < monsterTrucksInventory.size(); j++){
+						if (maxPrice < monsterTrucksInventory.get(j).getSalesPrice() && monsterTrucksInventory.get(j).getCondition() != "Broken"){
+							maxPrice = monsterTrucksInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "MonsterTrucks";
+						}
+					}
+					// Find most expensive car
+					for (int j = 0; j < carsInventory.size(); j++){
+						if (maxPrice < carsInventory.get(j).getSalesPrice() && carsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = carsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Cars";
+						}
+					}
+					// Find most expensive motorcycle
+					for (int j = 0; j < motorcyclesInventory.size(); j++){
+						if (maxPrice < motorcyclesInventory.get(j).getSalesPrice() && motorcyclesInventory.get(j).getCondition() != "Broken"){
+							maxPrice = motorcyclesInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Motorcycles";
+						}
+					}
+					// Find most expensive electric car
+					for (int j = 0; j < electricCarsInventory.size(); j++){
+						if (maxPrice < electricCarsInventory.get(j).getSalesPrice() && electricCarsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = electricCarsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "ElectricCars";
+						}
+					}
+					
+					// Find most expensive flying car
+					for (int j = 0; j < flyingCarsInventory.size(); j++){
+						if (maxPrice < flyingCarsInventory.get(j).getSalesPrice() && flyingCarsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = flyingCarsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "FlyingCars";
+						}
+					}
+					
+					// Find most expensive spaceship
+					for (int j = 0; j < spaceshipsInventory.size(); j++){
+						if (maxPrice < spaceshipsInventory.get(j).getSalesPrice() && spaceshipsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = spaceshipsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Spaceships";
+						}
+					}
+					
+					// Pickup is most expensive
+					if (maxPriceType == "Pickups"){
+						// Adjust sales chance
+						if (pickupsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (pickupsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ pickupsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ pickupsInventory.get(maxPriceIndex).getCondition() + " " + pickupsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + pickupsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = pickupsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Pickups withUpgrades = pickupsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							pickupsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + pickupsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ pickupsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += pickupsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += pickupsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = pickupsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(pickupsInventory.get(maxPriceIndex));
+							pickupsInventory.remove(maxPriceIndex);
+						}
+					}
+					// PerformanceCar most expensive
+					else if (maxPriceType == "PerformanceCars"){
+
+						// Adjust sales chance
+						if (performanceCarInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (performanceCarInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ performanceCarInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ performanceCarInventory.get(maxPriceIndex).getCondition() + " " + performanceCarInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + performanceCarInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = performanceCarInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							PerformanceCars withUpgrades = performanceCarInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							performanceCarInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + performanceCarInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ performanceCarInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += performanceCarInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += performanceCarInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = performanceCarInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(performanceCarInventory.get(maxPriceIndex));
+							performanceCarInventory.remove(maxPriceIndex);
+						}
+					}
+					// Cars is most expensive
+					else if (maxPriceType == "Cars"){
+						// Adjust sales chance
+						if (carsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (carsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ carsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ carsInventory.get(maxPriceIndex).getCondition() + " " + carsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + carsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = carsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Cars withUpgrades = carsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							carsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + carsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ carsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += carsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += carsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = carsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(carsInventory.get(maxPriceIndex));
+							carsInventory.remove(maxPriceIndex);
+						}
+					}
+					// Monster truck is most expensive
+					else if (maxPriceType == "MonsterTrucks"){
+						// Adjust sales chance
+						if (monsterTrucksInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (monsterTrucksInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ monsterTrucksInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ monsterTrucksInventory.get(maxPriceIndex).getCondition() + " " + monsterTrucksInventory.get(maxPriceIndex).getStageName() 
+							+ " to Buyer for $" + monsterTrucksInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = monsterTrucksInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							MonsterTrucks withUpgrades = monsterTrucksInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							monsterTrucksInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + monsterTrucksInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ monsterTrucksInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += monsterTrucksInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += monsterTrucksInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = monsterTrucksInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(monsterTrucksInventory.get(maxPriceIndex));
+							monsterTrucksInventory.remove(maxPriceIndex);
+						}
+					}
+					// motorcycles is most expensive
+					else if (maxPriceType == "Motorcycles"){
+						// Adjust sales chance
+						if (motorcyclesInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (motorcyclesInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ motorcyclesInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ motorcyclesInventory.get(maxPriceIndex).getCondition() + " " + motorcyclesInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + motorcyclesInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = motorcyclesInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Motorcycles withUpgrades = motorcyclesInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							motorcyclesInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + motorcyclesInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ motorcyclesInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += motorcyclesInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += motorcyclesInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = motorcyclesInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(motorcyclesInventory.get(maxPriceIndex));
+							motorcyclesInventory.remove(maxPriceIndex);
+						}
+					}
+					// electric cars is most expensive
+					else if (maxPriceType == "ElectricCars"){
+						// Adjust sales chance
+						if (electricCarsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (electricCarsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ electricCarsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ electricCarsInventory.get(maxPriceIndex).getCondition() + " " + electricCarsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + electricCarsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = electricCarsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							ElectricCars withUpgrades = electricCarsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							electricCarsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + electricCarsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ electricCarsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += electricCarsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += electricCarsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = electricCarsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(electricCarsInventory.get(maxPriceIndex));
+							electricCarsInventory.remove(maxPriceIndex);
+						}
+					}
+					// flying cars is most expensive
+					else if (maxPriceType == "FlyingCars"){
+						// Adjust sales chance
+						if (flyingCarsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (flyingCarsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ flyingCarsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ flyingCarsInventory.get(maxPriceIndex).getCondition() + " " + flyingCarsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + flyingCarsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = flyingCarsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							FlyingCars withUpgrades = flyingCarsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							flyingCarsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + flyingCarsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ flyingCarsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += flyingCarsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += flyingCarsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = flyingCarsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(flyingCarsInventory.get(maxPriceIndex));
+							flyingCarsInventory.remove(maxPriceIndex);
+						}
+					}
+					// spaceships is most expensive
+					else if (maxPriceType == "Spaceships"){
+						// Adjust sales chance
+						if (spaceshipsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (spaceshipsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ spaceshipsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ spaceshipsInventory.get(maxPriceIndex).getCondition() + " " + spaceshipsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + spaceshipsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = spaceshipsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Spaceships withUpgrades = spaceshipsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							spaceshipsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + spaceshipsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ spaceshipsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += spaceshipsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += spaceshipsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = spaceshipsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(spaceshipsInventory.get(maxPriceIndex));
+							spaceshipsInventory.remove(maxPriceIndex);
 						}
 					}
 				}
@@ -3628,6 +6879,34 @@ public class FNCD {
 							maxPriceType = "Cars";
 						}
 					}
+					
+					// Find most expensive flying car
+					for (int j = 0; j < flyingCarsInventory.size(); j++){
+						if (maxPrice < flyingCarsInventory.get(j).getSalesPrice() && flyingCarsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = flyingCarsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "FlyingCars";
+						}
+					}
+					
+					// Find most expensive boat
+					for (int j = 0; j < boatsInventory.size(); j++){
+						if (maxPrice < boatsInventory.get(j).getSalesPrice() && boatsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = boatsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Boats";
+						}
+					}
+					
+					// Find most expensive spaceship
+					for (int j = 0; j < spaceshipsInventory.size(); j++){
+						if (maxPrice < spaceshipsInventory.get(j).getSalesPrice() && spaceshipsInventory.get(j).getCondition() != "Broken"){
+							maxPrice = spaceshipsInventory.get(j).getSalesPrice();
+							maxPriceIndex = j;
+							maxPriceType = "Spaceships";
+						}
+					}
+					
 					// Pickup is most expensive
 					if (maxPriceType == "Pickups"){
 						// Adjust sales chance
@@ -3895,6 +7174,165 @@ public class FNCD {
 
 							soldVehicles.add(electricCarsInventory.get(maxPriceIndex));
 							electricCarsInventory.remove(maxPriceIndex);
+						}
+					}
+					// flying cars is most expensive
+					else if (maxPriceType == "FlyingCars"){
+						// Adjust sales chance
+						if (flyingCarsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (flyingCarsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ flyingCarsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ flyingCarsInventory.get(maxPriceIndex).getCondition() + " " + flyingCarsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + flyingCarsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = flyingCarsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							FlyingCars withUpgrades = flyingCarsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							flyingCarsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + flyingCarsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ flyingCarsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += flyingCarsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += flyingCarsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = flyingCarsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(flyingCarsInventory.get(maxPriceIndex));
+							flyingCarsInventory.remove(maxPriceIndex);
+						}
+					}
+					// boats is most expensive
+					else if (maxPriceType == "Boats"){
+						// Adjust sales chance
+						if (boatsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (boatsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ boatsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ boatsInventory.get(maxPriceIndex).getCondition() + " " + boatsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + boatsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = boatsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Boats withUpgrades = boatsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							boatsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + boatsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ boatsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += boatsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += boatsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = boatsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(boatsInventory.get(maxPriceIndex));
+							boatsInventory.remove(maxPriceIndex);
+						}
+					}
+					// spaceships is most expensive
+					else if (maxPriceType == "Spaceships"){
+						// Adjust sales chance
+						if (spaceshipsInventory.get(maxPriceIndex).getCondition() == "Like New"){
+							salesChance += 10;
+						}
+						if (spaceshipsInventory.get(maxPriceIndex).getCleanliness() == "Sparkling"){
+							salesChance += 10;
+						}
+						int sellRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+						// Successful sales roll
+						if (sellRoll <= salesChance){
+							System.out.println(salespersonStaff.get(salesPersonRoll).getUniqueName() + " sold " 
+							+ spaceshipsInventory.get(maxPriceIndex).getCleanliness() + " " 
+							+ spaceshipsInventory.get(maxPriceIndex).getCondition() + " " + spaceshipsInventory.get(maxPriceIndex).getID() 
+							+ " to Buyer for $" + spaceshipsInventory.get(maxPriceIndex).getSalesPrice());
+							int warrantyChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int undercoatingChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int roadRescueChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							int satelliteRadioChance = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+							Vehicles upgrades = spaceshipsInventory.get(maxPriceIndex);
+							if (warrantyChance <= 25) {
+								System.out.println(" with extended warranty for 20% extra, ");
+								upgrades = new ExtendedWarranty(upgrades);
+							}
+							if (undercoatingChance <= 10) {
+								System.out.println(" with undercoating for 5% extra, ");
+								upgrades = new Undercoating(upgrades);
+							}
+							if (roadRescueChance <= 5) {
+								System.out.println(" with road rescue coverage for 2% extra, ");
+								upgrades = new RoadRescueCoverage(upgrades);
+							}
+							if (satelliteRadioChance <= 40) {
+								System.out.println(" with satellite radio for 5% extra, ");
+								upgrades = new SatelliteRadio(upgrades);
+							}
+							Spaceships withUpgrades = spaceshipsInventory.get(maxPriceIndex);
+							withUpgrades.setSalesPrice(upgrades.getSalesPrice());
+							spaceshipsInventory.set(maxPriceIndex, withUpgrades);
+							System.out.println(" for a total of: " + spaceshipsInventory.get(maxPriceIndex).getSalesPrice() + " (earned $" 
+							+ spaceshipsInventory.get(maxPriceIndex).getSalesBonus() + " bonus)");
+
+							// Adjust operating budget/total sales/pay bonus
+							operatingBudget += spaceshipsInventory.get(maxPriceIndex).getSalesPrice();
+							totalSales += spaceshipsInventory.get(maxPriceIndex).getSalesPrice();
+							double bonus = spaceshipsInventory.get(maxPriceIndex).getSalesBonus() + salespersonStaff.get(salesPersonRoll).getBonusPay();
+							salespersonStaff.get(salesPersonRoll).setBonusPay(bonus);
+
+							soldVehicles.add(spaceshipsInventory.get(maxPriceIndex));
+							spaceshipsInventory.remove(maxPriceIndex);
 						}
 					}
 				}
@@ -4046,6 +7484,9 @@ public class FNCD {
 		int counterMO = 0; //counter for monster trucks
 		int counterMot = 0; //counter for motorcycles
 		int counterEC = 0; //counter for electric cars
+		int counterFC = 0; //counter for flying cars
+		int counterB = 0; //counter for boats
+		int counterSp = 0; //counter for spaceships
 		for (int i = 0; i < mechanicStaff.size(); i++) {
 			// Pay each mechanic
 			mechanicStaff.get(i).setNormalPay(mechanicStaff.get(i).getNormalPay() + 20.5);
@@ -4100,6 +7541,18 @@ public class FNCD {
 		for (int i = 0; i < electricCarsInventory.size(); i++) {
 			// count each EC
 			counterEC = counterEC + 1;
+		}
+		for (int i = 0; i < flyingCarsInventory.size(); i++) {
+			// count each FC
+			counterFC = counterFC + 1;
+		}
+		for (int i = 0; i < boatsInventory.size(); i++) {
+			// count each B
+			counterB = counterB + 1;
+		}
+		for (int i = 0; i < spaceshipsInventory.size(); i++) {
+			// count each Sp
+			counterSp = counterSp + 1;
 		}
 		int mechanicQuitChance = ThreadLocalRandom.current().nextInt(1, 10 + 1); // if mechanicQuitChance = 1; a mechanic quits
 		int salespersonQuitChance = ThreadLocalRandom.current().nextInt(1, 10 + 1); // if salespersonQuitChance = 1; a salesperson quits
@@ -4159,6 +7612,9 @@ public class FNCD {
 		final Object[][] tableMO = new String[counterMO][]; // table for monster truck
 		final Object[][] tableMot = new String[counterMot][]; //table for motorcycles
 		final Object[][] tableEC = new String[counterEC][]; //table for EC
+		final Object[][] tableFC = new String[counterFC][]; //table for flying cars
+		final Object[][] tableB = new String[counterB][]; //table for boats
+		final Object[][] tableSp = new String[counterSp][]; //table for spaceships
 		final Object[][] tableSales = new String[1][];
 		for (int i = 0; i < mechanicStaff.size(); i++) { //adds all working mechanics to table
 			tableM[i] = new String[] {mechanicStaff.get(i).getUniqueName(), Integer.toString(mechanicStaff.get(i).getDaysWorked()), String.valueOf(mechanicStaff.get(i).getNormalPay()), String.valueOf(mechanicStaff.get(i).getBonusPay()), "Working"};
@@ -4226,6 +7682,21 @@ public class FNCD {
 			String carSalesPrice = String.format("%.2f", electricCarsInventory.get(i).getSalesPrice());
 			tableEC[i] = new String[] {electricCarsInventory.get(i).getID(), "$" + carCostPrice, "$" + carSalesPrice, electricCarsInventory.get(i).getCondition(), electricCarsInventory.get(i).getCleanliness(), "In Stock"};
 		}
+		for (int i = 0; i < flyingCarsInventory.size(); i++) {
+			String carCostPrice = String.format("%.2f", flyingCarsInventory.get(i).getCostPrice());
+			String carSalesPrice = String.format("%.2f", flyingCarsInventory.get(i).getSalesPrice());
+			tableFC[i] = new String[] {flyingCarsInventory.get(i).getID(), "$" + carCostPrice, "$" + carSalesPrice, flyingCarsInventory.get(i).getCondition(), flyingCarsInventory.get(i).getCleanliness(), "In Stock"};
+		}
+		for (int i = 0; i < boatsInventory.size(); i++) {
+			String carCostPrice = String.format("%.2f", boatsInventory.get(i).getCostPrice());
+			String carSalesPrice = String.format("%.2f", boatsInventory.get(i).getSalesPrice());
+			tableB[i] = new String[] {boatsInventory.get(i).getID(), "$" + carCostPrice, "$" + carSalesPrice, boatsInventory.get(i).getCondition(), boatsInventory.get(i).getCleanliness(), "In Stock"};
+		}
+		for (int i = 0; i < spaceshipsInventory.size(); i++) {
+			String carCostPrice = String.format("%.2f", spaceshipsInventory.get(i).getCostPrice());
+			String carSalesPrice = String.format("%.2f", spaceshipsInventory.get(i).getSalesPrice());
+			tableSp[i] = new String[] {spaceshipsInventory.get(i).getID(), "$" + carCostPrice, "$" + carSalesPrice, spaceshipsInventory.get(i).getCondition(), spaceshipsInventory.get(i).getCleanliness(), "In Stock"};
+		}
 		String newOperatingBudget = String.format("%.2f", operatingBudget);
 		String newTotalSales = String.format("%.2f", totalSales);
 		tableSales[0] = new String[] {"$" + newOperatingBudget, "$" + newTotalSales};
@@ -4265,13 +7736,22 @@ public class FNCD {
 			tableP[0] = new String[] {"Pickup", "$0", "$0", "null", "null", "Out of Stock"};
 		}
 		if (monsterTrucksInventory.size() == 0) {
-			tableP[0] = new String[] {"MonsterTruck", "$0", "$0", "null", "null", "Out of Stock"};
+			tableMot[0] = new String[] {"MonsterTruck", "$0", "$0", "null", "null", "Out of Stock"};
 		}
 		if (motorcyclesInventory.size() == 0) {
-			tableP[0] = new String[] {"Motorcycle", "$0", "$0", "null", "null", "Out of Stock"};
+			tableM[0] = new String[] {"Motorcycle", "$0", "$0", "null", "null", "Out of Stock"};
 		}
 		if (electricCarsInventory.size() == 0) {
-			tableP[0] = new String[] {"ElectricCar", "$0", "$0", "null", "null", "Out of Stock"};
+			tableEC[0] = new String[] {"ElectricCar", "$0", "$0", "null", "null", "Out of Stock"};
+		}
+		if (flyingCarsInventory.size() == 0) {
+			tableFC[0] = new String[] {"FlyingCar", "$0", "$0", "null", "null", "Out of Stock"};
+		}
+		if (boatsInventory.size() == 0) {
+			tableB[0] = new String[] {"Boat", "$0", "$0", "null", "null", "Out of Stock"};
+		}
+		if (spaceshipsInventory.size() == 0) {
+			tableSp[0] = new String[] {"Spaceship", "$0", "$0", "null", "null", "Out of Stock"};
 		}
 		for (final Object[] row : tablePC) {
 			System.out.format("%15s%15s%15s%15s%15s%15s%n", row);
@@ -4289,6 +7769,15 @@ public class FNCD {
 			System.out.format("%15s%15s%15s%15s%15s%15s%n", row);
 		}
 		for (final Object[] row : tableEC) {
+			System.out.format("%15s%15s%15s%15s%15s%15s%n", row);
+		}
+		for (final Object[] row : tableFC) {
+			System.out.format("%15s%15s%15s%15s%15s%15s%n", row);
+		}
+		for (final Object[] row : tableB) {
+			System.out.format("%15s%15s%15s%15s%15s%15s%n", row);
+		}
+		for (final Object[] row : tableSp) {
 			System.out.format("%15s%15s%15s%15s%15s%15s%n", row);
 		}
 		System.out.println("Total Budget and Sales:");
