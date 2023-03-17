@@ -1670,3 +1670,1295 @@ Funds Added: 0.0
 Day: 20
 TotalSales: 881409.840847148
 Funds Added: 0.0
+
+Day: 20
+TotalSales: 941516.2975327661
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 941516.2975327661
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 941516.2975327661
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 941516.2975327661
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 941516.2975327661
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 941516.2975327661
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 941516.2975327661
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 941516.2975327661
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 941516.2975327661
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 941516.2975327661
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 941516.2975327661
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 941516.2975327661
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 941516.2975327661
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 941516.2975327661
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 941516.2975327661
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 941516.2975327661
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 941516.2975327661
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 941516.2975327661
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 941516.2975327661
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1218005.2497142926
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1218005.2497142926
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1218005.2497142926
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1218005.2497142926
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1218005.2497142926
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1218005.2497142926
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1218005.2497142926
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1218005.2497142926
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1218005.2497142926
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1218005.2497142926
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1218005.2497142926
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1218005.2497142926
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1218005.2497142926
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1218005.2497142926
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1218005.2497142926
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1218005.2497142926
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1218005.2497142926
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1218005.2497142926
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1218005.2497142926
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1064458.6295518284
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1064458.6295518284
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1064458.6295518284
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1064458.6295518284
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1064458.6295518284
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1064458.6295518284
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1064458.6295518284
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1064458.6295518284
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1064458.6295518284
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1064458.6295518284
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1064458.6295518284
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1064458.6295518284
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1064458.6295518284
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1064458.6295518284
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1064458.6295518284
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1064458.6295518284
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1064458.6295518284
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1064458.6295518284
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1064458.6295518284
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1033731.4419635772
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1033731.4419635772
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1033731.4419635772
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1033731.4419635772
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1033731.4419635772
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1033731.4419635772
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1033731.4419635772
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1033731.4419635772
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1033731.4419635772
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1033731.4419635772
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1033731.4419635772
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1033731.4419635772
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1033731.4419635772
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1033731.4419635772
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1033731.4419635772
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1033731.4419635772
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1033731.4419635772
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1033731.4419635772
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1033731.4419635772
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1339190.2214511237
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1339190.2214511237
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1339190.2214511237
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1339190.2214511237
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1339190.2214511237
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1339190.2214511237
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1339190.2214511237
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1339190.2214511237
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1339190.2214511237
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1339190.2214511237
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1339190.2214511237
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1339190.2214511237
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1339190.2214511237
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1339190.2214511237
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1339190.2214511237
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1339190.2214511237
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1339190.2214511237
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1339190.2214511237
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1339190.2214511237
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1629817.6823793354
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1629817.6823793354
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1629817.6823793354
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1629817.6823793354
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1629817.6823793354
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1629817.6823793354
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1629817.6823793354
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1629817.6823793354
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1629817.6823793354
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1629817.6823793354
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1629817.6823793354
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1629817.6823793354
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1629817.6823793354
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1629817.6823793354
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1629817.6823793354
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1629817.6823793354
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1629817.6823793354
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1629817.6823793354
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1629817.6823793354
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1070870.5392697307
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1070870.5392697307
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1070870.5392697307
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1070870.5392697307
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1070870.5392697307
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1070870.5392697307
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1070870.5392697307
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1070870.5392697307
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1070870.5392697307
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1070870.5392697307
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1070870.5392697307
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1070870.5392697307
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1070870.5392697307
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1070870.5392697307
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1070870.5392697307
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1070870.5392697307
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1070870.5392697307
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1070870.5392697307
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1070870.5392697307
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 946724.038367522
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 946724.038367522
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 946724.038367522
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 946724.038367522
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 946724.038367522
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 946724.038367522
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 946724.038367522
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 946724.038367522
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 946724.038367522
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 946724.038367522
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 946724.038367522
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 946724.038367522
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 946724.038367522
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 946724.038367522
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 946724.038367522
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 946724.038367522
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 946724.038367522
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 946724.038367522
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 946724.038367522
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1164771.9975073922
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1164771.9975073922
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1164771.9975073922
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1164771.9975073922
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1164771.9975073922
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1164771.9975073922
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1164771.9975073922
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1164771.9975073922
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1164771.9975073922
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1164771.9975073922
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1164771.9975073922
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1164771.9975073922
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1164771.9975073922
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1164771.9975073922
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1164771.9975073922
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1164771.9975073922
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1164771.9975073922
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1164771.9975073922
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1164771.9975073922
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 926755.6751572472
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 926755.6751572472
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 926755.6751572472
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 926755.6751572472
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 926755.6751572472
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 926755.6751572472
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 926755.6751572472
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 926755.6751572472
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 926755.6751572472
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 926755.6751572472
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 926755.6751572472
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 926755.6751572472
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 926755.6751572472
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 926755.6751572472
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 926755.6751572472
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 926755.6751572472
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 926755.6751572472
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 926755.6751572472
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 926755.6751572472
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1094615.3059007
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1094615.3059007
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1094615.3059007
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1094615.3059007
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1094615.3059007
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1094615.3059007
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1094615.3059007
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1094615.3059007
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1094615.3059007
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1094615.3059007
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1094615.3059007
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1094615.3059007
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1094615.3059007
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1094615.3059007
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1094615.3059007
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1094615.3059007
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1094615.3059007
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1094615.3059007
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1094615.3059007
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1233102.2748635232
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1233102.2748635232
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1233102.2748635232
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1233102.2748635232
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1233102.2748635232
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1233102.2748635232
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1233102.2748635232
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1233102.2748635232
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1233102.2748635232
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1233102.2748635232
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1233102.2748635232
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1233102.2748635232
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1233102.2748635232
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1233102.2748635232
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1233102.2748635232
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1233102.2748635232
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1233102.2748635232
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1233102.2748635232
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1233102.2748635232
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1464264.1624293416
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1464264.1624293416
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1464264.1624293416
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1464264.1624293416
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1464264.1624293416
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1464264.1624293416
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1464264.1624293416
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1464264.1624293416
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1464264.1624293416
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1464264.1624293416
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1464264.1624293416
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1464264.1624293416
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1464264.1624293416
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1464264.1624293416
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1464264.1624293416
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1464264.1624293416
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1464264.1624293416
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1464264.1624293416
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1464264.1624293416
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 858749.576577031
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 858749.576577031
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 858749.576577031
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 858749.576577031
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 858749.576577031
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 858749.576577031
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 858749.576577031
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 858749.576577031
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 858749.576577031
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 858749.576577031
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 858749.576577031
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 858749.576577031
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 858749.576577031
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 858749.576577031
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 858749.576577031
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 858749.576577031
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 858749.576577031
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 858749.576577031
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 858749.576577031
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1071595.9029919142
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1071595.9029919142
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1071595.9029919142
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1071595.9029919142
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1071595.9029919142
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1071595.9029919142
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1071595.9029919142
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1071595.9029919142
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1071595.9029919142
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1071595.9029919142
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1071595.9029919142
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1071595.9029919142
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1071595.9029919142
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1071595.9029919142
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1071595.9029919142
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1071595.9029919142
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1071595.9029919142
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1071595.9029919142
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1071595.9029919142
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1817472.9760169755
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1817472.9760169755
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1817472.9760169755
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1817472.9760169755
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1817472.9760169755
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1817472.9760169755
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1817472.9760169755
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1817472.9760169755
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1817472.9760169755
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1817472.9760169755
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1817472.9760169755
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1817472.9760169755
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1817472.9760169755
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1817472.9760169755
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1817472.9760169755
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1817472.9760169755
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1817472.9760169755
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1817472.9760169755
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1817472.9760169755
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1254886.5043203805
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1254886.5043203805
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1254886.5043203805
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1254886.5043203805
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1254886.5043203805
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1254886.5043203805
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1254886.5043203805
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1254886.5043203805
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1254886.5043203805
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1254886.5043203805
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1254886.5043203805
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1254886.5043203805
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1254886.5043203805
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1254886.5043203805
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1254886.5043203805
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1254886.5043203805
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1254886.5043203805
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1254886.5043203805
+Funds Added: 0.0
+
+Day: 20
+TotalSales: 1254886.5043203805
+Funds Added: 0.0
