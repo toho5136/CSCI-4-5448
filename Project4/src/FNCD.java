@@ -7794,9 +7794,9 @@ public class FNCD {
 	}
 	
 	public void runSimulation() {
+		Logger log = Logger.getInstance(this);
 		for (int i = 0; i < 30; i++){
 			//FNCD 1
-			Logger log = new Logger(this);
 			this.createStageNames();
 			this.opening();
 			this.washing();

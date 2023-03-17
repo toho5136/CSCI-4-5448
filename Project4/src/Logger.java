@@ -1,8 +1,18 @@
 import java.io.*;
 public class Logger extends Observer{
-    public Logger(FNCD fncd){
+    private static Logger logger;
+
+    private Logger(FNCD fncd){
         this.fncd = fncd;
         this.fncd.attach(this);
+    }
+
+    public static Logger getInstance(FNCD fncd){
+      if (logger == null){
+        logger = new Logger(fncd);
+      }
+
+      return logger;
     }
 
     @Override
