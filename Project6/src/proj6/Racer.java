@@ -1,9 +1,10 @@
-
+package proj6;
+import java.util.ArrayList;
 /*
 Things to add: export stats somehow, both for the horse and for the race itself.
  */
 class Racer extends Thread{
-    public int run(Horse horse, ArrayList<Track> track)
+    public int run(Horse horse, ArrayList<TrackS> track)
         {
             try {
                 boolean finish = false;

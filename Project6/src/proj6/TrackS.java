@@ -39,17 +39,20 @@ public class TrackS {
         quality = qualit;
     }
 
-    private static TrackS instance;
-
-    private TrackS() {
+    public TrackS(boolean isFinish) {
         int trackRoll = ThreadLocalRandom.current().nextInt(0, 2);
         int obstacleRoll = ThreadLocalRandom.current().nextInt(0, 2);
 
         // Straight track generated
-        if (trackRoll == 0) {
+        if (trackRoll == 0 || isFinish == true) {
             int distRoll = ThreadLocalRandom.current().nextInt(100, 501);
             setShape("Straight");
-            setDistance(distRoll);
+            if (isFinish == true) {
+                setDistance(0);
+            }
+            else {
+                setDistance(distRoll);
+            }
         }
         // Curve track generated
         else {
@@ -69,14 +72,5 @@ public class TrackS {
 
         // Hard coded to 10 for now...
         setQuality(10);
-    }
-
-    // Get instance for singleton pattern
-    public static TrackS getInstance() {
-        if (instance == null) {
-            instance = new TrackS();
-        }
-
-        return instance;
     }
 }
