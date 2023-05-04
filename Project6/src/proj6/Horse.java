@@ -11,6 +11,7 @@ public class Horse {
 	private int losses;
 	private double winloss;
 	private int age;
+	private int stat;
 	
 	public String getHorseName() {
 		return this.horseName;
@@ -82,6 +83,22 @@ public class Horse {
 		age = ag;
 	}
 	
+	public int getStat() {
+		return this.stat;
+	}
+	public void setStat() {
+		stat = 0;
+		if (speed > stat) {
+			stat = speed;
+		}
+		if (agility > stat) {
+			stat = agility;
+		}
+		if (endurance > stat) {
+			stat = endurance;
+		}
+	}
+	
 	class Thoroughbred extends Horse {
 		public Thoroughbred(String name, int speed, int agility, int endurance, int trait, int age) {
 			this.setHorseName(name);
@@ -127,6 +144,7 @@ public class Horse {
 				this.setAgility(getAgility() + 10);
 				this.setEndurance(getEndurance() + 10);
 			}
+			this.setStat();
 		}
 	}
 	class Arabian extends Horse {
@@ -174,6 +192,7 @@ public class Horse {
 				this.setAgility(getAgility() + 10);
 				this.setEndurance(getEndurance() + 10);
 			}
+			this.setStat();
 		}
 	}
 	class QuarterHouse extends Horse {
@@ -226,6 +245,7 @@ public class Horse {
 				this.setAgility(getAgility() + 10);
 				this.setEndurance(getEndurance() + 10);
 			}
+			this.setStat();
 		}
 	}
 	class Andalusian extends Horse {
@@ -273,6 +293,7 @@ public class Horse {
 				this.setAgility(getAgility() + 10);
 				this.setEndurance(getEndurance() + 10);
 			}
+			this.setStat();
 		}
 	}
 	class Clydesdale extends Horse {
@@ -320,6 +341,7 @@ public class Horse {
 				this.setAgility(getAgility() + 10);
 				this.setEndurance(getEndurance() + 10);
 			}
+			this.setStat();
 		}
 	}
 }
