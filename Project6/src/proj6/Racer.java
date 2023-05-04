@@ -1,5 +1,7 @@
 package proj6;
 import java.util.ArrayList;
+import java.util.Objects;
+
 /*
 Things to add: export stats somehow, both for the horse and for the race itself.
  */
@@ -37,11 +39,11 @@ class Racer extends Thread{
             }
         }
         public int Move(int speed, int agility, int endurance, String section){//calculation to see how far a horse moves. Not final, just easy for now
-            if (section == "Straight"){return speed;}//Straights are just dashes
-            else { return speed * agility;}//Curves check a horse's agility
+            if (Objects.equals(section, "Straight")){return speed * endurance;}//Straights are just dashes
+            else { return speed * agility * endurance;}//Curves check a horse's agility
         }
         public int getTired(int movement, int extra, String trait){//Calculates the loss of endurance for the horse
-            int cost = movement % 10;//For now, enduance is simply 10% of the distance moved
+            int cost = movement % 10;//For now, endurance is simply 10% of the distance moved
             cost = cost - (extra % 10);//If the horse went past the length, refund some endurance
             //affect traits here, once we determine how we want them to happen
             return cost;

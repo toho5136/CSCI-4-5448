@@ -4,21 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfd11bfb-3b5c-416d-98e1-58e0f28e4f90" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Project6/src/proj6/RaceRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project6/src/proj6/Racer.java" afterDir="false" />
+    <list default="true" id="51f044a8-f848-4198-ab59-453fd62a1023" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project6/src/proj6/RaceRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project6/src/proj6/RaceRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project6/src/proj6/Racer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project6/src/proj6/Racer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project6/src/proj6/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project6/src/proj6/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,77 +22,30 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2N85OLW02AtLYgIb1gRL8rnHb44" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2PJnOqSxd5X9kmpoUpKQKID5QDf" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Christopher Parker/Documents/CSCI4448/Project4/CSCI-4-5448/Project6/src/proj6",
+    "last_opened_file_path": "C:/Users/Christopher Parker/CSCI-4-5448",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
-  },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JAVA"
-    ]
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Christopher Parker\Documents\CSCI4448\Project4\CSCI-4-5448\Project6\src\proj6" />
-      <recent name="C:\Users\Christopher Parker\Documents\CSCI4448\Project4\CSCI-4-5448\Project4\src\src\LoggerFiles" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.Race Track">
-    <configuration name="Boats" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Boats" />
-      <module name="CSCI-4-5448" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Race Track" type="Application" factoryName="Application" temporary="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="19" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.Boats" />
-      <item itemvalue="Application.Race Track" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Race Track" />
-        <item itemvalue="Application.Boats" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bfd11bfb-3b5c-416d-98e1-58e0f28e4f90" name="Changes" comment="" />
-      <created>1679032835138</created>
+      <changelist id="51f044a8-f848-4198-ab59-453fd62a1023" name="Changes" comment="" />
+      <created>1683184022913</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1679032835138</updated>
+      <updated>1683184022913</updated>
     </task>
     <servers />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
