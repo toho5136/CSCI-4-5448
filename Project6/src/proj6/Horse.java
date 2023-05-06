@@ -46,6 +46,8 @@ public class Horse {
 	}
 	public void setEndurance(int endur) {
 		endurance = endur;
+		//Have to make sure Endurance doesn't hit 0
+		if (endurance <= 0){ endurance = 1;}
 	}
 	
 	public String getTrait() {

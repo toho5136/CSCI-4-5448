@@ -24,13 +24,13 @@ class Racer extends Thread{
                         }
                     }
                     int movement = Move(horse.getSpeed(), horse.getAgility(), horse.getEndurance(), track.getSection(section).getShape());
+                    //System.out.println(horse.getHorseName() + " moves " + movement);
                     if (movement > distance){extra = movement - distance;}
                     horse.setEndurance(horse.getEndurance() - getTired(movement, extra, horse.getTrait()));
                     distance = distance - movement;
                     if (distance < 0){distance = 0;}
                     time += 1;
                 }
-                System.out.println("Horse " + horse.getHorseName() + " has finished the race!");
                 return time;
             }
             
@@ -40,7 +40,7 @@ class Racer extends Thread{
         }
         public int Move(int speed, int agility, int endurance, String section){//calculation to see how far a horse moves. Not final, just easy for now
             if (Objects.equals(section, "Straight")){return speed * endurance;}//Straights are just dashes
-            else { return speed * agility * endurance;}//Curves check a horse's agility
+            else { return (speed + agility) * endurance;}//Curves check a horse's agility
         }
         public int getTired(int movement, int extra, String trait){//Calculates the loss of endurance for the horse
             int cost = movement % 10;//For now, endurance is simply 10% of the distance moved

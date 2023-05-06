@@ -45,7 +45,7 @@ public class TrackS {
 
         // Straight track generated
         if (trackRoll == 0 || isFinish == true) {
-            int distRoll = ThreadLocalRandom.current().nextInt(100, 501);
+            int distRoll = ThreadLocalRandom.current().nextInt(2000, 6001);
             setShape("Straight");
             if (isFinish == true) {
                 setDistance(0);
@@ -56,7 +56,7 @@ public class TrackS {
         }
         // Curve track generated
         else {
-            int distRoll = ThreadLocalRandom.current().nextInt(50, 251);
+            int distRoll = ThreadLocalRandom.current().nextInt(1000, 3501);
             setShape("Curve");
             setDistance(distRoll);
         }
