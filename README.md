@@ -9,6 +9,10 @@ Christopher Parker
 ### Java Version
 JavaSE 17
 
+### Factory Implementation
+
+HorseFactory.java
+
 ### Observer Implementation
 
 HorseObserver.java
