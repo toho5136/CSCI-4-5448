@@ -41,71 +41,74 @@ class RaceRunner {
             //System.out.println("Current Horse: " + entry.getKey().getHorseName());
             //System.out.println("Current Time " + entry.getValue());
             //System.out.println("Old Horse and time: " + first + " " + firstP);
-            if (third >= entry.getValue()) {
-                //System.out.println("Made it to third");
-                if (third == entry.getValue() && thirdP != null) {
-                    if (tie(thirdP, entry.getKey())) {
-                        continue;
-                    }
-                }
-                if (second >= entry.getValue()) {
-                    //System.out.println("Made it to second");
-                    thirdSpot = true;
-                    if (second == entry.getValue() && secondP != null) {
-                        if (tie(secondP, entry.getKey())) {
-                            continue;
-                        }
-                    }
-                    if (first >= entry.getValue()) {
-                        if (first == entry.getValue() && firstP != null) {
-                            if (tie(firstP, entry.getKey())) {
-                                continue;
+            /*
+            Logic on if statements. Blarg. First we check if the current horse time is better than the placing, or if no
+            horse has yet placed. If either is true, we then have a second check where we ensure either the horses didn't
+            tie, or if they did, then the new horse is faster. If either is true, we move on, if not, we leave.
+             */
+            if (thirdP == null || third >= entry.getValue()) {
+                if ((third != entry.getValue() || tie(thirdP, entry.getKey()))) {
+                    //System.out.println("Made it to third");
+                    if (secondP == null || (second >= entry.getValue())) {
+                        if ((second != entry.getValue() || tie(secondP, entry.getKey()))) {
+                            thirdSpot = true;
+
+                            if (firstP == null || (first >= entry.getValue())) {
+                                if ((first != entry.getValue() || tie(firstP, entry.getKey()))) {
+                                    //System.out.println("Woooo");
+                                    secondSpot = true;
+                                    tempHorse = firstP;
+                                    tempTime = first;
+                                    firstP = entry.getKey();
+                                    first = entry.getValue();
+                                }
+                            }
+                            if (secondSpot) {//If secondSpot is true, we need to rotate horses, if not, just swap second
+                                Horse secondTH = secondP;
+                                int secondTS = second;
+                                secondP = tempHorse;
+                                second = tempTime;
+                                tempHorse = secondTH;
+                                tempTime = secondTS;
+                            } else {
+                                tempHorse = secondP;
+                                tempTime = second;
+                                secondP = entry.getKey();
+                                second = entry.getValue();
                             }
                         }
-                        //System.out.println("Woooo");
-                        secondSpot = true;
-                        tempHorse = firstP;
-                        tempTime = first;
-                        firstP = entry.getKey();
-                        first = entry.getValue();
+                        if (thirdSpot) {//same deal as above, if third is true, we need to rotate
+                            thirdP = tempHorse;
+                            third = tempTime;
+                        } else {
+                            thirdP = entry.getKey();
+                            third = entry.getValue();
+                        }
                     }
-                    if (secondSpot) {//If secondSpot is true, we need to rotate horses, if not, just swap second
-                        Horse secondTH = secondP;
-                        int secondTS = second;
-                        secondP = tempHorse;
-                        second = tempTime;
-                        tempHorse = secondTH;
-                        tempTime = secondTS;
-                    } else {
-                        tempHorse = secondP;
-                        tempTime = second;
-                        secondP = entry.getKey();
-                        second = entry.getValue();
-                    }
-                }
-                if (thirdSpot) {//same deal as above, if third is true, we need to rotate
-                    thirdP = tempHorse;
-                    third = tempTime;
-                } else {
-                    thirdP = entry.getKey();
-                    third = entry.getValue();
                 }
             }
+        }
+        for (Map.Entry<Horse, Integer> entry : placing.entrySet()) {
+            if (entry.getKey() == firstP || entry.getKey() == secondP || entry.getKey() == thirdP){
+                entry.getKey().setWins(1);
+            }
+            else{entry.getKey().setLosses(1);}
         }
         System.out.println(firstP.getHorseName() + " comes in first with a time of " + first);
         System.out.println(secondP.getHorseName() + " comes in second with a time of " + second);
         System.out.println(thirdP.getHorseName() + " comes in third with a time of " + third);
     }
     public static boolean tie(Horse first, Horse second){
+        if (first == null){return true;}
         if (first.getSpeed() < second.getSpeed()) {//Look at their speed and give it to the faster one
-            return false;
-        } else if (first.getSpeed() > second.getSpeed()) {
             return true;
+        } else if (first.getSpeed() > second.getSpeed()) {
+            return false;
         } else {//If their speed is equal, flip a coin
             Random coin = new Random();
             int flip = coin.nextInt(2);
             //If we flip 0, current winner stays
-            return flip == 0;
+            return flip == 1;
         }
     }
 }

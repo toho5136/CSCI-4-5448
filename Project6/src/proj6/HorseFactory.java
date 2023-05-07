@@ -4,7 +4,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class HorseFactory {
 	public static Horse createHorse(String name) {
 		int breedRoll = ThreadLocalRandom.current().nextInt(1, 5 + 1);
-		int speedRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+		int speedRoll = ThreadLocalRandom.current().nextInt(20, 50 + 1);
 		int agilityRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 		int enduranceRoll = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 		int traitRoll = ThreadLocalRandom.current().nextInt(1, 5 + 1);
