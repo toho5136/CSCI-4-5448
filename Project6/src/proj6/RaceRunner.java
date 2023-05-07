@@ -88,11 +88,14 @@ class RaceRunner {
                 }
             }
         }
+        Random endur = new Random();
         for (Map.Entry<Horse, Integer> entry : placing.entrySet()) {
             if (entry.getKey() == firstP || entry.getKey() == secondP || entry.getKey() == thirdP){
                 entry.getKey().setWins(1);
             }
             else{entry.getKey().setLosses(1);}
+            //Restore some endurance to each horse for the next race
+            entry.getKey().setEndurance(entry.getKey().getEndurance() + endur.nextInt(10,30+1));
         }
         System.out.println(firstP.getHorseName() + " comes in first with a time of " + first);
         System.out.println(secondP.getHorseName() + " comes in second with a time of " + second);
